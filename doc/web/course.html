@@ -1,0 +1,461 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Material for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics">
+
+<title>Material for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics</title>
+
+
+<style type="text/css">
+/* blueish style */
+
+/* Color definitions:  http://www.december.com/html/spec/color0.html
+   CSS examples:       http://www.w3schools.com/css/css_examples.asp */
+
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
+}
+h1 { font-size: 1.8em; color: #1e36ce; }
+h2 { font-size: 1.6em; color: #1e36ce; }
+h3 { font-size: 1.4em; color: #1e36ce; }
+a { color: #1e36ce; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 1,
+ 'sections': [('Lecture notes', 1, None, '___sec0'),
+              ('Introduction and weekly program', 2, None, '___sec1'),
+              ('Experimental information and simple models',
+               2,
+               None,
+               '___sec2'),
+              ('Second quantization', 2, None, '___sec3'),
+              ('Mean-field theories and many-body perturbation theory',
+               2,
+               None,
+               '___sec4'),
+              ('Full configuration interaction theory', 2, None, '___sec5'),
+              ('Coupled cluster theory', 2, None, '___sec6'),
+              ('Similarity Renormalization Group theory', 2, None, '___sec7'),
+              ('Many-body project', 2, None, '___sec8'),
+              ('Selected Texts on Many-body theory', 2, None, '___sec9')]}
+end of tocinfo -->
+
+<body>
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Strange way of testing for vortex... -->
+
+
+<center><h1>Material for <a href="http://www.nucleartalent.org" target="_self">Nuclear Talent</a> course on Many-body methods for nuclear physics</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Scott Bogner, Gaute Hagen, Heiko Hergert, Morten Hjorth-Jensen, Gustav Jansen, and Thomas Papenbrock -->
+
+<center>
+<b>Scott Bogner</b> [1]
+</center>
+
+<center>
+<b>Gaute Hagen</b> [2]
+</center>
+
+<center>
+<b>Heiko Hergert</b> [1]
+</center>
+
+<center>
+<b>Morten Hjorth-Jensen</b> [1]
+</center>
+
+<center>
+<b>Gustav Jansen</b> [3]
+</center>
+
+<center>
+<b>Thomas Papenbrock</b> [4]
+</center>
+
+<p>
+<!-- institution(s) -->
+
+<center>[1] <b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
+<center>[2] <b>Physics Division, <a href="http://www.ornl.gov/" target="_self">Oak Ridge National Laboratory</a>, Oak Ridge, Tennessee,  USA</b></center>
+<center>[3] <b>National Center for Computational Sciences and Physics Division, <a href="http://www.ornl.gov/" target="_self">Oak Ridge National Laboratory</a>, Oak Ridge, Tennessee,  USA</b></center>
+<center>[4] <b><a href="http://www.ornl.gov/" target="_self">Oak Ridge National Laboratory</a> and <a href="https://www.phys.utk.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.utk.edu/" target="_self">University of Tennessee</a>, Knoxville, TN 37996-1200, USA</b></center>
+<br>
+
+<p>
+The teaching material is produced in various formats for printing and on-screen reading.
+
+<p>
+<!-- !split -->
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called &quot;HTML&quot; and &quot;ipynb&quot; below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+files if you find missing or incorrectly rendered
+formulas in HTML or ipython notebook files.
+
+<h1 id="___sec0">Lecture notes  </h1>
+
+<h2 id="___sec1">Introduction and weekly program </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/pdf/program-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/pdf/program-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/pdf/program-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/html/program.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/html/program-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/html/program-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/program/ipynb/program.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec2">Experimental information and simple models </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/pdf/spdata-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/pdf/spdata-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/pdf/spdata-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/html/spdata.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/html/spdata-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/html/spdata-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/spdata/ipynb/spdata.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec3">Second quantization </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/pdf/secondquant-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/pdf/secondquant-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/pdf/secondquant-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/html/secondquant.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/html/secondquant-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/html/secondquant-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/ipynb/secondquant.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec4">Mean-field theories and many-body perturbation theory </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/pdf/hfock-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/pdf/hfock-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/pdf/hfock-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/html/hfock.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/html/hfock-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/html/hfock-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/ipynb/hfock.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec5">Full configuration interaction theory </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/pdf/fci-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/pdf/fci-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/pdf/fci-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/fci/ipynb/fci.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec6">Coupled cluster theory </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/pdf/cc-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/pdf/cc-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/pdf/cc-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/html/cc.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/html/cc-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/html/cc-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/cc/ipynb/cc.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec7">Similarity Renormalization Group theory </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/pdf/imsrg-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/pdf/imsrg-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/pdf/imsrg-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/html/imsrg.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/html/imsrg-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/html/imsrg-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/imsrg/ipynb/imsrg.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec8">Many-body project </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/pdf/projects-minted.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/pdf/projects-beamer-handouts2x3.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/pdf/projects-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects.html" target="_self">Plain html style</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-reveal.html" target="_self">Reveal html style for easy reading on mobile devices</a></li>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" target="_self">Bootstrap html style for easy reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://nucleartalent.github.io/ManyBody2018/doc/pub/projects/ipynb/projects.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec9">Selected Texts on Many-body theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Blaizot and Ripka, <em>Quantum Theory of Finite systems</em>, MIT press 1986</li>
+ <li> Fetter and Walecka, <em>Quantum Theory of Many-Particle Systems</em>, McGraw-Hill, 1971.</li>
+ <li> Dickhoff and Van Neck, <em>Many-Body Theory Exposed</em>, World Scientific, 2006.</li>
+</ul>
+</div>
+
+
+<p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

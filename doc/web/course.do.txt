@@ -1,0 +1,84 @@
+# Strange way of testing for vortex...
+# #ifdef NON_VORTEX
+TITLE: Overview of course material for "Nuclear Talent":"http://www.nucleartalent.org" course on Nuclear Theory for Nuclear Structure Experiments
+
+TOC: off
+# #else
+TITLE: Material for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics
+AUTHOR: Scott Bogner at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+AUTHOR: Gaute Hagen  at Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
+AUTHOR: Heiko Hergert at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+AUTHOR: Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+AUTHOR: Gustav Jansen  at National Center for Computational Sciences and Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
+AUTHOR: Thomas Papenbrock  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+# #endif
+
+<%
+pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
+published = ['program', 'spdata', 'secondquant', 'hfock', 'fci', 'cc', 'imsrg', 'projects',]
+chapters = {
+ 'program': 'Introduction and weekly program',
+ 'spdata': 'Experimental information and simple models',
+ 'secondquant': 'Second quantization',
+ 'hfock': 'Mean-field theories and many-body perturbation theory',
+ 'fci': 'Full configuration interaction theory',
+ 'cc': 'Coupled cluster theory',
+ 'imsrg': 'Similarity Renormalization Group theory',
+ 'projects': 'Many-body project',
+}
+%>
+
+
+<%def name="text_types(name)">
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "${pub_url}/${name}/pdf/${name}-minted.pdf", compact: "6 pages per sheet": "${pub_url}/${name}/pdf/${name}-beamer-handouts2x3.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "${pub_url}/${name}/pdf/${name}-beamer.pdf"
+ * HTML:
+   * "Plain html style": "${pub_url}/${name}/html/${name}.html"
+   * "Reveal html style for easy reading on mobile devices": "${pub_url}/${name}/html/${name}-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "${pub_url}/${name}/html/${name}-bs.html"
+ * iPython notebook:
+   * "ipynb file": "${pub_url}/${name}/ipynb/${name}.ipynb"
+
+</%def>
+
+<%def name="slide_types(name)">
+</%def>
+
+The teaching material is produced in various formats for printing and on-screen reading.
+
+!split
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called ``HTML'' and ``ipynb'' below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+files if you find missing or incorrectly rendered
+formulas in HTML or ipython notebook files.
+
+
+======= Lecture notes  =======
+
+% for ch in published:
+===== ${chapters[ch]} =====
+
+${text_types(ch)}
+
+% endfor
+
+
+===== Selected Texts on Many-body theory =====
+!bblock
+ * Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
+ * Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
+ * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+!eblock
+
+
+
+
