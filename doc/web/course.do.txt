@@ -77,6 +77,7 @@ ${text_types(ch)}
  * Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
  * Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
  * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+ * Hjorth-Jensen, Lombardo and van Kolck (Eds), *An Advanced Course in Computational Nuclear Physics; Bridging Scales from Quarks to Neutron Stars*, "Lecture Notes in Physics, vol. 936 (Springer 2017)":"http://www.springer.com/gp/book/9783319533353".
 !eblock
 
 

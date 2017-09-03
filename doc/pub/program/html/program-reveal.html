@@ -1,0 +1,616 @@
+\
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Program for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics">
+
+<title>Program for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics</title>
+
+
+
+
+
+
+
+<!-- reveal.js: http://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+    hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .reveal .alert-text-small   { font-size: 80%;  }
+    .reveal .alert-text-large   { font-size: 130%; }
+    .reveal .alert-text-normal  { font-size: 90%;  }
+    .reveal .alert {
+             padding:8px 35px 8px 14px; margin-bottom:18px;
+             text-shadow:0 1px 0 rgba(255,255,255,0.5);
+             border:5px solid #bababa;
+             -webkit-border-radius: 14px; -moz-border-radius: 14px;
+             border-radius:14px;
+             background-position: 10px 10px;
+             background-repeat: no-repeat;
+             background-size: 38px;
+             padding-left: 30px; /* 55px; if icon */
+     }
+     .reveal .alert-block {padding-top:14px; padding-bottom:14px}
+     .reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+     /*.reveal .alert li {margin-top: 1em}*/
+     .reveal .alert-block p+p {margin-top:5px}
+     /*.reveal .alert-notice { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+     .reveal .alert-summary  { background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+     .reveal .alert-warning { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+     .reveal .alert-question {background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+
+</style>
+
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+<body>
+<div class="reveal">
+
+<!-- Any section element inside the <div class="slides"> container
+     is displayed as a slide -->
+
+<div class="slides">
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+
+
+
+<center><h1 style="text-align: center;">Program for <a href="http://www.nucleartalent.org" target="_blank">Nuclear Talent</a> course on Many-body methods for nuclear physics</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Scott Bogner, Gaute Hagen, Heiko Hergert, Morten Hjorth-Jensen, Gustav Jansen, and Thomas Papenbrock -->
+
+<center>
+<b>Scott Bogner</b> [1]
+</center>
+
+<center>
+<b>Gaute Hagen</b> [2]
+</center>
+
+<center>
+<b>Heiko Hergert</b> [1]
+</center>
+
+<center>
+<b>Morten Hjorth-Jensen</b> [1]
+</center>
+
+<center>
+<b>Gustav Jansen</b> [3]
+</center>
+
+<center>
+<b>Thomas Papenbrock</b> [4]
+</center>
+
+<p>&nbsp;<br>
+<!-- institution(s) -->
+
+<center>[1] <b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
+<center>[2] <b>Physics Division, <a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>, Oak Ridge, Tennessee,  USA</b></center>
+<center>[3] <b>National Center for Computational Sciences and Physics Division, <a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>, Oak Ridge, Tennessee,  USA</b></center>
+<center>[4] <b><a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a> and <a href="https://www.phys.utk.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.utk.edu/" target="_blank">University of Tennessee</a>, Knoxville, TN 37996-1200, USA</b></center>
+<br>
+<p>&nbsp;<br>
+<center><h4>Jun 22, 2017</h4></center> <!-- date -->
+<br>
+</section>
+
+
+<section>
+<h2 id="___sec0">Motivation and introduction </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+To understand why matter is stable, and thereby shed light on the
+limits of nuclear stability, is one of the overarching aims and
+intellectual challenges of basic research in nuclear physics. To
+relate the stability of matter to the underlying fundamental forces
+and particles of nature as manifested in nuclear matter, is central to
+present and planned rare isotope facilities.
+
+<p>
+Important properties of nuclear systems which can reveal information about these topics are
+for example masses, and thereby binding energies, and density
+distributions of nuclei.  These are quantities which convey important
+information on the shell structure of nuclei, with their pertinent
+magic numbers and shell closures or the eventual disappearence of the
+latter away from the valley of stability.
+
+<p>
+During the last decade,  the study of nuclear
+structure and the models used to describe atomic nuclei are
+experiencing a renaissance. This is driven by three technological
+revolutions: accelerators capable of producing and accelerating exotic
+nuclei far from stability; instrumentation capable of detecting the
+resulting reaction products and gamma radiation, often on an
+event-by-event basis, in situations where data rates may be many
+orders of magnitude less than has been traditional; and computing
+power adequate to analyze the resulting data, often on-line, and to
+carry out sophisticated theoretical calculations to understand these
+nuclei at the limits of stability and to unravel what they tell us
+about nuclei and their structural evolution.
+
+<p>
+The nuclear shell model plays  a central role in guiding our analysis of this wealth of 
+experimental data.
+It provides an excellent link to the underlying nuclear forces and the pertinent laws of motion,
+allowing nuclear physicists to interpret complicated experiments in terms of various 
+components of the nuclear Hamiltonian and to understand a swath of nuclei by following chains of isotopes and isotoones over wide ranges of nucleon numbers. The nuclear shell model allows us to see how the structure of nuclei changes and how the occupation of specific nucleonic orbits affects the interplay of residual interactions and configuration mixing.  The computed expectation values and transition probabilities 
+can be directly linked to experiment, with the potential to single out new phenomena and guide future experiments. 
+Large-scale shell-model calculations represent also 
+challenging computational and theoretical topics, spanning from efficient usage of high-performance computing facilities  to consistent theories for deriving effective Hamiltonians and operators. 
+Alltogether, these various facets of nuclear theory represent important elements in our endeavors to understand nuclei and their limits of stability.  
+It is the goal and motivation of this course to introduce and
+develop the nuclear structure tools  needed to carry out forefront research using the shell model as the central tool. The various projects will focus on the development of a shell-model code for simpler systems like \( sd \)-shell nuclei, giving the participants the essential ideas of configuration interaction methods. During the first two weeks the aim is to develop such a shell-model code. With these insights, the students can divert into several directions
+the last week, from the usage of the <a href="https://people.nscl.msu.edu/~brown/nushellx.zip" target="_blank">NushellX suite of nuclear structure programs</a> to further developing 
+their own shell-model program. After completion, it is our hope that the participants have understood the overarching ideas 
+behind central theoretical tools used to analyse nuclear structure experiments.
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec1">Aims and Learning Outcomes </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This three-week TALENT course on nuclear theory will focus on the
+
+<h3 id="___sec2">Format: </h3>
+
+<p>
+We propose approximately forty-five hours of lectures over three weeks and a
+comparable amount of practical computer and exercise sessions, including the
+setting of individual problems and the organization of various individual projects.
+
+<p>
+The mornings will consist of lectures and the
+afternoons will be devoted to exercises meant to shed light on the exposed theory, 
+and the computational projects. These
+components will be coordinated to foster student engagement,
+maximize learning and create lasting value for the students. For the
+benefit of the TALENT series and of the community, material (courses,
+slides, problems and solutions, reports on students' projects) will be
+made publicly available using version control software like <em>git</em> and posted electronically on 
+<a href="https://github.com" target="_blank">github</a>.
+
+<p>
+As with previous TALENT courses, we envision
+the following features for the afternoon sessions: 
+
+<ul>
+<p><li> We will use both individual and group work to carry out tasks that are very specific in technical instructions, but leave freedom for creativity.</li>
+
+<p><li> Groups will be carefully put together to maximize diversity of backgrounds.</li>
+
+<p><li> Results will be presented in a conference-like setting to create accountability.</li>
+
+<p><li> We will organize events where individuals and groups exchange their experiences, difficulties and successes to foster interaction.</li>
+
+<p><li> During the school, on-line and lecture-based training tailored to technical issues will be provided. Students will learn to use and interpret the results of computer-based and hand calculations of nuclear models. The lectures will be aligned with the practical computational projects and exercises and the lecturers will be available to help students and work with them during the exercise sessions.</li>
+
+<p><li> These interactions will raise topics not originally envisioned for the course but which are recognized to be valuable for the students. There will be flexibility to organize mini-lectures and discussion sessions on an ad-hoc basis in such cases.</li>
+
+<p><li> Each group of students will maintain an online logbook of their activities and results.</li>
+
+<p><li> Training modules, codes, lectures, practical exercise instructions, online logbooks, instructions and information created by participants will be merged into a comprehensive website that will be available to the community and the public for self-guided training or for use in various educational settings (for example, a graduate course at a university could assign some of the projects as homework or an extra credit project, etc).</li>
+</ul>
+
+<h3 id="___sec3">Objectives and learning outcomes: </h3>
+
+At the end of the course the students should have a basic understanding of
+
+<ul>
+<p><li> Configuration interaction methods (nuclear shell-model here) as a central tool to interpret nuclear structure experiment</li>
+<p><li> Have an understanding of single-particle basis functions and the construction of many-body basis states built thereupon. Examples are basis states from a Woods-Saxon potential, harmonic oscillator states and mean-field based states from a Hartree-Fock calculation. The single-particle basis states are orthonormal and are used to construct  a corresponding orthonormal basis set of Slater determinants.</li>
+<p><li> Develop an understanding of what defines an observable.</li> 
+<p><li> Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).</li>
+<p><li> Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators</li>
+<p><li> Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)</li>
+<p><li> The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses.</li> 
+<p><li> Understand how to use shell-model calculations to calculate decay rates and transition probabilities and relate these to various electromagnetic transition operators and operators for beta-decays and double-beta decays.</li>
+
+<p><li> Develop a critical understanding the limits of shell-model studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec4">Course Content and detailed plan  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm.
+
+<h3 id="___sec5">Week 1  </h3>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">   Day   </th> <th align="center">            </th> <th align="center">Lecture Topics and lecturer</th> <th align="center">Projects and exercises</th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   Monday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Tuesday      </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Wednesday    </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Thursday     </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Friday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+</tbody>
+</table>
+
+<h3 id="___sec6">Week 2  </h3>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">   Day   </th> <th align="center">            </th> <th align="center">Lecture Topics and lecturer</th> <th align="center">Projects and exercises</th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   Monday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Tuesday      </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Wednesday    </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Thursday     </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Friday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+</tbody>
+</table>
+
+<h3 id="___sec7">Week 3  </h3>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">   Day   </th> <th align="center">            </th> <th align="center">Lecture Topics and lecturer</th> <th align="center">Projects and exercises</th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   Monday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Tuesday      </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Wednesday    </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Thursday     </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">   Friday       </td> <td align="center">   9am-1230pm      </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   1230pm-230pm    </td> <td align="center">   Lunch +own activities          </td> <td align="center">                             </td> </tr>
+<tr><td align="center">                </td> <td align="center">   230pm-6pm       </td> <td align="center">                                  </td> <td align="center">                             </td> </tr>
+</tbody>
+</table>
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec8">Teaching and projects </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The course will be taught as an intensive  course of duration of three weeks, with a
+total time of 45 h of lectures, 45 h of exercises and  a final assignment of 2 weeks of work for those of you wish to receive 7 ECTS credits for the course. 
+The total load, with the additional project to be handed in later,  will be approximately 160-170 hours, corresponding to  <b>7 ECTS</b> in Europe.
+
+<p>
+The final assignment will be graded
+with marks A, B, C, D, E and failed for Master students and passed/not passed for PhD students.
+
+<p>
+A course certificate will be issued for students requiring it from the University of Trento. This certificate states that you have completed the equivalent of 7 ECTS at the graduate level. We plan also to issue a certificate for those of you who have attended the course but did not want to do the final project. This certificate will most likely correspond to 4 ECTS at the graduate level.
+
+<p>
+The organization of a typical course day is as follows:
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">    Time    </th> <th align="center">                           Activity                          </th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   9am-1230pm      </td> <td align="center">   Lectures, project relevant information and directed exercises    </td> </tr>
+<tr><td align="center">   1230pm-230pm    </td> <td align="center">   Lunch                                                            </td> </tr>
+<tr><td align="center">   230pm-6pm       </td> <td align="center">   Computational projects, exercises  and hands-on sessions         </td> </tr>
+<tr><td align="center">   6pm-7pm         </td> <td align="center">   Wrap-up of the day and eventual student presentations            </td> </tr>
+</tbody>
+</table>
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec9">Teachers and organizers </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The organizers are 
+
+<ol>
+<p><li> <a href="https://people.nscl.msu.edu/~brown/" target="_blank">Alex Brown</a>, <a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</li>
+<p><li> <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a>, <a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, N-0316 Oslo, Norway</li> 
+</ol>
+<p>
+
+Morten Hjorth-Jensen will also function as student advisor and coordinator.
+
+<p>
+The teachers are 
+
+<ol>
+<p><li> <a href="https://people.nscl.msu.edu/~brown/" target="_blank">Alex Brown</a>, <a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</li>
+<p><li> <a href="https://people.nscl.msu.edu/~gade/" target="_blank">Alexandra Gade</a>  <a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</li>
+<p><li> <a href="http://web.utk.edu/~rgrzywac/" target="_blank">Robert Grzywacz</a>  at <a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>, Oak Ridge, TN 37831  and <a href="https://www.phys.utk.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.utk.edu/" target="_blank">University of Tennessee</a>, Knoxville, TN 37996-1200, USA</li>
+<p><li> <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a>  at <a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA and  Department of Physics, University of Oslo, N-0316 Oslo, Norway</li>
+<p><li> <a href="https://www.ornl.gov/staff-profile/gustav-r-jansen" target="_blank">Gustav Jansen</a>  at <a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>, Oak Ridge, TN 37831, USA</li>
+</ol>
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec10">Audience and Prerequisites </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+You are expected to have operating programming skills in in
+compiled programming languages like Fortran or C++ or alternatively an
+interpreted language like Python and knowledge of quantum mechanics at
+an intermediate level.  Preparatory modules on second quantization,
+Wick's theorem, representation of Hamiltonians and calculations of
+Hamiltonian matrix elements, independent particle models and
+Hartree-Fock theory are provided at the website of the course.
+Students who have not studied the above topics are expected to gain
+this knowledge prior to attendance.  Additional modules for
+self-teaching on Fortran and/or C++ or Python are also provided.
+</div>
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+    // Display navigation controls in the bottom right corner
+    controls: true,
+
+    // Display progress bar (below the horiz. slider)
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    //center: true,
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+    theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speaker notes
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remote control your reveal.js presentation using a touch device
+        //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // MathJax
+        //{ src: 'reveal.js/plugin/math/math.js', async: true }
+    ]
+});
+
+Reveal.initialize({
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1170,  // original: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+     end footer logo -->
+
+
+
+</body>
+</html>
