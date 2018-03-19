@@ -1,6 +1,5 @@
 TITLE: Program for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics
 AUTHOR: Scott Bogner at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-AUTHOR: Gaute Hagen  at Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
 AUTHOR: Heiko Hergert at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Gustav Jansen  at National Center for Computational Sciences and Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
