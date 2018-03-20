@@ -40,36 +40,62 @@ carry out sophisticated theoretical calculations to understand these
 nuclei at the limits of stability and to unravel what they tell us
 about nuclei and their structural evolution. 
 
-The nuclear shell model plays  a central role in guiding our analysis of this wealth of 
-experimental data.  Add more here.
-It provides an excellent link to the underlying nuclear forces and the pertinent laws of motion,
-allowing nuclear physicists to interpret complicated experiments in terms of various 
-components of the nuclear Hamiltonian and to understand a swath of nuclei by following chains of isotopes and isotoones over wide ranges of nucleon numbers. The nuclear shell model allows us to see how the structure of nuclei changes and how the occupation of specific nucleonic orbits affects the interplay of residual interactions and configuration mixing.  The computed expectation values and transition probabilities 
-can be directly linked to experiment, with the potential to single out new phenomena and guide future experiments. 
-Large-scale shell-model calculations represent also 
-challenging computational and theoretical topics, spanning from efficient usage of high-performance computing facilities  to consistent theories for deriving effective Hamiltonians and operators. 
-Alltogether, these various facets of nuclear theory represent important elements in our endeavors to understand nuclei and their limits of stability.  
-It is the goal and motivation of this course to introduce and
-develop the nuclear structure tools  needed to carry out forefront research using the shell model and many-body methods like _Coupled Cluster theory_ and the _in-medium similarity renormalization group_ as central tools. 
-After completion, it is our hope that the participants have understood the overarching ideas 
-behind central theoretical tools used to analyse nuclear structure experiments. 
+The nuclear shell model plays a central role in guiding our analysis
+of this wealth of experimental data.  
+The shell model provides an
+excellent link to the underlying nuclear forces and the pertinent laws
+of motion, allowing nuclear physicists to interpret complicated
+experiments in terms of various components of the nuclear Hamiltonian
+and to understand a swath of nuclei by following chains of isotopes
+and isotoones over wide ranges of nucleon numbers. The nuclear shell
+model allows us to see how the structure of nuclei changes and how the
+occupation of specific nucleonic orbits affects the interplay of
+residual interactions and configuration mixing.  The computed
+expectation values and transition probabilities can be directly linked
+to experiment, with the potential to single out new phenomena and
+guide future experiments.  Large-scale shell-model calculations
+represent also challenging computational and theoretical topics,
+spanning from efficient usage of high-performance computing facilities
+to consistent theories for deriving effective Hamiltonians and
+operators.  Alltogether, these various facets of nuclear theory
+represent important elements in our endeavors to understand nuclei and
+their limits of stability.  
+
+However, the dimensionalities of interest for shell-model studies
+exceed quickly present computational capabilities of eigensystem
+solvers. In order to be able to describe nuclear systems with many
+more degrees of freedom as well as providing better effective
+operators, approximative many-body methods like _Coupled Cluster_ (CC) theory
+or the _In-Medium Similarity Renormalization Group_ (IMSRG) approach have lately
+gained wide interest and applicabilities in the nuclear many-body
+community.
+
+It is the goal and motivation of this
+course to introduce and develop the nuclear structure tools needed to
+carry out forefront research using the shell model and many-body
+methods like CC theory and the IMSRG method as central tools, with applications to both structure and reaction theory studies.  After completion, it is our
+hope that the participants have understood the overarching ideas
+behind central theoretical tools used to analyse nuclear structure
+experiments.
   
 !eblock
 
 
-!split
-===== Aims and Learning Outcomes =====
-!bblock
-This three-week TALENT course on nuclear theory will focus on the
-Many-body methods for nuclear structure and reactions, focusing on nuclear shell model and/or coupled cluster theory and in-medium SRG with applications to structure and reactions. 
+!split ===== Aims and Learning Outcomes ===== 
+!bblock 
+
+This three-week TALENT course on nuclear theory will focus on the Many-body methods
+for nuclear structure and reactions, focusing on nuclear shell model
+and/or coupled cluster theory and in-medium SRG with applications to
+structure and reactions.  Via hands-on projects and series of exercise, the participants 
+will have been exposed to the necessary tools and theoretical models used in modern nuclear theory.
 
 
 === Format: === 
 
 We propose approximately forty-five hours of lectures over three weeks and a
 comparable amount of practical computer and exercise sessions, including the
-setting of individual problems and the organization of various individual projects. The course starts July 16 (with arrival on July 15) and ends (the course) on August 3. A two days workshop will organized from August 4 to August 5.
-
+setting of individual problems and the organization of various individual projects. The course starts July 16 (with arrival on July 15) and ends (the course) on August 3. A three days workshop will be organized from August 4 to August 6. 
 The mornings will consist of lectures and the
 afternoons will be devoted to exercises meant to shed light on the exposed theory, 
 and the computational projects. These
@@ -95,14 +121,15 @@ the following features for the afternoon sessions:
 === Objectives and learning outcomes: ===
 At the end of the course the students should have a basic understanding of
 * Configuration interaction methods (nuclear shell-model here) as a central tool to interpret nuclear structure experiment
+* Central many-body methods like Coupled Cluster theory and the In-Medium Similarity Renormalization Group approach
+* How to compute nuclear structure properties with these methods 
 * Have an understanding of single-particle basis functions and the construction of many-body basis states built thereupon. Examples are basis states from a Woods-Saxon potential, harmonic oscillator states and mean-field based states from a Hartree-Fock calculation. The single-particle basis states are orthonormal and are used to construct  a corresponding orthonormal basis set of Slater determinants.
 * Develop an understanding of what defines an observable. 
 * Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).
 * Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators
 * Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)
 * The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses. 
-* Understand how to use shell-model calculations to calculate decay rates and transition probabilities and relate these to various electromagnetic transition operators and operators for beta-decays and double-beta decays.  
-* Develop a critical understanding the limits of shell-model studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
+* Develop a critical understanding of the limits of many-body studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
 
 
 !eblock
@@ -210,14 +237,7 @@ Lectures are approximately 45 min each with a small break between each lecture. 
 !bblock
 
 The course will be taught as an intensive  course of duration of three weeks, with a
-total time of 45 h of lectures, 45 h of exercises and  a final assignment of 2 weeks of work for those of you wish to receive 7 ECTS credits for the course. 
-The total load, with the additional project to be handed in later,  will be approximately 160-170 hours, corresponding to  _7 ECTS_ in Europe.
-
-
-The final assignment will be graded
-with marks A, B, C, D, E and failed for Master students and passed/not passed for PhD students.
-
-A course certificate will be issued for students requiring it from the University of Trento. This certificate states that you have completed the equivalent of 7 ECTS at the graduate level. We plan also to issue a certificate for those of you who have attended the course but did not want to do the final project. This certificate will most likely correspond to 4 ECTS at the graduate level. 
+total time of 45 h of lectures, 45 h of exercises, with the possibility to complete a final assignment if credits are needed.
 
 The organization of a typical course day is as follows:
 
@@ -269,6 +289,14 @@ Hartree-Fock theory are provided at the website of the course.
 Students who have not studied the above topics are expected to gain
 this knowledge prior to attendance.  Additional modules for
 self-teaching on Fortran and/or C++ or Python are also provided.
+!eblock
+
+
+!split
+===== Venue and how to apply =====
+!bblock
+Here we should place info in how to arrivem where to stay and when to apply
+
 !eblock
 
 

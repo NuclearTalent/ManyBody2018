@@ -1,17 +1,13 @@
-# Strange way of testing for vortex...
-# #ifdef NON_VORTEX
-TITLE: Overview of course material for "Nuclear Talent":"http://www.nucleartalent.org" course on Nuclear Theory for Nuclear Structure Experiments
-
-TOC: off
-# #else
-TITLE: Material for "Nuclear Talent":"http://www.nucleartalent.org" course on Many-body methods for nuclear physics
-AUTHOR: Scott Bogner at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-AUTHOR: Gaute Hagen  at Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
+TITLE: Material for "Nuclear Talent":"http://www.nucleartalent.org" course on *Many-body methods for nuclear physics, from Structure to Reactions* at "Henan Normal University, P.R. China":"http://www.htu.cn/english/", July 16-August 5 2018
 AUTHOR: Heiko Hergert at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-AUTHOR: Gustav Jansen  at National Center for Computational Sciences and Physics Division, "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee,  USA
+AUTHOR: Baishan Hu at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
+AUTHOR:   Weiguang Jiang at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 AUTHOR: Thomas Papenbrock  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-# #endif
+AUTHOR:   Zhonghao Sun at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+AUTHOR: Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
+
+TOC: off
 
 <%
 pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
@@ -24,7 +20,7 @@ chapters = {
  'fci': 'Full configuration interaction theory',
  'cc': 'Coupled cluster theory',
  'imsrg': 'Similarity Renormalization Group theory',
- 'projects': 'Many-body project',
+ 'projects': 'Many-body projects',
 }
 %>
 
@@ -79,7 +75,5 @@ ${text_types(ch)}
  * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
  * Hjorth-Jensen, Lombardo and van Kolck (Eds), *An Advanced Course in Computational Nuclear Physics; Bridging Scales from Quarks to Neutron Stars*, "Lecture Notes in Physics, vol. 936 (Springer 2017)":"http://www.springer.com/gp/book/9783319533353".
 !eblock
-
-
 
 
