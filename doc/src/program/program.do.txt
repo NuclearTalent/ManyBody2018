@@ -147,7 +147,7 @@ Lectures are approximately 45 min each with a small break between each lecture. 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm |  |        |
+| Monday | 9am-1230pm |  |  Welcome      |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |  |
 |--------------------------------------------------------------------------|
