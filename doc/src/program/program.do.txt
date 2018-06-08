@@ -292,12 +292,6 @@ self-teaching on Fortran and/or C++ or Python are also provided.
 !eblock
 
 
-!split
-===== Venue and how to apply =====
-!bblock
-Here we should place info in how to arrivem where to stay and when to apply
-
-!eblock
 
 
 
