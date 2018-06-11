@@ -291,6 +291,7 @@ Hartree-Fock theory are provided at the website of the course.
 Students who have not studied the above topics are expected to gain
 this knowledge prior to attendance.  Additional modules for
 self-teaching on Fortran and/or C++ or Python are also provided.
+
 !eblock
 
 
