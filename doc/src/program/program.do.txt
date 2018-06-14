@@ -141,19 +141,25 @@ At the end of the course the students should have a basic understanding of
 
 Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
 
+The acronyms here stand for the different teachers:
+o MHJ: Morten Hjorth-Jensen
+o TM: Titus Morris
+o TP: Thomas Papenbrock
+o YMZ: Yu-Min Zhao
 
 === Week 1  ===
 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm | Welcome  and introduction  |    |
-|        |            | Second quantization repetion and Hartree-Fock theory  |           |
+| Monday | 9am-1230pm | Welcome  and introduction (All organizers) |    |
+|        |            | Second quantization repetion and Hartree-Fock theory (MHJ) |           |
 
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Getting started with Pairing Hamiltonian |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm |  |        |
+| Tuesday | 9am-1030pm | Hartree-Fock theory (MHJ)  |        |
+|  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |  |
 |--------------------------------------------------------------------------|
