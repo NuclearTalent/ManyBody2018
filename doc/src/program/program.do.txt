@@ -152,26 +152,27 @@ o YMZ: Yu-Min Zhao
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm | Welcome  and introduction (All organizers) |    |
-|        |            | Second quantization repetion and Hartree-Fock theory (MHJ) |           |
+| Monday | 9am-1230pm | Welcome  and introduction (Organizers) |    |
+|        |            | Second quantization  and Hamiltonians (MHJ) |           |
 
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  | Getting started with Pairing Hamiltonian |
+|        | 230pm-6pm   |Getting started with Pairing Hamiltonian  | Additional analytical exercises|
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1030pm | Hartree-Fock theory (MHJ)  |        |
+| Tuesday | 9am-1030pm | Full configuration interaction theory (MHJ)  |        |
 |  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Analytical exercises and start with coding pairing Hamiltonian |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1230pm |  |        |
+| Wednesday | 9am-1030pm | Full configuration interaction theory (MHJ)  |        |
+|  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  |Writing a shell-model code for the pairing problem  |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1230pm |  |        |
+| Thursday | 9am-1030pm | Full configuration interaction theory and Hartree-Fock theory(MHJ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Writing a shell-model code for the pairing problem |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm |  |        |
+| Friday | 9am-1230pm |  | Pairing in nuclear physics (YMZ)       |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |  |
 |--------------------------------------------------------------------------|
