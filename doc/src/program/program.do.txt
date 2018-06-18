@@ -1,9 +1,10 @@
 TITLE: Program for "Nuclear Talent":"http://www.nucleartalent.org" course on *Many-body methods for nuclear physics, from Structure to Reactions* at "Henan Normal University, P.R. China":"http://www.htu.cn/english/", July 16-August 5 2018
-AUTHOR: Heiko Hergert at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+AUTHOR: Kevin Fossez at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Baishan Hu at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
 AUTHOR:   Weiguang Jiang at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 AUTHOR: Thomas Papenbrock  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+AUTHOR: Ragnar Stroberg  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
 AUTHOR:   Zhonghao Sun at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 AUTHOR: Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
@@ -73,7 +74,7 @@ community.
 It is the goal and motivation of this
 course to introduce and develop the nuclear structure tools needed to
 carry out forefront research using the shell model and many-body
-methods like CC theory and the IMSRG method as central tools, with applications to both structure and reaction theory studies.  After completion, it is our
+methods like CC theory and the IMSRG method as central tools, with applications to both structure and reaction theory studies, including continuum contributions and resonances.  After completion, it is our
 hope that the participants have understood the overarching ideas
 behind central theoretical tools used to analyse nuclear structure
 experiments.
@@ -127,12 +128,42 @@ At the end of the course the students should have a basic understanding of
 * Develop an understanding of what defines an observable. 
 * Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).
 * Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators
+* Understand how to study resonances and contributions from continuum states
 * Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)
 * The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses. 
 * Develop a critical understanding of the limits of many-body studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
 
 
 !eblock
+
+!split
+===== Teachers and organizers =====
+!bblock
+The local organizers are 
+
+o "Chun-Wang Ma":"https://www.researchgate.net/profile/Chun-Wang_Ma" at "Henan Normal University, Xinxiang, Henan 453007, P.R. China":"http://www.htu.cn/english/"
+o "Furong Xu":"http://www.phy.pku.edu.cn/~frxu/" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
+o "Shan-Gui Zhou":"http://www.itp.ac.cn/~sgzhou/eindex.html" at  the "Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100864, P.R. China":"http://www.cas.ac.cn/" 
+
+In addition Qiao Chunyuan will help with administrative matters. You can reach her at the email address qiaochunyuan919@126.com.
+
+Thomas Papenbrock and Morten Hjorth-Jensen  will also function as student advisors and coordinators.
+
+
+
+The teachers are 
+o "Kevin Fossez":"https://loop.frontiersin.org/people/519268/overview" at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/",  "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+o "Baishan Hu":"http://www.phy.pku.edu.cn/~frxu/people.html" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
+o "Weiguang Jiang":"https://www.researchgate.net/profile/Weiguang_Jiang2" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+o "Thomas Papenbrock":"http://web.utk.edu/~tpapenbr/default.html"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+o "Zhonghao Sun":"http://volweb.utk.edu/~zsun20/" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+o "Ragnar Stroberg":"http://people.reed.edu/~rstroberg/"  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
+o "Yu-Min Zhao":"http://www.physics.sjtu.edu.cn/en/people/1/ymZhao"  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
+
+
+!eblock
+
 
 
 !split
@@ -262,28 +293,6 @@ The organization of a typical course day is as follows:
 
 !eblock
 
-!split
-===== Teachers and organizers =====
-!bblock
-The local organizers are 
-
-o "Chun-Wang Ma":"https://www.researchgate.net/profile/Chun-Wang_Ma" at "Henan Normal University, Xinxiang, Henan 453007, P.R. China":"http://www.htu.cn/english/"
-o "Furong Xu":"http://www.phy.pku.edu.cn/~frxu/" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
-o "Shan-Gui Zhou":"http://www.itp.ac.cn/~sgzhou/eindex.html" at  the "Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100864, P.R. China":"http://www.cas.ac.cn/" 
-
-Thomas Papenbrock and Morten Hjorth-Jensen  will also function as student advisors and coordinators.
-
-The teachers are 
-o "Heiko Hergert":"https://www.nscl.msu.edu/directory/hergert.html" at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o :Baishan Hu":"http://www.phy.pku.edu.cn/~frxu/people.html" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
-o "Weiguang Jiang":"https://www.researchgate.net/profile/Weiguang_Jiang2" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Thomas Papenbrock":"http://web.utk.edu/~tpapenbr/default.html"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Zhonghao Sun":"http://volweb.utk.edu/~zsun20/" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Yu-Min Zhao":"http://www.physics.sjtu.edu.cn/en/people/1/ymZhao"  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
-
-
-!eblock
 
 !split
 ===== Audience and Prerequisites =====
