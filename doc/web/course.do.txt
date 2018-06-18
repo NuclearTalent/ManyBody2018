@@ -16,7 +16,7 @@ published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'cc', 'imsrg', 'p
 chapters = {
  'program': 'Introduction and weekly program',
  'secondquant': 'Second quantization',
- 'hfock': 'Mean-field theories and many-body perturbation theory',
+ 'hfock': 'Hartree-Fock theory and basic many-body definitions',
  'fci': 'Full configuration interaction theory',
  'mbpt': 'Many-body perturbation theory',
  'cc': 'Coupled cluster theory',
