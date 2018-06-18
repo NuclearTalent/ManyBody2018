@@ -142,9 +142,10 @@ At the end of the course the students should have a basic understanding of
 Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
 
 The acronyms here stand for the different teachers:
+o KF: Kevin Fossez
 o MHJ: Morten Hjorth-Jensen
-o TM: ?
 o TP: Thomas Papenbrock
+o RS: Ragnar Stroberg
 o YMZ: Yu-Min Zhao
 
 === Week 1  ===
