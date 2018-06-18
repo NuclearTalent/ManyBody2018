@@ -157,8 +157,8 @@ o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at "National S
 o "Baishan Hu":"http://www.phy.pku.edu.cn/~frxu/people.html" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
 o "Weiguang Jiang":"https://www.researchgate.net/profile/Weiguang_Jiang2" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 o "Thomas Papenbrock":"http://web.utk.edu/~tpapenbr/default.html"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Zhonghao Sun":"http://volweb.utk.edu/~zsun20/" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 o "Ragnar Stroberg":"http://people.reed.edu/~rstroberg/"  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
+o "Zhonghao Sun":"http://volweb.utk.edu/~zsun20/" at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
 o "Yu-Min Zhao":"http://www.physics.sjtu.edu.cn/en/people/1/ymZhao"  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
 
@@ -171,12 +171,19 @@ o "Yu-Min Zhao":"http://www.physics.sjtu.edu.cn/en/people/1/ymZhao"  at "School 
 !bblock
 
 Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
+Every Friday we will have presentations from each group, where a summary of what has been achieved is presented. 
+
+Lectures and preparatory material on second quantization are all available at the "Github address of the course":"https://github.com/NuclearTalent/ManyBody2018", or go to URL:" https://nucleartalent.github.io/ManyBody2018/doc/web/course.html"  for an easier read. 
+
+Furthermore, we strongly recommend that you read chapter 8 and 10 of "Lecture Notes in Physics 936":"https://www.springer.com/us/book/9783319533353". This text contains also links to all codes we will discuss, in addition to the codes we have placed in the "program folder of the course":"https://nucleartalent.github.io/ManyBody2018/doc/web/course.html
 
 The acronyms here stand for the different teachers:
 o KF: Kevin Fossez
 o MHJ: Morten Hjorth-Jensen
+o WJ: Weiguang Jiang
 o TP: Thomas Papenbrock
 o RS: Ragnar Stroberg
+o ZS: Zhonghao Sun
 o YMZ: Yu-Min Zhao
 
 === Week 1  ===
@@ -186,27 +193,27 @@ o YMZ: Yu-Min Zhao
 |--------------------------------------------------------------------------|
 | Monday | 9am-1230pm | Welcome  and introduction (Organizers) |    |
 |        |            | Second quantization  and Hamiltonians (MHJ) |           |
-
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |Getting started with Pairing Hamiltonian  | Additional analytical exercises|
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1030pm | Full configuration interaction theory (MHJ)  |        |
-|  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
+| Tuesday | 9am-11am | Full configuration interaction theory (MHJ)  |        |
+|  | 1130am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Analytical exercises and start with coding pairing Hamiltonian |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1030pm | Full configuration interaction theory (MHJ)  |        |
+| Wednesday | 9am-1030am | Full configuration interaction theory and the pairing model problem(MHJ)  |        |
 |  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |Writing a shell-model code for the pairing problem  |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1030pm | Full configuration interaction theory and Hartree-Fock theory(MHJ)  |        |
+| Thursday | 9am-1230pm | Full configuration interaction theory (MHJ)  |        |
+|          |            | Hartree-Fock theory and links to Coupled Cluster theory | |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Writing a shell-model code for the pairing problem |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm |  | Pairing in nuclear physics (YMZ)       |
+| Friday | 9am-1230pm |  | Pairing in nuclear physics and summary of 1st week (YMZ)       |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   | Group presentations of weekly work|  |
 |--------------------------------------------------------------------------|
 
 
@@ -216,25 +223,28 @@ o YMZ: Yu-Min Zhao
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm |  |        |
+| Monday | 9am-1230pm | Introduction to Coupled Cluster (CC) theory (TP)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Pairing model: MBPT and begin CC theory   |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm |  |        |
+| Tuesday | 9am-1230pm | Developing a CC code for the pairing model (TP) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Start writing a CC code for the pairing model |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1230pm |  |        |
+| Wednesday | 9am-11am | Infinite matter and CC theory (TP) |        |
+|           | 1130am-1230pm | Quantum Computing and CC theory (ZS)
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Finalize CC code for the pairing model |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1230pm |  |        |
+| Thursday | 9am-1030am | Summary of CC theory and infinite matter (TP) |  |
+|          | 11am-1230pm | Machine learning applied to CC theory (WJ) |    |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Start writing CC code for infinite matter  |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm |  |        |
+| Friday | 9am-11am | From structure to reaction theory (TP) |        |
+|  | 1130am-1230pm | Summary of second week and links to IMSRG (TP+RS) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   | Group presentations of weekly work  |  |
 |--------------------------------------------------------------------------|
 
 
@@ -244,25 +254,27 @@ o YMZ: Yu-Min Zhao
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm |  |        |
+| Monday | 9am-1230pm | SRG theory (KF and RS) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Continue work on CC code for infinite matter  |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm |  |        |
+| Tuesday | 9am-1230pm | IMSRG and infinite matter (RS) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Start coding IMSRG for infinite matter and the pairing model |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1230pm |  |        |
+| Wednesday | 9am-1030am | Summary IMSRG theory (RS) |        |
+|  | 11am-1230am | Bergreen basis, the continuum and IMSRG (KF) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Continue work on code for infinite matter  |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1230pm |  |        |
+| Thursday | 9am-1230pm | Bergreen basis, the continuum and IMSRG (KF)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   |  | Continue work on code for infinite matter |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm |  |        |
+| Friday | 9am-1030am | Summary Bergreen basis, the continuum and IMSRG (KF) |        |
+|        | 11am-1230pm | Summary of school | |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
-|        | 230pm-6pm   |  |  |
+|        | 230pm-6pm   | Final group presentations |  |
 |--------------------------------------------------------------------------|
 
 
