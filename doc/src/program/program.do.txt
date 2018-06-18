@@ -232,7 +232,7 @@ o YMZ: Yu-Min Zhao
 |        | 230pm-6pm   |  | Start writing a CC code for the pairing model |
 |--------------------------------------------------------------------------|
 | Wednesday | 9am-11am | Infinite matter and CC theory (TP) |        |
-|           | 1130am-1230pm | Quantum Computing and CC theory (ZS)
+|           | 1130am-1230pm | Quantum Computing and CC theory (ZS)  |   |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Finalize CC code for the pairing model |
 |--------------------------------------------------------------------------|
