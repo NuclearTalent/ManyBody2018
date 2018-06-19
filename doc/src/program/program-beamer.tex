@@ -1,0 +1,552 @@
+
+% LaTeX Beamer file automatically generated from DocOnce
+% https://github.com/hplgit/doconce
+
+%-------------------- begin beamer-specific preamble ----------------------
+
+\documentclass{beamer}
+
+\usetheme{red_plain}
+\usecolortheme{default}
+
+% turn off the almost invisible, yet disturbing, navigation symbols:
+\setbeamertemplate{navigation symbols}{}
+
+% Examples on customization:
+%\usecolortheme[named=RawSienna]{structure}
+%\usetheme[height=7mm]{Rochester}
+%\setbeamerfont{frametitle}{family=\rmfamily,shape=\itshape}
+%\setbeamertemplate{items}[ball]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\useoutertheme{infolines}
+%
+%\usefonttheme{}
+%\useinntertheme{}
+%
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+% fine for B/W printing:
+%\usecolortheme{seahorse}
+
+\usepackage{pgf}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{relsize}
+
+\usepackage{fancybox}  % make sure fancybox is loaded before fancyvrb
+
+\usepackage{fancyvrb}
+%\usepackage{minted} % requires pygments and latex -shell-escape filename
+%\usepackage{anslistings}
+%\usepackage{listingsutf8}
+
+\usepackage{amsmath,amssymb,bm}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{framed}
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
+
+% --- begin table of contents based on sections ---
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each section:
+% (Only section headings can enter the table of contents in Beamer
+% slides generated from DocOnce source, while subsections are used
+% for the title in ordinary slides.)
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+  \frametitle{}
+  %\frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% --- end table of contents based on sections ---
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\newcommand{\shortinlinecomment}[3]{\note{\textbf{#1}: #2}}
+\newcommand{\longinlinecomment}[3]{\shortinlinecomment{#1}{#2}{#3}}
+
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3
+    }
+\setlength{\parskip}{0pt}  % {1em}
+
+\newenvironment{doconceexercise}{}{}
+\newcounter{doconceexercisecounter}
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+\newcommand{\subex}[1]{\noindent\textbf{#1}}  % for subexercises: a), b), etc
+
+%-------------------- end beamer-specific preamble ----------------------
+
+% Add user's preamble
+
+
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% matching end for #ifdef PREAMBLE
+
+\newcommand{\exercisesection}[1]{\subsection*{#1}}
+
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\title{Program for \href{{http://www.nucleartalent.org}}{Nuclear Talent} course on \emph{Many-body methods for nuclear physics, from Structure to Reactions} at \href{{http://www.htu.cn/english/}}{Henan Normal University, P.R. China}, July 16-August 5 2018}
+
+% ----------------- author(s) -------------------------
+
+\author{Kevin Fossez\inst{1}
+\and
+Morten Hjorth-Jensen\inst{2}
+\and
+Baishan Hu\inst{3}
+\and
+Weiguang Jiang\inst{4}
+\and
+Thomas Papenbrock\inst{4}
+\and
+Ragnar Stroberg\inst{5}
+\and
+Zhonghao Sun\inst{4}
+\and
+Yu-Min Zhao\inst{6}}
+\institute{\href{{http://www.nscl.msu.edu/}}{National Superconducting Cyclotron Laboratory}, \href{{http://www.msu.edu/}}{Michigan State University}, East Lansing, MI 48824, USA\inst{1}
+\and
+\href{{http://www.nscl.msu.edu/}}{National Superconducting Cyclotron Laboratory} and \href{{https://www.pa.msu.edu/}}{Department of Physics and Astronomy}, \href{{http://www.msu.edu/}}{Michigan State University}, East Lansing, MI 48824, USA\inst{2}
+\and
+\href{{http://english.pku.edu.cn/}}{School of Physics, Peking University, Beijing 100871, P.R. China}\inst{3}
+\and
+\href{{https://www.phys.utk.edu/}}{Department of Physics and Astronomy}, \href{{http://www.utk.edu/}}{University of Tennessee}, Knoxville, TN 37996-1200, USA and \href{{http://www.ornl.gov/}}{Oak Ridge National Laboratory}, Oak Ridge, TN, USA\inst{4}
+\and
+\href{{http://www.reed.edu/}}{Departmentof Physics, Reed College}, Portland, OR, 97202 and \href{{https://sharepoint.washington.edu/phys/Pages/default.aspx}}{Department of Physics, University of Washington}, Seattle, WA 98195-1560, USA\inst{5}
+\and
+\href{{http://www.physics.sjtu.edu.cn/en/about/news/3}}{School of Physics and Astronomy, Shanghai Jiao Tong University}, Shanghai 200240, P.R. China\inst{6}}
+% ----------------- end author(s) -------------------------
+
+
+\date{March 2018
+% <optional titlepage figure>
+% <optional copyright>
+}
+
+\begin{frame}[plain,fragile]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Motivation and introduction}
+
+\begin{block}{}
+To understand why matter is stable, and thereby shed light on the
+limits of nuclear stability, is one of the overarching aims and
+intellectual challenges of basic research in nuclear physics. To
+relate the stability of matter to the underlying fundamental forces
+and particles of nature as manifested in nuclear matter, is central to
+present and planned rare isotope facilities.  
+
+Important properties of nuclear systems which can reveal information about these topics are
+for example masses, and thereby binding energies, and density
+distributions of nuclei.  These are quantities which convey important
+information on the shell structure of nuclei, with their pertinent
+magic numbers and shell closures or the eventual disappearence of the
+latter away from the valley of stability.  
+
+During the last decade,  the study of nuclear
+structure and the models used to describe atomic nuclei are
+experiencing a renaissance. This is driven by three technological
+revolutions: accelerators capable of producing and accelerating exotic
+nuclei far from stability; instrumentation capable of detecting the
+resulting reaction products and gamma radiation, often on an
+event-by-event basis, in situations where data rates may be many
+orders of magnitude less than has been traditional; and computing
+power adequate to analyze the resulting data, often on-line, and to
+carry out sophisticated theoretical calculations to understand these
+nuclei at the limits of stability and to unravel what they tell us
+about nuclei and their structural evolution. 
+
+The nuclear shell model plays a central role in guiding our analysis
+of this wealth of experimental data.  
+The shell model provides an
+excellent link to the underlying nuclear forces and the pertinent laws
+of motion, allowing nuclear physicists to interpret complicated
+experiments in terms of various components of the nuclear Hamiltonian
+and to understand a swath of nuclei by following chains of isotopes
+and isotoones over wide ranges of nucleon numbers. The nuclear shell
+model allows us to see how the structure of nuclei changes and how the
+occupation of specific nucleonic orbits affects the interplay of
+residual interactions and configuration mixing.  The computed
+expectation values and transition probabilities can be directly linked
+to experiment, with the potential to single out new phenomena and
+guide future experiments.  Large-scale shell-model calculations
+represent also challenging computational and theoretical topics,
+spanning from efficient usage of high-performance computing facilities
+to consistent theories for deriving effective Hamiltonians and
+operators.  Alltogether, these various facets of nuclear theory
+represent important elements in our endeavors to understand nuclei and
+their limits of stability.  
+
+However, the dimensionalities of interest for shell-model studies
+exceed quickly present computational capabilities of eigensystem
+solvers. In order to be able to describe nuclear systems with many
+more degrees of freedom as well as providing better effective
+operators, approximative many-body methods like \textbf{Coupled Cluster} (CC) theory
+or the \textbf{In-Medium Similarity Renormalization Group} (IMSRG) approach have lately
+gained wide interest and applicabilities in the nuclear many-body
+community.
+
+It is the goal and motivation of this
+course to introduce and develop the nuclear structure tools needed to
+carry out forefront research using the shell model and many-body
+methods like CC theory and the IMSRG method as central tools, with applications to both structure and reaction theory studies, including continuum contributions and resonances.  After completion, it is our
+hope that the participants have understood the overarching ideas
+behind central theoretical tools used to analyse nuclear structure
+experiments.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+% No title on this slide
+
+===== Aims and Learning Outcomes ===== 
+\begin{block}{}
+
+This three-week TALENT course on nuclear theory will focus on the Many-body methods
+for nuclear structure and reactions, focusing on nuclear shell model
+and/or coupled cluster theory and in-medium SRG with applications to
+structure and reactions.  Via hands-on projects and series of exercise, the participants 
+will have been exposed to the necessary tools and theoretical models used in modern nuclear theory.
+
+
+\noindent\textbf{Format:}
+We propose approximately forty-five hours of lectures over three weeks and a
+comparable amount of practical computer and exercise sessions, including the
+setting of individual problems and the organization of various individual projects. The course starts July 16 (with arrival on July 15) and ends (the course) on August 3. A three days workshop will be organized from August 4 to August 6. 
+The mornings will consist of lectures and the
+afternoons will be devoted to exercises meant to shed light on the exposed theory, 
+and the computational projects. These
+components will be coordinated to foster student engagement,
+maximize learning and create lasting value for the students. For the
+benefit of the TALENT series and of the community, material (courses,
+slides, problems and solutions, reports on students' projects) will be
+made publicly available using version control software like \emph{git} and posted electronically on 
+\href{{https://github.com}}{github}. 
+
+As with previous TALENT courses, we envision
+the following features for the afternoon sessions: 
+\begin{itemize}
+\item We will use both individual and group work to carry out tasks that are very specific in technical instructions, but leave freedom for creativity.  
+
+\item Groups will be carefully put together to maximize diversity of backgrounds.  
+
+\item Results will be presented in a conference-like setting to create accountability.  
+
+\item We will organize events where individuals and groups exchange their experiences, difficulties and successes to foster interaction.  
+
+\item During the school, on-line and lecture-based training tailored to technical issues will be provided. Students will learn to use and interpret the results of computer-based and hand calculations of nuclear models. The lectures will be aligned with the practical computational projects and exercises and the lecturers will be available to help students and work with them during the exercise sessions.  
+
+\item These interactions will raise topics not originally envisioned for the course but which are recognized to be valuable for the students. There will be flexibility to organize mini-lectures and discussion sessions on an ad-hoc basis in such cases.  
+
+\item Each group of students will maintain an online logbook of their activities and results.  
+
+\item Training modules, codes, lectures, practical exercise instructions, online logbooks, instructions and information created by participants will be merged into a comprehensive website that will be available to the community and the public for self-guided training or for use in various educational settings (for example, a graduate course at a university could assign some of the projects as homework or an extra credit project, etc).
+\end{itemize}
+
+\noindent
+\noindent\textbf{Objectives and learning outcomes:}
+At the end of the course the students should have a basic understanding of
+\begin{itemize}
+\item Configuration interaction methods (nuclear shell-model here) as a central tool to interpret nuclear structure experiment
+
+\item Central many-body methods like Coupled Cluster theory and the In-Medium Similarity Renormalization Group approach
+
+\item How to compute nuclear structure properties with these methods 
+
+\item Have an understanding of single-particle basis functions and the construction of many-body basis states built thereupon. Examples are basis states from a Woods-Saxon potential, harmonic oscillator states and mean-field based states from a Hartree-Fock calculation. The single-particle basis states are orthonormal and are used to construct  a corresponding orthonormal basis set of Slater determinants.
+
+\item Develop an understanding of what defines an observable. 
+
+\item Understand how theory  can be used to interpret experimental quantities (separation energies and shell gaps for example).
+
+\item Understand how second-quantization is used to represent states and compute expectation values and transition probabilities  of operators
+
+\item Understand how to study resonances and contributions from continuum states
+
+\item Understand how the Hamiltonian matrix is constructed from this orthonormal basis set of many-body states (linear expansion of Slater determinants)
+
+\item The students will also learn to understand the basic elements of effective shell-model Hamiltonians and how to interpret the calculated properties in terms of various components of the nuclear forces (spin-orbit force, tensor force, central force etc). We will provide the students with the necessary tools to perform such analyses. 
+
+\item Develop a critical understanding of the limits of many-body studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Teachers and organizers}
+
+\begin{block}{}
+The local organizers are 
+
+\begin{enumerate}
+\item \href{{https://www.researchgate.net/profile/Chun-Wang_Ma}}{Chun-Wang Ma} at \href{{http://www.htu.cn/english/}}{Henan Normal University, Xinxiang, Henan 453007, P.R. China}
+
+\item \href{{http://www.phy.pku.edu.cn/~frxu/}}{Furong Xu} at \href{{http://english.pku.edu.cn/}}{School of Physics, Peking University, Beijing 100871, P.R. China}
+
+\item \href{{http://www.itp.ac.cn/~sgzhou/eindex.html}}{Shan-Gui Zhou} at  the \href{{http://www.cas.ac.cn/}}{Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100864, P.R. China} 
+\end{enumerate}
+
+\noindent
+In addition Qiao Chunyuan will help with administrative matters. You can reach her at the email address qiaochunyuan919@126.com.
+
+Thomas Papenbrock and Morten Hjorth-Jensen  will also function as student advisors and coordinators.
+
+
+
+The teachers are 
+\begin{enumerate}
+\item \href{{https://loop.frontiersin.org/people/519268/overview}}{Kevin Fossez} at \href{{http://www.nscl.msu.edu/}}{National Superconducting Cyclotron Laboratory},  \href{{http://www.msu.edu/}}{Michigan State University}, East Lansing, MI 48824, USA
+
+\item \href{{http://mhjgit.github.io/info/doc/web/}}{Morten Hjorth-Jensen}  at \href{{http://www.nscl.msu.edu/}}{National Superconducting Cyclotron Laboratory} and \href{{https://www.pa.msu.edu/}}{Department of Physics and Astronomy}, \href{{http://www.msu.edu/}}{Michigan State University}, East Lansing, MI 48824, USA
+
+\item \href{{http://www.phy.pku.edu.cn/~frxu/people.html}}{Baishan Hu} at \href{{http://english.pku.edu.cn/}}{School of Physics, Peking University, Beijing 100871, P.R. China}
+
+\item \href{{https://www.researchgate.net/profile/Weiguang_Jiang2}}{Weiguang Jiang} at  \href{{https://www.phys.utk.edu/}}{Department of Physics and Astronomy}, \href{{http://www.utk.edu/}}{University of Tennessee}, Knoxville, TN 37996-1200, USA and \href{{http://www.ornl.gov/}}{Oak Ridge National Laboratory}, Oak Ridge, TN, USA
+
+\item \href{{http://web.utk.edu/~tpapenbr/default.html}}{Thomas Papenbrock}  at \href{{http://www.ornl.gov/}}{Oak Ridge National Laboratory} and \href{{https://www.phys.utk.edu/}}{Department of Physics and Astronomy}, \href{{http://www.utk.edu/}}{University of Tennessee}, Knoxville, TN 37996-1200, USA
+
+\item \href{{http://people.reed.edu/~rstroberg/}}{Ragnar Stroberg}  at \href{{http://www.reed.edu/}}{Departmentof Physics, Reed College}, Portland, OR, 97202 and \href{{https://sharepoint.washington.edu/phys/Pages/default.aspx}}{Department of Physics, University of Washington}, Seattle, WA 98195-1560, USA
+
+\item \href{{http://volweb.utk.edu/~zsun20/}}{Zhonghao Sun} at \href{{https://www.phys.utk.edu/}}{Department of Physics and Astronomy}, \href{{http://www.utk.edu/}}{University of Tennessee}, Knoxville, TN 37996-1200, USA and \href{{http://www.ornl.gov/}}{Oak Ridge National Laboratory}, Oak Ridge, TN, USA
+
+\item \href{{http://www.physics.sjtu.edu.cn/en/people/1/ymZhao}}{Yu-Min Zhao}  at \href{{http://www.physics.sjtu.edu.cn/en/about/news/3}}{School of Physics and Astronomy, Shanghai Jiao Tong University}, Shanghai 200240, P.R. China 
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Course Content and detailed plan}
+
+\begin{block}{}
+
+Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
+Every Friday we will have presentations from each group, where a summary of what has been achieved is presented. 
+
+Lectures and preparatory material on second quantization are all available at the \href{{https://github.com/NuclearTalent/ManyBody2018}}{Github address of the course}, or go to \href{{URL:}}{\nolinkurl{ URL:}}https://nucleartalent.github.io/ManyBody2018/doc/web/course.html""  for an easier read. 
+
+Furthermore, we strongly recommend that you read chapter 8 and 10 of \href{{https://www.springer.com/us/book/9783319533353}}{Lecture Notes in Physics 936}. This text contains also links to all codes we will discuss, in addition to the codes we have placed in the "program folder of the course":"https://nucleartalent.github.io/ManyBody2018/doc/web/course.html
+
+The acronyms here stand for the different teachers:
+\begin{enumerate}
+\item KF: Kevin Fossez
+
+\item MHJ: Morten Hjorth-Jensen
+
+\item WJ: Weiguang Jiang
+
+\item TP: Thomas Papenbrock
+
+\item RS: Ragnar Stroberg
+
+\item ZS: Zhonghao Sun
+
+\item YMZ: Yu-Min Zhao
+\end{enumerate}
+
+\noindent
+\noindent\textbf{Week 1.}
+
+{\footnotesize
+\begin{tabular}{cccc}
+\hline
+\multicolumn{1}{c}{ Day } & \multicolumn{1}{c}{  } & \multicolumn{1}{c}{ Lecture Topics and lecturer } & \multicolumn{1}{c}{ Projects and exercises } \\
+\hline
+Monday    & 9am-1230pm    & Welcome  and introduction (Organizers)                                   &                                                                \\
+          &               & Second quantization  and Hamiltonians (MHJ)                              &                                                                \\
+          & 1230pm-230pm  & Lunch +own activities                                                    &                                                                \\
+          & 230pm-6pm     & Getting started with Pairing Hamiltonian                                 & Additional analytical exercises                                \\
+\hline
+Tuesday   & 9am-11am      & Full configuration interaction theory (MHJ)                              &                                                                \\
+          & 1130am-1230pm & Pairing in Nuclear Physics (YMZ)                                         &                                                                \\
+          & 1230pm-230pm  & Lunch +own activities                                                    &                                                                \\
+          & 230pm-6pm     &                                                                          & Analytical exercises and start with coding pairing Hamiltonian \\
+\hline
+Wednesday & 9am-1030am    & Full configuration interaction theory and the pairing model problem(MHJ) &                                                                \\
+          & 11am-1230pm   & Pairing in Nuclear Physics (YMZ)                                         &                                                                \\
+          & 1230pm-230pm  & Lunch +own activities                                                    &                                                                \\
+          & 230pm-6pm     &                                                                          & Writing a shell-model code for the pairing problem             \\
+\hline
+Thursday  & 9am-1230pm    & Full configuration interaction theory (MHJ)                              &                                                                \\
+          &               & Hartree-Fock theory and links to Coupled Cluster theory                  &                                                                \\
+          & 1230pm-230pm  & Lunch +own activities                                                    &                                                                \\
+          & 230pm-6pm     &                                                                          & Writing a shell-model code for the pairing problem             \\
+\hline
+Friday    & 9am-1230pm    &                                                                          & Pairing in nuclear physics and summary of 1st week (YMZ)       \\
+          & 1230pm-230pm  & Lunch +own activities                                                    &                                                                \\
+          & 230pm-6pm     & Group presentations of weekly work                                       &                                                                \\
+\hline
+\end{tabular}
+}
+
+\noindent
+
+
+\noindent\textbf{Week 2.}
+
+{\footnotesize
+\begin{tabular}{cccc}
+\hline
+\multicolumn{1}{c}{ Day } & \multicolumn{1}{c}{  } & \multicolumn{1}{c}{ Lecture Topics and lecturer } & \multicolumn{1}{c}{ Projects and exercises } \\
+\hline
+Monday    & 9am-1230pm    & Introduction to Coupled Cluster (CC) theory (TP)  &                                               \\
+          & 1230pm-230pm  & Lunch +own activities                             &                                               \\
+          & 230pm-6pm     &                                                   & Pairing model: MBPT and begin CC theory       \\
+\hline
+Tuesday   & 9am-1230pm    & Developing a CC code for the pairing model (TP)   &                                               \\
+          & 1230pm-230pm  & Lunch +own activities                             &                                               \\
+          & 230pm-6pm     &                                                   & Start writing a CC code for the pairing model \\
+\hline
+Wednesday & 9am-11am      & Infinite matter and CC theory (TP)                &                                               \\
+          & 1130am-1230pm & Quantum Computing and CC theory (ZS)              &                                               \\
+          & 1230pm-230pm  & Lunch +own activities                             &                                               \\
+          & 230pm-6pm     &                                                   & Finalize CC code for the pairing model        \\
+\hline
+Thursday  & 9am-1030am    & Summary of CC theory and infinite matter (TP)     &                                               \\
+          & 11am-1230pm   & Machine learning applied to CC theory (WJ)        &                                               \\
+          & 1230pm-230pm  & Lunch +own activities                             &                                               \\
+          & 230pm-6pm     &                                                   & Start writing CC code for infinite matter     \\
+\hline
+Friday    & 9am-11am      & From structure to reaction theory (TP)            &                                               \\
+          & 1130am-1230pm & Summary of second week and links to IMSRG (TP+RS) &                                               \\
+          & 1230pm-230pm  & Lunch +own activities                             &                                               \\
+          & 230pm-6pm     & Group presentations of weekly work                &                                               \\
+\hline
+\end{tabular}
+}
+
+\noindent
+
+
+\noindent\textbf{Week 3.}
+
+{\footnotesize
+\begin{tabular}{cccc}
+\hline
+\multicolumn{1}{c}{ Day } & \multicolumn{1}{c}{  } & \multicolumn{1}{c}{ Lecture Topics and lecturer } & \multicolumn{1}{c}{ Projects and exercises } \\
+\hline
+Monday    & 9am-1230pm   & SRG theory (KF and RS)                               &                                                              \\
+          & 1230pm-230pm & Lunch +own activities                                &                                                              \\
+          & 230pm-6pm    &                                                      & Continue work on CC code for infinite matter                 \\
+\hline
+Tuesday   & 9am-1230pm   & IMSRG and infinite matter (RS)                       &                                                              \\
+          & 1230pm-230pm & Lunch +own activities                                &                                                              \\
+          & 230pm-6pm    &                                                      & Start coding IMSRG for infinite matter and the pairing model \\
+\hline
+Wednesday & 9am-1030am   & Summary IMSRG theory (RS)                            &                                                              \\
+          & 11am-1230am  & Bergreen basis, the continuum and IMSRG (KF)         &                                                              \\
+          & 1230pm-230pm & Lunch +own activities                                &                                                              \\
+          & 230pm-6pm    &                                                      & Continue work on code for infinite matter                    \\
+\hline
+Thursday  & 9am-1230pm   & Bergreen basis, the continuum and IMSRG (KF)         &                                                              \\
+          & 1230pm-230pm & Lunch +own activities                                &                                                              \\
+          & 230pm-6pm    &                                                      & Continue work on code for infinite matter                    \\
+\hline
+Friday    & 9am-1030am   & Summary Bergreen basis, the continuum and IMSRG (KF) &                                                              \\
+          & 11am-1230pm  & Summary of school                                    &                                                              \\
+          & 1230pm-230pm & Lunch +own activities                                &                                                              \\
+          & 230pm-6pm    & Final group presentations                            &                                                              \\
+\hline
+\end{tabular}
+}
+
+\noindent
+
+
+
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Teaching and projects}
+
+\begin{block}{}
+
+The course will be taught as an intensive  course of duration of three weeks, with a
+total time of 45 h of lectures, 45 h of exercises, with the possibility to complete a final assignment if credits are needed.
+
+The organization of a typical course day is as follows:
+
+
+{\footnotesize
+\begin{tabular}{cc}
+\hline
+\multicolumn{1}{c}{ Time } & \multicolumn{1}{c}{ Activity } \\
+\hline
+9am-1230pm   & Lectures, project relevant information and directed exercises \\
+1230pm-230pm & Lunch                                                         \\
+230pm-6pm    & Computational projects, exercises  and hands-on sessions      \\
+6pm-7pm      & Wrap-up of the day and eventual student presentations         \\
+\hline
+\end{tabular}
+}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Audience and Prerequisites}
+
+\begin{block}{}
+
+You are expected to have operating programming skills in in
+compiled programming languages like Fortran or C++ or alternatively an
+interpreted language like Python and knowledge of quantum mechanics at
+an intermediate level.  Preparatory modules on second quantization,
+Wick's theorem, representation of Hamiltonians and calculations of
+Hamiltonian matrix elements, independent particle models and
+Hartree-Fock theory are provided at the website of the course.
+Students who have not studied the above topics are expected to gain
+this knowledge prior to attendance.  Additional modules for
+self-teaching on Fortran and/or C++ or Python are also provided.
+
+\end{block}
+\end{frame}
+
+\end{document}

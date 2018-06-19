@@ -2,10 +2,10 @@ TITLE: Program for "Nuclear Talent":"http://www.nucleartalent.org" course on *Ma
 AUTHOR: Kevin Fossez at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 AUTHOR: Baishan Hu at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
-AUTHOR:   Weiguang Jiang at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-AUTHOR: Thomas Papenbrock  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-AUTHOR: Ragnar Stroberg  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
-AUTHOR:   Zhonghao Sun at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
+AUTHOR:   Weiguang Jiang at  "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee, USA
+AUTHOR: Thomas Papenbrock  at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee, USA
+AUTHOR: Ragnar Stroberg  at "Department of Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
+AUTHOR:   Zhonghao Sun at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA  and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, Tennessee, USA
 AUTHOR: Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
 TOC: off
