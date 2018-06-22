@@ -1,7 +1,11 @@
-## Possible material for Nuclear talent course on many-body theory with reactions
+## Material for Nuclear talent course in Henan, China, July 16-August 5, 2018
 
-Possible teachers
-- Petr Navratil/Sofia Quaglioni, FCI, NCSM and ab initio reactions in light nuclei
-- Thomas Papenbrock and Gaute Hagen on CC theory and response functions from CC
-- Heiko Hergert and Scott Bogner on IM-SRG and response function from imsrg
+This website contains the learning material for the Nuclear Talent course 
+Many-body methods for nuclear physics, from Structure to Reactions, at Henan Normal University, P.R. China, July 16-August 5 2018
+
+
+
+
+
+
 

@@ -243,6 +243,15 @@ Lectures and preparatory material on second quantization are all available at th
 
 Furthermore, we strongly recommend that you read chapter 8 and 10 of "Lecture Notes in Physics 936":"https://www.springer.com/us/book/9783319533353". This text contains also links to all codes we will discuss, in addition to the codes we have placed in the "program folder of the course":"https://nucleartalent.github.io/ManyBody2018/doc/web/course.html
 
+If you cannot access the pdf file of the above text, you can reach chapters 8 and 10 via their respective arXiv versions, "click here for chapter 8":"https://arxiv.org/pdf/1611.06765.pdf" and 
+"here for chapter 10":"https://arxiv.org/pdf/1612.08315.pdf". 
+
+Furthermore, for Coupled Cluster theory the review of Crawford and Schaefer III, "An Introduction to Coupled Cluster Theory for Computational Chemists":"https://doi.org/10.1002/9780470125915.ch2" is highly recommended. 
+
+For nuclear structure problems, the book of "Rick Casten is a highly recommended read":"https://global.oup.com/academic/product/nuclear-structure-from-a-simple-perspective-9780198507246?cc=us&lang=en&".
+Similarly, "Alex Brown's text on Nuclear Structure":"https://github.com/NuclearTalent/NuclearStructure/blob/master/doc/Literature/brown.pdf" is a good companion read.  The text of  "Jouni Suhonen is also an excellent read":"https://www.springer.com/us/book/9783540488590".
+
+
 The acronyms here stand for the different teachers:
 o KF: Kevin Fossez
 o MHJ: Morten Hjorth-Jensen
@@ -388,6 +397,15 @@ this knowledge prior to attendance.  Additional modules for
 self-teaching on Fortran and/or C++ or Python are also provided.
 
 !eblock
+
+
+
+
+
+
+
+
+
 
 
 
