@@ -8,7 +8,7 @@ AUTHOR: Ragnar Stroberg  at "Departmentof Physics, Reed College":"http://www.ree
 AUTHOR:   Zhonghao Sun at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
 AUTHOR: Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
-DATE: March 2018
+DATE: today
 
 
 !split
@@ -152,14 +152,14 @@ Thomas Papenbrock and Morten Hjorth-Jensen  will also function as student adviso
 
 
 The teachers are 
-o "Kevin Fossez":"https://loop.frontiersin.org/people/519268/overview" at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/",  "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/"  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-o "Baishan Hu":"http://www.phy.pku.edu.cn/~frxu/people.html" at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
-o "Weiguang Jiang":"https://www.researchgate.net/profile/Weiguang_Jiang2" at  "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
-o "Thomas Papenbrock":"http://web.utk.edu/~tpapenbr/default.html"  at "Oak Ridge National Laboratory":"http://www.ornl.gov/" and "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA
-o "Ragnar Stroberg":"http://people.reed.edu/~rstroberg/"  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
-o "Zhonghao Sun":"http://volweb.utk.edu/~zsun20/" at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
-o "Yu-Min Zhao":"http://www.physics.sjtu.edu.cn/en/people/1/ymZhao"  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
+o Kevin Fossez at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+o Morten Hjorth-Jensen  at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+o Baishan Hu at "School of Physics, Peking University, Beijing 100871, P.R. China":"http://english.pku.edu.cn/"
+o Weiguang Jiang at  "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
+o Thomas Papenbrock  at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
+o Ragnar Stroberg  at "Departmentof Physics, Reed College":"http://www.reed.edu/", Portland, OR, 97202 and "Department of Physics, University of Washington":"https://sharepoint.washington.edu/phys/Pages/default.aspx", Seattle, WA 98195-1560, USA
+o Zhonghao Sun at "Department of Physics and Astronomy":"https://www.phys.utk.edu/", "University of Tennessee":"http://www.utk.edu/", Knoxville, TN 37996-1200, USA and "Oak Ridge National Laboratory":"http://www.ornl.gov/", Oak Ridge, TN, USA
+o Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
 
 !eblock
@@ -188,6 +188,7 @@ Similarly, "Alex Brown's text on Nuclear Structure":"https://github.com/NuclearT
 
 
 The acronyms here stand for the different teachers:
+o BH: Baishan Hu
 o KF: Kevin Fossez
 o MHJ: Morten Hjorth-Jensen
 o WJ: Weiguang Jiang
@@ -221,7 +222,7 @@ o YMZ: Yu-Min Zhao
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Writing a shell-model code for the pairing problem |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm |  | Pairing in nuclear physics and summary of 1st week (YMZ)       |
+| Friday | 9am-1230pm | Pairing in nuclear physics and summary of 1st week (YMZ)       | | 
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   | Group presentations of weekly work|  |
 |--------------------------------------------------------------------------|
@@ -242,7 +243,7 @@ o YMZ: Yu-Min Zhao
 |        | 230pm-6pm   |  | Start writing a CC code for the pairing model |
 |--------------------------------------------------------------------------|
 | Wednesday | 9am-11am | Infinite matter and CC theory (TP) |        |
-|           | 1130am-1230pm | Quantum Computing and CC theory (ZS)  |   |
+|           | 1130am-1230pm | Computational CC theory  for closed and open shell nuclei (ZS)  |   |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Finalize CC code for the pairing model |
 |--------------------------------------------------------------------------|
@@ -268,7 +269,8 @@ o YMZ: Yu-Min Zhao
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Continue work on CC code for infinite matter  |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm | IMSRG and infinite matter (RS) |        |
+| Tuesday | 9am-11am | IMSRG and infinite matter (RS) |        |
+|         | 1130am-1230pm | Many-body perturbation theory calculations (BH) | |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Start coding IMSRG for infinite matter and the pairing model |
 |--------------------------------------------------------------------------|
