@@ -3,6 +3,7 @@ TITLE: Hartree-Fock methods
 AUTHOR:   "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/", National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
 DATE: today
 
+# to do: change and more materials to general section of many-body physics
 
 ===== Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space =====
 

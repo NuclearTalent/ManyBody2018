@@ -4,7 +4,7 @@ DATE: today
 
 # to do: update on sympy
 
-======= Second quantization =======
+======= Definitions and Second quantization =======
 
 We introduce the time-independent  operators
 $a_\alpha^{\dagger}$ and $a_\alpha$   which create and annihilate, respectively, a particle 
