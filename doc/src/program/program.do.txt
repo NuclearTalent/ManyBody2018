@@ -197,12 +197,14 @@ o RS: Ragnar Stroberg
 o ZS: Zhonghao Sun
 o YMZ: Yu-Min Zhao
 
+There is a bus transportation from the hotel to	the auditorium at Henan	Normal University. Note that we start 830am on Monday July 16.
+
 === Week 1  ===
 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm | Welcome  and introduction (Organizers) |    |
+| Monday | 830am-1230pm | Welcome  and introduction (Organizers) |    |
 |        |            | Second quantization  and Hamiltonians (MHJ) |           |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |Getting started with Pairing Hamiltonian  | Additional analytical exercises|
