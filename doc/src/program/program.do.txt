@@ -210,12 +210,12 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 230pm-6pm   |Getting started with Pairing Hamiltonian  | Additional analytical exercises|
 |--------------------------------------------------------------------------|
 | Tuesday | 9am-11am | Full configuration interaction theory (MHJ)  |        |
-|  | 1130am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
+|  | 1130am-1230pm | Pairing in Nuclear Physics,  why is the pairing interaction important?  (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Analytical exercises and start with coding pairing Hamiltonian |
 |--------------------------------------------------------------------------|
 | Wednesday | 9am-1030am | Full configuration interaction theory and the pairing model problem(MHJ)  |        |
-|  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
+|  | 11am-1230pm | Why is the pairing interaction important and Fundamental knowledge of the pairing interaction. (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |Writing a shell-model code for the pairing problem  |
 |--------------------------------------------------------------------------|
@@ -224,7 +224,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Writing a shell-model code for the pairing problem |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm | Pairing in nuclear physics and summary of 1st week (YMZ)       | | 
+| Friday | 9am-1230pm | Pairing in nuclear physics, fundamental propertiers and pairing in nuclei. Summary of 1st week (YMZ)       | | 
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   | Group presentations of weekly work|  |
 |--------------------------------------------------------------------------|
