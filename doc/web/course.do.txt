@@ -15,8 +15,8 @@ pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
 published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'projects',]
 chapters = {
  'program': 'Introduction and weekly program',
- 'secondquant': 'Second quantization',
- 'hfock': 'Hartree-Fock theory and basic many-body definitions',
+ 'secondquant': 'Many-body Hamiltonians, some linear algebra and Second quantization',
+ 'hfock': 'Hartree-Fock theory',
  'fci': 'Full configuration interaction theory',
  'mbpt': 'Many-body perturbation theory',
  'CCM': 'Coupled cluster theory',
