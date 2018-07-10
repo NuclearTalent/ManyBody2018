@@ -12,14 +12,14 @@ TOC: off
 
 <%
 pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
-published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'cc', 'imsrg', 'projects',]
+published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'projects',]
 chapters = {
  'program': 'Introduction and weekly program',
  'secondquant': 'Second quantization',
  'hfock': 'Hartree-Fock theory and basic many-body definitions',
  'fci': 'Full configuration interaction theory',
  'mbpt': 'Many-body perturbation theory',
- 'cc': 'Coupled cluster theory',
+ 'CCM': 'Coupled cluster theory',
  'imsrg': 'Similarity Renormalization Group theory',
  'projects': 'Many-body projects',
 }
