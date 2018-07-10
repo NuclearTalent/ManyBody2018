@@ -34,7 +34,6 @@ chapters = {
      * "Standard one-page format": "${pub_url}/${name}/pdf/${name}-minted.pdf"
  * HTML:
    * "Plain html style": "${pub_url}/${name}/html/${name}.html"
-   * "Reveal html style for easy reading on mobile devices": "${pub_url}/${name}/html/${name}-reveal.html"
    * "Bootstrap html style for easy reading on mobile devices": "${pub_url}/${name}/html/${name}-bs.html"
  * iPython notebook:
    * "ipynb file": "${pub_url}/${name}/ipynb/${name}.ipynb"

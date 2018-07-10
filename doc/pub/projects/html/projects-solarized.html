@@ -6,9 +6,9 @@ Automatically generated HTML file from DocOnce source
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
-<meta name="description" content="">
+<meta name="description" content="Project for "Nuclear Talent":"http://www.nucleartalent.org" course on *Many-body methods for nuclear physics, from Structure to Reactions* at "Henan Normal University, P.R. China":"http://www.htu.cn/english/", July 16-August 5 2018">
 
-<title></title>
+<title>Project for "Nuclear Talent":"http://www.nucleartalent.org" course on *Many-body methods for nuclear physics, from Structure to Reactions* at "Henan Normal University, P.R. China":"http://www.htu.cn/english/", July 16-August 5 2018</title>
 
 
 <link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
@@ -35,35 +35,43 @@ div { text-align: justify; text-justify: inter-word; }
 <!-- tocinfo
 {'highest level': 2,
  'sections': [('Introduction', 2, None, '___sec0'),
-              ('Part 1, pairing problem', 2, None, '___sec1'),
+              ('Some basic ingredients for a successful numerical project',
+               2,
+               None,
+               '___sec1'),
+              ('Part 1, pairing problem', 2, None, '___sec2'),
               ('Part 1a: Paper and pencil gym while we wait for the more '
                'serious stuff',
                3,
                None,
-               '___sec2'),
-              ('Part 1b: Simpler case', 3, None, '___sec3'),
+               '___sec3'),
+              ('Part 1b: Simpler case', 3, None, '___sec4'),
               ('Part 1c: Setting up the Hamiltonian matrix',
                3,
                None,
-               '___sec4'),
+               '___sec5'),
               ('Part 1d: Diagonalizing the Hamiltonian matrix',
                3,
                None,
-               '___sec5'),
+               '___sec6'),
               ('Part 1e: Further benchmarks and optional part',
                3,
                None,
-               '___sec6'),
-              ('Part 2, building your CC code the pairing case and extending '
-               'it to infinite matter',
-               2,
-               None,
                '___sec7'),
-              ('Part 3, building your IMSRG code the pairing case and '
-               'extending it to infinite matter',
+              ('Part 2: Coupled cluster calculations with doubles excitations '
+               'only for the pairing model',
                2,
                None,
-               '___sec8')]}
+               '___sec8'),
+              ('Part 3: Coupled cluster calculations with doubles excitations '
+               'only for infinite nuclear matter',
+               2,
+               None,
+               '___sec9'),
+              ('Part 4: IMSRG code for the pairing model and infinite matter',
+               2,
+               None,
+               '___sec10')]}
 end of tocinfo -->
 
 <body>
@@ -89,20 +97,56 @@ MathJax.Hub.Config({
 
 
 
-<center><h1><p></h1></center>  <!-- document title -->
+<center><h1>Project for <a href="http://www.nucleartalent.org" target="_blank">Nuclear Talent</a> course on <em>Many-body methods for nuclear physics, from Structure to Reactions</em> at <a href="http://www.htu.cn/english/" target="_blank">Henan Normal University, P.R. China</a>, July 16-August 5 2018</h1></center>  <!-- document title -->
 
-<!-- author(s): DATE: This text will be updated with more material -->
+<p>
+<!-- author(s): Kevin Fossez, Morten Hjorth-Jensen, Baishan Hu, Weiguang Jiang, Thomas Papenbrock, Ragnar Stroberg, Zhonghao Sun, and Yu-Min Zhao -->
 
 <center>
-<b>DATE: This text will be updated with more material</b> 
+<b>Kevin Fossez</b> [1]
+</center>
+
+<center>
+<b>Morten Hjorth-Jensen</b> [2]
+</center>
+
+<center>
+<b>Baishan Hu</b> [3]
+</center>
+
+<center>
+<b>Weiguang Jiang</b> [4]
+</center>
+
+<center>
+<b>Thomas Papenbrock</b> [4]
+</center>
+
+<center>
+<b>Ragnar Stroberg</b> [5]
+</center>
+
+<center>
+<b>Zhonghao Sun</b> [4]
+</center>
+
+<center>
+<b>Yu-Min Zhao</b> [6]
 </center>
 
 <p>
 <!-- institution(s) -->
 
+<center>[1] <b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
+<center>[2] <b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
+<center>[3] <b><a href="http://english.pku.edu.cn/" target="_blank">School of Physics, Peking University, Beijing 100871, P.R. China</a></b></center>
+<center>[4] <b><a href="https://www.phys.utk.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.utk.edu/" target="_blank">University of Tennessee</a>, Knoxville, TN 37996-1200, USA and <a href="http://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>, Oak Ridge, TN, USA</b></center>
+<center>[5] <b><a href="http://www.reed.edu/" target="_blank">Departmentof Physics, Reed College</a>, Portland, OR, 97202 and <a href="https://sharepoint.washington.edu/phys/Pages/default.aspx" target="_blank">Department of Physics, University of Washington</a>, Seattle, WA 98195-1560, USA</b></center>
+<center>[6] <b><a href="http://www.physics.sjtu.edu.cn/en/about/news/3" target="_blank">School of Physics and Astronomy, Shanghai Jiao Tong University</a>, Shanghai 200240, P.R. China</b></center>
 <br>
+
 <p>
-<center><h4>This text will be updated with more material</h4></center> <!-- date -->
+<center><h4>Jul 10, 2018</h4></center> <!-- date -->
 <br>
 
 <h2 id="___sec0">Introduction </h2>
@@ -125,19 +169,52 @@ hope is that the lectures and the computational projects will together
 allow you to achieve these goals.
 
 <p>
-The project is divided in three main parts. The first part deals with
+The project is divided in four main parts. The first part deals with
 a simple pairing model and the development of a shell-model program
 related to this model.  This program can then serve as a benchmark
 program for the Coupled Cluster theory and in-medium SRG codes to be
-developed. The latter form the other two parts of the project.
+developed. The latter form the remaining parts of the project.
 
 <p>
+If you have not used version control before now, it is time to do so.
+Proper version control is central to a good ethical scientific conduct.
+We do require that you use some kind of version control software when working on the projects. We recommend strongly <a href="https://github.com/" target="_blank">github</a>. All lectures and additional material is available at the github <a href="http://nucleartalent.github.io/Course2ManyBodyMethods/doc/web/course.html" target="_blank">address of the course</a>
+
+<p>
+Furthermore, before coming to the course, we recommend that you refresh your knowledge on second quantization.
+
+<h2 id="___sec1">Some basic ingredients for a successful numerical project </h2>
+
+<p>
+When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
+
+<ol>
+  <li> How to structure a code in terms of functions</li>
+  <li> How to make a module</li>
+  <li> How to read input data flexibly from the command line</li>
+  <li> How to create graphical/web user interfaces</li>
+  <li> How to write unit tests (test functions)</li>
+  <li> How to refactor code in terms of classes (instead of functions only), in our case you think of a system and a solver class</li>
+  <li> How to conduct and automate large-scale numerical experiments</li>
+  <li> How to write scientific reports in various formats (LaTeX, HTML)</li>
+</ol>
+
+The conventions and techniques outlined here will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
+
+<ol>
+<li> New code is added in a modular fashion to a library (modules)</li>
+<li> Programs are run through convenient user interfaces</li>
+<li> It takes one quick command to let all your code undergo heavy testing</li>
+<li> Tedious manual work with running programs is automated,</li>
+<li> Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.</li>
+</ol>
+
 We expect you to form working
 groups consisting of typically three (or more) participants. Every
 group should establish its own Github or Gitlab repository for the
 project.
 
-<h2 id="___sec1">Part 1, pairing problem </h2>
+<h2 id="___sec2">Part 1, pairing problem </h2>
 
 <p>
 In the first part of the  project we will thus work with a simplified Hamiltonian consisting of a one-body operator and a so-called 
@@ -235,7 +312,7 @@ with  the spin projection \( \hat{S}_z \) and the total spin
 This is an important feature of our system that allows us to block-diagonalize
 the full Hamiltonian. In this project we will focus only on total spin \( S=0 \), this case is normally called the no-broken pair case.
 
-<h3 id="___sec2">Part 1a: Paper and pencil gym while we wait for the more serious stuff </h3>
+<h3 id="___sec3">Part 1a: Paper and pencil gym while we wait for the more serious stuff </h3>
 
 Show that the
 unperturbed Hamiltonian  \( \hat{H}_0 \) and \( \hat{V} \) commute
@@ -300,7 +377,7 @@ $$
 Show  that Hamiltonian commutes with the product of the pair creation and annihilation operators.
 This model corresponds to a system with no broken pairs. This means that the Hamiltonian can only link two-particle states in so-called spin-reversed states.
 
-<h3 id="___sec3">Part 1b: Simpler case </h3>
+<h3 id="___sec4">Part 1b: Simpler case </h3>
 
 Assume now that the effective Hilbert space consists only of the two lowest single-particle states and that we have two particles only.
 Set up the possible two-particle configurations when we have only two single-particle states, that is \( p=1 \) and \( p=2 \). 
@@ -312,17 +389,31 @@ for a system with no broken pairs and spin \( S=0 \) (with projection \( S_z=0 \
 Find the eigenvalues by diagonalizing the Hamiltonian matrix.
 Vary your results for selected values of \( g\in [-1,1] \) and comment your results.
 
-<h3 id="___sec4">Part 1c: Setting up the Hamiltonian matrix </h3>
+<h3 id="___sec5">Part 1c: Setting up the Hamiltonian matrix </h3>
 
 Construct thereafter the Hamiltonian matrix for a system with no broken pairs and spin \( S=0 \) for the case of the four lowest single-particle levels. Our system consists of four particles only.
 Our single-particle space consists of only the four lowest levels 
 \( p=1,2,3,4 \).  You need to set up all possible Slater determinants and the Hamiltonian matrix using second quantization and
 find all eigenvalues by diagonalizing the Hamiltonian matrix.
 Vary your results for values of \( g\in [-1,1] \).  Your Hamiltonian matrix is a \( 6\times 6 \) matrix. 
-These results will serve as a benchmark for the construction  of our shell-model program. 
+These results will serve as a benchmark for the construction  of our shell-model program and the CC and IMSRG programs.
 We  refer to this as the exact results. Comment the behavior of the ground state as function of \( g \).
 
-<h3 id="___sec5">Part 1d: Diagonalizing the Hamiltonian matrix </h3>
+<p>
+To help, your final Hamiltonian matrix reads
+$$
+H = \left (
+\begin{array}{cccccc}
+2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\
+ -g/2 & 4\delta -g & -g/2 & -g/2 & -0 & -g/2 \\
+-g/2 & -g/2 & 6\delta -g & 0 & -g/2 & -g/2 \\
+ -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\
+ -g/2 & 0 & -g/2 & -g/2 & 8\delta-g & -g/2 \\
+0 & -g/2 & -g/2 & -g/2 & -g/2 & 10\delta -g
+\end{array} \right )
+$$
+
+<h3 id="___sec6">Part 1d: Diagonalizing the Hamiltonian matrix </h3>
 
 Our next step is to develop a code which sets up the above Hamiltonian matrices for two and four particles in 2 and 4 single-particles states (the same as what you did in exercises b) and c) and obtain the eigenvalues.
 To achieve this you should
@@ -337,7 +428,7 @@ To achieve this you should
 Codes to diagonalize in C++ or Fortran can be provided. For Python, numpy contains eigenvalue solvers based on for example Householder's and Givens' algorithms.   These are topics which can we discuss separately. The lecture slides contain a rather detailed recipe
 on how to construct a Slater determinant basis and how to set up the Hamiltonian matrix to diagonalize.
 
-<h3 id="___sec6">Part 1e: Further benchmarks and optional part </h3>
+<h3 id="___sec7">Part 1e: Further benchmarks and optional part </h3>
 
 In developing the code it also useful to test against cases which have closed-form solutions. One obvious case is that of removing the 
 two-body interaction. Then we have only the single-particle energies.
@@ -353,11 +444,45 @@ $$
 Challenge: Enlarge now your system to six and eight fermions and to \( p=6 \) and \( p=8 \) single-particle states, respectively. Run your program for a degenerate single-particle state with degeneracy \( \Omega \) and test
 against the exact result for the ground state. Introduce thereafter a finite single-particle spacing and study the results as you vary \( g \),  as done in b) and c). Comment your results.
 
-<h2 id="___sec7">Part 2, building your CC code the pairing case and extending it to infinite matter  </h2>
-
-<h2 id="___sec8">Part 3, building your IMSRG code the pairing case and extending it to infinite matter  </h2>
+<h2 id="___sec8">Part 2: Coupled cluster calculations with doubles excitations only for the pairing model </h2>
 
 <p>
+This project serves as a continuation
+of the pairing model with the aim being to solve the same problem but
+now by developing a program that implements the coupled cluster method
+with double excitations only. In doing so you will find it convenient
+to write classes which define the single-particle basis and the
+Hamiltonian. Your functions that solve the coupled cluster equations
+will then just need to set up variables which point to interaction
+elements and single-particle states with their pertinent quantum
+numbers. Use for example the setup discussed in the FCI lectures for
+the pairing model.
+
+<ol>
+<li> Explain why no single excitations are involved in this model.</li>
+<li> Set up the coupled cluster equations for doubles excitations and convince yourself about their meaning and correctness.</li>
+<li> Write a class which holds single-particle data like specific quantum numbers, single-particle Hamiltonian etc. Write also a class which sets up and stores two-body matrix elements defined by the single-particle states.  Write thereafter functions/classes which implement the coupled cluster method with doubles only.</li>
+<li> Compare your results with tose from the exact diagonalization with and without the \( 4p4h \) excitation. Compare also your results to perturbation theory at different orders, in particular to second order. Discuss your results.</li>
+</ol>
+
+<h2 id="___sec9">Part 3: Coupled cluster calculations with doubles excitations only for infinite nuclear matter </h2>
+
+<p>
+This project forms one possible final path for the remaining two weeks. It can also be extended in order to define the final project.  You should be able to use the program you developed in connection with the
+solution of the pairing model.
+
+<ol>
+<li> Explain why we don't have single excitations in infinite matter.</li>
+<li> Set up the relavent quantum numbers for a cartesian basis with plane waves in three dimensions. Make the according changes to the code you developed in connection with the pairing model. Implement periodic boundary conditions.</li>
+<li> Replace the two-body interaction from the pairing model with the Minnesota potential model discussed during the <a href="https://github.com/NuclearTalent/Course2ManyBodyMethods/blob/master/doc/pub/cc/pdf/Lectures1-2_TALENT_NuclearMatter_GH.pdf" target="_blank">lectures</a>.</li>
+<li> Use the program you developed in connection with the pairing model to perform coupled cluster calculations in infinite matter with doubles excitations. Perform coupled cluster calculations for infinite nuclear matter with the Minnesota interaction for different particle numbers (to be inserted later). Limit yourself to two-particle and two-hole intermediate excitations only.</li>
+</ol>
+
+<h2 id="___sec10">Part 4: IMSRG code for the pairing model and infinite matter </h2>
+
+<p>
+Our final step consists in modifying the above program in order to include the IMSRG method, applying it to both the pairing model and infinite neutron matter.
+Compare your results with those obtained with Coupled Cluster theory and comment the pairing model and infinite neutron matter results.
 
 <!-- ------------------- end of main content --------------- -->
 
