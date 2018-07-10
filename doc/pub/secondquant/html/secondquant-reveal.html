@@ -3,9 +3,9 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
-<meta name="description" content="Second Quantization">
+<meta name="description" content="Many-body Hamiltonians, basic linear algebra and Second Quantization">
 
-<title>Second Quantization</title>
+<title>Many-body Hamiltonians, basic linear algebra and Second Quantization</title>
 
 
 
@@ -147,7 +147,7 @@ MathJax.Hub.Config({
 
 
 
-<center><h1 style="text-align: center;">Second Quantization</h1></center>  <!-- document title -->
+<center><h1 style="text-align: center;">Many-body Hamiltonians, basic linear algebra and Second Quantization</h1></center>  <!-- document title -->
 
 <p>
 <!-- author(s): <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a>, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
@@ -161,10 +161,631 @@ MathJax.Hub.Config({
 
 <br>
 <p>&nbsp;<br>
-<center><h4>Jun 18, 2018</h4></center> <!-- date -->
+<center><h4>Jul 10, 2018</h4></center> <!-- date -->
 <br>
 
-<h1 id="___sec0">Second quantization </h1>
+<h2 id="___sec0">Definitions and notations </h2>
+
+<p>
+Before we proceed we need some definitions.
+We will assume that the interacting part of the Hamiltonian
+can be approximated by a two-body interaction.
+This means that our Hamiltonian is written as the sum of some onebody part and a twobody part
+<p>&nbsp;<br>
+$$
+\begin{equation}
+    \hat{H} = \hat{H}_0 + \hat{H}_I 
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j}^A \hat{v}(r_{ij}),
+\tag{1}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+with 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  H_0=\sum_{i=1}^A \hat{h}_0(x_i).
+\tag{2}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+The onebody part \( u_{\mathrm{ext}}(x_i) \) is normally approximated by a harmonic oscillator potential or the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
+one derived from the self-consistent solution of the Hartree-Fock equations to be discussed here.
+
+<p>
+Our Hamiltonian is invariant under the permutation (interchange) of two particles.
+Since we deal with fermions however, the total wave function is antisymmetric.
+Let \( \hat{P} \) be an operator which interchanges two particles.
+Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
+<p>&nbsp;<br>
+$$
+[\hat{H},\hat{P}] = 0,
+ $$
+<p>&nbsp;<br>
+
+meaning that \( \Psi_{\lambda}(x_1, x_2, \dots , x_A) \) is an eigenfunction of 
+\( \hat{P} \) as well, that is
+<p>&nbsp;<br>
+$$
+\hat{P}_{ij}\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A)=
+\beta\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A),
+$$
+<p>&nbsp;<br>
+
+where \( \beta \) is the eigenvalue of \( \hat{P} \). We have introduced the suffix \( ij \) in order to indicate that we permute particles \( i \) and \( j \).
+The Pauli principle tells us that the total wave function for a system of fermions
+has to be antisymmetric, resulting in the eigenvalue \( \beta = -1 \).
+
+<p>
+In our case we assume that  we can approximate the exact eigenfunction with a Slater determinant
+<p>&nbsp;<br>
+$$
+\begin{equation}
+   \Phi(x_1, x_2,\dots ,x_A,\alpha,\beta,\dots, \sigma)=\frac{1}{\sqrt{A!}}
+\left| \begin{array}{ccccc} \psi_{\alpha}(x_1)& \psi_{\alpha}(x_2)& \dots & \dots & \psi_{\alpha}(x_A)\\
+                            \psi_{\beta}(x_1)&\psi_{\beta}(x_2)& \dots & \dots & \psi_{\beta}(x_A)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots & \psi_{\sigma}(x_A)\end{array} \right|, \tag{3}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+where  \( x_i \)  stand for the coordinates and spin values of a particle \( i \) and \( \alpha,\beta,\dots, \gamma \) 
+are quantum numbers needed to describe remaining quantum numbers.
+
+<h3 id="___sec1">Brief reminder on some linear algebra properties </h3>
+
+<p>
+Before we proceed with a more compact representation of a Slater determinant, we would like to repeat some linear algebra properties which will be useful for our derivations of the energy as function of a Slater determinant, Hartree-Fock theory and later the nuclear shell model.
+
+<p>
+The inverse of a matrix is defined by
+
+<p>&nbsp;<br>
+$$
+\mathbf{A}^{-1} \cdot \mathbf{A} = I
+$$
+<p>&nbsp;<br>
+
+A unitary matrix \( \mathbf{A} \) is one whose inverse is its adjoint
+<p>&nbsp;<br>
+$$
+\mathbf{A}^{-1}=\mathbf{A}^{\dagger}
+$$
+<p>&nbsp;<br>
+
+A real unitary matrix is called orthogonal and its inverse is equal to its transpose.
+A hermitian matrix is its own self-adjoint, that  is
+<p>&nbsp;<br>
+$$
+\mathbf{A}=\mathbf{A}^{\dagger}. 
+$$
+<p>&nbsp;<br>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">                Relations                 </th> <th align="center">      Name     </th> <th align="center">                              matrix elements                              </th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   \( A = A^{T} \)                               </td> <td align="center">   symmetric          </td> <td align="center">   \( a_{ij} = a_{ji} \)                                                          </td> </tr>
+<tr><td align="center">   \( A = \left (A^{T} \right )^{-1} \)          </td> <td align="center">   real orthogonal    </td> <td align="center">   \( \sum_k a_{ik} a_{jk} = \sum_k a_{ki} a_{kj} = \delta_{ij} \)                </td> </tr>
+<tr><td align="center">   \( A = A^{ * } \)                             </td> <td align="center">   real matrix        </td> <td align="center">   \( a_{ij} = a_{ij}^{ * } \)                                                    </td> </tr>
+<tr><td align="center">   \( A = A^{\dagger} \)                         </td> <td align="center">   hermitian          </td> <td align="center">   \( a_{ij} = a_{ji}^{ * } \)                                                    </td> </tr>
+<tr><td align="center">   \( A = \left (A^{\dagger} \right )^{-1} \)    </td> <td align="center">   unitary            </td> <td align="center">   \( \sum_k a_{ik} a_{jk}^{ * } = \sum_k a_{ki}^{ * } a_{kj} = \delta_{ij} \)    </td> </tr>
+</tbody>
+</table>
+<p>
+Since we will deal with Fermions (identical and indistinguishable particles) we will 
+form an ansatz for a given state in terms of so-called Slater determinants determined
+by a chosen basis of single-particle functions.
+
+<p>
+For a given \( n\times n \) matrix \( \mathbf{A} \) we can write its determinant
+<p>&nbsp;<br>
+$$
+   det(\mathbf{A})=|\mathbf{A}|=
+\left| \begin{array}{ccccc} a_{11}& a_{12}& \dots & \dots & a_{1n}\\
+                            a_{21}&a_{22}& \dots & \dots & a_{2n}\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                            a_{n1}& a_{n2}& \dots & \dots & a_{nn}\end{array} \right|,
+$$
+<p>&nbsp;<br>
+
+in a more compact form as 
+<p>&nbsp;<br>
+$$
+|\mathbf{A}|= \sum_{i=1}^{n!}(-1)^{p_i}\hat{P}_i a_{11}a_{22}\dots a_{nn},
+$$
+<p>&nbsp;<br>
+
+where \( \hat{P}_i \) is a permutation operator which permutes the column indices \( 1,2,3,\dots,n \)
+and the sum runs over all \( n! \) permutations.  The quantity \( p_i \) represents the number of transpositions of column indices that are needed in order to bring a given permutation back to its initial ordering, in our case given by \( a_{11}a_{22}\dots a_{nn} \) here.
+
+<p>
+A simple \( 2\times 2 \) determinant illustrates this. We have
+<p>&nbsp;<br>
+$$
+   det(\mathbf{A})=
+\left| \begin{array}{cc} a_{11}& a_{12}\\
+                            a_{21}&a_{22}\end{array} \right|= (-1)^0a_{11}a_{22}+(-1)^1a_{12}a_{21},
+$$
+<p>&nbsp;<br>
+
+where in the last term we have interchanged the column indices \( 1 \) and \( 2 \). The natural ordering we have chosen is \( a_{11}a_{22} \).
+
+<h3 id="___sec2">Back to the derivation of the energy </h3>
+
+<p>
+The single-particle function \( \psi_{\alpha}(x_i) \)  are eigenfunctions of the onebody
+Hamiltonian \( h_i \), that is
+<p>&nbsp;<br>
+$$
+\hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i),
+$$
+<p>&nbsp;<br>
+
+with eigenvalues 
+<p>&nbsp;<br>
+$$
+\hat{h}_0(x_i) \psi_{\alpha}(x_i)=\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right)\psi_{\alpha}(x_i)=\varepsilon_{\alpha}\psi_{\alpha}(x_i).
+$$
+<p>&nbsp;<br>
+
+The energies \( \varepsilon_{\alpha} \) are the so-called non-interacting single-particle energies, or unperturbed energies. 
+The total energy is in this case the sum over all  single-particle energies, if no two-body or more complicated
+many-body interactions are present.
+
+<p>
+Let us denote the ground state energy by \( E_0 \). According to the
+variational principle we have
+<p>&nbsp;<br>
+$$
+  E_0 \le E[\Phi] = \int \Phi^*\hat{H}\Phi d\mathbf{\tau}
+$$
+<p>&nbsp;<br>
+
+where \( \Phi \) is a trial function which we assume to be normalized
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\Phi d\mathbf{\tau} = 1,
+$$
+<p>&nbsp;<br>
+
+where we have used the shorthand \( d\mathbf{\tau}=dx_1dr_2\dots dr_A \).
+
+<p>
+In the Hartree-Fock method the trial function is the Slater
+determinant of Eq.&nbsp;<a href="#mjx-eqn-3">(3)</a> which can be rewritten as 
+<p>&nbsp;<br>
+$$
+  \Phi(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) = \frac{1}{\sqrt{A!}}\sum_{P} (-)^P\hat{P}\psi_{\alpha}(x_1)
+    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A)=\sqrt{A!}\hat{A}\Phi_H,
+$$
+<p>&nbsp;<br>
+
+where we have introduced the antisymmetrization operator \( \hat{A} \) defined by the 
+summation over all possible permutations of two particles.
+
+<p>
+It is defined as
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \hat{A} = \frac{1}{A!}\sum_{p} (-)^p\hat{P},
+\tag{4}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+with \( p \) standing for the number of permutations. We have introduced for later use the so-called
+Hartree-function, defined by the simple product of all possible single-particle functions
+<p>&nbsp;<br>
+$$
+  \Phi_H(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) =
+  \psi_{\alpha}(x_1)
+    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A).
+$$
+<p>&nbsp;<br>
+
+<p>
+Both \( \hat{H}_0 \) and \( \hat{H}_I \) are invariant under all possible permutations of any two particles
+and hence commute with \( \hat{A} \)
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  [H_0,\hat{A}] = [H_I,\hat{A}] = 0. \tag{5}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+Furthermore, \( \hat{A} \) satisfies
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \hat{A}^2 = \hat{A},  \tag{6}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+since every permutation of the Slater
+determinant reproduces it.
+
+<p>
+The expectation value of \( \hat{H}_0 \) 
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_0\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*\hat{A}\hat{H}_0\hat{A}\Phi_H d\mathbf{\tau}
+$$
+<p>&nbsp;<br>
+
+is readily reduced to
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_0\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*\hat{H}_0\hat{A}\Phi_H d\mathbf{\tau},
+$$
+<p>&nbsp;<br>
+
+where we have used Eqs.&nbsp;<a href="#mjx-eqn-5">(5)</a> and
+<a href="#mjx-eqn-6">(6)</a>. The next step is to replace the antisymmetrization
+operator by its definition and to
+replace \( \hat{H}_0 \) with the sum of one-body operators
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
+  = \sum_{i=1}^A \sum_{p} (-)^p\int 
+  \Phi_H^*\hat{h}_0\hat{P}\Phi_H d\mathbf{\tau}.
+$$
+<p>&nbsp;<br>
+
+<p>
+The integral vanishes if two or more particles are permuted in only one
+of the Hartree-functions \( \Phi_H \) because the individual single-particle wave functions are
+orthogonal. We obtain then
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}= \sum_{i=1}^A \int \Phi_H^*\hat{h}_0\Phi_H  d\mathbf{\tau}.
+$$
+<p>&nbsp;<br>
+
+Orthogonality of the single-particle functions allows us to further simplify the integral, and we
+arrive at the following expression for the expectation values of the
+sum of one-body Hamiltonians 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
+  = \sum_{\mu=1}^A \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx
+  d\mathbf{r}.
+\tag{7}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+We introduce the following shorthand for the above integral
+<p>&nbsp;<br>
+$$
+\langle \mu | \hat{h}_0 | \mu \rangle = \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx,
+$$
+<p>&nbsp;<br>
+
+and rewrite Eq.&nbsp;<a href="#mjx-eqn-7">(7)</a> as
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \int \Phi^*\hat{H}_0\Phi  d\tau
+  = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle.
+\tag{8}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+The expectation value of the two-body part of the Hamiltonian is obtained in a
+similar manner. We have
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*\hat{A}\hat{H}_I\hat{A}\Phi_H d\mathbf{\tau},
+$$
+<p>&nbsp;<br>
+
+which reduces to
+<p>&nbsp;<br>
+$$
+ \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
+  = \sum_{i\le j=1}^A \sum_{p} (-)^p\int 
+  \Phi_H^*\hat{v}(r_{ij})\hat{P}\Phi_H d\mathbf{\tau},
+$$
+<p>&nbsp;<br>
+
+by following the same arguments as for the one-body
+Hamiltonian.
+
+<p>
+Because of the dependence on the inter-particle distance \( r_{ij} \),  permutations of
+any two particles no longer vanish, and we get
+<p>&nbsp;<br>
+$$
+  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
+  = \sum_{i < j=1}^A \int  
+  \Phi_H^*\hat{v}(r_{ij})(1-P_{ij})\Phi_H d\mathbf{\tau}.
+$$
+<p>&nbsp;<br>
+
+where \( P_{ij} \) is the permutation operator that interchanges
+particle \( i \) and particle \( j \). Again we use the assumption that the single-particle wave functions
+are orthogonal.
+
+<p>
+We obtain
+<p>&nbsp;<br>
+$$
+\begin{align}
+  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
+  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A
+    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    dx_idx_j \right.
+\tag{9}\\
+  &\left.
+  - \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
+  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  dx_idx_j
+  \right]. \tag{10}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+The first term is the so-called direct term. It is frequently also called the  Hartree term, 
+while the second is due to the Pauli principle and is called
+the exchange term or just the Fock term.
+The factor  \( 1/2 \) is introduced because we now run over
+all pairs twice.
+
+<p>
+The last equation allows us to  introduce some further definitions.  
+The single-particle wave functions \( \psi_{\mu}(x) \), defined by the quantum numbers \( \mu \) and \( x \)
+are defined as the overlap 
+<p>&nbsp;<br>
+$$
+   \psi_{\alpha}(x)  = \langle x | \alpha \rangle .
+$$
+<p>&nbsp;<br>
+
+<p>
+We introduce the following shorthands for the above two integrals
+<p>&nbsp;<br>
+$$
+\langle \mu\nu|\hat{v}|\mu\nu\rangle =  \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    dx_idx_j,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle \mu\nu|\hat{v}|\nu\mu\rangle = \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
+  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  dx_idx_j.  
+$$
+<p>&nbsp;<br>
+
+<h2 id="___sec3">Preparing for later studies: varying the coefficients of a wave function expansion and orthogonal transformations </h2>
+
+<p>
+It is common to  expand the single-particle functions in a known basis  and vary the coefficients, 
+that is, the new single-particle wave function is written as a linear expansion
+in terms of a fixed chosen orthogonal basis (for example the well-known harmonic oscillator functions or the hydrogen-like functions etc).
+We define our new single-particle basis (this is a normal approach for Hartree-Fock theory) by performing a unitary transformation 
+on our previous basis (labelled with greek indices) as
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\psi_p^{new}  = \sum_{\lambda} C_{p\lambda}\phi_{\lambda}. \tag{11}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+In this case we vary the coefficients \( C_{p\lambda} \). If the basis has infinitely many solutions, we need
+to truncate the above sum.  We assume that the basis \( \phi_{\lambda} \) is orthogonal.
+
+<p>
+It is normal to choose a single-particle basis defined as the eigenfunctions
+of parts of the full Hamiltonian. The typical situation consists of the solutions of the one-body part of the Hamiltonian, that is we have
+<p>&nbsp;<br>
+$$
+\hat{h}_0\phi_{\lambda}=\epsilon_{\lambda}\phi_{\lambda}.
+$$
+<p>&nbsp;<br>
+
+The single-particle wave functions \( \phi_{\lambda}(\mathbf{r}) \), defined by the quantum numbers \( \lambda \) and \( \mathbf{r} \)
+are defined as the overlap 
+<p>&nbsp;<br>
+$$
+   \phi_{\lambda}(\mathbf{r})  = \langle \mathbf{r} | \lambda \rangle .
+$$
+<p>&nbsp;<br>
+
+<p>
+In deriving the Hartree-Fock equations, we  will expand the single-particle functions in a known basis  and vary the coefficients, 
+that is, the new single-particle wave function is written as a linear expansion
+in terms of a fixed chosen orthogonal basis (for example the well-known harmonic oscillator functions or the hydrogen-like functions etc).
+
+<p>
+We stated that a unitary transformation keeps the orthogonality. To see this consider first a basis of vectors \( \mathbf{v}_i \),
+<p>&nbsp;<br>
+$$
+\mathbf{v}_i = \begin{bmatrix} v_{i1} \\ \dots \\ \dots \\v_{in} \end{bmatrix}
+$$
+<p>&nbsp;<br>
+
+We assume that the basis is orthogonal, that is 
+<p>&nbsp;<br>
+$$
+\mathbf{v}_j^T\mathbf{v}_i = \delta_{ij}.
+$$
+<p>&nbsp;<br>
+
+An orthogonal or unitary transformation
+<p>&nbsp;<br>
+$$
+\mathbf{w}_i=\mathbf{U}\mathbf{v}_i,
+$$
+<p>&nbsp;<br>
+
+preserves the dot product and orthogonality since
+<p>&nbsp;<br>
+$$
+\mathbf{w}_j^T\mathbf{w}_i=(\mathbf{U}\mathbf{v}_j)^T\mathbf{U}\mathbf{v}_i=\mathbf{v}_j^T\mathbf{U}^T\mathbf{U}\mathbf{v}_i= \mathbf{v}_j^T\mathbf{v}_i = \delta_{ij}.
+$$
+<p>&nbsp;<br>
+
+<p>
+This means that if the coefficients \( C_{p\lambda} \) belong to a unitary or orthogonal trasformation (using the Dirac bra-ket notation)
+<p>&nbsp;<br>
+$$
+\vert p\rangle  = \sum_{\lambda} C_{p\lambda}\vert\lambda\rangle,
+$$
+<p>&nbsp;<br>
+
+orthogonality is preserved, that is \( \langle \alpha \vert \beta\rangle = \delta_{\alpha\beta} \)
+and \( \langle p \vert q\rangle = \delta_{pq} \).
+
+<p>
+This propertry is extremely useful when we build up a basis of many-body Stater determinant based states.
+
+<p>
+<b>Note also that although a basis \( \vert \alpha\rangle \) contains an infinity of states, for practical calculations we have always to make some truncations.</b>
+
+<p>
+Before we develop for example the Hartree-Fock equations, there is another very useful property of determinants that we will use both in connection with Hartree-Fock calculations and later shell-model calculations.
+
+<p>
+Consider the following determinant
+<p>&nbsp;<br>
+$$
+\left| \begin{array}{cc} \alpha_1b_{11}+\alpha_2sb_{12}& a_{12}\\
+                         \alpha_1b_{21}+\alpha_2b_{22}&a_{22}\end{array} \right|=\alpha_1\left|\begin{array}{cc} b_{11}& a_{12}\\
+                         b_{21}&a_{22}\end{array} \right|+\alpha_2\left| \begin{array}{cc} b_{12}& a_{12}\\b_{22}&a_{22}\end{array} \right|
+$$
+<p>&nbsp;<br>
+
+<p>
+We can generalize this to  an \( n\times n \) matrix and have 
+<p>&nbsp;<br>
+$$
+\left| \begin{array}{cccccc} a_{11}& a_{12} & \dots & \sum_{k=1}^n c_k b_{1k} &\dots & a_{1n}\\
+a_{21}& a_{22} & \dots & \sum_{k=1}^n c_k b_{2k} &\dots & a_{2n}\\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+a_{n1}& a_{n2} & \dots & \sum_{k=1}^n c_k b_{nk} &\dots & a_{nn}\end{array} \right|=
+\sum_{k=1}^n c_k\left| \begin{array}{cccccc} a_{11}& a_{12} & \dots &  b_{1k} &\dots & a_{1n}\\
+a_{21}& a_{22} & \dots &  b_{2k} &\dots & a_{2n}\\
+\dots & \dots & \dots & \dots & \dots & \dots\\
+\dots & \dots & \dots & \dots & \dots & \dots\\
+a_{n1}& a_{n2} & \dots &  b_{nk} &\dots & a_{nn}\end{array} \right| .
+$$
+<p>&nbsp;<br>
+
+This is a property we will use in our Hartree-Fock discussions.
+
+<p>
+We can generalize the previous results, now 
+with all elements \( a_{ij} \)  being given as functions of 
+linear combinations  of various coefficients \( c \) and elements \( b_{ij} \),
+<p>&nbsp;<br>
+$$
+\left| \begin{array}{cccccc} \sum_{k=1}^n b_{1k}c_{k1}& \sum_{k=1}^n b_{1k}c_{k2} & \dots & \sum_{k=1}^n b_{1k}c_{kj}  &\dots & \sum_{k=1}^n b_{1k}c_{kn}\\
+\sum_{k=1}^n b_{2k}c_{k1}& \sum_{k=1}^n b_{2k}c_{k2} & \dots & \sum_{k=1}^n b_{2k}c_{kj} &\dots & \sum_{k=1}^n b_{2k}c_{kn}\\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+\dots & \dots & \dots & \dots & \dots &\dots \\
+\sum_{k=1}^n b_{nk}c_{k1}& \sum_{k=1}^n b_{nk}c_{k2} & \dots & \sum_{k=1}^n b_{nk}c_{kj} &\dots & \sum_{k=1}^n b_{nk}c_{kn}\end{array} \right|=det(\mathbf{C})det(\mathbf{B}),
+$$
+<p>&nbsp;<br>
+
+where \( det(\mathbf{C}) \) and \( det(\mathbf{B}) \) are the determinants of \( n\times n \) matrices
+with elements \( c_{ij} \) and \( b_{ij} \) respectively.  
+This is a property we will use in our Hartree-Fock discussions. Convince yourself about the correctness of the above expression by setting \( n=2 \).
+
+<p>
+With our definition of the new basis in terms of an orthogonal basis we have
+<p>&nbsp;<br>
+$$
+\psi_p(x)  = \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x).
+$$
+<p>&nbsp;<br>
+
+If the coefficients \( C_{p\lambda} \) belong to an orthogonal or unitary matrix, the new basis
+is also orthogonal. 
+Our Slater determinant in the new basis \( \psi_p(x) \) is written as
+<p>&nbsp;<br>
+$$
+\frac{1}{\sqrt{A!}}
+\left| \begin{array}{ccccc} \psi_{p}(x_1)& \psi_{p}(x_2)& \dots & \dots & \psi_{p}(x_A)\\
+                            \psi_{q}(x_1)&\psi_{q}(x_2)& \dots & \dots & \psi_{q}(x_A)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \psi_{t}(x_1)&\psi_{t}(x_2)& \dots & \dots & \psi_{t}(x_A)\end{array} \right|=\frac{1}{\sqrt{A!}}
+\left| \begin{array}{ccccc} \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_1)& \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_A)\\
+                            \sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_1)&\sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_A)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_1)&\sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_A)\end{array} \right|,
+$$
+<p>&nbsp;<br>
+
+which is nothing but \( det(\mathbf{C})det(\Phi) \), with \( det(\Phi) \) being the determinant given by the basis functions \( \phi_{\lambda}(x) \).
+
+<p>
+In our discussions hereafter we will use our definitions of single-particle states above and below the Fermi (\( F \)) level given by the labels
+\( ijkl\dots \le F \) for so-called single-hole states and \( abcd\dots > F \) for so-called particle states.
+For general single-particle states we employ the labels \( pqrs\dots \).
+
+<p>
+The energy functional is
+<p>&nbsp;<br>
+$$
+  E[\Phi] 
+  = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
+  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS},
+$$
+<p>&nbsp;<br>
+
+we found the expression for the energy functional in terms of the basis function \( \phi_{\lambda}(\mathbf{r}) \). We then  varied the above energy functional with respect to the basis functions \( |\mu \rangle \). 
+Now we are interested in defining a new basis defined in terms of
+a chosen basis as defined in Eq.&nbsp;<a href="#mjx-eqn-11">(11)</a>. We can then rewrite the energy functional as
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  E[\Phi^{New}] 
+  = \sum_{i=1}^A \langle i | h | i \rangle +
+  \frac{1}{2}\sum_{ij=1}^A\langle ij|\hat{v}|ij\rangle_{AS}, \tag{12}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+where \( \Phi^{New} \) is the new Slater determinant defined by the new basis of Eq.&nbsp;<a href="#mjx-eqn-11">(11)</a>.
+
+<p>
+Using Eq.&nbsp;<a href="#mjx-eqn-11">(11)</a> we can rewrite Eq.&nbsp;<a href="#mjx-eqn-12">(12)</a> as 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  E[\Psi] 
+  = \sum_{i=1}^A \sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
+  \frac{1}{2}\sum_{ij=1}^A\sum_{{\alpha\beta\gamma\delta}} C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}. \tag{13}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<h1 id="___sec4">Definitions and Second quantization </h1>
 
 <p>
 We introduce the time-independent  operators
@@ -176,7 +797,7 @@ We define the fermion creation operator
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha^{\dagger}|0\rangle \equiv  |\alpha\rangle  \tag{1},
+	a_\alpha^{\dagger}|0\rangle \equiv  |\alpha\rangle  \tag{14},
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -185,19 +806,19 @@ and
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha^{\dagger}|\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} \equiv  |\alpha\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} \tag{2}
+	a_\alpha^{\dagger}|\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} \equiv  |\alpha\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} \tag{15}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 <p>
-In Eq.&nbsp;<a href="#mjx-eqn-1">(1)</a> 
+In Eq.&nbsp;<a href="#mjx-eqn-14">(14)</a> 
 the operator  \( a_\alpha^{\dagger} \)  acts on the vacuum state 
 \( |0\rangle \), which does not contain any particles. Alternatively, we could define  a closed-shell nucleus or atom as our new vacuum, but then
 we need to introduce the particle-hole  formalism, see the discussion to come.
 
 <p>
-In Eq.&nbsp;<a href="#mjx-eqn-2">(2)</a> \( a_\alpha^{\dagger} \) acts on an antisymmetric \( n \)-particle state and 
+In Eq.&nbsp;<a href="#mjx-eqn-15">(15)</a> \( a_\alpha^{\dagger} \) acts on an antisymmetric \( n \)-particle state and 
 creates an antisymmetric \( (n+1) \)-particle state, where the one-body state 
 \( \varphi_\alpha \) is occupied, under the condition that
 \( \alpha \ne \alpha_1, \alpha_2, \dots, \alpha_n \). 
@@ -207,7 +828,7 @@ operators acting on the vacuum state.
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	|\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} = a_{\alpha_1}^{\dagger} a_{\alpha_2}^{\dagger} \dots a_{\alpha_n}^{\dagger} |0\rangle \tag{3}
+	|\alpha_1\dots \alpha_n\rangle_{\mathrm{AS}} = a_{\alpha_1}^{\dagger} a_{\alpha_2}^{\dagger} \dots a_{\alpha_n}^{\dagger} |0\rangle \tag{16}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -215,12 +836,12 @@ $$
 <p>
 It is easy to derive the commutation and anticommutation rules  for the fermionic creation operators 
 \( a_\alpha^{\dagger} \). Using the antisymmetry of the states 
-<a href="#mjx-eqn-3">(3)</a>
+<a href="#mjx-eqn-16">(16)</a>
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	|\alpha_1\dots \alpha_i\dots \alpha_k\dots \alpha_n\rangle_{\mathrm{AS}} = 
-		- |\alpha_1\dots \alpha_k\dots \alpha_i\dots \alpha_n\rangle_{\mathrm{AS}} \tag{4}
+		- |\alpha_1\dots \alpha_k\dots \alpha_i\dots \alpha_n\rangle_{\mathrm{AS}} \tag{17}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -229,7 +850,7 @@ we obtain
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	 a_{\alpha_i}^{\dagger}  a_{\alpha_k}^{\dagger} = - a_{\alpha_k}^{\dagger} a_{\alpha_i}^{\dagger} \tag{5}
+	 a_{\alpha_i}^{\dagger}  a_{\alpha_k}^{\dagger} = - a_{\alpha_k}^{\dagger} a_{\alpha_i}^{\dagger} \tag{18}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -239,7 +860,7 @@ Using the Pauli principle
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	|\alpha_1\dots \alpha_i\dots \alpha_i\dots \alpha_n\rangle_{\mathrm{AS}} = 0 \tag{6}
+	|\alpha_1\dots \alpha_i\dots \alpha_i\dots \alpha_n\rangle_{\mathrm{AS}} = 0 \tag{19}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -248,17 +869,17 @@ it follows that
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_{\alpha_i}^{\dagger}  a_{\alpha_i}^{\dagger} = 0. \tag{7}
+	a_{\alpha_i}^{\dagger}  a_{\alpha_i}^{\dagger} = 0. \tag{20}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-If we combine Eqs.&nbsp;<a href="#mjx-eqn-5">(5)</a> and <a href="#mjx-eqn-7">(7)</a>, we obtain the well-known anti-commutation rule
+If we combine Eqs.&nbsp;<a href="#mjx-eqn-18">(18)</a> and <a href="#mjx-eqn-20">(20)</a>, we obtain the well-known anti-commutation rule
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	a_{\alpha}^{\dagger}  a_{\beta}^{\dagger} + a_{\beta}^{\dagger}  a_{\alpha}^{\dagger} \equiv 
-		\{a_{\alpha}^{\dagger},a_{\beta}^{\dagger}\} = 0 \tag{8}
+		\{a_{\alpha}^{\dagger},a_{\beta}^{\dagger}\} = 0 \tag{21}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -268,16 +889,16 @@ The hermitian conjugate  of \( a_\alpha^{\dagger} \) is
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_{\alpha} = ( a_{\alpha}^{\dagger} )^{\dagger} \tag{9}
+	a_{\alpha} = ( a_{\alpha}^{\dagger} )^{\dagger} \tag{22}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-If we take the hermitian conjugate of Eq.&nbsp;<a href="#mjx-eqn-8">(8)</a>, we arrive at 
+If we take the hermitian conjugate of Eq.&nbsp;<a href="#mjx-eqn-21">(21)</a>, we arrive at 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\{a_{\alpha},a_{\beta}\} = 0 \tag{10}
+	\{a_{\alpha},a_{\beta}\} = 0 \tag{23}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -289,17 +910,17 @@ Consider the following matrix element
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha_1'\alpha_2' \dots \alpha_m'\rangle \tag{11}
+	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha_1'\alpha_2' \dots \alpha_m'\rangle \tag{24}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 where both sides are antisymmetric. We  distinguish between two cases. The first (1) is when
-\( \alpha \in \{\alpha_i\} \). Using the Pauli principle of Eq.&nbsp;<a href="#mjx-eqn-6">(6)</a> it follows
+\( \alpha \in \{\alpha_i\} \). Using the Pauli principle of Eq.&nbsp;<a href="#mjx-eqn-19">(19)</a> it follows
 <p>&nbsp;<br>
 $$
 \begin{equation}
-		\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha = 0 \tag{12}
+		\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha = 0 \tag{25}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -308,24 +929,24 @@ The second (2) case is when \( \alpha \notin \{\alpha_i\} \). It follows that an
 <p>&nbsp;<br>
 $$
 \begin{equation}
-		\langle \alpha_1\alpha_2 \dots \alpha_n|a_\alpha = \langle\alpha\alpha_1\alpha_2 \dots \alpha_n|  \tag{13}
+		\langle \alpha_1\alpha_2 \dots \alpha_n|a_\alpha = \langle\alpha\alpha_1\alpha_2 \dots \alpha_n|  \tag{26}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 <p>
-Eq.&nbsp;<a href="#mjx-eqn-13">(13)</a> holds for case (1) since the lefthand side is zero due to the Pauli principle. We write
-Eq.&nbsp;<a href="#mjx-eqn-11">(11)</a> as
+Eq.&nbsp;<a href="#mjx-eqn-26">(26)</a> holds for case (1) since the lefthand side is zero due to the Pauli principle. We write
+Eq.&nbsp;<a href="#mjx-eqn-24">(24)</a> as
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha_1'\alpha_2' \dots \alpha_m'\rangle = 
-	\langle \alpha_1\alpha_2 \dots \alpha_n|\alpha\alpha_1'\alpha_2' \dots \alpha_m'\rangle \tag{14}
+	\langle \alpha_1\alpha_2 \dots \alpha_n|\alpha\alpha_1'\alpha_2' \dots \alpha_m'\rangle \tag{27}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-Here we must have \( m = n+1 \) if Eq.&nbsp;<a href="#mjx-eqn-14">(14)</a> has to be trivially different from zero.
+Here we must have \( m = n+1 \) if Eq.&nbsp;<a href="#mjx-eqn-27">(27)</a> has to be trivially different from zero.
 
 <p>
 For the last case, the minus and plus signs apply when the sequence 
@@ -335,7 +956,7 @@ If we assume that  \( \alpha \notin \{\alpha_i\} \) we obtain
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha_1'\alpha_2' \dots \alpha_{n+1}'\rangle = 0 \tag{15}
+	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha_1'\alpha_2' \dots \alpha_{n+1}'\rangle = 0 \tag{28}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -344,7 +965,7 @@ when \( \alpha \in \{\alpha_i'\} \). If \( \alpha \notin \{\alpha_i'\} \), we ob
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha\underbrace{|\alpha_1'\alpha_2' \dots \alpha_{n+1}'}\rangle_{\neq \alpha} = 0 \tag{16}
+	a_\alpha\underbrace{|\alpha_1'\alpha_2' \dots \alpha_{n+1}'}\rangle_{\neq \alpha} = 0 \tag{29}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -353,7 +974,7 @@ and in particular
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha |0\rangle = 0 \tag{17}
+	a_\alpha |0\rangle = 0 \tag{30}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -365,7 +986,7 @@ If \( \{\alpha\alpha_i\} = \{\alpha_i'\} \), performing the right permutations, 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha\alpha_1\alpha_2 \dots \alpha_{n}\rangle = 1 \tag{18}
+	\langle\alpha_1\alpha_2 \dots \alpha_n|a_\alpha|\alpha\alpha_1\alpha_2 \dots \alpha_{n}\rangle = 1 \tag{31}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -374,7 +995,7 @@ and thus
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha |\alpha\alpha_1\alpha_2 \dots \alpha_{n}\rangle = |\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{19}
+	a_\alpha |\alpha\alpha_1\alpha_2 \dots \alpha_{n}\rangle = |\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{32}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -399,7 +1020,7 @@ $$
 	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &= 0 \nonumber \\
 	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=
 	a_\alpha \underbrace{|\alpha \alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} = 
-	\underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} \tag{20}
+	\underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} \tag{33}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -416,16 +1037,16 @@ $$
 	a_\alpha^{\dagger} a_\alpha (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle \nonumber \\
 	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=
 	|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle \nonumber \\
-	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &= 0 \tag{21}
+	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &= 0 \tag{34}
 \end{align}
 $$
 <p>&nbsp;<br>
 
-From Eqs.&nbsp;<a href="#mjx-eqn-20">(20)</a> and  <a href="#mjx-eqn-21">(21)</a> we arrive at 
+From Eqs.&nbsp;<a href="#mjx-eqn-33">(33)</a> and  <a href="#mjx-eqn-34">(34)</a> we arrive at 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\{a_\alpha^{\dagger} , a_\alpha \} = a_\alpha^{\dagger} a_\alpha + a_\alpha a_\alpha^{\dagger} = 1 \tag{22}
+	\{a_\alpha^{\dagger} , a_\alpha \} = a_\alpha^{\dagger} a_\alpha + a_\alpha a_\alpha^{\dagger} = 1 \tag{35}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -442,7 +1063,7 @@ The first case results in
 $$
 \begin{align}
 	a_\alpha^{\dagger} a_\beta |\alpha\beta\alpha_1\alpha_2 \dots \alpha_{n-2}\rangle = 0 \nonumber \\
-	a_\beta a_\alpha^{\dagger} |\alpha\beta\alpha_1\alpha_2 \dots \alpha_{n-2}\rangle = 0 \tag{23}
+	a_\beta a_\alpha^{\dagger} |\alpha\beta\alpha_1\alpha_2 \dots \alpha_{n-2}\rangle = 0 \tag{36}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -455,7 +1076,7 @@ $$
 	 	|\alpha \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq  \alpha}\rangle \nonumber \\
 	a_\beta a_\alpha^{\dagger} |\beta \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle =&
 		a_\beta |\alpha\beta\underbrace{\beta \alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \nonumber \\
-	=& - |\alpha\underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \tag{24}
+	=& - |\alpha\underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \tag{37}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -467,7 +1088,7 @@ $$
 \begin{align}
 	a_\alpha^{\dagger} a_\beta |\underbrace{\alpha_1\alpha_2 \dots \alpha_{n}}_{\neq \alpha,\beta}\rangle &=& 0 \nonumber \\
 	a_\beta a_\alpha^{\dagger} |\underbrace{\alpha_1\alpha_2 \dots \alpha_{n}}_{\neq \alpha,\beta}\rangle &=& 
-		a_\beta |\alpha \underbrace{\alpha_1\alpha_2 \dots \alpha_{n}}_{\neq \alpha,\beta}\rangle = 0 \tag{25}
+		a_\beta |\alpha \underbrace{\alpha_1\alpha_2 \dots \alpha_{n}}_{\neq \alpha,\beta}\rangle = 0 \tag{38}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -476,17 +1097,17 @@ For all three cases we have
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\{a_\alpha^{\dagger},a_\beta \} = a_\alpha^{\dagger} a_\beta + a_\beta a_\alpha^{\dagger} = 0, \quad \alpha \neq \beta \tag{26}
+	\{a_\alpha^{\dagger},a_\beta \} = a_\alpha^{\dagger} a_\beta + a_\beta a_\alpha^{\dagger} = 0, \quad \alpha \neq \beta \tag{39}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 <p>
-We can summarize  our findings in Eqs.&nbsp;<a href="#mjx-eqn-22">(22)</a> and <a href="#mjx-eqn-26">(26)</a> as 
+We can summarize  our findings in Eqs.&nbsp;<a href="#mjx-eqn-35">(35)</a> and <a href="#mjx-eqn-39">(39)</a> as 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\{a_\alpha^{\dagger},a_\beta \} = \delta_{\alpha\beta} \tag{27}
+	\{a_\alpha^{\dagger},a_\beta \} = \delta_{\alpha\beta} \tag{40}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -546,7 +1167,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-<h1 id="___sec1">One-body operators in second quantization </h1>
+<h1 id="___sec5">One-body operators in second quantization </h1>
 
 <p>
 A very useful operator is the so-called number-operator.  Most physics cases  we will
@@ -572,7 +1193,7 @@ $$
 		\\
 		|\alpha_1\alpha_2 \dots \alpha_{n}\rangle & \alpha \in \{\alpha_i\}
 	\end{cases}
-\tag{28}
+\tag{41}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -582,7 +1203,7 @@ Summing over all possible one-particle states we arrive at
 $$
 \begin{equation}
 	\left( \sum_\alpha a_\alpha^{\dagger} a_\alpha \right) |\alpha_1\alpha_2 \dots \alpha_{n}\rangle = 
-	n |\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{29}
+	n |\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{42}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -592,7 +1213,7 @@ The operator
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{N} = \sum_\alpha a_\alpha^{\dagger} a_\alpha \tag{30}
+	\hat{N} = \sum_\alpha a_\alpha^{\dagger} a_\alpha \tag{43}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -612,7 +1233,7 @@ In coordinate space the operator reads
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{H}_0 = \sum_i \hat{h}_0(x_i) \tag{31}
+	\hat{H}_0 = \sum_i \hat{h}_0(x_i) \tag{44}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -629,13 +1250,13 @@ Defining
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{h}_0(x_i) \psi_{\alpha_i}(x_i) = \sum_{\alpha_k'} \psi_{\alpha_k'}(x_i) \langle\alpha_k'|\hat{h}_0|\alpha_k\rangle \tag{32}
+	\hat{h}_0(x_i) \psi_{\alpha_i}(x_i) = \sum_{\alpha_k'} \psi_{\alpha_k'}(x_i) \langle\alpha_k'|\hat{h}_0|\alpha_k\rangle \tag{45}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 we can easily  evaluate the action of \( \hat{H}_0 \) on each product of one-particle functions in Slater determinant.
-From Eq.&nbsp;<a href="#mjx-eqn-32">(32)</a>  we obtain the following result without  permuting any particle pair 
+From Eq.&nbsp;<a href="#mjx-eqn-45">(45)</a>  we obtain the following result without  permuting any particle pair 
 <p>&nbsp;<br>
 $$
 \begin{align}
@@ -646,7 +1267,7 @@ $$
 		\psi_{\alpha_1}(x_1)\psi_{\alpha_2'}(x_2) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	&+& \dots \nonumber \\
 	&+&\sum_{\alpha_n'} \langle \alpha_n'|\hat{h}_0|\alpha_n\rangle
-		\psi_{\alpha_1}(x_1)\psi_{\alpha_2}(x_2) \dots \psi_{\alpha_n'}(x_n) \tag{33}
+		\psi_{\alpha_1}(x_1)\psi_{\alpha_2}(x_2) \dots \psi_{\alpha_n'}(x_n) \tag{46}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -663,7 +1284,7 @@ $$
 		\psi_{\alpha_1'}(x_2)\psi_{\alpha_2}(x_1) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	&+& \dots \nonumber \\
 	&+&\sum_{\alpha_n'} \langle \alpha_n'|\hat{h}_0|\alpha_n\rangle
-		\psi_{\alpha_1}(x_2)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n'}(x_n) \tag{34}
+		\psi_{\alpha_1}(x_2)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n'}(x_n) \tag{47}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -682,27 +1303,27 @@ $$
 		|\alpha_1\alpha_2' \dots \alpha_{n}\rangle \nonumber \\
 	&+& \dots \nonumber \\
 	&+& \sum_{\alpha_n'} \langle \alpha_n'|\hat{h}_0|\alpha_n\rangle
-		|\alpha_1\alpha_2 \dots \alpha_{n}'\rangle \tag{35}
+		|\alpha_1\alpha_2 \dots \alpha_{n}'\rangle \tag{48}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-In Eq.&nbsp;<a href="#mjx-eqn-35">(35)</a> 
+In Eq.&nbsp;<a href="#mjx-eqn-48">(48)</a> 
 we have expressed the action of the one-body operator
-of Eq.&nbsp;<a href="#mjx-eqn-31">(31)</a> on the  \( n \)-body state in its second quantized form.
+of Eq.&nbsp;<a href="#mjx-eqn-44">(44)</a> on the  \( n \)-body state in its second quantized form.
 This equation can be further manipulated if we use the properties of the creation and annihilation operator
 on each primed quantum number, that is
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	|\alpha_1\alpha_2 \dots \alpha_k' \dots \alpha_{n}\rangle = 
-		a_{\alpha_k'}^{\dagger}  a_{\alpha_k} |\alpha_1\alpha_2 \dots \alpha_k \dots \alpha_{n}\rangle \tag{36}
+		a_{\alpha_k'}^{\dagger}  a_{\alpha_k} |\alpha_1\alpha_2 \dots \alpha_k \dots \alpha_{n}\rangle \tag{49}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-Inserting this in the right-hand side of Eq.&nbsp;<a href="#mjx-eqn-35">(35)</a> results in
+Inserting this in the right-hand side of Eq.&nbsp;<a href="#mjx-eqn-48">(48)</a> results in
 <p>&nbsp;<br>
 $$
 \begin{align}
@@ -714,7 +1335,7 @@ $$
 	&+& \sum_{\alpha_n'} \langle \alpha_n'|\hat{h}_0|\alpha_n\rangle
 		a_{\alpha_n'}^{\dagger}  a_{\alpha_n} |\alpha_1\alpha_2 \dots \alpha_{n}\rangle \nonumber \\
 	&=& \sum_{\alpha, \beta} \langle \alpha|\hat{h}_0|\beta\rangle a_\alpha^{\dagger} a_\beta 
-		|\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{37}
+		|\alpha_1\alpha_2 \dots \alpha_{n}\rangle \tag{50}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -725,7 +1346,7 @@ operator which conserves the number of particles
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{H}_0 = \sum_{\alpha\beta} \langle \alpha|\hat{h}_0|\beta\rangle a_\alpha^{\dagger} a_\beta \tag{38}
+	\hat{H}_0 = \sum_{\alpha\beta} \langle \alpha|\hat{h}_0|\beta\rangle a_\alpha^{\dagger} a_\beta \tag{51}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -738,13 +1359,13 @@ The opearator \( \hat{H}_0 \) takes a particle from the single-particle state \(
 with a probability for the transition given by the expectation value \( \langle \alpha|\hat{h}_0|\beta\rangle \).
 
 <p>
-It is instructive to verify Eq.&nbsp;<a href="#mjx-eqn-38">(38)</a> by computing the expectation value of \( \hat{H}_0 \) 
+It is instructive to verify Eq.&nbsp;<a href="#mjx-eqn-51">(51)</a> by computing the expectation value of \( \hat{H}_0 \) 
 between two single-particle states
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	\langle \alpha_1|\hat{h}_0|\alpha_2\rangle = \sum_{\alpha\beta} \langle \alpha|\hat{h}_0|\beta\rangle
-		\langle 0|a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger}|0\rangle \tag{39}
+		\langle 0|a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger}|0\rangle \tag{52}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -754,7 +1375,7 @@ Using the commutation relations for the creation and annihilation operators we h
 <p>&nbsp;<br>
 $$
 \begin{equation}
-a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger} = (\delta_{\alpha \alpha_1} - a_\alpha^{\dagger} a_{\alpha_1} )(\delta_{\beta \alpha_2} - a_{\alpha_2}^{\dagger} a_{\beta} ), \tag{40}
+a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger} = (\delta_{\alpha \alpha_1} - a_\alpha^{\dagger} a_{\alpha_1} )(\delta_{\beta \alpha_2} - a_{\alpha_2}^{\dagger} a_{\beta} ), \tag{53}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -763,7 +1384,7 @@ which results in
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\langle 0|a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger}|0\rangle = \delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} \tag{41}
+\langle 0|a_{\alpha_1}a_\alpha^{\dagger} a_\beta a_{\alpha_2}^{\dagger}|0\rangle = \delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} \tag{54}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -772,12 +1393,12 @@ and
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\langle \alpha_1|\hat{h}_0|\alpha_2\rangle = \sum_{\alpha\beta} \langle \alpha|\hat{h}_0|\beta\rangle\delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} = \langle \alpha_1|\hat{h}_0|\alpha_2\rangle \tag{42}
+\langle \alpha_1|\hat{h}_0|\alpha_2\rangle = \sum_{\alpha\beta} \langle \alpha|\hat{h}_0|\beta\rangle\delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} = \langle \alpha_1|\hat{h}_0|\alpha_2\rangle \tag{55}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-<h1 id="___sec2">Two-body operators in second quantization </h1>
+<h1 id="___sec6">Two-body operators in second quantization </h1>
 
 <p>
 Let us now derive the expression for our two-body interaction part, which also conserves the number of particles.
@@ -786,7 +1407,7 @@ two-body interaction part takes the following expression
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{H}_I = \sum_{i < j} V(x_i,x_j) \tag{43}
+	\hat{H}_I = \sum_{i < j} V(x_i,x_j) \tag{56}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -802,7 +1423,7 @@ $$
 \begin{equation}
 	V(x_i,x_j) \psi_{\alpha_k}(x_i) \psi_{\alpha_l}(x_j) = \sum_{\alpha_k'\alpha_l'} 
 		\psi_{\alpha_k}'(x_i)\psi_{\alpha_l}'(x_j) 
-		\langle \alpha_k'\alpha_l'|\hat{v}|\alpha_k\alpha_l\rangle \tag{44}
+		\langle \alpha_k'\alpha_l'|\hat{v}|\alpha_k\alpha_l\rangle \tag{57}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -821,7 +1442,7 @@ $$
 	& +& \dots \nonumber \\
 	&+& \sum_{\alpha_2'\alpha_n'} \langle \alpha_2'\alpha_n'|\hat{v}|\alpha_2\alpha_n\rangle
 		\psi_{\alpha_1}(x_1)\psi_{\alpha_2}'(x_2)\dots \psi_{\alpha_n}'(x_n) \nonumber \\
-	 & +& \dots \tag{45}
+	 & +& \dots \tag{58}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -841,7 +1462,7 @@ $$
 	&+& \dots \nonumber \\
 	&+& \sum_{\alpha_2', \alpha_n'} \langle \alpha_2'\alpha_n'|\hat{v}|\alpha_2\alpha_n\rangle
 		|\alpha_1\alpha_2'\dots\alpha_n'\rangle \nonumber \\
-	 &+& \dots \tag{46}
+	 &+& \dots \tag{59}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -857,13 +1478,13 @@ $$
 		|\alpha_k\alpha_l \underbrace{\alpha_1\alpha_2\dots\alpha_n}_{\neq \alpha_k,\alpha_l}\rangle \nonumber \\
 	&=& (-1)^{k-1} (-1)^{l-2} 
 	|\alpha_k'\alpha_l' \underbrace{\alpha_1\alpha_2\dots\alpha_n}_{\neq \alpha_k',\alpha_l'}\rangle \nonumber \\
-	&=& |\alpha_1\alpha_2\dots\alpha_k'\dots\alpha_l'\dots\alpha_n\rangle \tag{47}
+	&=& |\alpha_1\alpha_2\dots\alpha_k'\dots\alpha_l'\dots\alpha_n\rangle \tag{60}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-Inserting this in <a href="#mjx-eqn-46">(46)</a> gives
+Inserting this in <a href="#mjx-eqn-59">(59)</a> gives
 <p>&nbsp;<br>
 $$
 \begin{align}
@@ -882,7 +1503,7 @@ $$
 	&+& \dots \nonumber \\
 	&=& \sum_{\alpha, \beta, \gamma, \delta} ' \langle \alpha\beta|\hat{v}|\gamma\delta\rangle
 		a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma
-		|\alpha_1\alpha_2\dots\alpha_n\rangle \tag{48}
+		|\alpha_1\alpha_2\dots\alpha_n\rangle \tag{61}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -894,7 +1515,7 @@ run over all pairs of single-particle states. We wish to remove this restriction
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\langle \alpha\beta|\hat{v}|\gamma\delta\rangle = \langle \beta\alpha|\hat{v}|\delta\gamma\rangle \tag{49}
+	\langle \alpha\beta|\hat{v}|\gamma\delta\rangle = \langle \beta\alpha|\hat{v}|\delta\gamma\rangle \tag{62}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -905,9 +1526,9 @@ $$
 \begin{align}
 	\sum_{\alpha\beta} \langle \alpha\beta|\hat{v}|\gamma\delta\rangle a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma &=& 
 		\sum_{\alpha\beta} \langle \beta\alpha|\hat{v}|\delta\gamma\rangle 
-		a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma \tag{50} \\
+		a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma \tag{63} \\
 	&=& \sum_{\alpha\beta}\langle \beta\alpha|\hat{v}|\delta\gamma\rangle
-		a^{\dagger}_\beta a^{\dagger}_\alpha a_\gamma a_\delta \tag{51}
+		a^{\dagger}_\beta a^{\dagger}_\alpha a_\gamma a_\delta \tag{64}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -916,13 +1537,13 @@ where we  have used the anti-commutation rules.
 
 <p>
 Changing the summation indices 
-\( \alpha \) and \( \beta \) in <a href="#mjx-eqn-51">(51)</a> we obtain
+\( \alpha \) and \( \beta \) in <a href="#mjx-eqn-64">(64)</a> we obtain
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	\sum_{\alpha\beta} \langle \alpha\beta|\hat{v}|\gamma\delta\rangle a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma =
 		 \sum_{\alpha\beta} \langle \alpha\beta|\hat{v}|\delta\gamma\rangle 
-		  a^{\dagger}_\alpha a^{\dagger}_\beta  a_\gamma a_\delta \tag{52}
+		  a^{\dagger}_\alpha a^{\dagger}_\beta  a_\gamma a_\delta \tag{65}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -932,7 +1553,7 @@ From this it follows that the restriction on the summation over \( \gamma \) and
 $$
 \begin{equation}
 	\hat{H}_I = \frac{1}{2} \sum_{\alpha\beta\gamma\delta} \langle \alpha\beta|\hat{v}|\gamma\delta\rangle
-		a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma \tag{53}
+		a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma \tag{66}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -941,7 +1562,7 @@ where we sum freely over all single-particle states \( \alpha \),
 \( \beta \), \( \gamma \) og \( \delta \).
 
 <p>
-With this expression we can now verify that the second quantization form of \( \hat{H}_I \) in Eq.&nbsp;<a href="#mjx-eqn-53">(53)</a> 
+With this expression we can now verify that the second quantization form of \( \hat{H}_I \) in Eq.&nbsp;<a href="#mjx-eqn-66">(66)</a> 
 results in the same matrix between two anti-symmetrized two-particle states as its corresponding coordinate
 space representation. We have
 
@@ -952,7 +1573,7 @@ $$
 		\frac{1}{2} \sum_{\alpha\beta\gamma\delta}
 			\langle \alpha\beta|\hat{v}|\gamma\delta\rangle \langle 0|a_{\alpha_2} a_{\alpha_1} 
 			 a^{\dagger}_\alpha a^{\dagger}_\beta a_\delta a_\gamma 
-			 a_{\beta_1}^{\dagger} a_{\beta_2}^{\dagger}|0\rangle. \tag{54}
+			 a_{\beta_1}^{\dagger} a_{\beta_2}^{\dagger}|0\rangle. \tag{67}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -974,7 +1595,7 @@ $$
 	&=& a_{\alpha_2} a_{\alpha_1}a^{\dagger}_\alpha a^{\dagger}_\beta 
 		(\delta_{\gamma \beta_1} \delta_{\delta \beta_2} - \delta_{\gamma \beta_1} a_{\beta_2}^{\dagger} a_\delta \nonumber \\
 		&& \qquad - \delta_{\delta \beta_1} \delta_{\gamma \beta_2} + \delta_{\gamma \beta_2} a_{\beta_1}^{\dagger} a_\delta
-		+ a_\delta a_{\beta_1}^{\dagger} a_{\beta_2}^{\dagger} a_\gamma ) \tag{55}
+		+ a_\delta a_{\beta_1}^{\dagger} a_{\beta_2}^{\dagger} a_\gamma ) \tag{68}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -990,14 +1611,14 @@ $$
 		\delta_{\delta \beta_1} \delta_{\gamma \beta_2} ) 
 		\langle 0|a_{\alpha_2} a_{\alpha_1}a^{\dagger}_\alpha a^{\dagger}_\beta|0\rangle \nonumber \\
 	&=& (\delta_{\gamma \beta_1} \delta_{\delta \beta_2} -\delta_{\delta \beta_1} \delta_{\gamma \beta_2} )
-	(\delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} -\delta_{\beta \alpha_1} \delta_{\alpha \alpha_2} ) \tag{56}
+	(\delta_{\alpha \alpha_1} \delta_{\beta \alpha_2} -\delta_{\beta \alpha_1} \delta_{\alpha \alpha_2} ) \tag{69}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 Insertion of 
-Eq.&nbsp;<a href="#mjx-eqn-56">(56)</a> in Eq.&nbsp;<a href="#mjx-eqn-54">(54)</a> results in
+Eq.&nbsp;<a href="#mjx-eqn-69">(69)</a> in Eq.&nbsp;<a href="#mjx-eqn-67">(67)</a> results in
 <p>&nbsp;<br>
 $$
 \begin{align}
@@ -1005,7 +1626,7 @@ $$
 		\langle \alpha_1\alpha_2|\hat{v}|\beta_1\beta_2\rangle- \langle \alpha_1\alpha_2|\hat{v}|\beta_2\beta_1\rangle \nonumber \\
 		&& - \langle \alpha_2\alpha_1|\hat{v}|\beta_1\beta_2\rangle + \langle \alpha_2\alpha_1|\hat{v}|\beta_2\beta_1\rangle \big] \nonumber \\
 	&=& \langle \alpha_1\alpha_2|\hat{v}|\beta_1\beta_2\rangle - \langle \alpha_1\alpha_2|\hat{v}|\beta_2\beta_1\rangle \nonumber \\
-	&=& \langle \alpha_1\alpha_2|\hat{v}|\beta_1\beta_2\rangle_{\mathrm{AS}}. \tag{57}
+	&=& \langle \alpha_1\alpha_2|\hat{v}|\beta_1\beta_2\rangle_{\mathrm{AS}}. \tag{70}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1021,7 +1642,7 @@ $$
 		\langle \alpha \beta|\hat{v}|\delta\gamma \rangle \right] 
 		a_\alpha^{\dagger} a_\beta^{\dagger} a_\delta a_\gamma \nonumber \\
 	&=& \frac{1}{4} \sum_{\alpha\beta\gamma\delta} \langle \alpha \beta|\hat{v}|\gamma \delta\rangle_{\mathrm{AS}}
-		a_\alpha^{\dagger} a_\beta^{\dagger} a_\delta a_\gamma \tag{58}
+		a_\alpha^{\dagger} a_\beta^{\dagger} a_\delta a_\gamma \tag{71}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1038,14 +1659,14 @@ as
 $$
 \begin{equation}
 	H = \sum_{\alpha, \beta} \langle \alpha|\hat{t}+\hat{u}_{\mathrm{ext}}|\beta\rangle a_\alpha^{\dagger} a_\beta + \frac{1}{4} \sum_{\alpha\beta\gamma\delta}
-		\langle \alpha \beta|\hat{v}|\gamma \delta\rangle a_\alpha^{\dagger} a_\beta^{\dagger} a_\delta a_\gamma. \tag{59}
+		\langle \alpha \beta|\hat{v}|\gamma \delta\rangle a_\alpha^{\dagger} a_\beta^{\dagger} a_\delta a_\gamma. \tag{72}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 This is the form we will use in the rest of these lectures, assuming that we work with anti-symmetrized two-body matrix elements.
 
-<h1 id="___sec3">Particle-hole formalism </h1>
+<h1 id="___sec7">Particle-hole formalism </h1>
 
 <p>
 Second quantization is a useful and elegant formalism  for constructing many-body  states and 
@@ -1067,29 +1688,29 @@ considerably the complexity and thereby the dimensionality of the many-body prob
 
 <p>
 In the original particle representation these states are products of the creation operators  \( a_{\alpha_i}^\dagger \) acting on the true vacuum \( |0\rangle  \).
-Following Eq.&nbsp;<a href="#mjx-eqn-3">(3)</a> we have 
+Following Eq.&nbsp;<a href="#mjx-eqn-16">(16)</a> we have 
 <p>&nbsp;<br>
 $$
 \begin{align}
  |\alpha_1\alpha_2\dots\alpha_{n-1}\alpha_n\rangle &=& a_{\alpha_1}^\dagger a_{\alpha_2}^\dagger \dots
-					a_{\alpha_{n-1}}^\dagger a_{\alpha_n}^\dagger |0\rangle  \tag{60} \\
+					a_{\alpha_{n-1}}^\dagger a_{\alpha_n}^\dagger |0\rangle  \tag{73} \\
 	|\alpha_1\alpha_2\dots\alpha_{n-1}\alpha_n\alpha_{n+1}\rangle &=&
 		a_{\alpha_1}^\dagger a_{\alpha_2}^\dagger \dots a_{\alpha_{n-1}}^\dagger a_{\alpha_n}^\dagger
-		a_{\alpha_{n+1}}^\dagger |0\rangle  \tag{61} \\
+		a_{\alpha_{n+1}}^\dagger |0\rangle  \tag{74} \\
 	|\alpha_1\alpha_2\dots\alpha_{n-1}\rangle &=& a_{\alpha_1}^\dagger a_{\alpha_2}^\dagger \dots
-		a_{\alpha_{n-1}}^\dagger |0\rangle  \tag{62}
+		a_{\alpha_{n-1}}^\dagger |0\rangle  \tag{75}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-If we use Eq.&nbsp;<a href="#mjx-eqn-60">(60)</a> as our new reference state, we can simplify considerably the representation of 
+If we use Eq.&nbsp;<a href="#mjx-eqn-73">(73)</a> as our new reference state, we can simplify considerably the representation of 
 this state
 <p>&nbsp;<br>
 $$
 \begin{equation}
 	|c\rangle  \equiv |\alpha_1\alpha_2\dots\alpha_{n-1}\alpha_n\rangle =
-		a_{\alpha_1}^\dagger a_{\alpha_2}^\dagger \dots a_{\alpha_{n-1}}^\dagger a_{\alpha_n}^\dagger |0\rangle  \tag{63}
+		a_{\alpha_1}^\dagger a_{\alpha_2}^\dagger \dots a_{\alpha_{n-1}}^\dagger a_{\alpha_n}^\dagger |0\rangle  \tag{76}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1099,9 +1720,9 @@ The new reference states for the \( n+1 \) and \( n-1 \) states can then be writ
 $$
 \begin{align}
 	|\alpha_1\alpha_2\dots\alpha_{n-1}\alpha_n\alpha_{n+1}\rangle &=& (-1)^n a_{\alpha_{n+1}}^\dagger |c\rangle 
-		\equiv (-1)^n |\alpha_{n+1}\rangle_c \tag{64} \\
+		\equiv (-1)^n |\alpha_{n+1}\rangle_c \tag{77} \\
 	|\alpha_1\alpha_2\dots\alpha_{n-1}\rangle &=& (-1)^{n-1} a_{\alpha_n} |c\rangle  
-		\equiv (-1)^{n-1} |\alpha_{n-1}\rangle_c \tag{65} 
+		\equiv (-1)^{n-1} |\alpha_{n-1}\rangle_c \tag{78} 
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1114,11 +1735,11 @@ The second state has one particle less than the reference vacuum state  \( |c\ra
 a one-hole state. 
 When dealing with a new reference state it is often convenient to introduce 
 new creation and annihilation operators since we have 
-from Eq.&nbsp;<a href="#mjx-eqn-65">(65)</a>
+from Eq.&nbsp;<a href="#mjx-eqn-78">(78)</a>
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	a_\alpha |c\rangle  \neq 0 \tag{66}
+	a_\alpha |c\rangle  \neq 0 \tag{79}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1132,9 +1753,9 @@ which satisfy the following relations
 <p>&nbsp;<br>
 $$
 \begin{align}
-	b_\alpha |c\rangle  &=& 0 \tag{67} \\
+	b_\alpha |c\rangle  &=& 0 \tag{80} \\
 	\{b_\alpha^\dagger , b_\beta^\dagger \} = \{b_\alpha , b_\beta \} &=& 0 \nonumber  \\
-	\{b_\alpha^\dagger , b_\beta \} &=& \delta_{\alpha \beta} \tag{68}
+	\{b_\alpha^\dagger , b_\beta \} &=& \delta_{\alpha \beta} \tag{81}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1143,7 +1764,7 @@ We assume also that the new reference state is properly normalized
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\langle c | c \rangle = 1 \tag{69}
+	\langle c | c \rangle = 1 \tag{82}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1159,7 +1780,7 @@ $$
 		a_\alpha^\dagger |c\rangle  = |\alpha\rangle, & \alpha > F \\
 		\\
 		a_\alpha |c\rangle  = |\alpha^{-1}\rangle, & \alpha \leq F
-	\end{array} \tag{70}
+	\end{array} \tag{83}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1188,7 +1809,7 @@ $$
 		a_\alpha & \alpha > F \\
 		\\
 		 a_\alpha^\dagger & \alpha \leq F
-	\end{array} \tag{71}
+	\end{array} \tag{84}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1203,7 +1824,7 @@ $$
 \begin{equation}
 	|\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle \equiv
 		\underbrace{b_{\beta_1}^\dagger b_{\beta_2}^\dagger \dots b_{\beta_{n_p}}^\dagger}_{>F}
-		\underbrace{b_{\gamma_1}^\dagger b_{\gamma_2}^\dagger \dots b_{\gamma_{n_h}}^\dagger}_{\leq F} |c\rangle \tag{72}
+		\underbrace{b_{\gamma_1}^\dagger b_{\gamma_2}^\dagger \dots b_{\gamma_{n_h}}^\dagger}_{\leq F} |c\rangle \tag{85}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1214,7 +1835,7 @@ The number operator becomes
 $$
 \begin{equation}
 	\hat{N} = \sum_\alpha a_\alpha^\dagger a_\alpha= 
-\sum_{\alpha > F} b_\alpha^\dagger b_\alpha + n_c - \sum_{\alpha \leq F} b_\alpha^\dagger b_\alpha \tag{73}
+\sum_{\alpha > F} b_\alpha^\dagger b_\alpha + n_c - \sum_{\alpha \leq F} b_\alpha^\dagger b_\alpha \tag{86}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1224,17 +1845,17 @@ The action of \( \hat{N} \) on a many-body state results in
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	N |\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle = (n_p + n_c - n_h) |\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle \tag{74}
+	N |\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle = (n_p + n_c - n_h) |\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle \tag{87}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 Here  \( n=n_p +n_c - n_h \) is the total number of particles in the quasi-particle state of 
-Eq.&nbsp;<a href="#mjx-eqn-72">(72)</a>. Note that  \( \hat{N} \) counts the total number of particles  present 
+Eq.&nbsp;<a href="#mjx-eqn-85">(85)</a>. Note that  \( \hat{N} \) counts the total number of particles  present 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	N_{qp} = \sum_\alpha b_\alpha^\dagger b_\alpha, \tag{75}
+	N_{qp} = \sum_\alpha b_\alpha^\dagger b_\alpha, \tag{88}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1244,7 +1865,7 @@ gives us the number of quasi-particles as can be seen by computing
 $$
 \begin{equation}
 	N_{qp}= |\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle
-		= (n_p + n_h)|\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle \tag{76}
+		= (n_p + n_h)|\beta_1\beta_2\dots \beta_{n_p} \gamma_1^{-1} \gamma_2^{-1} \dots \gamma_{n_h}^{-1}\rangle \tag{89}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1258,7 +1879,7 @@ $$
 \begin{align}
 	\hat{H}_0 &=& \sum_{\alpha\beta > F} \langle \alpha|\hat{h}_0|\beta\rangle  b_\alpha^\dagger b_\beta +
 		\sum_{\alpha > F, \beta \leq F } \left[\langle \alpha|\hat{h}_0|\beta\rangle b_\alpha^\dagger b_\beta^\dagger + \langle \beta|\hat{h}_0|\alpha\rangle b_\beta  b_\alpha \right] \nonumber \\
-	&+& \sum_{\alpha \leq F} \langle \alpha|\hat{h}_0|\alpha\rangle - \sum_{\alpha\beta \leq F} \langle \beta|\hat{h}_0|\alpha\rangle b_\alpha^\dagger b_\beta \tag{77}
+	&+& \sum_{\alpha \leq F} \langle \alpha|\hat{h}_0|\alpha\rangle - \sum_{\alpha\beta \leq F} \langle \beta|\hat{h}_0|\alpha\rangle b_\alpha^\dagger b_\beta \tag{90}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1283,7 +1904,7 @@ $$
 		\langle i|\hat{h}|a\rangle b_i  b_a \right] \nonumber \\
 	&+& \sum_{i} \langle i|\hat{h}|i\rangle - 
 		\sum_{ij} \langle j|\hat{h}|i\rangle
-		b_i^\dagger b_j \tag{78}
+		b_i^\dagger b_j \tag{91}
 \end{align} 
 $$
 <p>&nbsp;<br>
@@ -1295,7 +1916,7 @@ states.  When performing the commutator algebra we can regroup the operator in f
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	\hat{H}_I = \hat{H}_I^{(a)} + \hat{H}_I^{(b)} + \hat{H}_I^{(c)} + \hat{H}_I^{(d)} + \hat{H}_I^{(e)} \tag{79}
+	\hat{H}_I = \hat{H}_I^{(a)} + \hat{H}_I^{(b)} + \hat{H}_I^{(c)} + \hat{H}_I^{(d)} + \hat{H}_I^{(e)} \tag{92}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1308,7 +1929,7 @@ $$
 \begin{equation}
 	\hat{H}_I^{(a)} = \frac{1}{4}
 	\sum_{abcd} \langle ab|\hat{V}|cd\rangle 
-		b_a^\dagger b_b^\dagger b_d b_c \tag{80}
+		b_a^\dagger b_b^\dagger b_d b_c \tag{93}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1318,7 +1939,7 @@ The next term \( \hat{H}_I^{(b)} \)  reads
 <p>&nbsp;<br>
 $$
 \begin{equation}
-	 \hat{H}_I^{(b)} = \frac{1}{4} \sum_{abci}\left(\langle ab|\hat{V}|ci\rangle b_a^\dagger b_b^\dagger b_i^\dagger b_c +\langle ai|\hat{V}|cb\rangle b_a^\dagger b_i b_b b_c\right) \tag{81}
+	 \hat{H}_I^{(b)} = \frac{1}{4} \sum_{abci}\left(\langle ab|\hat{V}|ci\rangle b_a^\dagger b_b^\dagger b_i^\dagger b_c +\langle ai|\hat{V}|cb\rangle b_a^\dagger b_i b_b b_c\right) \tag{94}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1333,7 +1954,7 @@ $$
 		\sum_{abij}\left(\langle ab|\hat{V}|ij\rangle b_a^\dagger b_b^\dagger b_j^\dagger b_i^\dagger +
 		\langle ij|\hat{V}|ab\rangle b_a  b_b b_j b_i \right)+  \nonumber \\
 	&&	\frac{1}{2}\sum_{abij}\langle ai|\hat{V}|bj\rangle b_a^\dagger b_j^\dagger b_b b_i + 
-		\frac{1}{2}\sum_{abi}\langle ai|\hat{V}|bi\rangle b_a^\dagger b_b. \tag{82}
+		\frac{1}{2}\sum_{abi}\langle ai|\hat{V}|bi\rangle b_a^\dagger b_b. \tag{95}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1352,7 +1973,7 @@ $$
 	 	\sum_{aijk}\left(\langle ai|\hat{V}|jk\rangle b_a^\dagger b_k^\dagger b_j^\dagger b_i+
 \langle ji|\hat{V}|ak\rangle b_k^\dagger b_j b_i b_a\right)+\nonumber \\
 &&\frac{1}{4}\sum_{aij}\left(\langle ai|\hat{V}|ji\rangle b_a^\dagger b_j^\dagger+
-\langle ji|\hat{V}|ai\rangle - \langle ji|\hat{V}|ia\rangle b_j b_a \right). \tag{83} 
+\langle ji|\hat{V}|ai\rangle - \langle ji|\hat{V}|ia\rangle b_j b_a \right). \tag{96} 
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1368,7 +1989,7 @@ $$
 		 \sum_{ijkl}
 		 \langle kl|\hat{V}|ij\rangle b_i^\dagger b_j^\dagger b_l b_k+
 	        \frac{1}{2}\sum_{ijk}\langle ij|\hat{V}|kj\rangle b_k^\dagger b_i
-	        +\frac{1}{2}\sum_{ij}\langle ij|\hat{V}|ij\rangle \tag{84}
+	        +\frac{1}{2}\sum_{ij}\langle ij|\hat{V}|ij\rangle \tag{97}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1379,7 +2000,7 @@ It represents a contribution to single-hole energy  to first order.
 The last term collects all contributions to the energy of the ground state of a closed-shell system arising
 from hole-hole correlations.
 
-<h1 id="___sec4">Summarizing and defining a normal-ordered Hamiltonian </h1>
+<h1 id="___sec8">Summarizing and defining a normal-ordered Hamiltonian </h1>
 
 <p>&nbsp;<br>
 $$
@@ -1477,12 +2098,12 @@ with the antisymmetrized matrix element
 $$
 \begin{align}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
-\tag{85}
+\tag{98}
 \end{align}
 $$
 <p>&nbsp;<br>
 
-<h1 id="___sec5">Hartree-Fock in second quantization and stability of HF solution </h1>
+<h1 id="___sec9">Hartree-Fock in second quantization and stability of HF solution </h1>
 
 <p>
 We wish now to derive the Hartree-Fock equations using our second-quantized formalism and study the stability of the equations. 
@@ -1523,7 +2144,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-<h2 id="___sec6">Thouless' theorem </h2>
+<h2 id="___sec10">Thouless' theorem </h2>
 
 <p>
 If the operators do not commute, we need to resort to the <a href="http://www.encyclopediaofmath.org/index.php/Campbell%E2%80%93Hausdorff_formula" target="_blank">Baker-Campbell-Hauersdorf</a>. This relation states that
@@ -1583,21 +2204,21 @@ The last equation can be written as
 $$
 \begin{align}
 |c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} 
-\tag{86}\\
+\tag{99}\\
 & \times\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
-\tag{87}
+\tag{100}
 \end{align}
 $$
 <p>&nbsp;<br>
 
-<h2 id="___sec7">New operators </h2>
+<h2 id="___sec11">New operators </h2>
 
 <p>
 If we define a new creation operator 
 <p>&nbsp;<br>
 $$
 \begin{equation}
-b^{\dagger}_{i}=a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}, \tag{88}
+b^{\dagger}_{i}=a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}, \tag{101}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1609,7 +2230,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-meaning that the new representation of the Slater determinant in second quantization, \( |c'\rangle \), looks like our previous ones. However, this representation is not general enough since we have a restriction on the sum over single-particle states in Eq.&nbsp;<a href="#mjx-eqn-88">(88)</a>. The single-particle states have all to be above the Fermi level.
+meaning that the new representation of the Slater determinant in second quantization, \( |c'\rangle \), looks like our previous ones. However, this representation is not general enough since we have a restriction on the sum over single-particle states in Eq.&nbsp;<a href="#mjx-eqn-101">(101)</a>. The single-particle states have all to be above the Fermi level.
 The question then is whether we can construct a general representation of a Slater determinant with a creation operator 
 <p>&nbsp;<br>
 $$
@@ -1625,7 +2246,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-<h2 id="___sec8">Showing that \( |\tilde{c}\rangle= |c'\rangle \)  </h2>
+<h2 id="___sec12">Showing that \( |\tilde{c}\rangle= |c'\rangle \)  </h2>
 
 <p>
 We need to show that \( |\tilde{c}\rangle= |c'\rangle \). We need also to assume that the new state
@@ -1728,7 +2349,7 @@ $$
 
 With this as a background, we are now ready to study the stability of the Hartree-Fock equations.
 
-<h2 id="___sec9">Hartree-Fock in second quantization and stability of HF solution </h2>
+<h2 id="___sec13">Hartree-Fock in second quantization and stability of HF solution </h2>
 
 <p>
 The variational condition for deriving the Hartree-Fock equations guarantees only that the expectation value \( \langle c | \hat{H} | c \rangle \) has an extreme value, not necessarily a minimum. To figure out whether the extreme value we have found  is a minimum, we can use second quantization to analyze our results and find a criterion 
@@ -1751,10 +2372,10 @@ Using Thouless' theorem we can write out \( |c'\rangle \) as
 $$
 \begin{align}
  {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle
-\tag{89}\\ 
+\tag{102}\\ 
 &=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
 a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
-\tag{90}
+\tag{103}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1796,10 +2417,10 @@ $$
 \langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
             \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
              \{a^{\dagger}_b a_j\} \right)| c\rangle
-\tag{91}\\
+\tag{104}\\
 & +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
             \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
-\tag{92}
+\tag{105}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1865,10 +2486,10 @@ With these definitions we write out the energy as
 $$
 \begin{align}
 \langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+
-\tag{93}\\
+\tag{106}\\
 &\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
 +O(\delta C_{ai}^3),
-\tag{94}
+\tag{107}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1936,7 +2557,7 @@ $$
 
 This equation can be used as a first test of the stability of the Hartree-Fock equation.
 
-<h1 id="___sec10">Operators in second quantization </h1>
+<h1 id="___sec14">Operators in second quantization </h1>
 
 <p>
 In the build-up of a shell-model or FCI code that is meant to tackle large dimensionalities
@@ -2176,7 +2797,7 @@ which results in \( |0001000000000000\rangle \). Counting the number of $1-$bits
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec11">Exercise 1: Relation between basis functions </h2>
+<h2 id="___sec15">Exercise 1: Relation between basis functions </h2>
 
 <p>
 This exercise serves to convince you about the relation between
@@ -2216,7 +2837,7 @@ use Wick's theorem to compute the normalization integral
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec12">Exercise 2: Matrix elements </h2>
+<h2 id="___sec16">Exercise 2: Matrix elements </h2>
 
 <p>
 Calculate the matrix elements
@@ -2278,7 +2899,7 @@ Compare these results with those from exercise 3c).
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec13">Exercise 3: Normal-ordered one-body operator </h2>
+<h2 id="___sec17">Exercise 3: Normal-ordered one-body operator </h2>
 
 <p>
 Show that the onebody part of the Hamiltonian
@@ -2305,7 +2926,7 @@ vacuum has been used?
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec14">Exercise 4: Normal-ordered two-body operator </h2>
+<h2 id="___sec18">Exercise 4: Normal-ordered two-body operator </h2>
 
 <p>
 Show that the twobody part of the Hamiltonian
@@ -2343,7 +2964,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec15">Exercise 5: Matrix elements using the Slater-Condon rule </h2>
+<h2 id="___sec19">Exercise 5: Matrix elements using the Slater-Condon rule </h2>
 
 <p>
 The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
@@ -2453,7 +3074,7 @@ where the Slater determinant to the right of the operator differs by more than t
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec16">Exercise 6: Program to set up Slater determinants </h2>
+<h2 id="___sec20">Exercise 6: Program to set up Slater determinants </h2>
 
 <p>
 Write a program which sets up all possible Slater determinants given \( N=4 \) eletrons which can occupy
@@ -2466,7 +3087,7 @@ states \( n \) are there in total?  Include the spin degrees of freedom as well.
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec17">Exercise 7: Using sympy to compute matrix elements </h2>
+<h2 id="___sec21">Exercise 7: Using sympy to compute matrix elements </h2>
 
 <p>
 Compute the matrix element
@@ -2486,7 +3107,7 @@ representation.
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec18">Exercise 8: Using sympy to compute matrix elements </h2>
+<h2 id="___sec22">Exercise 8: Using sympy to compute matrix elements </h2>
 
 <p>
 The last exercise can be solved using the symbolic Python package called <em>SymPy</em>. SymPy is a Python 
@@ -2517,7 +3138,7 @@ the creation and annihilation operators <em>Fd</em> and <em>F</em>, respectively
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec19">Exercise 9: Using sympy to compute matrix elements </h2>
+<h2 id="___sec23">Exercise 9: Using sympy to compute matrix elements </h2>
 
 <p>
 We can expand the above Python code by defining one-body and two-body operators using  the following SymPy code 
@@ -2554,7 +3175,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec20">Exercise 10: Using sympy to compute matrix elements </h2>
+<h2 id="___sec24">Exercise 10: Using sympy to compute matrix elements </h2>
 
 <p>
 We can now use this code to compute the matrix elements between two two-body Slater determinants using Wick's theorem.
@@ -2594,7 +3215,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec21">Exercise 11: Using sympy to compute matrix elements </h2>
+<h2 id="___sec25">Exercise 11: Using sympy to compute matrix elements </h2>
 
 <p>
 We can continue along these lines and define a normal-ordered Hamiltonian with respect to a given reference state.
@@ -2637,7 +3258,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec22">Exercise 12: Using sympy to compute matrix elements </h2>
+<h2 id="___sec26">Exercise 12: Using sympy to compute matrix elements </h2>
 
 <p>
 In our next step we define the reference energy \( E_0 \) and redefine the Hamiltonian by subtracting the reference energy and collecting the coefficients for all normal-ordered products (given by the <em>NO</em> function).
@@ -2686,7 +3307,7 @@ again as expected, with the reference energy to be subtracted.
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec23">Exercise 13: Using sympy to compute matrix elements </h2>
+<h2 id="___sec27">Exercise 13: Using sympy to compute matrix elements </h2>
 
 <p>
 We can now go back to exercise 7 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
@@ -2724,7 +3345,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec24">Exercise 14: Diagrammatic representation of Hartree-Fock equations </h2>
+<h2 id="___sec28">Exercise 14: Diagrammatic representation of Hartree-Fock equations </h2>
 
 <p>
 What is the diagrammatic representation of the HF equation?
@@ -2744,7 +3365,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec25">Exercise 15: Derivation of Hartree-Fock equations </h2>
+<h2 id="___sec29">Exercise 15: Derivation of Hartree-Fock equations </h2>
 
 <p>
 Consider the ground state \( |\Phi\rangle \) 

@@ -39,7 +39,7 @@ Automatically generated HTML file from DocOnce source
 </head>
 
 <!-- tocinfo
-{'highest level': 2,
+{'highest level': 1,
  'sections': [('Why Hartree-Fock? Derivation of Hartree-Fock equations in '
                'coordinate space',
                2,
@@ -49,42 +49,52 @@ Automatically generated HTML file from DocOnce source
                2,
                None,
                '___sec1'),
-              ('Definitions and notations', 2, None, '___sec2'),
-              ('Brief reminder on some linear algebra properties',
-               3,
-               None,
-               '___sec3'),
-              ('Back to the derivation of the energy', 3, None, '___sec4'),
               ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
-               '___sec5'),
+               '___sec2'),
               ('Analysis of Hartree-Fock equations in coordinate space',
                2,
                None,
-               '___sec6'),
+               '___sec3'),
               ('Hartree-Fock by varying the coefficients of a wave function '
                'expansion',
                2,
                None,
-               '___sec7'),
-              ('Hartree-Fock algorithm', 2, None, '___sec8'),
+               '___sec4'),
+              ('Hartree-Fock algorithm', 2, None, '___sec5'),
               ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
-               '___sec9'),
+               '___sec6'),
               ('Exercise 1: Derivation of Hartree-Fock equations',
                2,
                None,
-               '___sec10'),
+               '___sec7'),
               ('Exercise 2: Derivation of Hartree-Fock equations',
                2,
                None,
-               '___sec11'),
+               '___sec8'),
               ('Exercise 3: Developing a  Hartree-Fock program',
                2,
                None,
-               '___sec12')]}
+               '___sec9'),
+              ('Hartree-Fock in second quantization and stability of HF '
+               'solution',
+               1,
+               None,
+               '___sec10'),
+              ("Thouless' theorem", 2, None, '___sec11'),
+              ('New operators', 2, None, '___sec12'),
+              ("Showing that $|\\tilde{c}\\rangle= |c'\\rangle$",
+               2,
+               None,
+               '___sec13'),
+              ('Hartree-Fock in second quantization and stability of HF '
+               'solution',
+               2,
+               None,
+               '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -122,19 +132,21 @@ MathJax.Hub.Config({
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#___sec0" style="font-size: 80%;"><b>Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec1" style="font-size: 80%;"><b>Variational Calculus and Lagrangian Multipliers</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec2" style="font-size: 80%;"><b>Definitions and notations</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec3" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Brief reminder on some linear algebra properties</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec4" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Back to the derivation of the energy</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec5" style="font-size: 80%;"><b>Derivation of Hartree-Fock equations in coordinate space</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec6" style="font-size: 80%;"><b>Analysis of Hartree-Fock equations in coordinate space</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec7" style="font-size: 80%;"><b>Hartree-Fock by varying the coefficients of a wave function expansion</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec8" style="font-size: 80%;"><b>Hartree-Fock algorithm</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;"><b>Analysis of Hartree-Fock equations and Koopman's theorem</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec10" style="font-size: 80%;"><b>Exercise 1: Derivation of Hartree-Fock equations</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec11" style="font-size: 80%;"><b>Exercise 2: Derivation of Hartree-Fock equations</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec12" style="font-size: 80%;"><b>Exercise 3: Developing a  Hartree-Fock program</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec0" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec1" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Variational Calculus and Lagrangian Multipliers</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec2" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Derivation of Hartree-Fock equations in coordinate space</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec3" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Analysis of Hartree-Fock equations in coordinate space</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec4" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Hartree-Fock by varying the coefficients of a wave function expansion</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec5" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Hartree-Fock algorithm</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Exercise 1: Derivation of Hartree-Fock equations</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec8" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Exercise 2: Derivation of Hartree-Fock equations</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Exercise 3: Developing a  Hartree-Fock program</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec10" style="font-size: 80%;"><b>Hartree-Fock in second quantization and stability of HF solution</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Thouless' theorem</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;New operators</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Showing that \( |\tilde{c}\rangle= |c'\rangle \)</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Hartree-Fock in second quantization and stability of HF solution</a></li>
 
         </ul>
       </li>
@@ -167,7 +179,7 @@ MathJax.Hub.Config({
 
 <br>
 <p>
-<center><h4>Jun 18, 2018</h4></center> <!-- date -->
+<center><h4>Jul 10, 2018</h4></center> <!-- date -->
 <br>
 <p>
 </div> <!-- end jumbotron -->
@@ -305,357 +317,7 @@ nothing but the standard
 Schroedinger equation and the variational  approach discussed here provides 
 a powerful method for obtaining approximate solutions of the wave function.
 
-<h2 id="___sec2" class="anchor">Definitions and notations </h2>
-
-<p>
-Before we proceed we need some definitions.
-We will assume that the interacting part of the Hamiltonian
-can be approximated by a two-body interaction.
-This means that our Hamiltonian is written as the sum of some onebody part and a twobody part
-$$
-\begin{equation}
-    \hat{H} = \hat{H}_0 + \hat{H}_I 
-    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j}^A \hat{v}(r_{ij}),
-\label{Hnuclei}
-\end{equation}
-$$
-
-with 
-$$
-\begin{equation}
-  H_0=\sum_{i=1}^A \hat{h}_0(x_i).
-\label{hinuclei}
-\end{equation}
-$$
-
-The onebody part \( u_{\mathrm{ext}}(x_i) \) is normally approximated by a harmonic oscillator potential or the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
-one derived from the self-consistent solution of the Hartree-Fock equations to be discussed here.
-
-<p>
-Our Hamiltonian is invariant under the permutation (interchange) of two particles.
-Since we deal with fermions however, the total wave function is antisymmetric.
-Let \( \hat{P} \) be an operator which interchanges two particles.
-Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
-$$
-[\hat{H},\hat{P}] = 0,
- $$
-
-meaning that \( \Psi_{\lambda}(x_1, x_2, \dots , x_A) \) is an eigenfunction of 
-\( \hat{P} \) as well, that is
-$$
-\hat{P}_{ij}\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A)=
-\beta\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A),
-$$
-
-where \( \beta \) is the eigenvalue of \( \hat{P} \). We have introduced the suffix \( ij \) in order to indicate that we permute particles \( i \) and \( j \).
-The Pauli principle tells us that the total wave function for a system of fermions
-has to be antisymmetric, resulting in the eigenvalue \( \beta = -1 \).
-
-<p>
-In our case we assume that  we can approximate the exact eigenfunction with a Slater determinant
-$$
-\begin{equation}
-   \Phi(x_1, x_2,\dots ,x_A,\alpha,\beta,\dots, \sigma)=\frac{1}{\sqrt{A!}}
-\left| \begin{array}{ccccc} \psi_{\alpha}(x_1)& \psi_{\alpha}(x_2)& \dots & \dots & \psi_{\alpha}(x_A)\\
-                            \psi_{\beta}(x_1)&\psi_{\beta}(x_2)& \dots & \dots & \psi_{\beta}(x_A)\\  
-                            \dots & \dots & \dots & \dots & \dots \\
-                            \dots & \dots & \dots & \dots & \dots \\
-                     \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots & \psi_{\sigma}(x_A)\end{array} \right|, \label{eq:HartreeFockDet}
-\end{equation}
-$$
-
-where  \( x_i \)  stand for the coordinates and spin values of a particle \( i \) and \( \alpha,\beta,\dots, \gamma \) 
-are quantum numbers needed to describe remaining quantum numbers.
-
-<h3 id="___sec3" class="anchor">Brief reminder on some linear algebra properties </h3>
-
-<p>
-Before we proceed with a more compact representation of a Slater determinant, we would like to repeat some linear algebra properties which will be useful for our derivations of the energy as function of a Slater determinant, Hartree-Fock theory and later the nuclear shell model.
-
-<p>
-The inverse of a matrix is defined by
-
-$$
-\mathbf{A}^{-1} \cdot \mathbf{A} = I
-$$
-
-A unitary matrix \( \mathbf{A} \) is one whose inverse is its adjoint
-$$
-\mathbf{A}^{-1}=\mathbf{A}^{\dagger}
-$$
-
-A real unitary matrix is called orthogonal and its inverse is equal to its transpose.
-A hermitian matrix is its own self-adjoint, that  is
-$$
-\mathbf{A}=\mathbf{A}^{\dagger}. 
-$$
-
-<p>
-
-<div class="row">
-  <div class="col-xs-12">
-    <table class="table table-striped table-hover table-condensed">
-<thead>
-<tr><td align="center"><b>                Relations                 </b></td> <td align="center"><b>      Name     </b></td> <td align="center"><b>                              matrix elements                              </b></td> </tr>
-</thead>
-<tbody>
-<tr><td align="center">   \( A = A^{T} \)                               </td> <td align="center">   symmetric          </td> <td align="center">   \( a_{ij} = a_{ji} \)                                                          </td> </tr>
-<tr><td align="center">   \( A = \left (A^{T} \right )^{-1} \)          </td> <td align="center">   real orthogonal    </td> <td align="center">   \( \sum_k a_{ik} a_{jk} = \sum_k a_{ki} a_{kj} = \delta_{ij} \)                </td> </tr>
-<tr><td align="center">   \( A = A^{ * } \)                             </td> <td align="center">   real matrix        </td> <td align="center">   \( a_{ij} = a_{ij}^{ * } \)                                                    </td> </tr>
-<tr><td align="center">   \( A = A^{\dagger} \)                         </td> <td align="center">   hermitian          </td> <td align="center">   \( a_{ij} = a_{ji}^{ * } \)                                                    </td> </tr>
-<tr><td align="center">   \( A = \left (A^{\dagger} \right )^{-1} \)    </td> <td align="center">   unitary            </td> <td align="center">   \( \sum_k a_{ik} a_{jk}^{ * } = \sum_k a_{ki}^{ * } a_{kj} = \delta_{ij} \)    </td> </tr>
-</tbody>
-    </table>
-  </div> <!-- col-xs-12 -->
-</div> <!-- cell row -->
-<p>
-Since we will deal with Fermions (identical and indistinguishable particles) we will 
-form an ansatz for a given state in terms of so-called Slater determinants determined
-by a chosen basis of single-particle functions.
-
-<p>
-For a given \( n\times n \) matrix \( \mathbf{A} \) we can write its determinant
-$$
-   det(\mathbf{A})=|\mathbf{A}|=
-\left| \begin{array}{ccccc} a_{11}& a_{12}& \dots & \dots & a_{1n}\\
-                            a_{21}&a_{22}& \dots & \dots & a_{2n}\\  
-                            \dots & \dots & \dots & \dots & \dots \\
-                            \dots & \dots & \dots & \dots & \dots \\
-                            a_{n1}& a_{n2}& \dots & \dots & a_{nn}\end{array} \right|,
-$$
-
-in a more compact form as 
-$$
-|\mathbf{A}|= \sum_{i=1}^{n!}(-1)^{p_i}\hat{P}_i a_{11}a_{22}\dots a_{nn},
-$$
-
-where \( \hat{P}_i \) is a permutation operator which permutes the column indices \( 1,2,3,\dots,n \)
-and the sum runs over all \( n! \) permutations.  The quantity \( p_i \) represents the number of transpositions of column indices that are needed in order to bring a given permutation back to its initial ordering, in our case given by \( a_{11}a_{22}\dots a_{nn} \) here.
-
-<p>
-A simple \( 2\times 2 \) determinant illustrates this. We have
-$$
-   det(\mathbf{A})=
-\left| \begin{array}{cc} a_{11}& a_{12}\\
-                            a_{21}&a_{22}\end{array} \right|= (-1)^0a_{11}a_{22}+(-1)^1a_{12}a_{21},
-$$
-
-where in the last term we have interchanged the column indices \( 1 \) and \( 2 \). The natural ordering we have chosen is \( a_{11}a_{22} \).
-
-<h3 id="___sec4" class="anchor">Back to the derivation of the energy </h3>
-
-<p>
-The single-particle function \( \psi_{\alpha}(x_i) \)  are eigenfunctions of the onebody
-Hamiltonian \( h_i \), that is
-$$
-\hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i),
-$$
-
-with eigenvalues 
-$$
-\hat{h}_0(x_i) \psi_{\alpha}(x_i)=\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right)\psi_{\alpha}(x_i)=\varepsilon_{\alpha}\psi_{\alpha}(x_i).
-$$
-
-The energies \( \varepsilon_{\alpha} \) are the so-called non-interacting single-particle energies, or unperturbed energies. 
-The total energy is in this case the sum over all  single-particle energies, if no two-body or more complicated
-many-body interactions are present.
-
-<p>
-Let us denote the ground state energy by \( E_0 \). According to the
-variational principle we have
-$$
-  E_0 \le E[\Phi] = \int \Phi^*\hat{H}\Phi d\mathbf{\tau}
-$$
-
-where \( \Phi \) is a trial function which we assume to be normalized
-$$
-  \int \Phi^*\Phi d\mathbf{\tau} = 1,
-$$
-
-where we have used the shorthand \( d\mathbf{\tau}=dx_1dr_2\dots dr_A \).
-
-<p>
-In the Hartree-Fock method the trial function is the Slater
-determinant of Eq.&nbsp;\eqref{eq:HartreeFockDet} which can be rewritten as 
-$$
-  \Phi(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) = \frac{1}{\sqrt{A!}}\sum_{P} (-)^P\hat{P}\psi_{\alpha}(x_1)
-    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A)=\sqrt{A!}\hat{A}\Phi_H,
-$$
-
-where we have introduced the antisymmetrization operator \( \hat{A} \) defined by the 
-summation over all possible permutations of two particles.
-
-<p>
-It is defined as
-$$
-\begin{equation}
-  \hat{A} = \frac{1}{A!}\sum_{p} (-)^p\hat{P},
-\label{antiSymmetryOperator}
-\end{equation}
-$$
-
-with \( p \) standing for the number of permutations. We have introduced for later use the so-called
-Hartree-function, defined by the simple product of all possible single-particle functions
-$$
-  \Phi_H(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) =
-  \psi_{\alpha}(x_1)
-    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A).
-$$
-
-<p>
-Both \( \hat{H}_0 \) and \( \hat{H}_I \) are invariant under all possible permutations of any two particles
-and hence commute with \( \hat{A} \)
-$$
-\begin{equation}
-  [H_0,\hat{A}] = [H_I,\hat{A}] = 0. \label{commutionAntiSym}
-\end{equation}
-$$
-
-Furthermore, \( \hat{A} \) satisfies
-$$
-\begin{equation}
-  \hat{A}^2 = \hat{A},  \label{AntiSymSquared}
-\end{equation}
-$$
-
-since every permutation of the Slater
-determinant reproduces it.
-
-<p>
-The expectation value of \( \hat{H}_0 \) 
-$$
-  \int \Phi^*\hat{H}_0\Phi d\mathbf{\tau} 
-  = A! \int \Phi_H^*\hat{A}\hat{H}_0\hat{A}\Phi_H d\mathbf{\tau}
-$$
-
-is readily reduced to
-$$
-  \int \Phi^*\hat{H}_0\Phi d\mathbf{\tau} 
-  = A! \int \Phi_H^*\hat{H}_0\hat{A}\Phi_H d\mathbf{\tau},
-$$
-
-where we have used Eqs.&nbsp;\eqref{commutionAntiSym} and
-\eqref{AntiSymSquared}. The next step is to replace the antisymmetrization
-operator by its definition and to
-replace \( \hat{H}_0 \) with the sum of one-body operators
-$$
-  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
-  = \sum_{i=1}^A \sum_{p} (-)^p\int 
-  \Phi_H^*\hat{h}_0\hat{P}\Phi_H d\mathbf{\tau}.
-$$
-
-<p>
-The integral vanishes if two or more particles are permuted in only one
-of the Hartree-functions \( \Phi_H \) because the individual single-particle wave functions are
-orthogonal. We obtain then
-$$
-  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}= \sum_{i=1}^A \int \Phi_H^*\hat{h}_0\Phi_H  d\mathbf{\tau}.
-$$
-
-Orthogonality of the single-particle functions allows us to further simplify the integral, and we
-arrive at the following expression for the expectation values of the
-sum of one-body Hamiltonians 
-$$
-\begin{equation}
-  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
-  = \sum_{\mu=1}^A \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx
-  d\mathbf{r}.
-\label{H1Expectation}
-\end{equation}
-$$
-
-<p>
-We introduce the following shorthand for the above integral
-$$
-\langle \mu | \hat{h}_0 | \mu \rangle = \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx,
-$$
-
-and rewrite Eq.&nbsp;\eqref{H1Expectation} as
-$$
-\begin{equation}
-  \int \Phi^*\hat{H}_0\Phi  d\tau
-  = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle.
-\label{H1Expectation1}
-\end{equation}
-$$
-
-<p>
-The expectation value of the two-body part of the Hamiltonian is obtained in a
-similar manner. We have
-$$
-  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
-  = A! \int \Phi_H^*\hat{A}\hat{H}_I\hat{A}\Phi_H d\mathbf{\tau},
-$$
-
-which reduces to
-$$
- \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
-  = \sum_{i\le j=1}^A \sum_{p} (-)^p\int 
-  \Phi_H^*\hat{v}(r_{ij})\hat{P}\Phi_H d\mathbf{\tau},
-$$
-
-by following the same arguments as for the one-body
-Hamiltonian.
-
-<p>
-Because of the dependence on the inter-particle distance \( r_{ij} \),  permutations of
-any two particles no longer vanish, and we get
-$$
-  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
-  = \sum_{i < j=1}^A \int  
-  \Phi_H^*\hat{v}(r_{ij})(1-P_{ij})\Phi_H d\mathbf{\tau}.
-$$
-
-where \( P_{ij} \) is the permutation operator that interchanges
-particle \( i \) and particle \( j \). Again we use the assumption that the single-particle wave functions
-are orthogonal.
-
-<p>
-We obtain
-$$
-\begin{align}
-  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
-  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A
-    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
-    dx_idx_j \right.
-\label{_auto1}\\
-  &\left.
-  - \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
-  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
-  dx_idx_j
-  \right]. \label{H2Expectation}
-\end{align}
-$$
-
-The first term is the so-called direct term. It is frequently also called the  Hartree term, 
-while the second is due to the Pauli principle and is called
-the exchange term or just the Fock term.
-The factor  \( 1/2 \) is introduced because we now run over
-all pairs twice.
-
-<p>
-The last equation allows us to  introduce some further definitions.  
-The single-particle wave functions \( \psi_{\mu}(x) \), defined by the quantum numbers \( \mu \) and \( x \)
-are defined as the overlap 
-$$
-   \psi_{\alpha}(x)  = \langle x | \alpha \rangle .
-$$
-
-<p>
-We introduce the following shorthands for the above two integrals
-$$
-\langle \mu\nu|\hat{v}|\mu\nu\rangle =  \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
-    dx_idx_j,
-$$
-
-and
-$$
-\langle \mu\nu|\hat{v}|\nu\mu\rangle = \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
-  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
-  dx_idx_j.  
-$$
-
-<h2 id="___sec5" class="anchor">Derivation of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec2" class="anchor">Derivation of Hartree-Fock equations in coordinate space </h2>
 
 <p>
 Let us denote the ground state energy by \( E_0 \). According to the
@@ -835,7 +497,7 @@ The Hartree-Fock equation is an example of an integro-differential equation. The
 The Hartree-Fock equations can also be rewritten in terms of an eigenvalue problem. The solution of an eigenvalue problem represents often a more practical algorithm and the  solution of  coupled  integro-differential equations.
 This alternative derivation of the Hartree-Fock equations is given below.
 
-<h2 id="___sec6" class="anchor">Analysis of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec3" class="anchor">Analysis of Hartree-Fock equations in coordinate space </h2>
 
 <p>
   A theoretically convenient form of the
@@ -890,7 +552,7 @@ $$
   \hat{h}^{HF}(x_i)= \hat{h}_0(x_i) + \hat{u}^{HF}(x_i). 
 $$
 
-<h2 id="___sec7" class="anchor">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec4" class="anchor">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 
 <p>
 Another possibility is to expand the single-particle functions in a known basis  and vary the coefficients, 
@@ -1079,7 +741,7 @@ which allows us to define a functional to be minimized that reads
 $$
 \begin{equation}
   F[\Phi^{HF}]=E[\Phi^{HF}] - \sum_{i=1}^A\epsilon_i\sum_{\alpha} C^*_{i\alpha}C_{i\alpha}.
-\label{_auto2}
+\label{_auto1}
 \end{equation}
 $$
 
@@ -1124,7 +786,7 @@ The latter is nothing but a standard eigenvalue problem. Compared with Eq.&nbsp;
 we see that we do not need to compute any integrals in an iterative procedure for solving the equations.
 It suffices to tabulate the matrix elements \( \langle \alpha | h | \beta \rangle \) and \( \langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS} \) once and for all. Successive iterations require thus only a look-up in tables over one-body and two-body matrix elements. These details will be discussed below when we solve the Hartree-Fock equations numerical.
 
-<h2 id="___sec8" class="anchor">Hartree-Fock algorithm </h2>
+<h2 id="___sec5" class="anchor">Hartree-Fock algorithm </h2>
 
 <p>
 Our Hartree-Fock matrix  is thus
@@ -1190,11 +852,7 @@ $$
 where \( \lambda \) is a user prefixed quantity (\( \lambda \sim 10^{-8} \) or smaller) and \( p \) runs over all calculated single-particle
 energies and \( m \) is the number of single-particle states.
 
-<ul>
-<li> TODO: add code with Hartree-Fock for nuclear system</li>
-</ul>
-
-<h2 id="___sec9" class="anchor">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec6" class="anchor">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 
 <p>
 We can rewrite the ground state energy by adding and subtracting \( \hat{u}^{HF}(x_i) \) 
@@ -1393,7 +1051,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec10" class="anchor">Exercise 1: Derivation of Hartree-Fock equations </h2>
+<h2 id="___sec7" class="anchor">Exercise 1: Derivation of Hartree-Fock equations </h2>
 
 <p>
 Consider a Slater determinant built up of single-particle orbitals \( \psi_{\lambda} \), 
@@ -1448,7 +1106,7 @@ Use the fact that \( C \) is a unitary matrix.
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec11" class="anchor">Exercise 2: Derivation of Hartree-Fock equations </h2>
+<h2 id="___sec8" class="anchor">Exercise 2: Derivation of Hartree-Fock equations </h2>
 
 <p>
 Consider the  Slater  determinant
@@ -1488,7 +1146,7 @@ $$
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec12" class="anchor">Exercise 3: Developing a  Hartree-Fock program </h2>
+<h2 id="___sec9" class="anchor">Exercise 3: Developing a  Hartree-Fock program </h2>
 
 <p>
 Neutron drops are a powerful theoretical laboratory for testing,
@@ -1550,7 +1208,7 @@ which is defined as
 $$
 \begin{equation}
 \rho_{\gamma\delta}=\sum_{i=1}^{N}\langle\gamma|i\rangle\langle i|\delta\rangle = \sum_{i=1}^{N}C_{i\gamma}C^*_{i\delta}.
-\label{_auto3}
+\label{_auto2}
 \end{equation}
 $$
 
@@ -1739,6 +1397,359 @@ The splitting between the \( 0p_{3/2}^{\nu} \) and the \( 0p_{1/2}^{\nu} \) stat
 
 <p>
 <!-- --- end exercise --- -->
+
+<h1 id="___sec10" class="anchor">Hartree-Fock in second quantization and stability of HF solution </h1>
+
+<p>
+We wish now to derive the Hartree-Fock equations using our second-quantized formalism and study the stability of the equations. 
+Our ansatz for the ground state of the system is approximated as (this is our representation of a Slater determinant in second quantization)
+$$   
+|\Phi_0\rangle = |c\rangle = a^{\dagger}_i a^{\dagger}_j \dots a^{\dagger}_l|0\rangle.
+$$
+
+We wish to determine \( \hat{u}^{HF} \) so that 
+\( E_0^{HF}= \langle c|\hat{H}| c\rangle \) becomes a local minimum.
+
+<p>
+In our analysis here we will need Thouless' theorem, which states that
+an arbitrary Slater determinant \( |c'\rangle \) which is not orthogonal to a determinant
+\( | c\rangle ={\displaystyle\prod_{i=1}^{n}}
+a_{\alpha_{i}}^{\dagger}|0\rangle \), can be written as
+$$
+|c'\rangle=exp\left\{\sum_{a>F}\sum_{i\le F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle 
+$$
+
+<p>
+Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state \( \vert c\rangle \). With this linear combination, we can make a new Slater determinant \( \vert c'\rangle  \) which is not orthogonal to 
+\( \vert c\rangle \), that is
+$$
+\langle c|c'\rangle \ne 0.
+$$
+
+To show this we need some intermediate steps. The exponential product of two operators  \( \exp{\hat{A}}\times\exp{\hat{B}} \) is equal to \( \exp{(\hat{A}+\hat{B})} \) only if the two operators commute, that is
+$$
+[\hat{A},\hat{B}] = 0.
+$$
+
+<h2 id="___sec11" class="anchor">Thouless' theorem </h2>
+
+<p>
+If the operators do not commute, we need to resort to the <a href="http://www.encyclopediaofmath.org/index.php/Campbell%E2%80%93Hausdorff_formula" target="_self">Baker-Campbell-Hauersdorf</a>. This relation states that
+$$
+\exp{\hat{C}}=\exp{\hat{A}}\exp{\hat{B}},
+$$
+
+with 
+$$
+\hat{C}=\hat{A}+\hat{B}+\frac{1}{2}[\hat{A},\hat{B}]+\frac{1}{12}[[\hat{A},\hat{B}],\hat{B}]-\frac{1}{12}[[\hat{A},\hat{B}],\hat{A}]+\dots
+$$
+
+From these relations, we note that 
+in our expression  for \( |c'\rangle \) we have commutators of the type
+$$
+[a_{a}^{\dagger}a_{i},a_{b}^{\dagger}a_{j}],
+$$
+
+and it is easy to convince oneself that these commutators, or higher powers thereof, are all zero. This means that we can write out our new representation of a Slater determinant as
+$$
+|c'\rangle=exp\left\{\sum_{a>F}\sum_{i\le F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}+\left(\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right)^2+\dots\right\}| c\rangle
+$$
+
+<p>
+We note that
+$$
+\prod_{i}\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\sum_{b>F}C_{bi}a_{b}^{\dagger}a_{i}| c\rangle =0,
+$$
+
+and all higher-order powers of these combinations of creation and annihilation operators disappear 
+due to the fact that \( (a_i)^n| c\rangle =0 \) when \( n > 1 \). This allows us to rewrite the expression for \( |c'\rangle  \) as
+$$
+|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle,
+$$
+
+which we can rewrite as 
+$$
+|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle.
+$$
+
+The last equation can be written as
+$$
+\begin{align}
+|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} 
+\label{_auto3}\\
+& \times\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\label{_auto4}
+\end{align}
+$$
+
+<h2 id="___sec12" class="anchor">New operators </h2>
+
+<p>
+If we define a new creation operator 
+$$
+\begin{equation}
+b^{\dagger}_{i}=a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}, \label{eq:newb}
+\end{equation}
+$$
+
+we have 
+$$
+|c'\rangle=\prod_{i}b^{\dagger}_{i}|0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle,
+$$
+
+meaning that the new representation of the Slater determinant in second quantization, \( |c'\rangle \), looks like our previous ones. However, this representation is not general enough since we have a restriction on the sum over single-particle states in Eq.&nbsp;\eqref{eq:newb}. The single-particle states have all to be above the Fermi level.
+The question then is whether we can construct a general representation of a Slater determinant with a creation operator 
+$$
+\tilde{b}^{\dagger}_{i}=\sum_{p}f_{ip}a_{p}^{\dagger},
+$$
+
+where \( f_{ip} \) is a matrix element of a unitary matrix which transforms our creation and annihilation operators
+\( a^{\dagger} \) and \( a \) to \( \tilde{b}^{\dagger} \) and \( \tilde{b} \). These new operators define a new representation of a Slater determinant as
+$$
+|\tilde{c}\rangle=\prod_{i}\tilde{b}^{\dagger}_{i}|0\rangle.
+$$
+
+<h2 id="___sec13" class="anchor">Showing that \( |\tilde{c}\rangle= |c'\rangle \)  </h2>
+
+<p>
+We need to show that \( |\tilde{c}\rangle= |c'\rangle \). We need also to assume that the new state
+is not orthogonal to \( |c\rangle \), that is \( \langle c| \tilde{c}\rangle \ne 0 \). From this it follows that 
+$$
+\langle c| \tilde{c}\rangle=\langle 0| a_{i_n}\dots a_{i_1}\left(\sum_{p=i_1}^{i_n}f_{i_1p}a_{p}^{\dagger} \right)\left(\sum_{q=i_1}^{i_n}f_{i_2q}a_{q}^{\dagger} \right)\dots \left(\sum_{t=i_1}^{i_n}f_{i_nt}a_{t}^{\dagger} \right)|0\rangle,
+$$
+
+which is nothing but the determinant \( det(f_{ip}) \) which we can, using the intermediate normalization condition, 
+normalize to one, that is
+$$
+det(f_{ip})=1,
+$$
+
+meaning that \( f \) has an inverse defined as (since we are dealing with orthogonal, and in our case unitary as well, transformations)
+$$
+\sum_{k} f_{ik}f^{-1}_{kj} = \delta_{ij},
+$$
+
+and 
+$$
+\sum_{j} f^{-1}_{ij}f_{jk} = \delta_{ik}.
+$$
+
+<p>
+Using these relations we can then define the linear combination of creation (and annihilation as well) 
+operators as
+$$
+\sum_{i}f^{-1}_{ki}\tilde{b}^{\dagger}_{i}=\sum_{i}f^{-1}_{ki}\sum_{p=i_1}^{\infty}f_{ip}a_{p}^{\dagger}=a_{k}^{\dagger}+\sum_{i}\sum_{p=i_{n+1}}^{\infty}f^{-1}_{ki}f_{ip}a_{p}^{\dagger}.
+$$
+
+Defining 
+$$
+c_{kp}=\sum_{i \le F}f^{-1}_{ki}f_{ip},
+$$
+
+we can redefine 
+$$
+a_{k}^{\dagger}+\sum_{i}\sum_{p=i_{n+1}}^{\infty}f^{-1}_{ki}f_{ip}a_{p}^{\dagger}=a_{k}^{\dagger}+\sum_{p=i_{n+1}}^{\infty}c_{kp}a_{p}^{\dagger}=b_k^{\dagger},
+$$
+
+our starting point. We have shown that our general representation of a Slater determinant 
+$$
+|\tilde{c}\rangle=\prod_{i}\tilde{b}^{\dagger}_{i}|0\rangle=|c'\rangle=\prod_{i}b^{\dagger}_{i}|0\rangle,
+$$
+
+with 
+$$
+b_k^{\dagger}=a_{k}^{\dagger}+\sum_{p=i_{n+1}}^{\infty}c_{kp}a_{p}^{\dagger}.
+$$
+
+<p>
+This means that we can actually write an ansatz for the ground state of the system as a linear combination of
+terms which contain the ansatz itself \( |c\rangle \) with  an admixture from an infinity of one-particle-one-hole states. The latter has important consequences when we wish to interpret the Hartree-Fock equations and their stability. We can rewrite the new representation as 
+$$
+|c'\rangle = |c\rangle+|\delta c\rangle,
+$$
+
+where \( |\delta c\rangle \) can now be interpreted as a small variation. If we approximate this term with 
+contributions from one-particle-one-hole (<em>1p-1h</em>) states only, we arrive at 
+$$
+|c'\rangle = \left(1+\sum_{ai}\delta C_{ai}a_{a}^{\dagger}a_i\right)|c\rangle.
+$$
+
+In our derivation of the Hartree-Fock equations we have shown that 
+$$
+\langle \delta c| \hat{H} | c\rangle =0,
+$$
+
+which means that we have to satisfy
+$$
+\langle c|\sum_{ai}\delta C_{ai}\left\{a_{a}^{\dagger}a_i\right\} \hat{H} | c\rangle =0.
+$$
+
+With this as a background, we are now ready to study the stability of the Hartree-Fock equations.
+
+<h2 id="___sec14" class="anchor">Hartree-Fock in second quantization and stability of HF solution </h2>
+
+<p>
+The variational condition for deriving the Hartree-Fock equations guarantees only that the expectation value \( \langle c | \hat{H} | c \rangle \) has an extreme value, not necessarily a minimum. To figure out whether the extreme value we have found  is a minimum, we can use second quantization to analyze our results and find a criterion 
+for the above expectation value to a local minimum. We will use Thouless' theorem and show that
+$$
+\frac{\langle c' |\hat{H} | c'\rangle}{\langle c' |c'\rangle} \ge \langle c |\hat{H} | c\rangle= E_0,
+$$
+
+with
+$$
+ {|c'\rangle} = {|c\rangle + |\delta c\rangle}.
+$$
+
+Using Thouless' theorem we can write out \( |c'\rangle \) as
+$$
+\begin{align}
+ {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle
+\label{_auto5}\\ 
+&=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
+a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
+\label{_auto6}
+\end{align}
+$$
+
+where the amplitudes \( \delta C \) are small.
+
+<p>
+The norm of \( |c'\rangle \) is given by (using the intermediate normalization condition \( \langle c' |c\rangle=1 \)) 
+$$
+\langle c' | c'\rangle = 1+\sum_{a>F}
+\sum_{i\le F}|\delta C_{ai}|^2+O(\delta C_{ai}^3).
+$$
+
+The expectation value for the energy is now given by (using the Hartree-Fock condition)
+$$
+\langle c' |\hat{H} | c'\rangle=\langle c |\hat{H} | c\rangle +
+\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}^*\delta C_{bj}\langle c |a_{i}^{\dagger}a_{a}\hat{H}a_{b}^{\dagger}a_{j}|c\rangle+
+$$
+
+$$
+\frac{1}{2!}\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}\delta C_{bj}\langle c |\hat{H}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}|c\rangle+\frac{1}{2!}\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}^*\delta C_{bj}^*\langle c|a_{j}^{\dagger}a_{b}a_{i}^{\dagger}a_{a}\hat{H}|c\rangle
++\dots
+$$
+
+<p>
+We have already calculated the second term on the right-hand side of the previous equation
+$$
+\begin{align}
+\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
+            \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
+             \{a^{\dagger}_b a_j\} \right)| c\rangle
+\label{_auto7}\\
+& +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
+            \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
+\label{_auto8}
+\end{align}
+$$
+
+resulting in
+$$
+E_0\sum_{ai}|\delta C_{ai}|^2+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a-\varepsilon_i)-\sum_{ijab} \langle aj|\hat{v}| bi\rangle \delta C_{ai}^*\delta C_{bj}.
+$$
+
+
+$$
+\frac{1}{2!}\langle c |\left(\{a^\dagger_j a_b\} \{a^\dagger_i a_a\} \hat{V}_N  \right) | c\rangle  = 
+\frac{1}{2!}\langle c |\left( \hat{V}_N \{a^\dagger_a a_i\} \{a^\dagger_b a_j\} \right)^{\dagger} | c\rangle 
+$$
+
+which is nothing but
+$$
+\frac{1}{2!}\langle c |  \left( \hat{V}_N \{a^\dagger_a a_i\} \{a^\dagger_b a_j\} \right) | c\rangle^*
+=\frac{1}{2} \sum_{ijab} (\langle ij|\hat{v}|ab\rangle)^*\delta C_{ai}^*\delta C_{bj}^*
+$$
+
+or 
+$$
+\frac{1}{2} \sum_{ijab} (\langle ab|\hat{v}|ij\rangle)\delta C_{ai}^*\delta C_{bj}^*
+$$
+
+where we have used the relation
+$$ 
+\langle a |\hat{A} | b\rangle =  (\langle b |\hat{A}^{\dagger} | a\rangle)^*
+$$
+
+due to the hermiticity of \( \hat{H} \) and \( \hat{V} \).
+
+<p>
+We define two matrix elements
+$$
+A_{ai,bj}=-\langle aj|\hat{v} bi\rangle
+$$
+
+and
+$$
+B_{ai,bj}=\langle ab|\hat{v}|ij\rangle
+$$
+
+both being anti-symmetrized.
+
+<p>
+With these definitions we write out the energy as
+$$
+\begin{align}
+\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+
+\label{_auto9}\\
+&\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
++O(\delta C_{ai}^3),
+\label{_auto10}
+\end{align}
+$$
+
+which can be rewritten as
+$$
+\langle c'|H|c'\rangle = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\Delta E+O(\delta C_{ai}^3),
+$$
+
+and skipping higher-order terms we arrived
+$$
+\frac{\langle c' |\hat{H} | c'\rangle}{\langle c' |c'\rangle} =E_0+\frac{\Delta E}{\left(1+\sum_{ai}|\delta C_{ai}|^2\right)}.
+$$
+
+<p>
+We have defined 
+$$
+\Delta E = \frac{1}{2} \langle \chi | \hat{M}| \chi \rangle
+$$
+
+with the vectors 
+$$ 
+\chi = \left[ \delta C\hspace{0.2cm} \delta C^*\right]^T
+$$
+
+and the matrix 
+$$
+\hat{M}=\left(\begin{array}{cc} \Delta + A & B \\ B^* & \Delta + A^*\end{array}\right),
+$$
+
+with \( \Delta_{ai,bj} = (\varepsilon_a-\varepsilon_i)\delta_{ab}\delta_{ij} \).
+
+<p>
+The condition
+$$
+\Delta E = \frac{1}{2} \langle \chi | \hat{M}| \chi \rangle \ge 0
+$$
+
+for an arbitrary  vector 
+$$ 
+\chi = \left[ \delta C\hspace{0.2cm} \delta C^*\right]^T
+$$
+
+means that all eigenvalues of the matrix have to be larger than or equal zero. 
+A necessary (but no sufficient) condition is that the matrix elements (for all \( ai \) )
+$$
+(\varepsilon_a-\varepsilon_i)\delta_{ab}\delta_{ij}+A_{ai,bj} \ge 0.
+$$
+
+This equation can be used as a first test of the stability of the Hartree-Fock equation.
+
+<p>
 
 <!-- ------------------- end of main content --------------- -->
 
