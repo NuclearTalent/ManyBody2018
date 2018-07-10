@@ -13,7 +13,7 @@ DATE: today
 
 !split
 ===== Motivation and introduction =====
-!bblock
+
 To understand why matter is stable, and thereby shed light on the
 limits of nuclear stability, is one of the overarching aims and
 intellectual challenges of basic research in nuclear physics. To
@@ -79,11 +79,12 @@ hope that the participants have understood the overarching ideas
 behind central theoretical tools used to analyse nuclear structure
 experiments.
   
-!eblock
 
 
-!split ===== Aims and Learning Outcomes ===== 
-!bblock 
+
+!split 
+===== Aims and Learning Outcomes ===== 
+
 
 This three-week TALENT course on nuclear theory will focus on the Many-body methods
 for nuclear structure and reactions, focusing on nuclear shell model
@@ -134,11 +135,11 @@ At the end of the course the students should have a basic understanding of
 * Develop a critical understanding of the limits of many-body studies and how these can be related to interpretations of data such as results from in-beam and decay experiments.
 
 
-!eblock
+
 
 !split
 ===== Teachers and organizers =====
-!bblock
+
 The local organizers are 
 
 o "Chun-Wang Ma":"https://www.researchgate.net/profile/Chun-Wang_Ma" at "Henan Normal University, Xinxiang, Henan 453007, P.R. China":"http://www.htu.cn/english/"
@@ -162,13 +163,12 @@ o Zhonghao Sun at "Department of Physics and Astronomy":"https://www.phys.utk.ed
 o Yu-Min Zhao  at "School of Physics and Astronomy, Shanghai Jiao Tong University":"http://www.physics.sjtu.edu.cn/en/about/news/3", Shanghai 200240, P.R. China 
 
 
-!eblock
 
 
 
 !split
 ===== Course Content and detailed plan  =====
-!bblock
+
 
 Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
 Every Friday we will have presentations from each group, where a summary of what has been achieved is presented. 
@@ -185,8 +185,6 @@ Similarly, "Alex Brown's text on Nuclear Structure":"https://github.com/NuclearT
 
 
 
-
-
 The acronyms here stand for the different teachers:
 o BH: Baishan Hu
 o KF: Kevin Fossez
@@ -199,57 +197,63 @@ o YMZ: Yu-Min Zhao
 
 There is a bus transportation from the hotel to	the auditorium at Henan	Normal University. Note that we start 830am on Monday July 16.
 
-=== Week 1  ===
+
+
+!split
+===== Week 1  =====
+
 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
 | Monday | 830am-1230pm | Welcome  and introduction (Organizers) |    |
-|        |            | Second quantization  and Hamiltonians (MHJ) |           |
+|        |            | "Second quantization  and Hamiltonians":"https://nucleartalent.github.io/ManyBody2018/doc/pub/secondquant/html/secondquant-bs.html" (MHJ) |           |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |Getting started with Pairing Hamiltonian  | Additional analytical exercises|
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-11am | Full configuration interaction theory (MHJ)  |        |
-|  | 1130am-1230pm | Pairing in Nuclear Physics,  why is the pairing interaction important?  (YMZ)  |        |
+| Tuesday | 9am-11am | "Full configuration interaction theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html" (MHJ)  |        |
+|  | 1130am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Analytical exercises and start with coding pairing Hamiltonian |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1030am | Full configuration interaction theory and the pairing model problem(MHJ)  |        |
-|  | 11am-1230pm | Why is the pairing interaction important and Fundamental knowledge of the pairing interaction. (YMZ)  |        |
+| Wednesday | 9am-1030am | "Full configuration interaction theory and the pairing model problem":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html" (MHJ)  |        |
+|  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |Writing a shell-model code for the pairing problem  |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1230pm | Full configuration interaction theory (MHJ)  |        |
-|          |            | Hartree-Fock theory and links to Coupled Cluster theory | |
+| Thursday | 9am-1230pm | "Full configuration interaction theory (MHJ)":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html"  |        |
+|          |            | "Hartree-Fock theory and links to Coupled Cluster theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/html/hfock-bs.html" | |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Writing a shell-model code for the pairing problem |
 |--------------------------------------------------------------------------|
-| Friday | 9am-1230pm | Pairing in nuclear physics, fundamental propertiers and pairing in nuclei. Summary of 1st week (YMZ)       | | 
+| Friday | 9am-1230pm | Pairing in nuclear physics and summary of 1st week (YMZ)       | | 
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   | Group presentations of weekly work|  |
 |--------------------------------------------------------------------------|
 
 
 
-=== Week 2  ===
+!split
+===== Week 2  =====
+
 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm | Introduction to Coupled Cluster (CC) theory (TP)  |        |
+| Monday | 9am-1230pm | "Introduction to Coupled Cluster (CC) theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Pairing model: MBPT and begin CC theory   |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm | Developing a CC code for the pairing model (TP) |        |
+| Tuesday | 9am-1230pm | "Developing a CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Start writing a CC code for the pairing model |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-11am | Infinite matter and CC theory (TP) |        |
+| Wednesday | 9am-11am | "CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html"  and "Infinite Matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/inf/html/inf-bs.html" (TP) |        |
 |           | 1130am-1230pm | Computational CC theory  for closed and open shell nuclei (ZS)  |   |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Finalize CC code for the pairing model |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1030am | Summary of CC theory and infinite matter (TP) |  |
+| Thursday | 9am-1030am | "Summary of CC theory and infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP) |  |
 |          | 11am-1230pm | Machine learning applied to CC theory (WJ) |    |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Start writing CC code for infinite matter  |
@@ -262,7 +266,9 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 
 
 
-=== Week 3  ===
+!split
+===== Week 3  =====
+
 
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
@@ -294,14 +300,8 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 
 
 
-
-
-!eblock
-
-
 !split
 ===== Teaching and projects =====
-!bblock
 
 The course will be taught as an intensive  course of duration of three weeks, with a
 total time of 45 h of lectures, 45 h of exercises, with the possibility to complete a final assignment if credits are needed.
@@ -317,12 +317,10 @@ The organization of a typical course day is as follows:
 | 6pm-7pm |  Wrap-up of the day and eventual student presentations       |
 |------------------------------------------------------------------------| 
 
-!eblock
 
 
 !split
 ===== Audience and Prerequisites =====
-!bblock
 
 You are expected to have operating programming skills in in
 compiled programming languages like Fortran or C++ or alternatively an
@@ -334,14 +332,4 @@ Hartree-Fock theory are provided at the website of the course.
 Students who have not studied the above topics are expected to gain
 this knowledge prior to attendance.  Additional modules for
 self-teaching on Fortran and/or C++ or Python are also provided.
-
-!eblock
-
-
-
-
-
-
-
-
 

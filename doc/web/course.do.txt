@@ -12,15 +12,16 @@ TOC: off
 
 <%
 pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
-published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'projects',]
+published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'inf', 'projects',]
 chapters = {
  'program': 'Introduction and weekly program',
- 'secondquant': 'Many-body Hamiltonians, some linear algebra and Second quantization',
+ 'secondquant': 'Many-body Hamiltonians, linear algebra and second quantization',
  'hfock': 'Hartree-Fock theory',
  'fci': 'Full configuration interaction theory',
  'mbpt': 'Many-body perturbation theory',
  'CCM': 'Coupled cluster theory',
  'imsrg': 'Similarity Renormalization Group theory',
+ 'inf': 'Infinite systems, from the homogeneous electron gas to nuclear matter, background material', 
  'projects': 'Many-body projects',
 }
 %>
@@ -312,7 +313,7 @@ There is a bus transportation from the hotel to the auditorium at Henan Normal U
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Start writing a CC code for the pairing model |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-11am | "Infinite matter and CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP) |        |
+| Wednesday | 9am-11am | "CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html"  and "Infinite Matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/inf/html/inf-bs.html" (TP) |        |
 |           | 1130am-1230pm | Computational CC theory  for closed and open shell nuclei (ZS)  |   |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | Finalize CC code for the pairing model |
