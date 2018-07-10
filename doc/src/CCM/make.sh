@@ -22,7 +22,7 @@ opt="--encoding=utf-8"
 # Note: Makefile examples contain constructions like ${PROG} which
 # looks like Mako constructions, but they are not. Use --no_mako
 # to turn off Mako processing.
-opt="--no_mako"
+opt="--no_mako --without_answers"
 
 rm -f *.aux
 

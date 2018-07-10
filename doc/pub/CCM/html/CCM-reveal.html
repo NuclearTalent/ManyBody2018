@@ -318,37 +318,8 @@ $$
 <!-- --- end hint in exercise --- -->
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-We have to move all operators that annihilate the reference state to the right of those that create on the reference state. Thus,
-<p>&nbsp;<br>
-$$
-\begin{align}
-\sum_{pq}\varepsilon_q^p a^\dagger_p a_q
-&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
-+\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
-+\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
-+\sum_{ij}\varepsilon_j^i a^\dagger_i a_j
-\tag{6}\\
-&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
-+\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
-+\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
-+\sum_{ij}\varepsilon_j^i \left(-a_ja^\dagger_i +\delta_i^j\right)
-\tag{7}\\
-&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
-+\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
-+\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
--\sum_{ij}\varepsilon_j^i a_ja^\dagger_i +\sum_i \varepsilon_i^i
-\tag{8}\\
-&=\sum_{pq}\varepsilon_q^p \left\{a^\dagger_p a_q\right\} +\sum_i \varepsilon_i^i
-\tag{9}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -362,7 +333,7 @@ We note that \( H = E_{HF} + H_N \), where
 $$
 \begin{align}
 E_{HF} &\equiv \langle\Phi_0|H|\Phi_0\rangle = \sum_{i} \varepsilon^i_i +\frac{1}{2}\sum_{ij}\langle ij|V|ij\rangle
-\tag{10}
+\tag{6}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -388,17 +359,8 @@ How do you know whether a Hartree-Fock state is a &quot;good&quot; reference?
 Which results of the Hartee-Fock computation will inform you?
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-Once the Hartree-Fock equations are solved, the Fock matrix
-<a href="#mjx-eqn-4">(4)</a> becomes diagonal, and its diagonal elements can be viewed
-as single-particle energies. Hopefully, there is a clear gap in the
-single-particle spectrum at the Fermi surface, i.e. after \( A \) orbitals
-are filled.
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -425,25 +387,8 @@ the coupled-cluster method? Which of these nuclei are potentially
 interesting? Why?
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-Nuclear shell closures are at \( N,Z=2,8,20,28,50,82,126 \), and subshell
-closures at \( N,Z=2,6,8,14,16,20,28,32,34,40,50,\ldots \).
-
-<p>
-In the physics of nuclei, the evolution of nuclear structure as
-neutrons are added (or removed) from an isotope is a key
-interest. Examples are the rare isotopes of helium (\( ^{8,10} \) He) 
-oxygen (\( ^{22,24,28} \) O), calcium (\( ^{52,54,60} \) Ca), nickel (\( ^{78} \) Ni)
-and tin (\( ^{100,132} \) Sn). The coupled-cluster method has the potential
-to address questions regarding these nuclei, and in a several cases
-was used to make predictions before experimental data was
-available. In addition, the method can be used to compute neighbors of
-nuclei with closed subshells.
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -461,7 +406,7 @@ correlated state as
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{11}
+\tag{7}
 |\Psi\rangle = e^T|\Phi_0\rangle ,
 \end{equation}
 $$
@@ -469,7 +414,7 @@ $$
 
 <p>
 Here, \( T \) is an operator that induces correlations. We can now demand
-that the correlate state <a href="#mjx-eqn-11">(11)</a> becomes and eigenstate of the
+that the correlate state <a href="#mjx-eqn-7">(7)</a> becomes and eigenstate of the
 Hamiltonian \( H_N \), i.e.  \( H_N|\Psi\rangle = E|\Psi\rangle \). This view,
 while correct, is not the most productive one.  Instead, we
 left-multiply the Schroedinger equation with \( e^{-T} \) and find
@@ -477,7 +422,7 @@ left-multiply the Schroedinger equation with \( e^{-T} \) and find
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{12}
+\tag{8}
 \overline{H_N}|\Phi_0\rangle = E_c |\Phi_0\rangle . 
 \end{equation}
 $$
@@ -490,7 +435,7 @@ Here, \( E_c \) is the correlation energy, and the total energy is
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{13}
+\tag{9}
 \overline{H_N} \equiv e^{-T} H_N e^T .
 \end{equation}
 $$
@@ -500,7 +445,7 @@ $$
 A more productive view on coupled-cluster theory thus emerges: This
 method seeks a similarity transformation such that the uncorrelated
 reference state <a href="#mjx-eqn-1">(1)</a> becomes an exact eigenstate of the
-similarity-transformed Hamiltonian <a href="#mjx-eqn-13">(13)</a>.
+similarity-transformed Hamiltonian <a href="#mjx-eqn-9">(9)</a>.
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -514,14 +459,8 @@ similarity-transformed Hamiltonian <a href="#mjx-eqn-13">(13)</a>.
 What are the conditions on \( T \) such that \( \overline{H_N} \) is Hermitian?
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-For a Hermitian \( \overline{H_N} \), we need a unitary \( e^T \), i.e. an anti-Hermitian \( T \) with
-\( T = -T^\dagger \)
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -545,44 +484,8 @@ arbitrary \( T \). What is the spectral decomposition of a non-Hermitian
 \( \overline{H_N} \) ?
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-Let \( H_N|E\rangle = E|E\rangle \). Thus
-
-<p>&nbsp;<br>
-$$
-\begin{align*}
-H_N e^{T} e^{-T} |E\rangle &= E|E\rangle , \\
-\left(e^{-T} H_N e^T\right) e^{-T} |E\rangle &= Ee^{-T} |E\rangle , \\
-\overline{H_N} e^{-T} |E\rangle &= E e^{-T}|E\rangle .
-\end{align*}
-$$
-<p>&nbsp;<br>
-
-<p>
-Thus, if \( |E\rangle \) is an eigenstate of \( H_N \) with eigenvalue \( E \),
-then \( e^{-T}|E\rangle \) is eigenstate of \( \overline{H_N} \) with the same
-eigenvalue.
-
-<p>
-A non-Hermitian \( \overline{H_N} \) has eigenvalues \( E_\alpha \)
-corresponding to left \( \langle L_\alpha| \) and right \( |R_\alpha
-\rangle \) eigenstates. Thus
-
-<p>&nbsp;<br>
-$$
-\begin{align}
-\overline{H_N} = \sum_\alpha |R_\alpha\rangle E_\alpha \langle L_\alpha |
-\tag{14}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-with bi-orthonormal \( \langle L_\alpha|R_\beta\rangle = \delta_\alpha^\beta \).
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -596,7 +499,7 @@ coupled cluster theory, this operator is
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{15}
+\tag{10}
 T \equiv \sum_{ia} t_i^a a^\dagger_a a_i + \frac{1}{4}\sum_{ijab}t_{ij}^{ab}
 a^\dagger_aa^\dagger_ba_ja_i + \cdots
 + \frac{1}{(A!)^2}\sum_{i_1\ldots i_A a_1 \ldots a_A}
@@ -606,7 +509,7 @@ $$
 <p>&nbsp;<br>
 
 <p>
-Thus, the operator <a href="#mjx-eqn-15">(15)</a> induces particle-hole (p-h)
+Thus, the operator <a href="#mjx-eqn-10">(10)</a> induces particle-hole (p-h)
 excitations with respect to the reference. In general, \( T \) generates
 up to \( Ap-Ah \) excitations, and the unknown parameters are the cluster amplitides
 \( t_i^a \), \( t_{ij}^{ab} \), ..., \( t_{i_1,\ldots,i_A}^{a_1,\ldots,a_A} \).
@@ -624,27 +527,8 @@ Show that the number of unknowns is as large as the FCI dimension of
 the problem, using the numbers \( A \) and \( n_u \).
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-We have to sum up all \( np-nh \) excitations, and there are
-\( \binom{n_u}{n} \) particle states and \( \binom{A}{A-n} \) hole states for
-each \( n \). Thus, we have for the total number
-
-<p>&nbsp;<br>
-$$
-\begin{align}
-\sum_{n=0}^A \binom{n_u}{n} \binom{A}{A-n}= \binom{A+n_u}{A} .
-\tag{16}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-<p>
-The right hand side are obviously all ways to distribute \( A \) fermions over \( n_0+A \) orbitals.
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -653,7 +537,7 @@ The right hand side are obviously all ways to distribute \( A \) fermions over \
 
 <p>
 Thus, the coupled-cluster method with the full cluster operator
-<a href="#mjx-eqn-15">(15)</a> is exponentially expensive, just as FCI. To make progress,
+<a href="#mjx-eqn-10">(10)</a> is exponentially expensive, just as FCI. To make progress,
 we need to make an approximation by truncating the operator. Here, we
 will use the CCSD (coupled clusters singles doubles) approximation,
 where
@@ -661,7 +545,7 @@ where
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{17}
+\tag{11}
 T \equiv \sum_{ia} t_i^a a^\dagger_a a_i + \frac{1}{4}\sum_{ijab}t_{ij}^{ab}
 a^\dagger_aa^\dagger_ba_ja_i .
 \end{equation}
@@ -675,26 +559,26 @@ We need to dermine the unknown cluster amplitudes that enter in CCSD. Let
 $$
 \begin{align}
 |\Phi_i^a\rangle &= a^\dagger_a a_i |\Phi_0\rangle , 
-\tag{18}\\
+\tag{12}\\
 |\Phi_{ij}^{ab}\rangle &= a^\dagger_a a^\dagger_b a_j a_i |\Phi_0\rangle
-\tag{19}
+\tag{13}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 be 1p-1h and 2p-2h excitations of the reference. Computing matrix
-elements of the Schroedinger Equation <a href="#mjx-eqn-12">(12)</a> yields
+elements of the Schroedinger Equation <a href="#mjx-eqn-8">(8)</a> yields
 
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{20}
+\tag{14}
 \langle \Phi_0|\overline{H_N}|\Phi_0\rangle &= E_c , \\
 \langle \Phi_i^a|\overline{H_N}|\Phi_0\rangle &= 0 , 
-\tag{21}\\
+\tag{15}\\
 \langle \Phi_{ij}^{ab}|\overline{H_N}|\Phi_0\rangle &= 0 .
-\tag{22}
+\tag{16}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -706,7 +590,7 @@ second and third equations state that the similarity-transformed
 Hamiltonian exhibits no 1p-1h and no 2p-2h excitations. These
 equations have to be solved to find the unknown amplitudes \( t_i^a \) and
 \( t_{ij}^{ab} \). Then one can use these amplitudes and compute the
-correlation energy from the first line of Eq. <a href="#mjx-eqn-20">(20)</a>.
+correlation energy from the first line of Eq. <a href="#mjx-eqn-14">(14)</a>.
 
 <p>
 We note that in the CCSD approximation the reference state is not an
@@ -736,30 +620,30 @@ vacuum.
 
 <p>
 The solution of the CCSD equations, i.e. the second and third line of
-Eq. <a href="#mjx-eqn-20">(20)</a>, and the computation of the correlation energy
+Eq. <a href="#mjx-eqn-14">(14)</a>, and the computation of the correlation energy
 requires us to compute matrix elements of the similarity-transformed
-Hamiltonian <a href="#mjx-eqn-13">(13)</a>. This can be done with the
+Hamiltonian <a href="#mjx-eqn-9">(9)</a>. This can be done with the
 Baker-Campbell-Hausdorff expansion
 
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{23}
+\tag{17}
 \overline{H_N} &= e^{-T} H_N e^T \\
 &=H_N + \left[ H_N, T\right]+ \frac{1}{2!}\left[ \left[ H_N, T\right], T\right]
 + \frac{1}{3!}\left[\left[ \left[ H_N, T\right], T\right], T\right] +\ldots .
-\tag{24}
+\tag{18}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 We now come to a key element of coupled-cluster theory: the cluster
-operator <a href="#mjx-eqn-15">(15)</a> consists of sums of terms that consist of particle
+operator <a href="#mjx-eqn-10">(10)</a> consists of sums of terms that consist of particle
 creation and hole annihilation operators (but no particle annihilation
 or hole creation operators). Thus, all terms that enter \( T \) commute
 with each other. This means that the commutators in the
-Baker-Campbell-Hausdorff expansion <a href="#mjx-eqn-23">(23)</a> can only be non-zero
+Baker-Campbell-Hausdorff expansion <a href="#mjx-eqn-17">(17)</a> can only be non-zero
 because each \( T \) must connect to \( H_N \) (but no \( T \) with another
 \( T \)). Thus, the expansion is finite.
 
@@ -777,15 +661,8 @@ commutators yield nonzero results? Where does the
 Baker-Campbell-Hausdorff expansion terminate? What is the (many-body) rank of the resulting \( \overline{H_N} \)?
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-CCSD truncates for two-body operators at four-fold nested commutators,
-because each of the four annihilation and creation operators in
-\( \overline{H_N} \) can be knocked out with one term of \( T \).
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -808,7 +685,7 @@ We write the similarity-transformed Hamiltonian as
 $$
 \begin{align}
 \overline{H_N}=\sum_{pq} \overline{H}^p_q a^\dagger_q a_p + {1\over 4} \sum_{pqrs} \overline{H}^{pq}_{rs} a^\dagger_p a^\dagger_q a_s a_r + \ldots
-\tag{25}
+\tag{19}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -818,15 +695,15 @@ with
 $$
 \begin{align}
 \overline{H}^p_q &\equiv \langle p|\overline{H_N}|q\rangle , 
-\tag{26}\\
+\tag{20}\\
 \overline{H}^{pq}_{rs} &\equiv \langle pq|\overline{H_N}|rs\rangle .
-\tag{27}
+\tag{21}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-20">(20)</a> for the amplitudes can be written as
+Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-14">(14)</a> for the amplitudes can be written as
 \( \overline{H}_i^a = 0 \) and \( \overline{H}_{ij}^{ab}=0 \).
 
 <p>
@@ -838,18 +715,8 @@ Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-20">(20)</a> for the amplitudes can b
 <h2 id="___sec19">Exercise 8: Compute the matrix element \( \overline{H}_{ab}^{ij}\equiv \langle ij|\overline{H_N}|ab\rangle \) </h2>
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-This is a simple task. This matrix element is part of the operator
-\( \overline{H}_{ab}^{ij}a^\dagger_ia^\dagger_ja_ba_a \), i.e. particles
-are annihilated and holes are created. Thus, no contraction of the
-Hamiltonian \( H \) with any cluster operator \( T \) (remember that \( T \)
-annihilates holes and creates particles) can happen, and we simply
-have \( \overline{H}_{ab}^{ij} = \langle ij|V|ab\rangle \).
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -858,7 +725,7 @@ have \( \overline{H}_{ab}^{ij} = \langle ij|V|ab\rangle \).
 
 <p>
 We need to work out the similarity-transformed Hamiltonian of
-Eq. <a href="#mjx-eqn-23">(23)</a>. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
+Eq. <a href="#mjx-eqn-17">(17)</a>. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
 where \( T_1 \) and \( F \) are one-body operators, and \( T_2 \) and \( V \) are
 two-body operators.
 
@@ -1010,37 +877,22 @@ Remember: \( \langle\rm{left-out, right-out}|V|\rm{left-in, right-in}\rangle \).
 <br /><br /><center><p><img src="figslides/Diagrams-V1.png" align="bottom" width=800></p></center><br /><br />
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-\( \langle ab|V|cd\rangle + \langle ij|V|kl\rangle + \langle ia|V|bj\rangle \)
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <b>b)</b>
 <br /><br /><center><p><img src="figslides/Diagrams-V2.png" align="bottom" width=800></p></center><br /><br />
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-\( \langle ai|V!bc\rangle + \langle ij|V|ka\rangle + \langle ab|V|ci\rangle \)
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <b>c)</b>
 <br /><br /><center><p><img src="figslides/Diagrams-V3.png" align="bottom" width=800></p></center><br /><br />
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-\( \langle ia|V|jk\rangle + \langle ab|V|ij\rangle + \langle ij|V|ab\rangle \)
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -1089,7 +941,7 @@ the cluster operator with the normal-ordered Hamiltonian.
 <p>
 The CCSD correlation energy, \( E_c= \langle
 \Phi_0|\overline{H_N}|\Phi_0\rangle \), is the first of the CCSD
-equations <a href="#mjx-eqn-20">(20)</a>. It is a vacuum expectation value and thus
+equations <a href="#mjx-eqn-14">(14)</a>. It is a vacuum expectation value and thus
 consists of all diagrams with no external legs. There are three such diagrams:
 
 <p>
@@ -1154,34 +1006,8 @@ Start systematically! Consider all combinations of \( F \) and \( V \) diagrams 
 <!-- --- end hint in exercise --- -->
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-
-<p>
-<center> <!-- figure label: --> <div id="fig-ccd"></div> <!-- FIGURE -->
-<hr class="figure">
-<center><p class="caption">Figure 11:  The diagrams for the \( T_1 \) equation, i.e. the matrix elements of \( \overline{H}_i^a \). Taken from Baardsen et al (2013).  <!-- caption label: fig-ccd --> </p></center>
-<p><img src="figslides/Diagrams-CCD.png" align="bottom" width=800></p>
-</center>
-
-<p>
-The corresponding algebraic expression is
-<p>&nbsp;<br>
-$$
-\begin{align*}
-\overline{H}_{ij}^{ab} &= \langle ab|V|ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
-&+ {1\over 2} \sum_{cd} \langle ab|V|cd\rangle t_{ij}^{cd}+ {1\over 2} \sum_{kl} \langle kl|V|ij\rangle t_{kl}^{ab} + P(ab)P(ij)\sum_{kc} \langle kb|V|cj \rangle t_{ik}^{ac} \\
-&+ {1\over 2} P(ij)P(ab)\sum_{kcld} \langle kl|V|cd\rangle t_{ik}^{ac}t_{lj}^{db} 
-+ {1\over 2} P(ij)\sum_{kcld} \langle kl|V|cd\rangle t_{ik}^{cd}t_{lj}^{ab}\\
-&+ {1\over 2} P(ab)\sum_{kcld} \langle kl|V|cd\rangle t_{kl}^{ac}t_{ij}^{db}
-+ {1\over 4} \sum_{kcld} \langle kl|V|cd\rangle t_{ij}^{cd}t_{kl}^{ab} . 
-\end{align*}
-$$
-<p>&nbsp;<br>
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -1205,16 +1031,8 @@ computational cost in terms of the number of occupied \( A \) and the
 number of unoccupied \( n_u \) orbitals.
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-The cost is \( A^2 n_u^2 \), \( A^2 n_u^3 \), \( A^3 n_u^2 \),
-\( A^2 n_u^4 \), \( A^4 n_u^2 \), \( A^3 n_u^3 \),
-\( A^4 n_u^4 \), \( A^4 n_u^4 \),
-\( A^4 n_u^4 \), and \( A^4 n_u^4 \) for the respective diagrams.
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -1234,7 +1052,7 @@ computing first the intermediate
 $$
 \begin{align}
 \chi_{ij}^{kl}\equiv {1\over 2} \sum_{cd} \langle kl|V|cd\rangle t_{ij}^{cd}
-\tag{28}
+\tag{22}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1244,7 +1062,7 @@ at a cost of \( A^4n_u^2 \), and then
 $$
 \begin{align}
 {1\over 2} \sum_{kl} \chi_{ij}^{kl} t_{kl}^{ab}  
-\tag{29}
+\tag{23}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1266,79 +1084,8 @@ memory for computational cycles. This trick is known as
 Diagrams 7, 8, and 9 of Fig. <a href="#fig-ccd">11</a> also need to be factorized.
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-For diagram number 7, we compute
-<p>&nbsp;<br>
-$$
-\begin{align}
-\chi_{id}^{al}\equiv\sum_{kc} \langle kl|V|cd\rangle t_{ik}^{ac}
-\tag{30}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at a cost of \( A^3 n_u^3 \) and then compute
-<p>&nbsp;<br>
-$$
-\begin{align}
-{1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} 
-\tag{31}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at the cost of \( A^3 n_u^3 \).
-
-<p>
-For diagram number 8, we compute
-<p>&nbsp;<br>
-$$
-\begin{align}
-\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl|V|cd\rangle t_{ik}^{cd}
-\tag{32}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at a cost of \( A^3 n_u^2 \), and then compute
-<p>&nbsp;<br>
-$$
-\begin{align}
--P(ij) \sum_l \chi_i^l t_{lj}^{ab}
-\tag{33}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at the cost of \( A^3 n_u^2 \).
-
-<p>
-For diagram number 9, we compute
-<p>&nbsp;<br>
-$$
-\begin{align}
-\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl|V|cd\rangle t_{kl}^{ac}
-\tag{34}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at a cost of \( A^2 n_u^3 \) and then compute
-<p>&nbsp;<br>
-$$
-\begin{align}
-P(ab)\sum_d \chi_d^a t_{ij}^{db}
-\tag{35}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-at the cost of \( A^3 n_u^3 \).
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -1362,37 +1109,15 @@ elements of \( \overline{H}_i^a \) and \( \overline{H}_{ij}^{ab} \).
 Let us consider the matrix element \( \overline{H}_i^a \) first. Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have an incoming hole line and an outgoing particle line. Write down all these diagrams.
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-
-<p>
-<center> <!-- figure label: --> <div id="fig-CCSD1"></div> <!-- FIGURE -->
-<hr class="figure">
-<center><p class="caption">Figure 12:  The diagrams for the \( T_1 \) equation, i.e. the matrix elements of \( \overline{H}_i^a \). Taken from Crawford and Schaefer. Here \( \langle pq||rs\rangle \equiv \langle pq|V|rs\rangle \) and \( f_{pq}\equiv f^p_q \).  <!-- caption label: fig-CCSD1 --> </p></center>
-<p><img src="figslides/Diagrams-CCSD1.png" align="bottom" width=800></p>
-</center>
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <b>b)</b>
 Let us now consider the matrix element \( \overline{H}_{ij}^{ab} \). Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have two incoming hole lines and two outgoing particle lines. Write down all these diagrams and corresponding algebraic expressions.
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-
-<p>
-<center> <!-- figure label: --> <div id="fig-CCSD2"></div> <!-- FIGURE -->
-<hr class="figure">
-<center><p class="caption">Figure 13:  The diagrams for the \( T_2 \) equation, i.e. the matrix elements of \( \overline{H}_{ij}^{ab} \). Taken from Crawford and Schaefer. Here \( \langle pq||rs\rangle \equiv \langle pq|V|rs\rangle \), \( f_{pq}\equiv f^p_q \), and \( P(ab) = 1 - (a\leftrightarrow b) \) antisymmetrizes.  <!-- caption label: fig-CCSD2 --> </p></center>
-<p><img src="figslides/Diagrams-CCSD2.png" align="bottom" width=800></p>
-</center>
-
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
@@ -1421,7 +1146,7 @@ Dividing by \( (f_a^a +f_b^b -f_i^i -f_j^j) \) yields
 $$
 \begin{align}
 t_{ij}^{ab} &= t_{ij}^{ab} + \frac{\overline{H}_{ij}^{ab}}{f_a^a +f_b^b -f_i^i -f_j^j}
-\tag{36}
+\tag{24}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1433,7 +1158,7 @@ hope that this will converge to a solution. We take the perturbative result
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{37}
+\tag{25}
 \left(t_{ij}^{ab}\right)_0 = \frac{\langle ab|V|ij\rangle}{f_a^a +f_b^b -f_i^i -f_j^j}
 \end{align}
 $$
@@ -1441,7 +1166,7 @@ $$
 
 <p>
 as a starting point, compute \( \overline{H}_{ij}^{ab} \), and find a new
-\( t_{ij}^{ab} \) from the right-hand side of Eq. <a href="#mjx-eqn-36">(36)</a>. We repeat
+\( t_{ij}^{ab} \) from the right-hand side of Eq. <a href="#mjx-eqn-24">(24)</a>. We repeat
 this process until the amplitudes converge.
 
 <h1 id="___sec37">CCD for the pairing Hamiltonian </h1>
@@ -1455,7 +1180,7 @@ problem. This consists of the following steps
 <ol>
 <p><li> Write a function that compute the potential. We need \( \langle ab|V|cd\rangle \), \( \langle ij|V|kl\rangle \), and \( \langle ab|V|ij\rangle \). Why is there no \( \langle ab|V|id\rangle \) or \( \langle ai|V|jb\rangle \) ?</li>
 <p><li> Write a function that computes the Fock matrix. We only need \( f_a^b \) and \( f_i^j \). Why?</li> 
-<p><li> Initialize the cluster amplitudes according to Eq. <a href="#mjx-eqn-37">(37)</a>, and solve Eq. <a href="#mjx-eqn-36">(36)</a> by iteration.</li>
+<p><li> Initialize the cluster amplitudes according to Eq. <a href="#mjx-eqn-25">(25)</a>, and solve Eq. <a href="#mjx-eqn-24">(24)</a> by iteration.</li>
 </ol>
 <p>
 
@@ -1467,231 +1192,8 @@ problem. This consists of the following steps
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936.
 
 <p>
-<!-- --- begin answer of exercise --- -->
-<b>Answer.</b>
-<p>
-
-<!-- code=python (!bc pypro) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22">## Coupled clusters in CCD approximation</span>
-<span style="color: #228B22">## Implemented for the pairing model of Lecture Notes in Physics 936, Chapter 8.</span>
-<span style="color: #228B22">## Thomas Papenbrock, June 2018</span>
-
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-
-
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_pairing_v</span>(g,pnum,hnum):
-    <span style="color: #CD5555">&quot;&quot;&quot;</span>
-<span style="color: #CD5555">    returns potential matrices of the pairing model in three relevant channels</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    param g: strength of the pairing interaction, as in Eq. (8.42)</span>
-<span style="color: #CD5555">    param pnum: number of particle states</span>
-<span style="color: #CD5555">    param hnum: number of hole states</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    return v_pppp, v_pphh, v_hhhh: np.array(pnum,pnum,pnum,pnum), </span>
-<span style="color: #CD5555">                                   np.array(pnum,pnum,hnum,hnum), </span>
-<span style="color: #CD5555">                                   np.array(hnum,hnum,hnum,hnum), </span>
-<span style="color: #CD5555">                                   The interaction as a 4-indexed tensor in three channels.</span>
-<span style="color: #CD5555">    &quot;&quot;&quot;</span>
-    v_pppp=np.zeros((pnum,pnum,pnum,pnum))
-    v_pphh=np.zeros((pnum,pnum,hnum,hnum))
-    v_hhhh=np.zeros((hnum,hnum,hnum,hnum))
-    
-    gval=-<span style="color: #B452CD">0.5</span>*g
-    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
-        <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
-            v_pppp[a,a+<span style="color: #B452CD">1</span>,b,b+<span style="color: #B452CD">1</span>]=gval
-            v_pppp[a+<span style="color: #B452CD">1</span>,a,b,b+<span style="color: #B452CD">1</span>]=-gval
-            v_pppp[a,a+<span style="color: #B452CD">1</span>,b+<span style="color: #B452CD">1</span>,b]=-gval
-            v_pppp[a+<span style="color: #B452CD">1</span>,a,b+<span style="color: #B452CD">1</span>,b]=gval
-            
-    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
-        <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
-            v_pphh[a,a+<span style="color: #B452CD">1</span>,i,i+<span style="color: #B452CD">1</span>]=gval
-            v_pphh[a+<span style="color: #B452CD">1</span>,a,i,i+<span style="color: #B452CD">1</span>]=-gval
-            v_pphh[a,a+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>,i]=-gval
-            v_pphh[a+<span style="color: #B452CD">1</span>,a,i+<span style="color: #B452CD">1</span>,i]=gval
-    
-    <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
-        <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
-            v_hhhh[j,j+<span style="color: #B452CD">1</span>,i,i+<span style="color: #B452CD">1</span>]=gval
-            v_hhhh[j+<span style="color: #B452CD">1</span>,j,i,i+<span style="color: #B452CD">1</span>]=-gval
-            v_hhhh[j,j+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>,i]=-gval
-            v_hhhh[j+<span style="color: #B452CD">1</span>,j,i+<span style="color: #B452CD">1</span>,i]=gval
-        
-    <span style="color: #8B008B; font-weight: bold">return</span> v_pppp, v_pphh, v_hhhh
-    
-    
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_pairing_fock</span>(delta,g,pnum,hnum):
-    <span style="color: #CD5555">&quot;&quot;&quot;</span>
-<span style="color: #CD5555">    initializes the Fock matrix of the pairing model</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    param delta: Single-particle spacing, as in Eq. (8.41)</span>
-<span style="color: #CD5555">    param g: pairing strength, as in eq. (8.42)</span>
-<span style="color: #CD5555">    param pnum: number of particle states</span>
-<span style="color: #CD5555">    param hnum: number of hole states</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    return f_pp, f_hh: The Fock matrix in two channels as numpy arrays np.array(pnum,pnum), np.array(hnum,hnum). </span>
-<span style="color: #CD5555">    &quot;&quot;&quot;</span>
-<span style="color: #228B22"># the Fock matrix for the pairing model. No f_ph needed, because we are in Hartree-Fock basis </span>
-    deltaval=<span style="color: #B452CD">0.5</span>*delta
-    gval=-<span style="color: #B452CD">0.5</span>*g
-    f_pp = np.zeros((pnum,pnum))
-    f_hh = np.zeros((hnum,hnum))
-
-    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
-        f_hh[i  ,i  ] = deltaval*i+gval
-        f_hh[i+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>] = deltaval*i+gval
-        
-    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
-        f_pp[a  ,a  ] = deltaval*(hnum+a)
-        f_pp[a+<span style="color: #B452CD">1</span>,a+<span style="color: #B452CD">1</span>] = deltaval*(hnum+a)
-    
-    <span style="color: #8B008B; font-weight: bold">return</span> f_pp, f_hh
-
-
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_t2</span>(v_pphh,f_pp,f_hh):
-    <span style="color: #CD5555">&quot;&quot;&quot;</span>
-<span style="color: #CD5555">    Initializes t2 amlitudes as in MBPT2, see first equation on page 345</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    param v_pphh: pairing tensor in pphh channel</span>
-<span style="color: #CD5555">    param f_pp:   Fock matrix in pp channel</span>
-<span style="color: #CD5555">    param f_hh:   Fock matrix in hh channel</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    return t2: numpy array in pphh format, 4-indices tensor</span>
-<span style="color: #CD5555">    &quot;&quot;&quot;</span>
-    pnum = <span style="color: #658b00">len</span>(f_pp)
-    hnum = <span style="color: #658b00">len</span>(f_hh)
-    t2_new = np.zeros((pnum,pnum,hnum,hnum))
-    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
-        <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
-            <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
-                <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
-                    t2_new[a,b,i,j] = v_pphh[a,b,i,j] / (f_hh[i,i]+f_hh[j,j]-f_pp[a,a]-f_pp[b,b])
-    <span style="color: #8B008B; font-weight: bold">return</span> t2_new
-
-
-<span style="color: #228B22"># CCD equations. Note that the &quot;-&gt;abij&quot; assignment is redundant, because indices are ordered alphabetically.</span>
-<span style="color: #228B22"># Nevertheless, we retain it for transparency.</span>
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">ccd_iter</span>(v_pppp,v_pphh,v_hhhh,f_pp,f_hh,t2):
-    <span style="color: #CD5555">&quot;&quot;&quot;</span>
-<span style="color: #CD5555">    Performs one iteration of the CCD equations (8.34), using also intermediates for the nonliniar terms</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    param v_pppp: pppp-channel pairing tensor, numpy array</span>
-<span style="color: #CD5555">    param v_pphh: pphh-channel pairing tensor, numpy array</span>
-<span style="color: #CD5555">    param v_hhhh: hhhh-channel pairing tensor, numpy array</span>
-<span style="color: #CD5555">    param f_pp: Fock matrix in pp channel</span>
-<span style="color: #CD5555">    param f_hh: Fock matrix in hh channel</span>
-<span style="color: #CD5555">    param t2: Initial t2 amplitude, tensor in form of pphh channel</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    return t2_new: new t2 amplitude, tensor in form of pphh channel</span>
-<span style="color: #CD5555">    &quot;&quot;&quot;</span>
-    pnum = <span style="color: #658b00">len</span>(f_pp)
-    hnum = <span style="color: #658b00">len</span>(f_hh)
-    Hbar_pphh = (  v_pphh 
-                 + np.einsum(<span style="color: #CD5555">&#39;bc,acij-&gt;abij&#39;</span>,f_pp,t2) 
-                 - np.einsum(<span style="color: #CD5555">&#39;ac,bcij-&gt;abij&#39;</span>,f_pp,t2) 
-                 - np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abij&#39;</span>,t2,f_hh)
-                 + np.einsum(<span style="color: #CD5555">&#39;abjk,ki-&gt;abij&#39;</span>,t2,f_hh)
-                 + <span style="color: #B452CD">0.5</span>*np.einsum(<span style="color: #CD5555">&#39;abcd,cdij-&gt;abij&#39;</span>,v_pppp,t2) 
-                 + <span style="color: #B452CD">0.5</span>*np.einsum(<span style="color: #CD5555">&#39;abkl,klij-&gt;abij&#39;</span>,t2,v_hhhh)
-                )
-
-    <span style="color: #228B22"># hh intermediate, see (8.47)</span>
-    chi_hh = <span style="color: #B452CD">0.5</span>* np.einsum(<span style="color: #CD5555">&#39;cdkl,cdjl-&gt;kj&#39;</span>,v_pphh,t2)
-
-    Hbar_pphh = Hbar_pphh - (  np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abij&#39;</span>,t2,chi_hh) 
-                             - np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abji&#39;</span>,t2,chi_hh) )
-
-    <span style="color: #228B22"># pp intermediate, see (8.46)</span>
-    chi_pp = -<span style="color: #B452CD">0.5</span>* np.einsum(<span style="color: #CD5555">&#39;cdkl,bdkl-&gt;cb&#39;</span>,v_pphh,t2)
-
-    Hbar_pphh = Hbar_pphh + (  np.einsum(<span style="color: #CD5555">&#39;acij,cb-&gt;abij&#39;</span>,t2,chi_pp) 
-                             - np.einsum(<span style="color: #CD5555">&#39;acij,cb-&gt;baij&#39;</span>,t2,chi_pp) )
-
-    <span style="color: #228B22"># hhhh intermediate, see (8.48)</span>
-    chi_hhhh = <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;cdkl,cdij-&gt;klij&#39;</span>,v_pphh,t2)
-
-    Hbar_pphh = Hbar_pphh + <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;abkl,klij-&gt;abij&#39;</span>,t2,chi_hhhh)
-
-    <span style="color: #228B22"># phph intermediate, see (8.49)</span>
-    chi_phph= + <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;cdkl,dblj-&gt;bkcj&#39;</span>,v_pphh,t2)
-
-
-    Hbar_pphh = Hbar_pphh + (  np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;abij&#39;</span>,chi_phph,t2)
-                             - np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;baij&#39;</span>,chi_phph,t2)
-                             - np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;abji&#39;</span>,chi_phph,t2)
-                             + np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;baji&#39;</span>,chi_phph,t2) )
-                 
-    t2_new=np.zeros((pnum,pnum,hnum,hnum))
-    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
-        <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
-            <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
-                <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
-                    t2_new[a,b,i,j] = (  t2[a,b,i,j] 
-                                       + Hbar_pphh[a,b,i,j] / (f_hh[i,i]+f_hh[j,j]-f_pp[a,a]-f_pp[b,b]) )
-
-    <span style="color: #8B008B; font-weight: bold">return</span> t2_new
-
-
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">ccd_energy</span>(v_pphh,t2):
-    <span style="color: #CD5555">&quot;&quot;&quot;</span>
-<span style="color: #CD5555">    Computes CCD energy. Call as </span>
-<span style="color: #CD5555">    energy = ccd_energy(v_pphh,t2)</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    param v_pphh: pphh-channel pairing tensor, numpy array</span>
-<span style="color: #CD5555">    param t2: t2 amplitude, tensor in form of pphh channel</span>
-<span style="color: #CD5555">    </span>
-<span style="color: #CD5555">    return energy: CCD correlation energy</span>
-<span style="color: #CD5555">    &quot;&quot;&quot;</span>
-    erg = <span style="color: #B452CD">0.25</span>*np.einsum(<span style="color: #CD5555">&#39;abij,abij&#39;</span>,v_pphh,t2)
-    <span style="color: #8B008B; font-weight: bold">return</span> erg
-
-<span style="color: #228B22">###############################</span>
-<span style="color: #228B22">######## Main Program</span>
-
-<span style="color: #228B22"># set parameters as for model</span>
-pnum = <span style="color: #B452CD">20</span> <span style="color: #228B22"># number of particle states</span>
-hnum = <span style="color: #B452CD">10</span> <span style="color: #228B22"># number of hole states</span>
-delta = <span style="color: #B452CD">1.0</span>
-
-g = <span style="color: #B452CD">0.5</span>
-
-<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;parameters&quot;</span>)
-<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;delta =&quot;</span>, delta, <span style="color: #CD5555">&quot;, g =&quot;</span>, g)
-
-
-<span style="color: #228B22"># Initialize pairing matrix elements and Fock matrix</span>
-v_pppp, v_pphh, v_hhhh = init_pairing_v(g,pnum,hnum)
-f_pp, f_hh = init_pairing_fock(delta,g,pnum,hnum)
-
-<span style="color: #228B22"># Initialize T2 amplitudes from MBPT2</span>
-t2 = init_t2(v_pphh,f_pp,f_hh)
-erg = ccd_energy(v_pphh,t2)
-
-<span style="color: #228B22"># Exact MBPT2 for comparison, see last equation on page 365 </span>
-exact_mbpt2 = -<span style="color: #B452CD">0.25</span>*g**<span style="color: #B452CD">2</span>*(<span style="color: #B452CD">1.0</span>/(<span style="color: #B452CD">2.0</span>+g) + <span style="color: #B452CD">2.0</span>/(<span style="color: #B452CD">4.0</span>+g) + <span style="color: #B452CD">1.0</span>/(<span style="color: #B452CD">6.0</span>+g))
-<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;MBPT2 energy =&quot;</span>, erg, <span style="color: #CD5555">&quot;, compared to exact:&quot;</span>, exact_mbpt2)
-    
-    
-<span style="color: #228B22"># iterate CCD equations niter times</span>
-niter=<span style="color: #B452CD">200</span>
-mix=<span style="color: #B452CD">0.3</span>
-erg_old=<span style="color: #B452CD">0.0</span>
-eps=<span style="color: #B452CD">1.e-8</span>
-<span style="color: #8B008B; font-weight: bold">for</span> <span style="color: #658b00">iter</span> <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(niter):
-    t2_new = ccd_iter(v_pppp,v_pphh,v_hhhh,f_pp,f_hh,t2)
-    erg = ccd_energy(v_pphh,t2_new)
-    myeps = <span style="color: #658b00">abs</span>(erg-erg_old)/<span style="color: #658b00">abs</span>(erg)
-    <span style="color: #8B008B; font-weight: bold">if</span> myeps &lt; eps: <span style="color: #8B008B; font-weight: bold">break</span>
-    erg_old=erg
-    <span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;iter=&quot;</span>, <span style="color: #658b00">iter</span>, <span style="color: #CD5555">&quot;erg=&quot;</span>, erg, <span style="color: #CD5555">&quot;myeps=&quot;</span>, myeps)
-    t2 = mix*t2_new + (<span style="color: #B452CD">1.0</span>-mix)*t2 
-    
-<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;Energy = &quot;</span>, erg)
-</pre></div>
-<p>
-<!-- --- end answer of exercise --- -->
-
+<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
+ -->
 <p>
 <!-- --- end exercise --- -->
 
