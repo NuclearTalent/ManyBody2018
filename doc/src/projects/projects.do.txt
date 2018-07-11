@@ -37,7 +37,7 @@ developed. The latter form the remaining parts of the project.
 
 If you have not used version control before now, it is time to do so.
 Proper version control is central to a good ethical scientific conduct.
-We do require that you use some kind of version control software when working on the projects. We recommend strongly "github":"https://github.com/". All lectures and additional material is available at the github "address of the course":"http://nucleartalent.github.io/Course2ManyBodyMethods/doc/web/course.html"
+We do require that you use some kind of version control software when working on the projects. We recommend strongly "github":"https://github.com/". All lectures and additional material is available at the github "address of the course":"https://github.com/NuclearTalent/ManyBody2018".
 
 Furthermore, before coming to the course, we recommend that you refresh your knowledge on second quantization.
 
