@@ -242,12 +242,12 @@ To help, your final Hamiltonian matrix reads
 \[
 H = \left (
 \begin{array}{cccccc}
-2\delta -g & -g/2 & -g/2 & -g/2 & -g/2 & 0 \\
- -g/2 & 4\delta -g & -g/2 & -g/2 & -0 & -g/2 \\
--g/2 & -g/2 & 6\delta -g & 0 & -g/2 & -g/2 \\
- -g/2 & -g/2 & 0 & 6\delta-g & -g/2 & -g/2 \\
- -g/2 & 0 & -g/2 & -g/2 & 8\delta-g & -g/2 \\
-0 & -g/2 & -g/2 & -g/2 & -g/2 & 10\delta -g
+2\delta -2g & -g & -g & -g & -g & 0 \\
+ -g & 4\delta -2g & -g & -g & -0 & -g \\
+-g & -g & 6\delta -2g & 0 & -g & -g \\
+ -g & -g & 0 & 6\delta-2g & -g & -g \\
+ -g & 0 & -g & -g & 8\delta-2g & -g \\
+0 & -g & -g & -g & -g & 10\delta -2g
 \end{array} \right )
 \]
 !et
