@@ -216,13 +216,14 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Analytical exercises and start with coding pairing Hamiltonian":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1030am | "Full configuration interaction theory and the pairing model problem":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html" (MHJ)  |        |
+| Wednesday | 9am-1230am | "Full configuration interaction theory and the pairing model problem":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html" (MHJ)  |        |
 |  | 11am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  |"Writing a shell-model code for the pairing problem":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1230pm | "Full configuration interaction theory (MHJ)":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html"  |        |
+| Thursday | 9am-11pm | "Full configuration interaction theory (MHJ)":"https://nucleartalent.github.io/ManyBody2018/doc/pub/fci/html/fci-bs.html"  |        |
 |          |            | "Hartree-Fock theory and links to Coupled Cluster theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/hfock/html/hfock-bs.html" | |
+|  | 1130am-1230pm | Pairing in Nuclear Physics (YMZ)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Writing a shell-model code for the pairing problem":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
