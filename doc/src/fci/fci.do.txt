@@ -89,7 +89,7 @@ two columns can be the same) lead to the Pauli principle:
 As a practical matter, however, Slater determinants beyond $N=4$ quickly become 
 unwieldy. Thus we turn to the _occupation representation_ or _second quantization_ to simplify calculations. 
 
-The occupation representation, using fermion _creation_ and _annihilation_ 
+The occupation representation or number representation, using fermion _creation_ and _annihilation_ 
 operators, is compact and efficient. It is also abstract and, at first encounter, not easy to 
 internalize. It is inspired by other operator formalism, such as the ladder operators for 
 the harmonic oscillator or for angular momentum, but unlike those cases, the operators _do not have coordinate space representations_.
