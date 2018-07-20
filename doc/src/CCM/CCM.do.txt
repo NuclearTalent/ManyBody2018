@@ -1,6 +1,6 @@
-TITLE: The Coupled-Cluster Method
+TITLE: The Coupled Cluster Method
 AUTHOR: Thomas Papenbrock {copyright, 2018|CC BY-NC} at The University of Tennessee, Knoxville, tpapenbr@utk.edu 
-DATE: June 25, 2018
+DATE: Today
 
 
 TOC: on
@@ -28,7 +28,7 @@ We start from the reference state
 !bt
 \begin{equation}
 \label{HFref}
-|\Phi_0\rangle = \prod_{i=1}^A a^\dagger_i |0\rangle 
+\vert\Phi_0\rangle = \prod_{i=1}^A a^\dagger_i \vert 0\rangle 
 \end{equation}
 !et
 
@@ -47,7 +47,7 @@ occupied states. We consider the Hamiltonian
 \begin{equation}
 \label{Ham} H =
 \sum_{pq} \varepsilon^p_q a^\dagger_p a_q +
-\frac{1}{4}\sum_{pqrs}\langle pq|V|rs\rangle
+\frac{1}{4}\sum_{pqrs}\langle pq\vert V\vert rs\rangle
 a^\dagger_pa^\dagger_q a_sa_r
 \end{equation}
 !et
@@ -62,7 +62,7 @@ normal-ordered Hamiltonian
 !bt
 \begin{equation}
 \label{HN}
-H_N = \sum_{pq} f_{pq} \left\{a^\dagger_p a_q\right\} + \frac{1}{4}\sum_{pqrs}\langle pq|V|rs\rangle \left\{a^\dagger_pa^\dagger_q a_sa_r\right\}.
+H_N = \sum_{pq} f_{pq} \left\{a^\dagger_p a_q\right\} + \frac{1}{4}\sum_{pqrs}\langle pq\vert V\vert rs\rangle \left\{a^\dagger_pa^\dagger_q a_sa_r\right\}.
 \end{equation}
 !et
 
@@ -71,7 +71,7 @@ Here,
 !bt
 \begin{equation}
 \label{Fock}
-f^p_q = \varepsilon^p_q + \sum_i \langle pi|V|qi\rangle
+f^p_q = \varepsilon^p_q + \sum_i \langle pi\vert V\vert qi\rangle
 \end{equation}
 !et
 
@@ -80,10 +80,12 @@ Hartree-Fock basis. The brackets $\{\cdots\}$ in Eq. (ref{HN}) denote
 normal ordering, i.e. all operators that annihilate the nontrivial
 vaccum (ref{HFref}) are to the right of those operators that create
 with respect to that vaccum. Normal ordering implies that $\langle
-\Phi_0|H_N|\Phi_0\rangle = 0$.
+\Phi_0\vert H_N\vert \Phi_0\rangle = 0$.
+
 
 !bblock
 ===== Exercise: Practice in normal ordering =====
+label{ex-1}
 
 Normal order the expression $\sum\limits_{pq}\varepsilon_q^p a^\dagger_p a_q$.
 
@@ -119,32 +121,32 @@ We have to move all operators that annihilate the reference state to the right o
 &=\sum_{pq}\varepsilon_q^p \left\{a^\dagger_p a_q\right\} +\sum_i \varepsilon_i^i
 \end{align}
 !et
-
-
 !eans
 ===== =====
 !eblock
-
 
 
 We note that $H = E_{HF} + H_N$, where
 
 !bt
 \begin{align}
-E_{HF} &\equiv \langle\Phi_0|H|\Phi_0\rangle = \sum_{i} \varepsilon^i_i +\frac{1}{2}\sum_{ij}\langle ij|V|ij\rangle
+E_{HF} &\equiv \langle\Phi_0\vert H\vert \Phi_0\rangle = \sum_{i} \varepsilon^i_i +\frac{1}{2}\sum_{ij}\langle ij\vert V\vert ij\rangle
 \end{align}
 !et
 
 is the Hartree-Fock energy.
-
-
-
 The coupled-cluster method is a very efficient tool to compute nuclei
 when a ``good'' reference state is available. Let us assume that the
 reference state results from a Hartree-Fock calculation.
 
+
+
+
+
+
 !bblock
 ===== Exercise: What does ``good'' mean? =====
+label{ex-2}
 
 How do you know whether a Hartree-Fock state is a ``good'' reference?
 Which results of the Hartee-Fock computation will inform you?
@@ -166,8 +168,9 @@ nuclei with closed subshells for neutrons and for protons. On a first
 view, this might seem as a severe limitation. But is it? 
 
 !bblock
-===== Exercise: How many nuclei are accessible with the coupled cluster method based on spherical mean fields? =====
 
+===== Exercise: How many nuclei are accessible with the coupled cluster method based on spherical mean fields? =====
+label{ex-3}
 If one limits oneself to nuclei with mass number up to
 mass number $A=60$, how many nuclei can potentially be described with
 the coupled-cluster method? Which of these nuclei are potentially
@@ -180,20 +183,20 @@ closures at $N,Z=2,6,8,14,16,20,28,32,34,40,50,\ldots$.
 
 In the physics of nuclei, the evolution of nuclear structure as
 neutrons are added (or removed) from an isotope is a key
-interest. Examples are the rare isotopes of helium ($^{8,10}$ He) 
-oxygen ($^{22,24,28}$ O), calcium ($^{52,54,60}$ Ca), nickel ($^{78}$ Ni)
-and tin ($^{100,132}$ Sn). The coupled-cluster method has the potential
-to address questions regarding these nuclei, and in a several cases
-was used to make predictions before experimental data was
-available. In addition, the method can be used to compute neighbors of
-nuclei with closed subshells. 
+interest. Examples are the rare isotopes of helium ($^{8,10}$ He)
+oxygen ($^{22,24,28}$ O), calcium ($^{52,54,60}$ Ca), nickel ($^{78}$
+Ni) and tin ($^{100,132}$ Sn). The coupled-cluster method has the
+potential to address questions regarding these nuclei, and in a
+several cases was used to make predictions before experimental data
+was available. In addition, the method can be used to compute
+neighbors of nuclei with closed subshells.
 
 !eans
 ===== =====
 !eblock
 
 
-======= The similarity-transformed Hamiltonian =======
+======= The similarity transformed Hamiltonian =======
 
 
 There are several ways to view and understand the coupled-cluster
@@ -204,20 +207,20 @@ correlated state as
 !bt
 \begin{equation}
 \label{psi}
-|\Psi\rangle = e^T|\Phi_0\rangle ,
+  \vert\Psi\rangle = e^T\vert\Phi_0\rangle ,
 \end{equation}
 !et
 
 Here, $T$ is an operator that induces correlations. We can now demand
 that the correlate state (ref{psi}) becomes and eigenstate of the
-Hamiltonian $H_N$, i.e.  $H_N|\Psi\rangle = E|\Psi\rangle$. This view,
+Hamiltonian $H_N$, i.e.  $H_N\vert \Psi\rangle = E\vert \Psi\rangle$. This view,
 while correct, is not the most productive one.  Instead, we
 left-multiply the Schroedinger equation with $e^{-T}$ and find
 
 !bt
 \begin{equation}
 \label{Schroedinger}
-\overline{H_N}|\Phi_0\rangle = E_c |\Phi_0\rangle . 
+\overline{H_N}\vert \Phi_0\rangle = E_c \vert \Phi_0\rangle . 
 \end{equation}
 !et
 
@@ -239,7 +242,7 @@ similarity-transformed Hamiltonian (ref{Hsim}).
 
 !bblock
 ===== Exercise: What $T$ leads to Hermitian $\overline{H_N}$ ? =====
-
+label{ex-4}
 What are the conditions on $T$ such that $\overline{H_N}$ is Hermitian?
 
 !bans
@@ -255,37 +258,37 @@ As we will see below, coupld-cluster theory employs a non-Hermitian Hamiltonian.
 
 !bblock
 ===== Exercise: Understanding (non-unitary) similarity transformations =====
-
+label{ex-5}
 Show that $\overline{H_N}$ has the same eigenvalues as $H_N$ for
 arbitrary $T$. What is the spectral decomposition of a non-Hermitian
 $\overline{H_N}$ ?
 
 !bans
 
-Let $H_N|E\rangle = E|E\rangle$. Thus
+Let $H_N\vert E\rangle = E\vert E\rangle$. Thus
 
 !bt
 \begin{align*}
-H_N e^{T} e^{-T} |E\rangle &= E|E\rangle , \\
-\left(e^{-T} H_N e^T\right) e^{-T} |E\rangle &= Ee^{-T} |E\rangle , \\
-\overline{H_N} e^{-T} |E\rangle &= E e^{-T}|E\rangle .
+H_N e^{T} e^{-T} \vert E\rangle &= E\vert E\rangle , \\
+\left(e^{-T} H_N e^T\right) e^{-T} \vert E\rangle &= Ee^{-T} \vert E\rangle , \\
+\overline{H_N} e^{-T} \vert E\rangle &= E e^{-T}\vert E\rangle .
 \end{align*}
 !et
 
-Thus, if $|E\rangle$ is an eigenstate of $H_N$ with eigenvalue $E$,
-then $e^{-T}|E\rangle$ is eigenstate of $\overline{H_N}$ with the same
+Thus, if $\vert E\rangle$ is an eigenstate of $H_N$ with eigenvalue $E$,
+then $e^{-T}\vert E\rangle$ is eigenstate of $\overline{H_N}$ with the same
 eigenvalue.
 
 A non-Hermitian $\overline{H_N}$ has eigenvalues $E_\alpha$
-corresponding to left $\langle L_\alpha|$ and right $|R_\alpha
+corresponding to left $\langle L_\alpha\vert $ and right $\vert R_\alpha
 \rangle$ eigenstates. Thus
 
 !bt
 \begin{align}
-\overline{H_N} = \sum_\alpha |R_\alpha\rangle E_\alpha \langle L_\alpha |
+\overline{H_N} = \sum_\alpha \vert R_\alpha\rangle E_\alpha \langle L_\alpha \vert 
 \end{align}
 !et
-with bi-orthonormal $\langle L_\alpha|R_\beta\rangle = \delta_\alpha^\beta$. 
+with bi-orthonormal $\langle L_\alpha\vert R_\beta\rangle = \delta_\alpha^\beta$. 
 
 !eans
 ===== =====
@@ -313,7 +316,7 @@ $t_i^a$, $t_{ij}^{ab}$, ..., $t_{i_1,\ldots,i_A}^{a_1,\ldots,a_A}$.
 
 !bblock
 ===== Exercise: How many unknowns? =====
-
+label{ex-6}
 Show that the number of unknowns is as large as the FCI dimension of
 the problem, using the numbers $A$ and $n_u$.
 
@@ -353,8 +356,8 @@ We need to dermine the unknown cluster amplitudes that enter in CCSD. Let
 
 !bt
 \begin{align}
-|\Phi_i^a\rangle &= a^\dagger_a a_i |\Phi_0\rangle , \\
-|\Phi_{ij}^{ab}\rangle &= a^\dagger_a a^\dagger_b a_j a_i |\Phi_0\rangle
+\vert\Phi_i^a\rangle &= a^\dagger_a a_i \vert \Phi_0\rangle , \\
+\vert\Phi_{ij}^{ab}\rangle &= a^\dagger_a a^\dagger_b a_j a_i \vert \Phi_0\rangle
 \end{align}
 !et
 
@@ -364,9 +367,9 @@ elements of the Schroedinger Equation (ref{Schroedinger}) yields
 !bt
 \begin{align}
 \label{ccsd}
-\langle \Phi_0|\overline{H_N}|\Phi_0\rangle &= E_c , \\
-\langle \Phi_i^a|\overline{H_N}|\Phi_0\rangle &= 0 , \\
-\langle \Phi_{ij}^{ab}|\overline{H_N}|\Phi_0\rangle &= 0 .
+\langle \Phi_0\vert \overline{H_N}\vert \Phi_0\rangle &= E_c , \\
+\langle \Phi_i^a\vert \overline{H_N}\vert \Phi_0\rangle &= 0 , \\
+\langle \Phi_{ij}^{ab}\vert \overline{H_N}\vert \Phi_0\rangle &= 0 .
 \end{align}
 !et
 
@@ -400,6 +403,27 @@ light, the coupled-cluster method ``transforms'' an $A$-body problem
 vacuum.
 
 
+!bblock
+===== Exercise: Why is CCD not exact? =====
+label{ex-6b}
+Above we argued that a similarity transformation preserves all eigenvalues. Nevertheless, the CCD correlation energy is not the exact correlation energy. Explain!
+
+
+!bans
+
+The CCD approximation does not make $\vert\Phi_0\rangle$ an exact
+eigenstate of $\overline{H_N}$; it is only an eigenstate when the
+similarity-transformed Hamiltonian is truncated to at most 2p-2h
+states. The full $\overline{H_N}$, with $T=T_2$, would involve
+six-body terms (do you understand this?), and this full Hamiltonian
+would reproduce the exact correlation energy. Thus CCD is a similarity
+transformation plus a truncation, which decouples the ground state only
+from 2p-2h states.
+
+!eans
+===== =====
+!eblock
+
 ======= Computing the similarity-transformed Hamiltonian =======
 
 The solution of the CCSD equations, i.e. the second and third line of
@@ -428,7 +452,7 @@ $T$). Thus, the expansion is finite.
 
 !bblock
 ===== Exercise: When does CCSD truncate? =====
-
+label{ex-7}
 In CCSD and for two-body Hamiltonians, how many nested
 commutators yield nonzero results? Where does the
 Baker-Campbell-Hausdorff expansion terminate? What is the (many-body) rank of the resulting $\overline{H_N}$? 
@@ -462,8 +486,8 @@ We write the similarity-transformed Hamiltonian as
 with
 !bt
 \begin{align}
-\overline{H}^p_q &\equiv \langle p|\overline{H_N}|q\rangle , \\
-\overline{H}^{pq}_{rs} &\equiv \langle pq|\overline{H_N}|rs\rangle .
+\overline{H}^p_q &\equiv \langle p\vert \overline{H_N}\vert q\rangle , \\
+\overline{H}^{pq}_{rs} &\equiv \langle pq\vert \overline{H_N}\vert rs\rangle .
 \end{align}
 !et
 
@@ -471,8 +495,8 @@ Thus, the CCSD Eqs.~(ref{ccsd}) for the amplitudes can be written as
 $\overline{H}_i^a = 0$ and $\overline{H}_{ij}^{ab}=0$.
 
 !bblock
-===== Exercise: Compute the matrix element $\overline{H}_{ab}^{ij}\equiv \langle ij|\overline{H_N}|ab\rangle$ =====
-
+===== Exercise: Compute the matrix element $\overline{H}_{ab}^{ij}\equiv \langle ij\vert \overline{H_N}\vert ab\rangle$ =====
+label{ex-8}
 
 
 !bans
@@ -482,7 +506,7 @@ $\overline{H}_{ab}^{ij}a^\dagger_ia^\dagger_ja_ba_a$, i.e. particles
 are annihilated and holes are created. Thus, no contraction of the
 Hamiltonian $H$ with any cluster operator $T$ (remember that $T$
 annihilates holes and creates particles) can happen, and we simply
-have $\overline{H}_{ab}^{ij} = \langle ij|V|ab\rangle$.
+have $\overline{H}_{ab}^{ij} = \langle ij\vert V\vert ab\rangle$.
 
 !eans
 ===== =====
@@ -496,6 +520,7 @@ two-body operators.
 
 !bblock
 ===== Example: The contribution of $[F, T_2]$ to $\overline{H_N}$ =====
+label{ex-9}
 
 The commutator $[F, T_2]$ consists of two-body and one-body terms. Let
 us compute first the two-body term, as it results from a single
@@ -521,6 +546,7 @@ contraction (i.e. a single application of $[a_p, a^\dagger_q] =
 Here we exploited the antisymmetry $t_{ij}^{ab} = -t_{ji}^{ab} =
 -t_{ij}^{ba} = t_{ji}^{ba}$ in the last step. Using $a^\dagger_q a^\dagger_b a_j a_i = -a^\dagger_b a^\dagger_q a_j a_i $ and $a^\dagger_a a^\dagger_b a_p a_i = a^\dagger_a a^\dagger_b a_i a_p$, we can make the expression 
 manifest antisymmetric, i.e.
+
 !bt
 \begin{align*}
 [F, T_2]_{2b}
@@ -549,57 +575,58 @@ approach. This is where diagramms come in handy.
 The pictures in this Subsection are taken from Crawford and Schaefer.
 
 By convention, hole lines (labels $i, j, k,\ldots$) are pointing down. 
-FIGURE: [figslides/Diagram-i.png, width=40 frac=0.8] This is a hole line. label{fig-i}
+FIGURE: [figslides/Diagram-i.png, height=120 frac=0.8] This is a hole line. label{fig-i}
 
 By convention, particle lines (labels $a, b, c,\ldots$) are pointing up. 
-FIGURE: [figslides/Diagram-a.png, width=40 frac=0.8] This is a particle line. label{fig-a}
+FIGURE: [figslides/Diagram-a.png, height=120 frac=0.8] This is a particle line. label{fig-a}
 
 Let us look at the one-body operator of the normal-ordered Hamiltonian, i.e. Fock matrix. Its diagrams are as follows.
 
-FIGURE: [figslides/Diagram-fab.png, width=100 frac=0.8] The diagrams corresponding to $f_a^b$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. The labels $a$ and $b$ are not denoted, but you should label the outgoing and incoming lines accordingly. label{fig-fab}
+FIGURE: [figslides/Diagram-fab.png, height=120 frac=0.8] The diagrams corresponding to $f_a^b$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. The labels $a$ and $b$ are not denoted, but you should label the outgoing and incoming lines accordingly. label{fig-fab}
 
-FIGURE: [figslides/Diagram-fij.png, width=100 frac=0.8] The diagrams corresponding to $f_i^j$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fij}
+FIGURE: [figslides/Diagram-fij.png, height=120 frac=0.8] The diagrams corresponding to $f_i^j$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fij}
 
-FIGURE: [figslides/Diagram-fia.png, width=100 frac=0.8] The diagrams corresponding to $f_a^i$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fia}
+FIGURE: [figslides/Diagram-fia.png, height=120 frac=0.8] The diagrams corresponding to $f_a^i$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fia}
 
-FIGURE: [figslides/Diagram-fai.png, width=100 frac=0.8] The diagrams corresponding to $f_i^a$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fai}
+FIGURE: [figslides/Diagram-fai.png, height=120 frac=0.8] The diagrams corresponding to $f_i^a$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fai}
 
 We now turn to the two-body interaction. It is denoted as a horizontal
 dashed line with incoming and outgoing lines attached to it. We start
-by noting that the following diagrams of the inetraction are all
+by noting that the following diagrams of the interaction are all
 related by permutation symmetry.
 
-FIGURE: [figslides/Diagrams-symmetry.png, width=800 frac=0.8] The diagrams corresponding to $\langle ai|V|jb \rangle = - \langle ai|V|bj \rangle = -\langle ia|V|jb \rangle = \langle ia|V|bj\rangle$. label{fig-symmetry}
+FIGURE: [figslides/Diagrams-symmetry.png, width=600 frac=0.8] The diagrams corresponding to $\langle ai\vert V\vert jb \rangle = - \langle ai\vert V\vert bj \rangle = -\langle ia\vert V\vert jb \rangle = \langle ia\vert V\vert bj\rangle$. label{fig-symmetry}
 
 !bblock
-===== Exercise: Assign the correct matrix element $\langle pq|V|rs\rangle$ to each of the following diagrams of the interaction =====
+===== Exercise: Assign the correct matrix element $\langle pq\vert V\vert rs\rangle$ to each of the following diagrams of the interaction =====
+label{ex-10}
 
-Remember: $\langle\rm{left-out, right-out}|V|\rm{left-in, right-in}\rangle$.
+Remember: $\langle\rm{left-out, right-out}\vert V\vert \rm{left-in, right-in}\rangle$.
 
 !bsubex
-FIGURE: [figslides/Diagrams-V1.png, width=800 frac=0.8] 
+FIGURE: [figslides/Diagrams-V1.png, width=600 frac=0.8] 
 label{fig-V1}
 
 !bans
-$\langle ab|V|cd\rangle + \langle ij|V|kl\rangle + \langle ia|V|bj\rangle$
+$\langle ab\vert V\vert cd\rangle + \langle ij\vert V\vert kl\rangle + \langle ia\vert V\vert bj\rangle$
 !eans
 !esubex
 
 !bsubex
-FIGURE: [figslides/Diagrams-V2.png, width=800 frac=0.8] 
+FIGURE: [figslides/Diagrams-V2.png, width=600 frac=0.8] 
 label{fig-V2}
 
 !bans
-$\langle ai|V|bc\rangle + \langle ij|V|ka\rangle + \langle ab|V|ci\rangle$
+$\langle ai\vert V\vert bc\rangle + \langle ij\vert V\vert ka\rangle + \langle ab\vert V\vert ci\rangle$
 !eans
 !esubex
 
 !bsubex
-FIGURE: [figslides/Diagrams-V3.png, width=800 frac=0.8] 
+FIGURE: [figslides/Diagrams-V3.png, width=600 frac=0.8] 
 label{fig-V3}
 
 !bans
-$\langle ia|V|jk\rangle + \langle ab|V|ij\rangle + \langle ij|V|ab\rangle$
+$\langle ia\vert V\vert jk\rangle + \langle ab\vert V\vert ij\rangle + \langle ij\vert V\vert ab\rangle$
 !eans
 !esubex
 
@@ -608,7 +635,7 @@ $\langle ia|V|jk\rangle + \langle ab|V|ij\rangle + \langle ij|V|ab\rangle$
 
 
 Finally, we have the following diagrams for the $T_1$ and $T_2$ amplitudes.
-FIGURE: [figslides/Diagrams-T.png, width=800 frac=0.8] The horizontal full line is the cluster amplitude with incoming hole lines and outgoing particle lines as indicated. label{fig-T}
+FIGURE: [figslides/Diagrams-T.png, width=500 frac=0.8] The horizontal full line is the cluster amplitude with incoming hole lines and outgoing particle lines as indicated. label{fig-T}
 
 We are now in the position to construct the diagrams of the
 similarity-transformed Hamiltonian, keeping in mind that these
@@ -635,15 +662,15 @@ the cluster operator with the normal-ordered Hamiltonian.
 
 !bblock
 ===== Example: CCSD correlation energy =====
-
+label{ex-11}
 The CCSD correlation energy, $E_c= \langle
-\Phi_0|\overline{H_N}|\Phi_0\rangle$, is the first of the CCSD
+\Phi_0\vert \overline{H_N}\vert \Phi_0\rangle$, is the first of the CCSD
 equations (ref{ccsd}). It is a vacuum expectation value and thus
 consists of all diagrams with no external legs. There are three such diagrams:
 
 FIGURE: [figslides/Diagrams-E0.png, width=800 frac=0.8] Three diagrams enter for the CCSD correlation energy, i.e. all diagrams that leave no external legs. label{fig-E0}
 
-The correponding algebraic expression is $E_c=\sum_{ia}f^i_a t_i^a +{1\over 4}\sum_{ijab} \langle ij|V|ab\rangle t_{ij}^{ab} + {1\over 2} \sum_{ijab} \langle ij|V|ab\rangle t_i^a t_j^b$.
+The correponding algebraic expression is $E_c=\sum_{ia}f^i_a t_i^a +{1\over 4}\sum_{ijab} \langle ij\vert V\vert ab\rangle t_{ij}^{ab} + {1\over 2} \sum_{ijab} \langle ij\vert V\vert ab\rangle t_i^a t_j^b$.
 
 The first algebraic expression is clear. We have one hole line and one
 loop, giving it a positive sign. There are no equivalent lines or
@@ -655,7 +682,7 @@ loops and two hole lines, again leading to a positive sign. We have
 two indentical vertices (each connecting to a $T_1$ in the same way)
 and thus a symmetry factor $1/2$.
 
-
+===== =====
 !eblock
 
 
@@ -674,7 +701,7 @@ particle-hole excitations).
 
 !bblock
 ===== Exercise: Derive the CCD equations! =====
-
+label{ex-12}
 Let us consider the matrix element $\overline{H}_{ij}^{ab}$. Clearly,
 it consists of all diagrams (i.e. all combinations of $T_2$, and a
 single $F$ or $V$ that have two incoming hole lines and two outgoing
@@ -686,17 +713,17 @@ Start systematically! Consider all combinations of $F$ and $V$ diagrams with 0, 
 
 !bans
 
-FIGURE: [figslides/Diagrams-CCD.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Baardsen et al (2013). label{fig-ccd}
+FIGURE: [figslides/Diagrams-CCD.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Baardsen et al (2013). label{fig-ccd}
 
 The corresponding algebraic expression is
 !bt
 \begin{align*}
-\overline{H}_{ij}^{ab} &= \langle ab|V|ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
-&+ {1\over 2} \sum_{cd} \langle ab|V|cd\rangle t_{ij}^{cd}+ {1\over 2} \sum_{kl} \langle kl|V|ij\rangle t_{kl}^{ab} + P(ab)P(ij)\sum_{kc} \langle kb|V|cj \rangle t_{ik}^{ac} \\
-&+ {1\over 2} P(ij)P(ab)\sum_{kcld} \langle kl|V|cd\rangle t_{ik}^{ac}t_{lj}^{db} 
-+ {1\over 2} P(ij)\sum_{kcld} \langle kl|V|cd\rangle t_{ik}^{cd}t_{lj}^{ab}\\
-&+ {1\over 2} P(ab)\sum_{kcld} \langle kl|V|cd\rangle t_{kl}^{ac}t_{ij}^{db}
-+ {1\over 4} \sum_{kcld} \langle kl|V|cd\rangle t_{ij}^{cd}t_{kl}^{ab} . 
+\overline{H}_{ij}^{ab} &= \langle ab\vert V\vert ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
+&+ {1\over 2} \sum_{cd} \langle ab\vert V\vert cd\rangle t_{ij}^{cd}+ {1\over 2} \sum_{kl} \langle kl\vert V\vert ij\rangle t_{kl}^{ab} + P(ab)P(ij)\sum_{kc} \langle kb\vert V\vert cj \rangle t_{ik}^{ac} \\
+&+ {1\over 2} P(ij)P(ab)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}t_{lj}^{db} 
++ {1\over 2} P(ij)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}t_{lj}^{ab}\\
+&+ {1\over 2} P(ab)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}t_{ij}^{db}
++ {1\over 4} \sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ij}^{cd}t_{kl}^{ab} . 
 \end{align*}
 !et
 
@@ -710,7 +737,7 @@ Let us now turn to the computational cost of a CCD computation.
 
 !bblock
 ===== Exercise: Computational scaling of CCD =====
-
+label{ex-13}
 For each of the diagrams in Fig. ref{fig-ccd} write down the
 computational cost in terms of the number of occupied $A$ and the
 number of unoccupied $n_u$ orbitals.
@@ -721,6 +748,7 @@ $A^2 n_u^4$, $A^4 n_u^2$, $A^3 n_u^3$,
 $A^4 n_u^4$, $A^4 n_u^4$,
 $A^4 n_u^4$, and $A^4 n_u^4$ for the respective diagrams.
 !eans
+
 ===== =====
 !eblock
 
@@ -733,7 +761,7 @@ Fig. ref{fig-ccd}. We break up the computation into two steps,
 computing first the intermediate
 !bt
 \begin{align}
-\chi_{ij}^{kl}\equiv {1\over 2} \sum_{cd} \langle kl|V|cd\rangle t_{ij}^{cd}
+\chi_{ij}^{kl}\equiv {1\over 2} \sum_{cd} \langle kl\vert V\vert cd\rangle t_{ij}^{cd}
 \end{align}
 !et
 at a cost of $A^4n_u^2$, and then 
@@ -742,7 +770,7 @@ at a cost of $A^4n_u^2$, and then
 {1\over 2} \sum_{kl} \chi_{ij}^{kl} t_{kl}^{ab}  
 \end{align}
 !et
-at a cost of $A^4n_u^2. This is affordable. The price to pay is the
+at a cost of $A^4n_u^2$. This is affordable. The price to pay is the
 storage of the intermediate $\chi_{ij}^{kl}$, i.e. we traded
 memory for computational cycles. This trick is known as
 ``factorization.'' 
@@ -750,7 +778,7 @@ memory for computational cycles. This trick is known as
 
 !bblock
 ===== Exercise: Factorize the remaining diagrams of the CCD equation =====
-
+label{ex-14}
 Diagrams 7, 8, and 9 of Fig. ref{fig-ccd} also need to be factorized. 
 
 
@@ -758,7 +786,7 @@ Diagrams 7, 8, and 9 of Fig. ref{fig-ccd} also need to be factorized.
 For diagram number 7, we compute
 !bt
 \begin{align}
-\chi_{id}^{al}\equiv\sum_{kc} \langle kl|V|cd\rangle t_{ik}^{ac}
+\chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}
 \end{align}
 !et
 at a cost of $A^3 n_u^3$ and then compute
@@ -772,7 +800,7 @@ at the cost of $A^3 n_u^3$.
 For diagram number 8, we compute
 !bt
 \begin{align}
-\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl|V|cd\rangle t_{ik}^{cd}
+\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}
 \end{align}
 !et
 at a cost of $A^3 n_u^2$, and then compute
@@ -786,7 +814,7 @@ at the cost of $A^3 n_u^2$.
 For diagram number 9, we compute
 !bt
 \begin{align}
-\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl|V|cd\rangle t_{kl}^{ac}
+\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}
 \end{align}
 !et
 at a cost of $A^2 n_u^3$ and then compute
@@ -808,14 +836,14 @@ elements of $\overline{H}_i^a$ and $\overline{H}_{ij}^{ab}$.
 
 !bblock
 ===== Project: (Optional) Derive the CCSD equations! =====
-
+label{ex-15}
 
 !bsubex
 Let us consider the matrix element $\overline{H}_i^a$ first. Clearly, it consists of all diagrams (i.e. all combinations of $T_1$, $T_2$, and a single $F$ or $V$ that have an incoming hole line and an outgoing particle line. Write down all these diagrams. 
 
 !bans
 
-FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Crawford and Schaefer. Here $\langle pq||rs\rangle \equiv \langle pq|V|rs\rangle$ and $f_{pq}\equiv f^p_q$. label{fig-CCSD1}
+FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$ and $f_{pq}\equiv f^p_q$. label{fig-CCSD1}
 
 !eans
 !esubex
@@ -825,13 +853,15 @@ Let us now consider the matrix element $\overline{H}_{ij}^{ab}$. Clearly, it con
 
 !bans
 
-FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Crawford and Schaefer. Here $\langle pq||rs\rangle \equiv \langle pq|V|rs\rangle$, $f_{pq}\equiv f^p_q$, and $P(ab) = 1 - (a\leftrightarrow b)$ antisymmetrizes. label{fig-CCSD2}
+FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$, $f_{pq}\equiv f^p_q$, and $P(ab) = 1 - (a\leftrightarrow b)$ antisymmetrizes. label{fig-CCSD2}
 
 !eans
 !esubex
 
 ===== =====
 !eblock
+
+We can now turn to the solution of the coupled-cluster equations.
 
 
 
@@ -862,7 +892,7 @@ hope that this will converge to a solution. We take the perturbative result
 !bt
 \begin{align}
 \label{pert}
-\left(t_{ij}^{ab}\right)_0 = \frac{\langle ab|V|ij\rangle}{f_a^a +f_b^b -f_i^i -f_j^j}
+\left(t_{ij}^{ab}\right)_0 = \frac{\langle ab\vert V\vert ij\rangle}{f_a^a +f_b^b -f_i^i -f_j^j}
 \end{align}
 !et
 
@@ -870,24 +900,319 @@ as a starting point, compute $\overline{H}_{ij}^{ab}$, and find a new
 $t_{ij}^{ab}$ from the right-hand side of Eq. (ref{iter}). We repeat
 this process until the amplitudes converge.
 
+
+
 ======= CCD for the pairing Hamiltonian =======
+
 
 You learned about the pairing Hamiltonian earlier in this
 school. Convince yourself that this Hamiltonian does not induce any
 1p-1h excitations. Let us solve the CCD equations for this
 problem. This consists of the following steps
 
-o Write a function that compute the potential. We need $\langle ab|V|cd\rangle$, $\langle ij|V|kl\rangle$, and $\langle ab|V|ij\rangle$. Why is there no $\langle ab|V|id\rangle$ or $\langle ai|V|jb\rangle$ ?
+o Write a function that compute the potential, i.e. it returns a four-indexed array (or tensor). We need $\langle ab\vert V\vert cd\rangle$, $\langle ij\vert V\vert kl\rangle$, and $\langle ab\vert V\vert ij\rangle$. Why is there no $\langle ab\vert V\vert id\rangle$ or $\langle ai\vert V\vert jb\rangle$ ?
 
-o Write a function that computes the Fock matrix. We only need $f_a^b$ and $f_i^j$. Why? 
+o Write a function that computes the Fock matrix, i.e. a two-indexed array. We only need $f_a^b$ and $f_i^j$. Why? 
 
-o Initialize the cluster amplitudes according to Eq. (ref{pert}), and solve Eq. (ref{iter}) by iteration.
+o Initialize the cluster amplitudes according to Eq. (ref{pert}), and solve Eq. (ref{iter}) by iteration. The cluster amplitudes $T_1$ and $T_2$ are two- and four-indexed arrays, respectively.
+
+Please note that the contraction of tensors (i.e. the summation over
+common indices in products of tensors) is very user friendly and
+elegant in python when `numpy.einsum` is used.
 
 ===== Project: Solve the CCD equations for the pairing problem =====
-
+label{ex-16}
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936. 
 
 !bans
-@@@CODE programs/CCD_PairingModel.py
+@@@CODE Programs/CCD_PairingModel.py
 !eans
+
+
+
+========= Nucleonic Matter =========
+
+We want to compute nucleonic matter using coupled cluster or IMSRG
+methods, and start with considering the relevant symmetries.
+
+!bblock
+===== Exercise: Which symmetries are relevant for nuclear matter? =====
+label{ex-17}
+
+!bsubex
+Enumerate continuous and discrete symmetries of nuclear matter. 
+
+!bans
+
+The symmetries are the same as for nuclei.  Continuous symmetries:
+translational and rotational invariance. Discrete symmetries: Parity
+and time reversal invariance.
+
+!eans
+!esubex
+
+!bsubex
+What basis should we use to implement these symmetries? Why do we have to make a choice between the two continuous symmetries? Which basis is most convenient and why? 
+
+!bans
+
+Angular momentum and momentum do not commute. Thus, there is no basis
+that respects both symmetries simultaneously. If we choose the
+spherical basis, we are computing a spherical blob of nuclear matter
+and have to contend with surface effects, i.e. with finite size
+effects. We also need a partial-wave decomposition of the nuclear
+interaction. This approach has been done followed in
+[``Coupled-cluster studies of infinite nuclear matter, '' G. Baardsen,
+A. Ekström, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C
+88, 054312 (2013)]. If we choose a basis of discrete momentum states,
+translational invariance can be respected. This also facilitates the
+implementetation of modern nuclear interactions (which are often
+formulated in momentum space in effective field theories). However, we
+have to think about the finite size effects imposed by periodic
+boundary conditions (or generalized Bloch waves). This approch was
+implemented in [``Coupled-cluster calculations of nucleonic matter,''
+G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
+S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
+Phys. Rev. C 89, 014319 (2014)].
+
+!eans
+!esubex
+
+===== =====
+!eblock
+
+
+======= Basis states ======= 
+
+In what follows, we employ a basis made from discrete momentum states,
+i.e. those states $\vert k_x, k_y, k_z\rangle$ in a cubic box of size $L$ that
+exhibit periodic boundary conditions, i.e. $\psi_k(x+L) =\psi_k(x)$.
+
+!bblock
+===== Exercise: Determine the basis states =====
+label{ex-18}
+
+What are the discrete values of momenta admissable in $(k_x, k_y, k_z)$?
+
+!bans
+
+In 1D position space $\psi_k(x) \propto e^{i k x}$ with $k =
+{2\pi n\over L}$ and $n=0, \pm 1, \pm 2, \ldots$ fulfill $\psi_k(x+L)
+= \psi_k(x)$. 
+
+!eans
+
+===== =====
+!eblock
+
+
+Thus, we use a cubic lattice in momentum space.  Note that the
+momentum states $e^{i k x}$ are not invariant under time reversal
+(i.e. under $k\to -k$), and also do not exhibit good parity ($x\to
+-x$). The former implies that the Hamiltonian matrix will in general
+be complex Hermitian and that the cluster amplitudes will in general
+be complex.
+
+
+
+
+!bblock
+===== Exercise: How large should the basis be?  =====
+label{ex-19}
+
+What values should be chosen for the box size $L$ and for the maximum number $n_{\rm max}$ , i.e.
+for the discrete momenta $k = {2\pi n\over L}$ and $n=0, \pm 1,\
+ \pm 2, \ldots, \pm n_{\rm max}$? 
+
+!bans
+
+Usually $n_{\rm max}$ is fixed by computational cost, because we have
+$(2n_{\rm max}+1)^3$ basis states. We have used $n_{\rm max}=4$ or up
+to $n_{\rm max}=6$ in actual calculations to get converged results.
+
+The maximum momentum must fulfill $k_{n_{\rm max}}> \Lambda$, where
+$\Lambda$ is the momemtum cutoff of the interaction. This then fixes
+$L$ for a given $n_{\rm max}$.
+
+!eans
+===== =====
+!eblock
+
+
+Coupled cluster and IMSRG start from a Hartree-Fock reference state,
+and we need to think about this next. What are the magic numbers of a
+cubic lattice for neutron matter?
+
+!bblock
+===== Exercise: Determine the lowest few magic numbers for a cubic lattice.  =====
+label{ex-20}
+
+
+!bans
+
+As the spin-degeneracy is $g_s=2$, we have the magic numbers $g_s N$
+with $N=1, 7, 19, 27, 33, 57, 66, \ldots$ for neutrons.
+
+!eans
+
+===== =====
+!eblock
+
+Given $n_{\rm max}$ and $L$ for the basis parameters, we can choose a
+magic neutron number $N$. Clearly, the density of the system is then
+$\rho=N/L^3$. This summarizes the requirements for the basis. We
+choose $n_{\rm max}$ as large as possible, i.e. as large as
+computationally feasible. Then $L$ and $N$ are constrained by the UV
+cutoff and density of the system.
+
+
+===== Finite size effects =====
+We could also have considered the case of a more generalized boundary
+condition, i.e.  $\psi_k(x+L) =e^{i\theta}\psi_k(x)$.  Admissable
+momenta that fulfill such a boundary condition are $k_n(\theta) = {2\pi n
++\theta \over L}$. Avering over the ``twist'' angle $\theta$ removes
+finite size effects, because the discrete momenta are really drawn
+form a continuum.  In three dimensions, there are three possible twist
+angles, and averaging over twist angles implies summing over many
+results corresponding to different angles. Thus, the removal of
+finite-size effects significantly increases the numerical expense.
+An example
+is shown in Figure ref{fig-finite}, where we compute the kinetic
+energy per particle
+
+!bt
+\begin{align}
+T_N(\theta_x,\theta_y,\theta_z)=g_s\sum_{n_x, n_y, n_z \in N} {\hbar^2 \left( k_{n_x}^2(\theta_x) +k_{n_y}^2(\theta_y) +k_{n_z}^2(\theta_z)\right)\over 2m}
+\end{align}
+!et
+
+and compare with the infinite result $T_{\rm inf} = {3\over 10} 
+{\hbar^2 k_F^2\over m} N$ valid for the free Fermi gas. We clearly see
+strong shell effects (blue dashed line) and that averaging over the twist angles
+(red full line) very much reduces the shell oscillations. We also note that
+the neutron number 66 is quite attractive as it exhibits smaller
+finite size effects than other of the accessible magic numbers.
+
+
+FIGURE: [figslides/fig-finite.png, width=800 frac=0.8] Relative finite-size corrections for the kinetic energy in pure neutron matter at the Fermi momentum $k_F = 1.6795 {\rm fm}^{-1}$ versus the neutron number A. TABC10 are twist-averaged boundary conditions with 10 Gauss-Legendre points in each spatial direction. label{fig-finite}
+
+======= Channel structure of Hamiltonian and cluster amplitudes =======
+
+Good quantum numbers for the nuclear interaction (i.e. operators that
+commute with the Hamiltonian and with each other) are total momentum,
+and the number of neutrons and protons, and -- for simple interactions
+-- also the spin (this is really spin, not orbital anular momentum or
+total angular momentum, as the latter two do not commute with
+momentum). Thus the Hamiltonian (and the cluster amplitudes) will
+consist of blocks, one for each set of quantum numbers. We call the
+set of quantum numbers that label each such block as a ``channel.''
+As the interaction is block diagonal, a numerically efficient
+implementation of nuclear matter has to take advantage of this channel
+structure. In fact, neutron matter cannot be computed in a numerically
+converged way (i.e. for large enough $n_{\rm max}$) if one does not
+exploit the channel structure.
+
+This means that our simple solution we implemented for the pairing
+problem cannot be really re-used when computing neutron matter. 
+Let us take a look at the Minnesota potential
+
+FIGURE: [figslides/V-Minnesota.png, width=600 frac=0.8] The Minnesota potential. label{fig-minnesota}
+
+
+Here,
+
+!bt
+\begin{align}
+P^\sigma_{12}&= {1\over 2}(1+\vec{\sigma}_1\cdot\vec{\sigma}_2) , \nonumber\\
+P^\tau_{12} &= {1\over 2}(1+\vec{\tau}_1\cdot\vec{\tau}_2) 
+\end{align}
+!et
+
+are spin and isospin exchange operators, respectively, and
+$\vec{\sigma}$ and $\vec{\tau}$ are vectors of Pauli matrices in spin
+and isospin space, respectively. The momentum-space part of the
+interaction is shown in Figure ref{fig-minn-kspace}, with $q\equiv
+(1/2)(k_p-k_q-k_r+k_s)$, and momentum conservation $k_p+k_q=k_r+k_s$
+is explicit.
+
+FIGURE: [figslides/V-Minn-kspace.png, width=600 frac=0.8] The momentum-space matrix elements of the Minnesota potential. label{fig-minn-kspace}
+
+The parameters of the potential are depicted below in Figure ref{table-Minnesota}
+
+FIGURE: [figslides/table-Minnesota.png, width=400 frac=0.8] Parameters of the Minnesota potential. label{table-Minnesota}
+
+
+For the spin-exchange operator (and spins $s_1, s_2=\pm 1/2$), we have
+$P^\sigma\vert s_1s_2\rangle= \vert s_2s_1\rangle$. The terms $(1/2)(1\pm
+P^\sigma)$ thus project onto the spin triplet $(+)$ and singlet $(-)$
+channels.  For neutron matter, $P^\tau=1$, because the states are
+symmetric under exchange of isospin. Thus, the Minnesota potential
+simplifies significantly for neutron matter as $V_T$ does not
+contribute.
+
+
+
+!bblock
+===== Example: Channel structure and its usage =====
+label{ex-21}
+
+For neutron matter and the Minnesota potential, a channel for two-body
+states is identified by the conserved quantities of the Hamiltonian,
+i.e. total momentum and total spin projection. Let us consider the
+$T_2$ amplitude. It can be written as
+$t_{ij}^{ab}(S_{12}^z,K_{12})$. Here, we identified a given channel by
+its total momentum, i.e. $k_i + k_j = K_{12} = k_a +k_b$, and by its
+total spin projection, i.e. $s_i +s_j = S_{12}^z = s_a +s_b$.  For a
+given reference state, we can thus determine all possible total
+momenta $K_{12} = k_i + k_j$, and we can determine all possible
+$S_{12}^z$. Each allowed combination of $(K_{12},S_{12})$ labels a
+single channel. We also have all possible hh states
+$\vert ij(K_{12},S_{12})\rangle$, and their number is
+$D_{hh}(K_{12},S_{12})$. As the interaction preserves
+$(K_{12},S_{12})$, we can then seek all pp states
+$\vert ab(K_{12},S_{12})\rangle$ corresponding to this channel. Their
+number is $D_{pp}(K_{12},S_{12})$.  Thus
+$t_{ij}^{ab}(S_{12}^z,K_{12})$ is a rectangular matrix of dimension
+$D_{pp}(K_{12},S_{12}) \times D_{hh}(K_{12},S_{12})$ that we write as
+$T^{pp}_{hh}(K_{12},S_{12})$.
+
+
+Let us consider the fourth diagram in Figure ref{fig-ccd}, i.e. the
+pp-ladder diagram. It uses the pppp part of the two-body interaction
+$V$. This is a square matrix of dimensions $D_{pp}(K_{12},S_{12})
+\times D_{pp}(K_{12},S_{12})$ for each channel, and we write it as
+$V^{pp}_{pp}(K_{12},S_{12})$. The result of the contraction can be
+written as a rectangular matrix of dimension $D_{pp}(K_{12},S_{12})
+\times D_{hh}(K_{12},S_{12})$, and will simply be the matrix product
+of $V_{pp}^{pp} T^{pp}_{hh}$. Here we supressed the dependence of the
+channel.
+
+Likewise the fifth diagram of Figure ref{fig-ccd} can be written as
+$T^{pp}_{hh}V_{hh}^{hh}$ for each channel. It is probably a good idea
+to start the nuclear matter project by only using the first five diagrams
+of Figure ref{fig-ccd}.
+
+The other diagrams involving the two-body interaction are more
+complicated and cannot simply done as matrix-matrix products. In those
+cases, one needs lookup tables that find two-body states for a given
+channel.
+
+To summarize: As the interaction is block diagonal, sums over
+particles or hole lines are replaced by sums over channels and sums
+over the corresponding particle or hole lines in each channel. 
+
+
+===== =====
+!eblock 
+
+
+The steps towards the solution of the CCD equations for neutron matter are as follows
+
+o For a given density and UV cutoff, set up the lattice.
+
+o Determine the channels allowed by the (Minnesota) interaction, i.e. sets of states that are connected by the interaction.
+
+o Exploit this channel structure when computing the diagrams.
+
+o Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure ref{fig-ccd}.
 
