@@ -12,7 +12,7 @@ TOC: off
 
 <%
 pub_url = 'http://nucleartalent.github.io/ManyBody2018/doc/pub'
-published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'inf', 'projects',]
+published = ['program', 'secondquant', 'hfock', 'fci', 'mbpt', 'CCM', 'imsrg', 'inf', 'pairing', 'projects',]
 chapters = {
  'program': 'Introduction and weekly program',
  'secondquant': 'Many-body Hamiltonians, linear algebra and second quantization',
@@ -22,6 +22,7 @@ chapters = {
  'CCM': 'Coupled cluster theory',
  'imsrg': 'Similarity Renormalization Group theory',
  'inf': 'Infinite systems, from the homogeneous electron gas to nuclear matter, background material', 
+ 'pairing': 'Lecture material on pairing', 
  'projects': 'Many-body projects',
 }
 %>
