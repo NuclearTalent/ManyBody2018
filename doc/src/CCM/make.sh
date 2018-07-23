@@ -22,7 +22,8 @@ opt="--encoding=utf-8"
 # Note: Makefile examples contain constructions like ${PROG} which
 # looks like Mako constructions, but they are not. Use --no_mako
 # to turn off Mako processing.
-opt="--no_mako --without_answers"
+#opt="--no_mako --without_answers"
+opt="--no_mako" 
 
 rm -f *.aux
 
@@ -73,7 +74,8 @@ mkdir $dest/$name/html
 mkdir $dest/$name/ipynb
 fi
 cp ${name}*.pdf $dest/$name/pdf
-cp -r ${name}*.html ._${name}*.html reveal.js $dest/$name/html
+#cp -r ${name}*.html ._${name}*.html reveal.js $dest/$name/html
+cp -r ${name}*.html ._${name}*.html $dest/$name/html
 
 # Figures: cannot just copy link, need to physically copy the files
 if [ -d fig-${name} ]; then

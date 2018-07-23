@@ -146,7 +146,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>Jul 20, 2018</h4></center> <!-- date -->
+<center><h4>Jul 23, 2018</h4></center> <!-- date -->
 <br>
 
 <h1 id="table_of_contents">Table of contents</h2>
@@ -334,8 +334,37 @@ $$
 <!-- --- end hint in exercise --- -->
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+We have to move all operators that annihilate the reference state to the right of those that create on the reference state. Thus,
+<p>&nbsp;<br>
+$$
+\begin{align}
+\sum_{pq}\varepsilon_q^p a^\dagger_p a_q
+&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
++\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
++\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
++\sum_{ij}\varepsilon_j^i a^\dagger_i a_j
+\tag{6}\\
+&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
++\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
++\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
++\sum_{ij}\varepsilon_j^i \left(-a_ja^\dagger_i +\delta_i^j\right)
+\tag{7}\\
+&=\sum_{ab}\varepsilon_b^a a^\dagger_a a_b
++\sum_{ai}\varepsilon_i^a a^\dagger_a a_i
++\sum_{ai}\varepsilon_a^i a^\dagger_i a_a
+-\sum_{ij}\varepsilon_j^i a_ja^\dagger_i +\sum_i \varepsilon_i^i
+\tag{8}\\
+&=\sum_{pq}\varepsilon_q^p \left\{a^\dagger_p a_q\right\} +\sum_i \varepsilon_i^i
+\tag{9}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -349,7 +378,7 @@ We note that \( H = E_{HF} + H_N \), where
 $$
 \begin{align}
 E_{HF} &\equiv \langle\Phi_0\vert H\vert \Phi_0\rangle = \sum_{i} \varepsilon^i_i +\frac{1}{2}\sum_{ij}\langle ij\vert V\vert ij\rangle
-\tag{6}
+\tag{10}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -373,8 +402,17 @@ How do you know whether a Hartree-Fock state is a &quot;good&quot; reference?
 Which results of the Hartee-Fock computation will inform you?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+Once the Hartree-Fock equations are solved, the Fock matrix
+<a href="#mjx-eqn-4">(4)</a> becomes diagonal, and its diagonal elements can be viewed
+as single-particle energies. Hopefully, there is a clear gap in the
+single-particle spectrum at the Fermi surface, i.e. after \( A \) orbitals
+are filled.
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -401,8 +439,25 @@ the coupled-cluster method? Which of these nuclei are potentially
 interesting? Why?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+Nuclear shell closures are at \( N,Z=2,8,20,28,50,82,126 \), and subshell
+closures at \( N,Z=2,6,8,14,16,20,28,32,34,40,50,\ldots \).
+
+<p>
+In the physics of nuclei, the evolution of nuclear structure as
+neutrons are added (or removed) from an isotope is a key
+interest. Examples are the rare isotopes of helium (\( ^{8,10} \) He)
+oxygen (\( ^{22,24,28} \) O), calcium (\( ^{52,54,60} \) Ca), nickel (\( ^{78} \)
+Ni) and tin (\( ^{100,132} \) Sn). The coupled-cluster method has the
+potential to address questions regarding these nuclei, and in a
+several cases was used to make predictions before experimental data
+was available. In addition, the method can be used to compute
+neighbors of nuclei with closed subshells.
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -420,7 +475,7 @@ correlated state as
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{7}
+\tag{11}
   \vert\Psi\rangle = e^T\vert\Phi_0\rangle ,
 \end{equation}
 $$
@@ -428,7 +483,7 @@ $$
 
 <p>
 Here, \( T \) is an operator that induces correlations. We can now demand
-that the correlate state <a href="#mjx-eqn-7">(7)</a> becomes and eigenstate of the
+that the correlate state <a href="#mjx-eqn-11">(11)</a> becomes and eigenstate of the
 Hamiltonian \( H_N \), i.e.  \( H_N\vert \Psi\rangle = E\vert \Psi\rangle \). This view,
 while correct, is not the most productive one.  Instead, we
 left-multiply the Schroedinger equation with \( e^{-T} \) and find
@@ -436,7 +491,7 @@ left-multiply the Schroedinger equation with \( e^{-T} \) and find
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{8}
+\tag{12}
 \overline{H_N}\vert \Phi_0\rangle = E_c \vert \Phi_0\rangle . 
 \end{equation}
 $$
@@ -449,7 +504,7 @@ Here, \( E_c \) is the correlation energy, and the total energy is
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{9}
+\tag{13}
 \overline{H_N} \equiv e^{-T} H_N e^T .
 \end{equation}
 $$
@@ -459,7 +514,7 @@ $$
 A more productive view on coupled-cluster theory thus emerges: This
 method seeks a similarity transformation such that the uncorrelated
 reference state <a href="#mjx-eqn-1">(1)</a> becomes an exact eigenstate of the
-similarity-transformed Hamiltonian <a href="#mjx-eqn-9">(9)</a>.
+similarity-transformed Hamiltonian <a href="#mjx-eqn-13">(13)</a>.
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -473,8 +528,14 @@ similarity-transformed Hamiltonian <a href="#mjx-eqn-9">(9)</a>.
 What are the conditions on \( T \) such that \( \overline{H_N} \) is Hermitian?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+For a Hermitian \( \overline{H_N} \), we need a unitary \( e^T \), i.e. an anti-Hermitian \( T \) with
+\( T = -T^\dagger \)
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -498,8 +559,44 @@ arbitrary \( T \). What is the spectral decomposition of a non-Hermitian
 \( \overline{H_N} \) ?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+Let \( H_N\vert E\rangle = E\vert E\rangle \). Thus
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+H_N e^{T} e^{-T} \vert E\rangle &= E\vert E\rangle , \\
+\left(e^{-T} H_N e^T\right) e^{-T} \vert E\rangle &= Ee^{-T} \vert E\rangle , \\
+\overline{H_N} e^{-T} \vert E\rangle &= E e^{-T}\vert E\rangle .
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>
+Thus, if \( \vert E\rangle \) is an eigenstate of \( H_N \) with eigenvalue \( E \),
+then \( e^{-T}\vert E\rangle \) is eigenstate of \( \overline{H_N} \) with the same
+eigenvalue.
+
+<p>
+A non-Hermitian \( \overline{H_N} \) has eigenvalues \( E_\alpha \)
+corresponding to left \( \langle L_\alpha\vert  \) and right \( \vert R_\alpha
+\rangle \) eigenstates. Thus
+
+<p>&nbsp;<br>
+$$
+\begin{align}
+\overline{H_N} = \sum_\alpha \vert R_\alpha\rangle E_\alpha \langle L_\alpha \vert 
+\tag{14}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+with bi-orthonormal \( \langle L_\alpha\vert R_\beta\rangle = \delta_\alpha^\beta \).
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -513,7 +610,7 @@ coupled cluster theory, this operator is
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{10}
+\tag{15}
 T \equiv \sum_{ia} t_i^a a^\dagger_a a_i + \frac{1}{4}\sum_{ijab}t_{ij}^{ab}
 a^\dagger_aa^\dagger_ba_ja_i + \cdots
 + \frac{1}{(A!)^2}\sum_{i_1\ldots i_A a_1 \ldots a_A}
@@ -523,7 +620,7 @@ $$
 <p>&nbsp;<br>
 
 <p>
-Thus, the operator <a href="#mjx-eqn-10">(10)</a> induces particle-hole (p-h)
+Thus, the operator <a href="#mjx-eqn-15">(15)</a> induces particle-hole (p-h)
 excitations with respect to the reference. In general, \( T \) generates
 up to \( Ap-Ah \) excitations, and the unknown parameters are the cluster amplitides
 \( t_i^a \), \( t_{ij}^{ab} \), ..., \( t_{i_1,\ldots,i_A}^{a_1,\ldots,a_A} \).
@@ -541,8 +638,27 @@ Show that the number of unknowns is as large as the FCI dimension of
 the problem, using the numbers \( A \) and \( n_u \).
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+We have to sum up all \( np-nh \) excitations, and there are
+\( \binom{n_u}{n} \) particle states and \( \binom{A}{A-n} \) hole states for
+each \( n \). Thus, we have for the total number
+
+<p>&nbsp;<br>
+$$
+\begin{align}
+\sum_{n=0}^A \binom{n_u}{n} \binom{A}{A-n}= \binom{A+n_u}{A} .
+\tag{16}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>
+The right hand side are obviously all ways to distribute \( A \) fermions over \( n_0+A \) orbitals.
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -551,7 +667,7 @@ the problem, using the numbers \( A \) and \( n_u \).
 
 <p>
 Thus, the coupled-cluster method with the full cluster operator
-<a href="#mjx-eqn-10">(10)</a> is exponentially expensive, just as FCI. To make progress,
+<a href="#mjx-eqn-15">(15)</a> is exponentially expensive, just as FCI. To make progress,
 we need to make an approximation by truncating the operator. Here, we
 will use the CCSD (coupled clusters singles doubles) approximation,
 where
@@ -559,7 +675,7 @@ where
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\tag{11}
+\tag{17}
 T \equiv \sum_{ia} t_i^a a^\dagger_a a_i + \frac{1}{4}\sum_{ijab}t_{ij}^{ab}
 a^\dagger_aa^\dagger_ba_ja_i .
 \end{equation}
@@ -573,26 +689,26 @@ We need to dermine the unknown cluster amplitudes that enter in CCSD. Let
 $$
 \begin{align}
 \vert\Phi_i^a\rangle &= a^\dagger_a a_i \vert \Phi_0\rangle , 
-\tag{12}\\
+\tag{18}\\
 \vert\Phi_{ij}^{ab}\rangle &= a^\dagger_a a^\dagger_b a_j a_i \vert \Phi_0\rangle
-\tag{13}
+\tag{19}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 be 1p-1h and 2p-2h excitations of the reference. Computing matrix
-elements of the Schroedinger Equation <a href="#mjx-eqn-8">(8)</a> yields
+elements of the Schroedinger Equation <a href="#mjx-eqn-12">(12)</a> yields
 
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{14}
+\tag{20}
 \langle \Phi_0\vert \overline{H_N}\vert \Phi_0\rangle &= E_c , \\
 \langle \Phi_i^a\vert \overline{H_N}\vert \Phi_0\rangle &= 0 , 
-\tag{15}\\
+\tag{21}\\
 \langle \Phi_{ij}^{ab}\vert \overline{H_N}\vert \Phi_0\rangle &= 0 .
-\tag{16}
+\tag{22}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -604,7 +720,7 @@ second and third equations state that the similarity-transformed
 Hamiltonian exhibits no 1p-1h and no 2p-2h excitations. These
 equations have to be solved to find the unknown amplitudes \( t_i^a \) and
 \( t_{ij}^{ab} \). Then one can use these amplitudes and compute the
-correlation energy from the first line of Eq. <a href="#mjx-eqn-14">(14)</a>.
+correlation energy from the first line of Eq. <a href="#mjx-eqn-20">(20)</a>.
 
 <p>
 We note that in the CCSD approximation the reference state is not an
@@ -642,8 +758,20 @@ vacuum.
 Above we argued that a similarity transformation preserves all eigenvalues. Nevertheless, the CCD correlation energy is not the exact correlation energy. Explain!
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+The CCD approximation does not make \( \vert\Phi_0\rangle \) an exact
+eigenstate of \( \overline{H_N} \); it is only an eigenstate when the
+similarity-transformed Hamiltonian is truncated to at most 2p-2h
+states. The full \( \overline{H_N} \), with \( T=T_2 \), would involve
+six-body terms (do you understand this?), and this full Hamiltonian
+would reproduce the exact correlation energy. Thus CCD is a similarity
+transformation plus a truncation, which decouples the ground state only
+from 2p-2h states.
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -654,30 +782,30 @@ Above we argued that a similarity transformation preserves all eigenvalues. Neve
 
 <p>
 The solution of the CCSD equations, i.e. the second and third line of
-Eq. <a href="#mjx-eqn-14">(14)</a>, and the computation of the correlation energy
+Eq. <a href="#mjx-eqn-20">(20)</a>, and the computation of the correlation energy
 requires us to compute matrix elements of the similarity-transformed
-Hamiltonian <a href="#mjx-eqn-9">(9)</a>. This can be done with the
+Hamiltonian <a href="#mjx-eqn-13">(13)</a>. This can be done with the
 Baker-Campbell-Hausdorff expansion
 
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{17}
+\tag{23}
 \overline{H_N} &= e^{-T} H_N e^T \\
 &=H_N + \left[ H_N, T\right]+ \frac{1}{2!}\left[ \left[ H_N, T\right], T\right]
 + \frac{1}{3!}\left[\left[ \left[ H_N, T\right], T\right], T\right] +\ldots .
-\tag{18}
+\tag{24}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 We now come to a key element of coupled-cluster theory: the cluster
-operator <a href="#mjx-eqn-10">(10)</a> consists of sums of terms that consist of particle
+operator <a href="#mjx-eqn-15">(15)</a> consists of sums of terms that consist of particle
 creation and hole annihilation operators (but no particle annihilation
 or hole creation operators). Thus, all terms that enter \( T \) commute
 with each other. This means that the commutators in the
-Baker-Campbell-Hausdorff expansion <a href="#mjx-eqn-17">(17)</a> can only be non-zero
+Baker-Campbell-Hausdorff expansion <a href="#mjx-eqn-23">(23)</a> can only be non-zero
 because each \( T \) must connect to \( H_N \) (but no \( T \) with another
 \( T \)). Thus, the expansion is finite.
 
@@ -695,8 +823,15 @@ commutators yield nonzero results? Where does the
 Baker-Campbell-Hausdorff expansion terminate? What is the (many-body) rank of the resulting \( \overline{H_N} \)?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+CCSD truncates for two-body operators at four-fold nested commutators,
+because each of the four annihilation and creation operators in
+\( \overline{H_N} \) can be knocked out with one term of \( T \).
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -719,7 +854,7 @@ We write the similarity-transformed Hamiltonian as
 $$
 \begin{align}
 \overline{H_N}=\sum_{pq} \overline{H}^p_q a^\dagger_q a_p + {1\over 4} \sum_{pqrs} \overline{H}^{pq}_{rs} a^\dagger_p a^\dagger_q a_s a_r + \ldots
-\tag{19}
+\tag{25}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -729,15 +864,15 @@ with
 $$
 \begin{align}
 \overline{H}^p_q &\equiv \langle p\vert \overline{H_N}\vert q\rangle , 
-\tag{20}\\
+\tag{26}\\
 \overline{H}^{pq}_{rs} &\equiv \langle pq\vert \overline{H_N}\vert rs\rangle .
-\tag{21}
+\tag{27}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-14">(14)</a> for the amplitudes can be written as
+Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-20">(20)</a> for the amplitudes can be written as
 \( \overline{H}_i^a = 0 \) and \( \overline{H}_{ij}^{ab}=0 \).
 
 <p>
@@ -749,8 +884,18 @@ Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-14">(14)</a> for the amplitudes can b
 <h2 id="ex-8">Exercise 9: Compute the matrix element \( \overline{H}_{ab}^{ij}\equiv \langle ij\vert \overline{H_N}\vert ab\rangle \)</h2>
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+This is a simple task. This matrix element is part of the operator
+\( \overline{H}_{ab}^{ij}a^\dagger_ia^\dagger_ja_ba_a \), i.e. particles
+are annihilated and holes are created. Thus, no contraction of the
+Hamiltonian \( H \) with any cluster operator \( T \) (remember that \( T \)
+annihilates holes and creates particles) can happen, and we simply
+have \( \overline{H}_{ab}^{ij} = \langle ij\vert V\vert ab\rangle \).
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -759,7 +904,7 @@ Thus, the CCSD Eqs.&nbsp;<a href="#mjx-eqn-14">(14)</a> for the amplitudes can b
 
 <p>
 We need to work out the similarity-transformed Hamiltonian of
-Eq. <a href="#mjx-eqn-17">(17)</a>. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
+Eq. <a href="#mjx-eqn-23">(23)</a>. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
 where \( T_1 \) and \( F \) are one-body operators, and \( T_2 \) and \( V \) are
 two-body operators.
 
@@ -912,22 +1057,37 @@ Remember: \( \langle\rm{left-out, right-out}\vert V\vert \rm{left-in, right-in}\
 <br /><br /><center><p><img src="figslides/Diagrams-V1.png" align="bottom" width=600></p></center><br /><br />
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+\( \langle ab\vert V\vert cd\rangle + \langle ij\vert V\vert kl\rangle + \langle ia\vert V\vert bj\rangle \)
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <b>b)</b>
 <br /><br /><center><p><img src="figslides/Diagrams-V2.png" align="bottom" width=600></p></center><br /><br />
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+\( \langle ai\vert V\vert bc\rangle + \langle ij\vert V\vert ka\rangle + \langle ab\vert V\vert ci\rangle \)
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <b>c)</b>
 <br /><br /><center><p><img src="figslides/Diagrams-V3.png" align="bottom" width=600></p></center><br /><br />
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+\( \langle ia\vert V\vert jk\rangle + \langle ab\vert V\vert ij\rangle + \langle ij\vert V\vert ab\rangle \)
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -974,7 +1134,7 @@ the cluster operator with the normal-ordered Hamiltonian.
 <h2 id="ex-11">Example: CCSD correlation energy</h2>
 The CCSD correlation energy, \( E_c= \langle
 \Phi_0\vert \overline{H_N}\vert \Phi_0\rangle \), is the first of the CCSD
-equations <a href="#mjx-eqn-14">(14)</a>. It is a vacuum expectation value and thus
+equations <a href="#mjx-eqn-20">(20)</a>. It is a vacuum expectation value and thus
 consists of all diagrams with no external legs. There are three such diagrams:
 
 <p>
@@ -1039,8 +1199,34 @@ Start systematically! Consider all combinations of \( F \) and \( V \) diagrams 
 <!-- --- end hint in exercise --- -->
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+
+<p>
+<center> <!-- figure label: --> <div id="fig-ccd"></div> <!-- FIGURE -->
+<hr class="figure">
+<center><p class="caption">Figure 11:  The diagrams for the \( T_2 \) equation, i.e. the matrix elements of \( \overline{H}_{ij}^{ab} \). Taken from Baardsen et al (2013).  <!-- caption label: fig-ccd --> </p></center>
+<p><img src="figslides/Diagrams-CCD.png" align="bottom" width=800></p>
+</center>
+
+<p>
+The corresponding algebraic expression is
+<p>&nbsp;<br>
+$$
+\begin{align*}
+\overline{H}_{ij}^{ab} &= \langle ab\vert V\vert ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
+&+ {1\over 2} \sum_{cd} \langle ab\vert V\vert cd\rangle t_{ij}^{cd}+ {1\over 2} \sum_{kl} \langle kl\vert V\vert ij\rangle t_{kl}^{ab} + P(ab)P(ij)\sum_{kc} \langle kb\vert V\vert cj \rangle t_{ik}^{ac} \\
+&+ {1\over 2} P(ij)P(ab)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}t_{lj}^{db} 
++ {1\over 2} P(ij)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}t_{lj}^{ab}\\
+&+ {1\over 2} P(ab)\sum_{kcld} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}t_{ij}^{db}
++ {1\over 4} \sum_{kcld} \langle kl\vert V\vert cd\rangle t_{ij}^{cd}t_{kl}^{ab} . 
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>
+<!-- --- end answer of exercise --- -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -1064,9 +1250,12 @@ computational cost in terms of the number of occupied \( A \) and the
 number of unoccupied \( n_u \) orbitals.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
-<p>
+<!-- !bans -->
+<!-- The cost is \( A^2 n_u^2 \), \( A^2 n_u^3 \), \( A^3 n_u^2 \), -->
+<!-- \( A^2 n_u^4 \), \( A^4 n_u^2 \), \( A^3 n_u^3 \), -->
+<!-- \( A^4 n_u^4 \), \( A^4 n_u^4 \), -->
+<!-- \( A^4 n_u^4 \), and \( A^4 n_u^4 \) for the respective diagrams. -->
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <h2><div id="___sec34"></div></h2>
@@ -1085,7 +1274,7 @@ computing first the intermediate
 $$
 \begin{align}
 \chi_{ij}^{kl}\equiv {1\over 2} \sum_{cd} \langle kl\vert V\vert cd\rangle t_{ij}^{cd}
-\tag{22}
+\tag{28}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1095,7 +1284,7 @@ at a cost of \( A^4n_u^2 \), and then
 $$
 \begin{align}
 {1\over 2} \sum_{kl} \chi_{ij}^{kl} t_{kl}^{ab}  
-\tag{23}
+\tag{29}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1117,9 +1306,51 @@ memory for computational cycles. This trick is known as
 Diagrams 7, 8, and 9 of Fig. <a href="#fig-ccd">11</a> also need to be factorized.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+<!-- For diagram number 7, we compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- \chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at a cost of \( A^3 n_u^3 \) and then compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- {1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at the cost of \( A^3 n_u^3 \). -->
+
 <p>
+<!-- For diagram number 8, we compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- \chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at a cost of \( A^3 n_u^2 \), and then compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- -P(ij) \sum_l \chi_i^l t_{lj}^{ab} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at the cost of \( A^3 n_u^2 \). -->
+
+<p>
+<!-- For diagram number 9, we compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- \chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at a cost of \( A^2 n_u^3 \) and then compute -->
+<!-- !bt -->
+<!-- \begin{align} -->
+<!-- P(ab)\sum_d \chi_d^a t_{ij}^{db} -->
+<!-- \end{align} -->
+<!-- !et -->
+<!-- at the cost of \( A^3 n_u^3 \). -->
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <h2><div id="___sec36"></div></h2>
@@ -1142,15 +1373,27 @@ elements of \( \overline{H}_i^a \) and \( \overline{H}_{ij}^{ab} \).
 Let us consider the matrix element \( \overline{H}_i^a \) first. Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have an incoming hole line and an outgoing particle line. Write down all these diagrams.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
+<p>
+<!-- FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the \( T_1 \) equation, i.e. the matrix elements of \( \overline{H}_i^a \). Taken from Crawford and Schaefer. Here \( \langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle \) and \( f_{pq}\equiv f^p_q \). <div id="fig-CCSD1"></div> -->
+
+<p>
+<!-- !eans -->
+
 <p>
 <b>b)</b>
 Let us now consider the matrix element \( \overline{H}_{ij}^{ab} \). Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have two incoming hole lines and two outgoing particle lines. Write down all these diagrams and corresponding algebraic expressions.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
+<p>
+<!-- FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the \( T_2 \) equation, i.e. the matrix elements of \( \overline{H}_{ij}^{ab} \). Taken from Crawford and Schaefer. Here \( \langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle \), \( f_{pq}\equiv f^p_q \), and \( P(ab) = 1 - (a\leftrightarrow b) \) antisymmetrizes. <div id="fig-CCSD2"></div> -->
+
+<p>
+<!-- !eans -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -1182,7 +1425,7 @@ Dividing by \( (f_a^a +f_b^b -f_i^i -f_j^j) \) yields
 $$
 \begin{align}
 t_{ij}^{ab} &= t_{ij}^{ab} + \frac{\overline{H}_{ij}^{ab}}{f_a^a +f_b^b -f_i^i -f_j^j}
-\tag{24}
+\tag{30}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1194,7 +1437,7 @@ hope that this will converge to a solution. We take the perturbative result
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{25}
+\tag{31}
 \left(t_{ij}^{ab}\right)_0 = \frac{\langle ab\vert V\vert ij\rangle}{f_a^a +f_b^b -f_i^i -f_j^j}
 \end{align}
 $$
@@ -1202,7 +1445,7 @@ $$
 
 <p>
 as a starting point, compute \( \overline{H}_{ij}^{ab} \), and find a new
-\( t_{ij}^{ab} \) from the right-hand side of Eq. <a href="#mjx-eqn-24">(24)</a>. We repeat
+\( t_{ij}^{ab} \) from the right-hand side of Eq. <a href="#mjx-eqn-30">(30)</a>. We repeat
 this process until the amplitudes converge.
 
 <h1 id="___sec40">CCD for the pairing Hamiltonian </h1>
@@ -1216,7 +1459,7 @@ problem. This consists of the following steps
 <ol>
 <p><li> Write a function that compute the potential, i.e. it returns a four-indexed array (or tensor). We need \( \langle ab\vert V\vert cd\rangle \), \( \langle ij\vert V\vert kl\rangle \), and \( \langle ab\vert V\vert ij\rangle \). Why is there no \( \langle ab\vert V\vert id\rangle \) or \( \langle ai\vert V\vert jb\rangle \) ?</li>
 <p><li> Write a function that computes the Fock matrix, i.e. a two-indexed array. We only need \( f_a^b \) and \( f_i^j \). Why?</li> 
-<p><li> Initialize the cluster amplitudes according to Eq. <a href="#mjx-eqn-25">(25)</a>, and solve Eq. <a href="#mjx-eqn-24">(24)</a> by iteration. The cluster amplitudes \( T_1 \) and \( T_2 \) are two- and four-indexed arrays, respectively.</li>
+<p><li> Initialize the cluster amplitudes according to Eq. <a href="#mjx-eqn-31">(31)</a>, and solve Eq. <a href="#mjx-eqn-30">(30)</a> by iteration. The cluster amplitudes \( T_1 \) and \( T_2 \) are two- and four-indexed arrays, respectively.</li>
 </ol>
 <p>
 
@@ -1233,9 +1476,9 @@ elegant in python when <code>numpy.einsum</code> is used.
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
-<p>
+<!-- !bans -->
+<!-- @@@CODE Programs/CCD_PairingModel.py -->
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <p>
@@ -1259,15 +1502,46 @@ methods, and start with considering the relevant symmetries.
 Enumerate continuous and discrete symmetries of nuclear matter.
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
+<p>
+<!-- The symmetries are the same as for nuclei.  Continuous symmetries: -->
+<!-- translational and rotational invariance. Discrete symmetries: Parity -->
+<!-- and time reversal invariance. -->
+
+<p>
+<!-- !eans -->
+
 <p>
 <b>b)</b>
 What basis should we use to implement these symmetries? Why do we have to make a choice between the two continuous symmetries? Which basis is most convenient and why?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
+<p>
+<!-- Angular momentum and momentum do not commute. Thus, there is no basis -->
+<!-- that respects both symmetries simultaneously. If we choose the -->
+<!-- spherical basis, we are computing a spherical blob of nuclear matter -->
+<!-- and have to contend with surface effects, i.e. with finite size -->
+<!-- effects. We also need a partial-wave decomposition of the nuclear -->
+<!-- interaction. This approach has been done followed in -->
+<!-- [&quot;Coupled-cluster studies of infinite nuclear matter, &quot; G. Baardsen, -->
+<!-- A. Ekstr&#246;m, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C -->
+<!-- 88, 054312 (2013)]. If we choose a basis of discrete momentum states, -->
+<!-- translational invariance can be respected. This also facilitates the -->
+<!-- implementetation of modern nuclear interactions (which are often -->
+<!-- formulated in momentum space in effective field theories). However, we -->
+<!-- have to think about the finite size effects imposed by periodic -->
+<!-- boundary conditions (or generalized Bloch waves). This approch was -->
+<!-- implemented in [&quot;Coupled-cluster calculations of nucleonic matter,&quot; -->
+<!-- G. Hagen, T. Papenbrock, A. Ekstr&#246;m, K. A. Wendt, G. Baardsen, -->
+<!-- S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925, -->
+<!-- Phys. Rev. C 89, 014319 (2014)]. -->
+
+<p>
+<!-- !eans -->
+
 <p>
 <!-- --- end exercise --- -->
 
@@ -1293,9 +1567,15 @@ exhibit periodic boundary conditions, i.e. \( \psi_k(x+L) =\psi_k(x) \).
 What are the discrete values of momenta admissable in \( (k_x, k_y, k_z) \)?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
 <p>
+<!-- In 1D position space \( \psi_k(x) \propto e^{i k x} \) with \( k = -->
+<!-- {2\pi n\over L} \) and \( n=0, \pm 1, \pm 2, \ldots \) fulfill \( \psi_k(x+L) -->
+<!-- = \psi_k(x) \). -->
+
+<p>
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <h2><div id="___sec47"></div></h2>
@@ -1323,9 +1603,20 @@ for the discrete momenta \( k = {2\pi n\over L} \) and \( n=0, \pm 1,\
  \pm 2, \ldots, \pm n_{\rm max} \)?
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
 <p>
+<!-- Usually \( n_{\rm max} \) is fixed by computational cost, because we have -->
+<!-- \( (2n_{\rm max}+1)^3 \) basis states. We have used \( n_{\rm max}=4 \) or up -->
+<!-- to \( n_{\rm max}=6 \) in actual calculations to get converged results. -->
+
+<p>
+<!-- The maximum momentum must fulfill \( k_{n_{\rm max}}> \Lambda \), where -->
+<!-- \( \Lambda \) is the momemtum cutoff of the interaction. This then fixes -->
+<!-- \( L \) for a given \( n_{\rm max} \). -->
+
+<p>
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <h2><div id="___sec49"></div></h2>
@@ -1345,9 +1636,17 @@ cubic lattice for neutron matter?
 <h2 id="ex-20">Exercise 19: Determine the lowest few magic numbers for a cubic lattice.</h2>
 
 <p>
-<!-- removed !bans ... !eans environment (because of the command-line option --without_answers)
- -->
+<!-- !bans -->
+
 <p>
+<!-- !bans -->
+
+<p>
+<!-- As the spin-degeneracy is \( g_s=2 \), we have the magic numbers \( g_s N \) -->
+<!-- with \( N=1, 7, 19, 27, 33, 57, 66, \ldots \) for neutrons. -->
+
+<p>
+<!-- !eans -->
 <!-- --- end exercise --- -->
 
 <h2><div id="___sec51"></div></h2>
@@ -1372,14 +1671,14 @@ angles, and averaging over twist angles implies summing over many
 results corresponding to different angles. Thus, the removal of
 finite-size effects significantly increases the numerical expense.
 An example
-is shown in Figure <a href="#fig-finite">14</a>, where we compute the kinetic
+is shown in Figure <a href="#fig-finite">12</a>, where we compute the kinetic
 energy per particle
 
 <p>&nbsp;<br>
 $$
 \begin{align}
 T_N(\theta_x,\theta_y,\theta_z)=g_s\sum_{n_x, n_y, n_z \in N} {\hbar^2 \left( k_{n_x}^2(\theta_x) +k_{n_y}^2(\theta_y) +k_{n_z}^2(\theta_z)\right)\over 2m}
-\tag{26}
+\tag{32}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1395,7 +1694,7 @@ finite size effects than other of the accessible magic numbers.
 <p>
 <center> <!-- figure label: --> <div id="fig-finite"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 14:  Relative finite-size corrections for the kinetic energy in pure neutron matter at the Fermi momentum \( k_F = 1.6795 {\rm fm}^{-1} \) versus the neutron number A. TABC10 are twist-averaged boundary conditions with 10 Gauss-Legendre points in each spatial direction.  <!-- caption label: fig-finite --> </p></center>
+<center><p class="caption">Figure 12:  Relative finite-size corrections for the kinetic energy in pure neutron matter at the Fermi momentum \( k_F = 1.6795 {\rm fm}^{-1} \) versus the neutron number A. TABC10 are twist-averaged boundary conditions with 10 Gauss-Legendre points in each spatial direction.  <!-- caption label: fig-finite --> </p></center>
 <p><img src="figslides/fig-finite.png" align="bottom" width=800></p>
 </center>
 
@@ -1424,7 +1723,7 @@ Let us take a look at the Minnesota potential
 <p>
 <center> <!-- figure label: --> <div id="fig-minnesota"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 15:  The Minnesota potential.  <!-- caption label: fig-minnesota --> </p></center>
+<center><p class="caption">Figure 13:  The Minnesota potential.  <!-- caption label: fig-minnesota --> </p></center>
 <p><img src="figslides/V-Minnesota.png" align="bottom" width=600></p>
 </center>
 
@@ -1436,7 +1735,7 @@ $$
 \begin{align}
 P^\sigma_{12}&= {1\over 2}(1+\vec{\sigma}_1\cdot\vec{\sigma}_2) , \nonumber\\
 P^\tau_{12} &= {1\over 2}(1+\vec{\tau}_1\cdot\vec{\tau}_2) 
-\tag{27}
+\tag{33}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1445,24 +1744,24 @@ $$
 are spin and isospin exchange operators, respectively, and
 \( \vec{\sigma} \) and \( \vec{\tau} \) are vectors of Pauli matrices in spin
 and isospin space, respectively. The momentum-space part of the
-interaction is shown in Figure <a href="#fig-minn-kspace">16</a>, with \( q\equiv
+interaction is shown in Figure <a href="#fig-minn-kspace">14</a>, with \( q\equiv
 (1/2)(k_p-k_q-k_r+k_s) \), and momentum conservation \( k_p+k_q=k_r+k_s \)
 is explicit.
 
 <p>
 <center> <!-- figure label: --> <div id="fig-minn-kspace"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 16:  The momentum-space matrix elements of the Minnesota potential.  <!-- caption label: fig-minn-kspace --> </p></center>
+<center><p class="caption">Figure 14:  The momentum-space matrix elements of the Minnesota potential.  <!-- caption label: fig-minn-kspace --> </p></center>
 <p><img src="figslides/V-Minn-kspace.png" align="bottom" width=600></p>
 </center>
 
 <p>
-The parameters of the potential are depicted below in Figure <a href="#table-Minnesota">17</a>
+The parameters of the potential are depicted below in Figure <a href="#table-Minnesota">15</a>
 
 <p>
 <center> <!-- figure label: --> <div id="table-Minnesota"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 17:  Parameters of the Minnesota potential.  <!-- caption label: table-Minnesota --> </p></center>
+<center><p class="caption">Figure 15:  Parameters of the Minnesota potential.  <!-- caption label: table-Minnesota --> </p></center>
 <p><img src="figslides/table-Minnesota.png" align="bottom" width=400></p>
 </center>
 

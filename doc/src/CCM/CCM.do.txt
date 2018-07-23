@@ -742,12 +742,12 @@ For each of the diagrams in Fig. ref{fig-ccd} write down the
 computational cost in terms of the number of occupied $A$ and the
 number of unoccupied $n_u$ orbitals.
 
-!bans
-The cost is $A^2 n_u^2$, $A^2 n_u^3$, $A^3 n_u^2$,
-$A^2 n_u^4$, $A^4 n_u^2$, $A^3 n_u^3$,
-$A^4 n_u^4$, $A^4 n_u^4$,
-$A^4 n_u^4$, and $A^4 n_u^4$ for the respective diagrams.
-!eans
+#!bans
+#The cost is $A^2 n_u^2$, $A^2 n_u^3$, $A^3 n_u^2$,
+#$A^2 n_u^4$, $A^4 n_u^2$, $A^3 n_u^3$,
+#$A^4 n_u^4$, $A^4 n_u^4$,
+#$A^4 n_u^4$, and $A^4 n_u^4$ for the respective diagrams.
+#!eans
 
 ===== =====
 !eblock
@@ -782,49 +782,49 @@ label{ex-14}
 Diagrams 7, 8, and 9 of Fig. ref{fig-ccd} also need to be factorized. 
 
 
-!bans
-For diagram number 7, we compute
-!bt
-\begin{align}
-\chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}
-\end{align}
-!et
-at a cost of $A^3 n_u^3$ and then compute
-!bt
-\begin{align}
-{1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} 
-\end{align}
-!et
-at the cost of $A^3 n_u^3$.
+#!bans
+#For diagram number 7, we compute
+#!bt
+#\begin{align}
+#\chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}
+#\end{align}
+#!et
+#at a cost of $A^3 n_u^3$ and then compute
+#!bt
+#\begin{align}
+#{1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} 
+#\end{align}
+#!et
+#at the cost of $A^3 n_u^3$.
 
-For diagram number 8, we compute
-!bt
-\begin{align}
-\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}
-\end{align}
-!et
-at a cost of $A^3 n_u^2$, and then compute
-!bt
-\begin{align}
--P(ij) \sum_l \chi_i^l t_{lj}^{ab}
-\end{align}
-!et
-at the cost of $A^3 n_u^2$.
+#For diagram number 8, we compute
+#!bt
+#\begin{align}
+#\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}
+#\end{align}
+#!et
+#at a cost of $A^3 n_u^2$, and then compute
+#!bt
+#\begin{align}
+#-P(ij) \sum_l \chi_i^l t_{lj}^{ab}
+#\end{align}
+#!et
+#at the cost of $A^3 n_u^2$.
 
-For diagram number 9, we compute
-!bt
-\begin{align}
-\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}
-\end{align}
-!et
-at a cost of $A^2 n_u^3$ and then compute
-!bt
-\begin{align}
-P(ab)\sum_d \chi_d^a t_{ij}^{db}
-\end{align}
-!et
-at the cost of $A^3 n_u^3$.
-!eans
+#For diagram number 9, we compute
+#!bt
+#\begin{align}
+#\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}
+#\end{align}
+#!et
+#at a cost of $A^2 n_u^3$ and then compute
+#!bt
+#\begin{align}
+#P(ab)\sum_d \chi_d^a t_{ij}^{db}
+#\end{align}
+#!et
+#at the cost of $A^3 n_u^3$.
+#!eans
 
 ===== =====
 !eblock
@@ -841,21 +841,21 @@ label{ex-15}
 !bsubex
 Let us consider the matrix element $\overline{H}_i^a$ first. Clearly, it consists of all diagrams (i.e. all combinations of $T_1$, $T_2$, and a single $F$ or $V$ that have an incoming hole line and an outgoing particle line. Write down all these diagrams. 
 
-!bans
+#!bans
 
-FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$ and $f_{pq}\equiv f^p_q$. label{fig-CCSD1}
+#FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$ and $f_{pq}\equiv f^p_q$. label{fig-CCSD1}
 
-!eans
+#!eans
 !esubex
 
 !bsubex
 Let us now consider the matrix element $\overline{H}_{ij}^{ab}$. Clearly, it consists of all diagrams (i.e. all combinations of $T_1$, $T_2$, and a single $F$ or $V$ that have two incoming hole lines and two outgoing particle lines. Write down all these diagrams and corresponding algebraic expressions. 
 
-!bans
+#!bans
 
-FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$, $f_{pq}\equiv f^p_q$, and $P(ab) = 1 - (a\leftrightarrow b)$ antisymmetrizes. label{fig-CCSD2}
+#FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$, $f_{pq}\equiv f^p_q$, and $P(ab) = 1 - (a\leftrightarrow b)$ antisymmetrizes. label{fig-CCSD2}
 
-!eans
+#!eans
 !esubex
 
 ===== =====
@@ -924,9 +924,9 @@ elegant in python when `numpy.einsum` is used.
 label{ex-16}
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936. 
 
-!bans
-@@@CODE Programs/CCD_PairingModel.py
-!eans
+#!bans
+#@@@CODE Programs/CCD_PairingModel.py
+#!eans
 
 
 
@@ -942,40 +942,40 @@ label{ex-17}
 !bsubex
 Enumerate continuous and discrete symmetries of nuclear matter. 
 
-!bans
+#!bans
 
-The symmetries are the same as for nuclei.  Continuous symmetries:
-translational and rotational invariance. Discrete symmetries: Parity
-and time reversal invariance.
+#The symmetries are the same as for nuclei.  Continuous symmetries:
+#translational and rotational invariance. Discrete symmetries: Parity
+#and time reversal invariance.
 
-!eans
+#!eans
 !esubex
 
 !bsubex
 What basis should we use to implement these symmetries? Why do we have to make a choice between the two continuous symmetries? Which basis is most convenient and why? 
 
-!bans
+#!bans
 
-Angular momentum and momentum do not commute. Thus, there is no basis
-that respects both symmetries simultaneously. If we choose the
-spherical basis, we are computing a spherical blob of nuclear matter
-and have to contend with surface effects, i.e. with finite size
-effects. We also need a partial-wave decomposition of the nuclear
-interaction. This approach has been done followed in
-[``Coupled-cluster studies of infinite nuclear matter, '' G. Baardsen,
-A. Ekström, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C
-88, 054312 (2013)]. If we choose a basis of discrete momentum states,
-translational invariance can be respected. This also facilitates the
-implementetation of modern nuclear interactions (which are often
-formulated in momentum space in effective field theories). However, we
-have to think about the finite size effects imposed by periodic
-boundary conditions (or generalized Bloch waves). This approch was
-implemented in [``Coupled-cluster calculations of nucleonic matter,''
-G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
-S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
-Phys. Rev. C 89, 014319 (2014)].
+#Angular momentum and momentum do not commute. Thus, there is no basis
+#that respects both symmetries simultaneously. If we choose the
+#spherical basis, we are computing a spherical blob of nuclear matter
+#and have to contend with surface effects, i.e. with finite size
+#effects. We also need a partial-wave decomposition of the nuclear
+#interaction. This approach has been done followed in
+#[``Coupled-cluster studies of infinite nuclear matter, '' G. Baardsen,
+#A. Ekström, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C
+#88, 054312 (2013)]. If we choose a basis of discrete momentum states,
+#translational invariance can be respected. This also facilitates the
+#implementetation of modern nuclear interactions (which are often
+#formulated in momentum space in effective field theories). However, we
+#have to think about the finite size effects imposed by periodic
+#boundary conditions (or generalized Bloch waves). This approch was
+#implemented in [``Coupled-cluster calculations of nucleonic matter,''
+#G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
+#S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
+#Phys. Rev. C 89, 014319 (2014)].
 
-!eans
+#!eans
 !esubex
 
 ===== =====
@@ -994,13 +994,13 @@ label{ex-18}
 
 What are the discrete values of momenta admissable in $(k_x, k_y, k_z)$?
 
-!bans
+#!bans
 
-In 1D position space $\psi_k(x) \propto e^{i k x}$ with $k =
-{2\pi n\over L}$ and $n=0, \pm 1, \pm 2, \ldots$ fulfill $\psi_k(x+L)
-= \psi_k(x)$. 
+#In 1D position space $\psi_k(x) \propto e^{i k x}$ with $k =
+#{2\pi n\over L}$ and $n=0, \pm 1, \pm 2, \ldots$ fulfill $\psi_k(x+L)
+#= \psi_k(x)$. 
 
-!eans
+#!eans
 
 ===== =====
 !eblock
@@ -1024,17 +1024,17 @@ What values should be chosen for the box size $L$ and for the maximum number $n_
 for the discrete momenta $k = {2\pi n\over L}$ and $n=0, \pm 1,\
  \pm 2, \ldots, \pm n_{\rm max}$? 
 
-!bans
+#!bans
 
-Usually $n_{\rm max}$ is fixed by computational cost, because we have
-$(2n_{\rm max}+1)^3$ basis states. We have used $n_{\rm max}=4$ or up
-to $n_{\rm max}=6$ in actual calculations to get converged results.
+#Usually $n_{\rm max}$ is fixed by computational cost, because we have
+#$(2n_{\rm max}+1)^3$ basis states. We have used $n_{\rm max}=4$ or up
+#to $n_{\rm max}=6$ in actual calculations to get converged results.
 
-The maximum momentum must fulfill $k_{n_{\rm max}}> \Lambda$, where
-$\Lambda$ is the momemtum cutoff of the interaction. This then fixes
-$L$ for a given $n_{\rm max}$.
+#The maximum momentum must fulfill $k_{n_{\rm max}}> \Lambda$, where
+#$\Lambda$ is the momemtum cutoff of the interaction. This then fixes
+#$L$ for a given $n_{\rm max}$.
 
-!eans
+#!eans
 ===== =====
 !eblock
 
@@ -1048,12 +1048,12 @@ cubic lattice for neutron matter?
 label{ex-20}
 
 
-!bans
+#!bans
 
-As the spin-degeneracy is $g_s=2$, we have the magic numbers $g_s N$
-with $N=1, 7, 19, 27, 33, 57, 66, \ldots$ for neutrons.
+#As the spin-degeneracy is $g_s=2$, we have the magic numbers $g_s N$
+#with $N=1, 7, 19, 27, 33, 57, 66, \ldots$ for neutrons.
 
-!eans
+#!eans
 
 ===== =====
 !eblock
