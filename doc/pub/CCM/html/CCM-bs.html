@@ -2324,7 +2324,7 @@ respectively. For neutron matter, two-neutron states have isospin
 \( T_{12}=1 \), and the Minnesota potential has no triplet term \( V_T \).
 For the spin-exchange operator (and spins \( s_1, s_2=\pm 1/2 \)), we have
 \( P_{12}^\sigma\vert s_1s_2\rangle= \vert s_2s_1\rangle \).  For neutron
-matter, \( P^\tau=1 \), because the states are symmetric under exchange of
+matter, \( P_{12}^\tau=1 \), because the states are symmetric under exchange of
 isospin. Thus, the Minnesota potential simplifies significantly for
 neutron matter as \( V_T \) does not contribute.
 
@@ -2363,11 +2363,8 @@ and the parameters are as follows
 <p>
 Note that \( \kappa_\alpha^{1/2} \) sets the momentum scale of the
 Minnesota potential. We see that we deal with a short-ranged repulsive
-core (the \( V_R \) term) and attractive terms in the singlet (the term
-\( V_S \)) and triplet (the term \( V_T \)) channels.
-
-<p>
-<!-- FIGURE: [figslides/V-Minnesota.png, width=600 frac=0.8] The Minnesota potential. <div id="fig-minnesota"></div> -->
+core (the \( V_R \) term) and longer ranged attractive terms in the
+singlet (the term \( V_S \)) and triplet (the term \( V_T \)) channels.
 
 <p>
 A Fourier transform (in the finite cube of length \( L \)) yields the momentum-space form of the potential
@@ -2460,7 +2457,7 @@ The steps towards the solution of the CCD equations for neutron matter are as fo
 
 <ol>
 <li> For a given density and UV cutoff, set up the lattice, i.e. determine the single-particle basis.</li>
-<li> Determine the channels allowed by the (Minnesota) interaction, i.e. sets of two-bodu states that are connected by the interaction.</li>
+<li> Determine the channels allowed by the (Minnesota) interaction, i.e. sets of two-body states that are connected by the interaction.</li>
 <li> Exploit this channel structure when computing the diagrams.</li>
 <li> Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure <a href="#fig-ccd">11</a>.</li>
 </ol>
