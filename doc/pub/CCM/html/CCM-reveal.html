@@ -1521,6 +1521,18 @@ elegant in python when <code>numpy.einsum</code> is used.
 <h2 id="ex-16">Project 15: Solve the CCD equations for the pairing problem</h2>
 
 <p>
+The Hamiltonian is
+<p>&nbsp;<br>
+$$
+\begin{align}
+H = \delta \sum_{p=1}^\Omega (p-1)\left(a^\dagger_{p+}a_{p+} + a^\dagger_{p-}a_{p-}\right)
+-{g \over 2} \sum_{p, q=1}^\Omega a^\dagger_{p+}a^\dagger_{p-} a_{q-} a_{q+} .
+\tag{38}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936.
 
 <p>
@@ -1724,7 +1736,7 @@ energy per particle
 $$
 \begin{align}
 T_N(\theta_x,\theta_y,\theta_z)=g_s\sum_{n_x, n_y, n_z \in N} {\hbar^2 \left( k_{n_x}^2(\theta_x) +k_{n_y}^2(\theta_y) +k_{n_z}^2(\theta_z)\right)\over 2m}
-\tag{38}
+\tag{39}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1767,7 +1779,7 @@ The Hamiltonian is of the structure
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{39}
+\tag{40}
 H = \sum_{\vec{k}, \sigma} \varepsilon_{\vec{k}, \sigma}^{\vec{k}, \sigma} a^\dagger_{\vec{k}, \sigma}a_{\vec{k}, \sigma}
 + \sum_{\vec{Q},\vec{p},\vec{k},\sigma_s} V_{\sigma_1\sigma_2}^{\sigma_3\sigma_4}(\vec{p},\vec{k}) a^\dagger_{\vec{Q/2}+\vec{p}, \sigma_3}a^\dagger_{\vec{Q/2}-\vec{p}, \sigma_4} a_{\vec{Q/2}-\vec{k}, \sigma_2}a_{\vec{Q/2}+\vec{k}, \sigma_1}
 \end{align}
@@ -1776,7 +1788,7 @@ $$
 
 <p>
 with \( \varepsilon_{\vec{k}, \sigma}^{\vec{k}, \sigma} = {k^2\over
-2m} \).  In Eq. <a href="#mjx-eqn-39">(39)</a> we expressed the single-particle momenta in
+2m} \).  In Eq. <a href="#mjx-eqn-40">(40)</a> we expressed the single-particle momenta in
 terms of center-of-mass momentum \( \vec{Q} \) and relative momenta
 \( (\vec{k},\vec{p}) \), i.e. the incoming momenta \( (\vec{k}_1,
 \vec{k}_2) \) and outgoing momenta \( (\vec{k}_3, \vec{k}_3) \) are
@@ -1785,13 +1797,13 @@ terms of center-of-mass momentum \( \vec{Q} \) and relative momenta
 $$
 \begin{align}
 \vec{k}_1 &= \vec{Q}/2 +\vec{k} ,
-\tag{40}\\
-\vec{k}_2 &= \vec{Q}/2 -\vec{k} ,
 \tag{41}\\
-\vec{k}_3 &= \vec{Q}/2 +\vec{p} ,
+\vec{k}_2 &= \vec{Q}/2 -\vec{k} ,
 \tag{42}\\
+\vec{k}_3 &= \vec{Q}/2 +\vec{p} ,
+\tag{43}\\
 \vec{k}_4 &= \vec{Q}/2 -\vec{p} .
-\tag{43}
+\tag{44}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1812,7 +1824,7 @@ Thus, the \( T_2 \) operator is
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{44}
+\tag{45}
 T_2 = {1\over 4} \sum_{\vec{Q},\vec{p},\vec{k},\sigma_s} t_{\sigma_1\sigma_2}^{\sigma_3\sigma_4}(Q; \vec{p},\vec{k}) a^\dagger_{\vec{Q/2}+\vec{p}, \sigma_3}a^\dagger_{\vec{Q/2}-\vec{p}, \sigma_4} a_{\vec{Q/2}-\vec{k}, \sigma_2}a_{\vec{Q/2}+\vec{k}, \sigma_1} . 
 \end{align}
 $$
@@ -1825,7 +1837,7 @@ contrast to the potential matrix element
 \( V_{\sigma_1\sigma_2}^{\sigma_3\sigma_4}(\vec{p},\vec{k}) \).
 
 <p>
-In the expressions <a href="#mjx-eqn-39">(39)</a> and <a href="#mjx-eqn-44">(44)</a> we supressed that
+In the expressions <a href="#mjx-eqn-40">(40)</a> and <a href="#mjx-eqn-45">(45)</a> we supressed that
 \( \sigma_1+\sigma_2 = \sigma_3+\sigma_4 \). So, a channel is defined by
 \( \vec{Q} \) and total spin projection \( \sigma_1+\sigma_2 \).
 
@@ -1838,7 +1850,7 @@ neutron matter.  Let us take a look at the Minnesota potential
 $$
 \begin{align}
 V(r) = \left( V_R(r)  + {1\over 2}(1+P_{12}^\sigma)V_T(r) + {1\over 2}(1-P_{12}^\sigma)V_S(r)\right) {1\over 2}(1-P_{12}^\sigma P_{12}^\tau). 
-\tag{45}
+\tag{46}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1851,7 +1863,7 @@ $$
 \begin{align}
 P^\sigma_{12}&= {1\over 2}(1+\vec{\sigma}_1\cdot\vec{\sigma}_2) , \nonumber\\
 P^\tau_{12} &= {1\over 2}(1+\vec{\tau}_1\cdot\vec{\tau}_2) 
-\tag{46}
+\tag{47}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1867,7 +1879,7 @@ $$
 {1\over 2}(1-P_{12}^\sigma P_{12}^\tau) & = \vert
 S_{12}=0, T_{12}=1\rangle\langle S_{12}=0,T_{12}=1\vert + \vert
 S_{12}=1, T_{12}=0\rangle\langle S_{12}=1,T_{12}=0\vert
-\tag{47}
+\tag{48}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1878,9 +1890,9 @@ $$
 \begin{align}
 {1\over 2}(1-P_{12}^\sigma) & = \vert
 S_{12}=0\rangle\langle S_{12}=0\vert , 
-\tag{48}\\ {1\over 2}(1+P_{12}^\sigma)
+\tag{49}\\ {1\over 2}(1+P_{12}^\sigma)
 & = \vert S_{12}=1\rangle\langle S_{12}=1\vert
-\tag{49}
+\tag{50}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1900,12 +1912,12 @@ The radial functions are
 $$
 \begin{align}
 V_R(r) &=V_R e^{-\kappa_R r^2} , 
-\tag{50}\\
-V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \tag{51}\\
-V_T(r) &=V_T e^{-\kappa_T r^2} , 
+V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \tag{52}\\
-\tag{53}
+V_T(r) &=V_T e^{-\kappa_T r^2} , 
+\tag{53}\\
+\tag{54}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1939,7 +1951,7 @@ $$
 \begin{align}
 \langle k_p k_q \vert V_\alpha\vert k_r k_s \rangle = {V_\alpha\over L^3} \left({\pi\over\kappa_\alpha}\right)^{3/2}
 e^{- {q^2 \over 4\kappa_\alpha}} \delta_{k_p+k_q}^{k_r+k_s} . 
-\tag{54}
+\tag{55}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -1954,7 +1966,7 @@ $$
 \begin{align}
 \langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
 \left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
-\tag{55}
+\tag{56}
 \end{align}
 $$
 <p>&nbsp;<br>

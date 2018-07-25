@@ -927,6 +927,14 @@ elegant in python when `numpy.einsum` is used.
 
 ===== Project: Solve the CCD equations for the pairing problem =====
 label{ex-16}
+The Hamiltonian is
+!bt
+\begin{align}
+H = \delta \sum_{p=1}^\Omega (p-1)\left(a^\dagger_{p+}a_{p+} + a^\dagger_{p-}a_{p-}\right)
+-{g \over 2} \sum_{p, q=1}^\Omega a^\dagger_{p+}a^\dagger_{p-} a_{q-} a_{q+} .
+\end{align}
+!et
+
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936. 
 
 #!bans

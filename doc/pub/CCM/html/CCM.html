@@ -1565,6 +1565,16 @@ elegant in python when <code>numpy.einsum</code> is used.
 <h2 id="ex-16">Project 15: Solve the CCD equations for the pairing problem</h2>
 
 <p>
+The Hamiltonian is
+$$
+\begin{align}
+H = \delta \sum_{p=1}^\Omega (p-1)\left(a^\dagger_{p+}a_{p+} + a^\dagger_{p-}a_{p-}\right)
+-{g \over 2} \sum_{p, q=1}^\Omega a^\dagger_{p+}a^\dagger_{p-} a_{q-} a_{q+} .
+\label{_auto25}
+\end{align}
+$$
+
+<p>
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936.
 
 <p>
@@ -1779,7 +1789,7 @@ energy per particle
 $$
 \begin{align}
 T_N(\theta_x,\theta_y,\theta_z)=g_s\sum_{n_x, n_y, n_z \in N} {\hbar^2 \left( k_{n_x}^2(\theta_x) +k_{n_y}^2(\theta_y) +k_{n_z}^2(\theta_z)\right)\over 2m}
-\label{_auto25}
+\label{_auto26}
 \end{align}
 $$
 
@@ -1836,13 +1846,13 @@ terms of center-of-mass momentum \( \vec{Q} \) and relative momenta
 $$
 \begin{align}
 \vec{k}_1 &= \vec{Q}/2 +\vec{k} ,
-\label{_auto26}\\
-\vec{k}_2 &= \vec{Q}/2 -\vec{k} ,
 \label{_auto27}\\
-\vec{k}_3 &= \vec{Q}/2 +\vec{p} ,
+\vec{k}_2 &= \vec{Q}/2 -\vec{k} ,
 \label{_auto28}\\
+\vec{k}_3 &= \vec{Q}/2 +\vec{p} ,
+\label{_auto29}\\
 \vec{k}_4 &= \vec{Q}/2 -\vec{p} .
-\label{_auto29}
+\label{_auto30}
 \end{align}
 $$
 
@@ -1885,7 +1895,7 @@ neutron matter.  Let us take a look at the Minnesota potential
 $$
 \begin{align}
 V(r) = \left( V_R(r)  + {1\over 2}(1+P_{12}^\sigma)V_T(r) + {1\over 2}(1-P_{12}^\sigma)V_S(r)\right) {1\over 2}(1-P_{12}^\sigma P_{12}^\tau). 
-\label{_auto30}
+\label{_auto31}
 \end{align}
 $$
 
@@ -1896,7 +1906,7 @@ $$
 \begin{align}
 P^\sigma_{12}&= {1\over 2}(1+\vec{\sigma}_1\cdot\vec{\sigma}_2) , \nonumber\\
 P^\tau_{12} &= {1\over 2}(1+\vec{\tau}_1\cdot\vec{\tau}_2) 
-\label{_auto31}
+\label{_auto32}
 \end{align}
 $$
 
@@ -1910,7 +1920,7 @@ $$
 {1\over 2}(1-P_{12}^\sigma P_{12}^\tau) & = \vert
 S_{12}=0, T_{12}=1\rangle\langle S_{12}=0,T_{12}=1\vert + \vert
 S_{12}=1, T_{12}=0\rangle\langle S_{12}=1,T_{12}=0\vert
-\label{_auto32}
+\label{_auto33}
 \end{align}
 $$
 
@@ -1919,9 +1929,9 @@ $$
 \begin{align}
 {1\over 2}(1-P_{12}^\sigma) & = \vert
 S_{12}=0\rangle\langle S_{12}=0\vert , 
-\label{_auto33}\\ {1\over 2}(1+P_{12}^\sigma)
+\label{_auto34}\\ {1\over 2}(1+P_{12}^\sigma)
 & = \vert S_{12}=1\rangle\langle S_{12}=1\vert
-\label{_auto34}
+\label{_auto35}
 \end{align}
 $$
 
@@ -1939,12 +1949,12 @@ The radial functions are
 $$
 \begin{align}
 V_R(r) &=V_R e^{-\kappa_R r^2} , 
-\label{_auto35}\\
-V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \label{_auto36}\\
-V_T(r) &=V_T e^{-\kappa_T r^2} , 
+V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \label{_auto37}\\
-\label{_auto38}
+V_T(r) &=V_T e^{-\kappa_T r^2} , 
+\label{_auto38}\\
+\label{_auto39}
 \end{align}
 $$
 
@@ -1976,7 +1986,7 @@ $$
 \begin{align}
 \langle k_p k_q \vert V_\alpha\vert k_r k_s \rangle = {V_\alpha\over L^3} \left({\pi\over\kappa_\alpha}\right)^{3/2}
 e^{- {q^2 \over 4\kappa_\alpha}} \delta_{k_p+k_q}^{k_r+k_s} . 
-\label{_auto39}
+\label{_auto40}
 \end{align}
 $$
 
@@ -1989,7 +1999,7 @@ $$
 \begin{align}
 \langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
 \left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
-\label{_auto40}
+\label{_auto41}
 \end{align}
 $$
 
