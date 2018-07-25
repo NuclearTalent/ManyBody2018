@@ -872,20 +872,21 @@ We can now turn to the solution of the coupled-cluster equations.
 ===== Solving the CCD equations =====
 
 The CCD equations, depicted in Fig. ref{fig-ccd}, are nonlinear in the
-cluster amplitudes. How do we solve $\overline{H}_{ij}^{ab}=0$? We add
-$(f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab}$ to both sides of
-$\overline{H}_{ij}^{ab}=0$ and find
+cluster amplitudes. How do we solve $\overline{H}_{ij}^{ab}=0$? We
+subtract $(f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab}$ from both sides of
+$\overline{H}_{ij}^{ab}=0$ (because this term is contained in
+$\overline{H}_{ij}^{ab}$) and find
 
 !bt
 \begin{align*}
-(f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab} &= (f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab} +\overline{H}_{ij}^{ab}
+(f_i^i +f_j^j -f_a^a -f_b^b)t_{ij}^{ab} &= (f_i^i +f_j^j -f_a^a -f_b^b)t_{ij}^{ab} +\overline{H}_{ij}^{ab}
 \end{align*}
 !et
 
-Dividing by $(f_a^a +f_b^b -f_i^i -f_j^j)$ yields
+Dividing by $(f_i^i +f_j^j -f_a^a -f_b^b)$ yields
 !bt
 \begin{align}
-t_{ij}^{ab} &= t_{ij}^{ab} + \frac{\overline{H}_{ij}^{ab}}{f_a^a +f_b^b -f_i^i -f_j^j}
+t_{ij}^{ab} &= t_{ij}^{ab} + \frac{\overline{H}_{ij}^{ab}}{f_i^i +f_j^j -f_a^a -f_b^b}
 \label{iter}
 \end{align}
 !et
@@ -896,13 +897,13 @@ hope that this will converge to a solution. We take the perturbative result
 !bt
 \begin{align}
 \label{pert}
-\left(t_{ij}^{ab}\right)_0 = \frac{\langle ab\vert V\vert ij\rangle}{f_a^a +f_b^b -f_i^i -f_j^j}
+\left(t_{ij}^{ab}\right)_0 = \frac{\langle ab\vert V\vert ij\rangle}{f_i^i +f_j^j -f_a^a -f_b^b}
 \end{align}
 !et
 
 as a starting point, compute $\overline{H}_{ij}^{ab}$, and find a new
 $t_{ij}^{ab}$ from the right-hand side of Eq. (ref{iter}). We repeat
-this process until the amplitudes converge.
+this process until the amplitudes (or the CCD energy) converge.
 
 
 
@@ -946,40 +947,40 @@ label{ex-17}
 !bsubex
 Enumerate continuous and discrete symmetries of nuclear matter. 
 
-#!bans
+!bans
 
-#The symmetries are the same as for nuclei.  Continuous symmetries:
-#translational and rotational invariance. Discrete symmetries: Parity
-#and time reversal invariance.
+The symmetries are the same as for nuclei.  Continuous symmetries:
+translational and rotational invariance. Discrete symmetries: Parity
+and time reversal invariance.
 
-#!eans
+!eans
 !esubex
 
 !bsubex
 What basis should we use to implement these symmetries? Why do we have to make a choice between the two continuous symmetries? Which basis is most convenient and why? 
 
-#!bans
+!bans
 
-#Angular momentum and momentum do not commute. Thus, there is no basis
-#that respects both symmetries simultaneously. If we choose the
-#spherical basis, we are computing a spherical blob of nuclear matter
-#and have to contend with surface effects, i.e. with finite size
-#effects. We also need a partial-wave decomposition of the nuclear
-#interaction. This approach has been done followed in
-#[``Coupled-cluster studies of infinite nuclear matter, '' G. Baardsen,
-#A. Ekström, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C
-#88, 054312 (2013)]. If we choose a basis of discrete momentum states,
-#translational invariance can be respected. This also facilitates the
-#implementetation of modern nuclear interactions (which are often
-#formulated in momentum space in effective field theories). However, we
-#have to think about the finite size effects imposed by periodic
-#boundary conditions (or generalized Bloch waves). This approch was
-#implemented in [``Coupled-cluster calculations of nucleonic matter,''
-#G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
-#S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
-#Phys. Rev. C 89, 014319 (2014)].
+Angular momentum and momentum do not commute. Thus, there is no basis
+that respects both symmetries simultaneously. If we choose the
+spherical basis, we are computing a spherical blob of nuclear matter
+and have to contend with surface effects, i.e. with finite size
+effects. We also need a partial-wave decomposition of the nuclear
+interaction. This approach has been done followed in
+[``Coupled-cluster studies of infinite nuclear matter, '' G. Baardsen,
+A. Ekström, G. Hagen, M. Hjorth-Jensen, arXiv:1306.5681, Phys. Rev. C
+88, 054312 (2013)]. If we choose a basis of discrete momentum states,
+translational invariance can be respected. This also facilitates the
+implementetation of modern nuclear interactions (which are often
+formulated in momentum space in effective field theories). However, we
+have to think about the finite size effects imposed by periodic
+boundary conditions (or generalized Bloch waves). This approch was
+implemented in [``Coupled-cluster calculations of nucleonic matter,''
+G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
+S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
+Phys. Rev. C 89, 014319 (2014)].
 
-#!eans
+!eans
 !esubex
 
 ===== =====
@@ -998,13 +999,13 @@ label{ex-18}
 
 What are the discrete values of momenta admissable in $(k_x, k_y, k_z)$?
 
-#!bans
+!bans
 
-#In 1D position space $\psi_k(x) \propto e^{i k x}$ with $k =
-#{2\pi n\over L}$ and $n=0, \pm 1, \pm 2, \ldots$ fulfill $\psi_k(x+L)
-#= \psi_k(x)$. 
+In 1D position space $\psi_k(x) \propto e^{i k x}$ with $k =
+{2\pi n\over L}$ and $n=0, \pm 1, \pm 2, \ldots$ fulfill $\psi_k(x+L)
+= \psi_k(x)$. 
 
-#!eans
+!eans
 
 ===== =====
 !eblock
@@ -1028,17 +1029,17 @@ What values should be chosen for the box size $L$ and for the maximum number $n_
 for the discrete momenta $k = {2\pi n\over L}$ and $n=0, \pm 1,\
  \pm 2, \ldots, \pm n_{\rm max}$? 
 
-#!bans
+!bans
 
-#Usually $n_{\rm max}$ is fixed by computational cost, because we have
-#$(2n_{\rm max}+1)^3$ basis states. We have used $n_{\rm max}=4$ or up
-#to $n_{\rm max}=6$ in actual calculations to get converged results.
+Usually $n_{\rm max}$ is fixed by computational cost, because we have
+$(2n_{\rm max}+1)^3$ basis states. We have used $n_{\rm max}=4$ or up
+to $n_{\rm max}=6$ in actual calculations to get converged results.
 
-#The maximum momentum must fulfill $k_{n_{\rm max}}> \Lambda$, where
-#$\Lambda$ is the momemtum cutoff of the interaction. This then fixes
-#$L$ for a given $n_{\rm max}$.
+The maximum momentum must fulfill $k_{n_{\rm max}}> \Lambda$, where
+$\Lambda$ is the momemtum cutoff of the interaction. This then fixes
+$L$ for a given $n_{\rm max}$.
 
-#!eans
+!eans
 ===== =====
 !eblock
 
@@ -1052,12 +1053,12 @@ cubic lattice for neutron matter?
 label{ex-20}
 
 
-#!bans
+!bans
 
-#As the spin-degeneracy is $g_s=2$, we have the magic numbers $g_s N$
-#with $N=1, 7, 19, 27, 33, 57, 66, \ldots$ for neutrons.
+As the spin-degeneracy is $g_s=2$, we have the magic numbers $g_s N$
+with $N=1, 7, 19, 27, 33, 57, 66, \ldots$ for neutrons.
 
-#!eans
+!eans
 
 ===== =====
 !eblock
@@ -1172,7 +1173,11 @@ Because of this channel structure, the simple solution we implemented
 for the pairing problem cannot be really re-used when computing
 neutron matter.  Let us take a look at the Minnesota potential
 
-FIGURE: [figslides/V-Minnesota.png, width=600 frac=0.8] The Minnesota potential. label{fig-minnesota}
+!bt
+\begin{align}
+V(r) = \left( V_R(r)  + {1\over 2}(1+P_{12}^\sigma)V_T(r) + {1\over 2}(1-P_{12}^\sigma)V_S(r)\right) {1\over 2}(1-P_{12}^\sigma P_{12}^\tau). 
+\end{align}
+!et
 
 
 Here,
@@ -1186,25 +1191,77 @@ P^\tau_{12} &= {1\over 2}(1+\vec{\tau}_1\cdot\vec{\tau}_2)
 
 are spin and isospin exchange operators, respectively, and
 $\vec{\sigma}$ and $\vec{\tau}$ are vectors of Pauli matrices in spin
-and isospin space, respectively. The momentum-space part of the
-interaction is shown in Figure ref{fig-minn-kspace}, with the momentum
-transfer $q\equiv (1/2)(k_p-k_q-k_r+k_s)$, and momentum conservation
+and isospin space, respectively. Thus,
+
+!bt
+\begin{align}
+{1\over 2}(1-P_{12}^\sigma P_{12}^\tau) & = \vert
+S_{12}=0, T_{12}=1\rangle\langle S_{12}=0,T_{12}=1\vert + \vert
+S_{12}=1, T_{12}=0\rangle\langle S_{12}=1,T_{12}=0\vert
+\end{align}
+!et
+projects onto two-particle spin-isospin states as indicated, while
+!bt
+\begin{align}
+{1\over 2}(1-P_{12}^\sigma) & = \vert
+S_{12}=0\rangle\langle S_{12}=0\vert , \\ {1\over 2}(1+P_{12}^\sigma)
+& = \vert S_{12}=1\rangle\langle S_{12}=1\vert
+\end{align}
+!et
+project onto spin singlet and spin triplet combinations,
+respectively. For neutron matter, two-neutron states have isospin
+$T_{12}=1$, and the Minnesota potential has no triplet term $V_T$.
+For the spin-exchange operator (and spins $s_1, s_2=\pm 1/2$), we have
+$P_{12}^\sigma\vert s_1s_2\rangle= \vert s_2s_1\rangle$.  For neutron
+matter, $P^\tau=1$, because the states are symmetric under exchange of
+isospin. Thus, the Minnesota potential simplifies significantly for
+neutron matter as $V_T$ does not contribute.
+
+
+The radial functions are
+!bt
+\begin{align}
+V_R(r) &=V_R e^{-\kappa_R r^2} , \\
+V_S(r) &=V_S e^{-\kappa_S r^2} , \\
+V_T(r) &=V_T e^{-\kappa_T r^2} , \\
+\end{align}
+!et
+and the parameters are as follows
+
+|---c---------c--------------c----------------|
+| $\alpha$ | $V_\alpha$  | $\kappa_\alpha$    |
+|---c---------r--------------c----------------|
+|  $R$     | +200 MeV    | 1.487 fm $^{-2}$   |
+|  $S$     | -91.85 MeV  | 0.465 fm $^{-2}$   |
+|  $T$     | -178 MeV    | 0.639 fm $^{-2}$   |
+|---------------------------------------------|
+
+Note that $\kappa_\alpha^{1/2}$ sets the momentum scale of the
+Minnesota potential. We see that we deal with a short-ranged repulsive
+core (the $V_R$ term) and attractive terms in the singlet (the term
+$V_S$) and triplet (the term $V_T$) channels.
+
+#FIGURE: [figslides/V-Minnesota.png, width=600 frac=0.8] The Minnesota potential. label{fig-minnesota}
+
+A Fourier transform (in the finite cube of length $L$) yields the momentum-space form of the potential
+!bt
+\begin{align}
+\langle k_p k_q \vert V_\alpha\vert k_r k_s \rangle = {V_\alpha\over L^3} \left({\pi\over\kappa_\alpha}\right)^{3/2}
+e^{- {q^2 \over 4\kappa_\alpha}} \delta_{k_p+k_q}^{k_r+k_s} . 
+\end{align}
+!et
+Here, $q\equiv {1\over 2}(k_p-k_q-k_r+k_s)$ is the momentum transfer, and the momentum conservation
 $k_p+k_q=k_r+k_s$ is explicit.
 
-FIGURE: [figslides/V-Minn-kspace.png, width=600 frac=0.8] The momentum-space matrix elements of the Minnesota potential. label{fig-minn-kspace}
+As we are dealing only with neutrons, the potential matrix elements (including spin) are for $\alpha = R, S$
+!bt
+\begin{align}
+\langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
+\left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
+\end{align}
+!et
+and it is understood that there is no contribution from $V_T$. 
 
-The parameters of the potential are depicted below in Figure ref{table-Minnesota}
-
-FIGURE: [figslides/table-Minnesota.png, width=400 frac=0.8] Parameters of the Minnesota potential. label{table-Minnesota}
-
-
-For the spin-exchange operator (and spins $s_1, s_2=\pm 1/2$), we have
-$P^\sigma\vert s_1s_2\rangle= \vert s_2s_1\rangle$. The terms $(1/2)(1\pm
-P^\sigma)$ thus project onto the spin triplet $(+)$ and singlet $(-)$
-channels.  For neutron matter, $P^\tau=1$, because the states are
-symmetric under exchange of isospin. Thus, the Minnesota potential
-simplifies significantly for neutron matter as $V_T$ does not
-contribute.
 
 
 
@@ -1264,9 +1321,9 @@ over the corresponding particle or hole lines in each channel.
 
 The steps towards the solution of the CCD equations for neutron matter are as follows
 
-o For a given density and UV cutoff, set up the lattice.
+o For a given density and UV cutoff, set up the lattice, i.e. determine the single-particle basis.
 
-o Determine the channels allowed by the (Minnesota) interaction, i.e. sets of states that are connected by the interaction.
+o Determine the channels allowed by the (Minnesota) interaction, i.e. sets of two-bodu states that are connected by the interaction.
 
 o Exploit this channel structure when computing the diagrams.
 
