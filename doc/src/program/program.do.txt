@@ -241,20 +241,20 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Monday | 9am-1230pm | "Introduction to Coupled Cluster (CC) theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP)  |        |
+| Monday | 9am-1230pm | "Introduction to Coupled Cluster (CC) theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html" (TP)  |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Pairing model: MBPT and begin CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"   |
 |--------------------------------------------------------------------------|
-| Tuesday | 9am-1230pm | "Developing a CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP) |        |
+| Tuesday | 9am-1230pm | "Developing a CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html" (TP) |        |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Start writing a CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-11am | "CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html"  and "Infinite Matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/inf/html/inf-bs.html" (TP) |        |
+| Wednesday | 9am-11am | "CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html"  and "Infinite Matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/inf/html/inf-bs.html" (TP) |        |
 |           | 1130am-1230pm | Computational CC theory  for closed and open shell nuclei (ZS)  |   |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Finalize CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1030am | "Summary of CC theory and infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM-bs.html" (TP) |  |
+| Thursday | 9am-1030am | "Summary of CC theory and infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html" (TP) |  |
 |          | 11am-1230pm | Machine learning applied to CC theory (WJ) |    |
 |        | 1230pm-230pm  | Lunch +own activities |                         |
 |        | 230pm-6pm   |  | "Start writing CC code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
