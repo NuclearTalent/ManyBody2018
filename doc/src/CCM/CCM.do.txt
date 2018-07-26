@@ -1143,6 +1143,7 @@ $(\vec{k},\vec{p})$, i.e. the incoming momenta $(\vec{k}_1,
 
 !bt
 \begin{align}
+\label{CoM}
 \vec{k}_1 &= \vec{Q}/2 +\vec{k} ,\\
 \vec{k}_2 &= \vec{Q}/2 -\vec{k} ,\\
 \vec{k}_3 &= \vec{Q}/2 +\vec{p} ,\\
@@ -1275,51 +1276,105 @@ and it is understood that there is no contribution from $V_T$.
 ===== Example: Channel structure and its usage =====
 label{ex-21}
 
-For neutron matter and the Minnesota potential, a channel for two-body
-states is identified by the conserved quantities of the Hamiltonian,
-i.e. total momentum and total spin projection. Let us consider the
-$T_2$ amplitude. It can be written as
-$t_{ij}^{ab}(S_{12}^z,K_{12})$. Here, we identified a given channel by
-its total momentum, i.e. $k_i + k_j = K_{12} = k_a +k_b$, and by its
-total spin projection, i.e. $s_i +s_j = S_{12}^z = s_a +s_b$.  For a
-given reference state, we can thus determine all possible total
-momenta $K_{12} = k_i + k_j$, and we can determine all possible
-$S_{12}^z$. Each allowed combination of $(K_{12},S_{12})$ labels a
-single channel. We also have all possible hh states
-$\vert ij(K_{12},S_{12})\rangle$, and their number is
-$D_{hh}(K_{12},S_{12})$. As the interaction preserves
-$(K_{12},S_{12})$, we can then seek all pp states
-$\vert ab(K_{12},S_{12})\rangle$ corresponding to this channel. Their
-number is $D_{pp}(K_{12},S_{12})$.  Thus
-$t_{ij}^{ab}(S_{12}^z,K_{12})$ is a rectangular matrix of dimension
-$D_{pp}(K_{12},S_{12}) \times D_{hh}(K_{12},S_{12})$ that we write as
-$T^{pp}_{hh}(K_{12},S_{12})$.
+We have single-particle states with momentum and spin, namely
+
+!bt
+\begin{align}
+\vert r\rangle \equiv \vert k_r s_r\rangle .
+\end{align}
+!et
+
+Naively, two-body states are then
+!bt
+\begin{align}
+\vert r s \rangle \equiv \vert k_r s_r k_s s_s\rangle ,
+\end{align}
+!et
+but using the center-of-mass transformation (ref{CoM}) we can rewrite
+!bt
+\begin{align}
+\vert r s \rangle \equiv \vert P_{rs} k_{rs} s_r s_s\rangle ,
+\end{align}
+!et
+
+where $P_{rs} = k_r +k_s$ is the total momentum and
+$k_{rs}=(k_r-k_s)/2$ is the relative momentum. This representation of
+two-body states is well adapated to our problem, because the
+interaction and the $T_2$ amplitudes preserve the total momentum.
+Thus, we store the cluster amplitudes $t_{ij}^{ab}$ as matrices
+
+!bt
+\begin{align}
+t_{ij}^{ab} \to \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\equiv t_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , 
+\end{align}  
+!et
+
+and the conservation of total momentum is explicit.
+
+Likewise, the pppp, pphh, and hhhh parts of the interaction can be written in this form, namely
+!bt
+\begin{align}
+V_{cd}^{ab} &\to \left[V(P_{ab})\right]_{\vert k_{cd} s_c s_d\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\equiv V_{\vert P_{ab} k_{cd} s_c s_d\rangle}^{\vert P_{ab} k_{ab} s_a s_b\rangle} , \\
+V_{ij}^{ab} &\to \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\equiv V_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , \\ 
+V_{ij}^{kl} &\to \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle}
+\equiv V_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{kl} s_k s_l\rangle} , 
+\end{align} 
+!et
+
+and we also have
+!bt
+\begin{align}
+\overline{H}_{ij}^{ab} \to \left[\overline{H}(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\equiv \overline{H}_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , 
+\end{align}  
+!et
 
 
-Let us consider the fourth diagram in Figure ref{fig-ccd}, i.e. the
-pp-ladder diagram. It uses the pppp part of the two-body interaction
-$V$. This is a square matrix of dimensions $D_{pp}(K_{12},S_{12})
-\times D_{pp}(K_{12},S_{12})$ for each channel, and we write it as
-$V^{pp}_{pp}(K_{12},S_{12})$. The result of the contraction can be
-written as a rectangular matrix of dimension $D_{pp}(K_{12},S_{12})
-\times D_{hh}(K_{12},S_{12})$, and will simply be the matrix product
-of $V_{pp}^{pp} T^{pp}_{hh}$. Here we supressed the dependence of the
-channel.
+Using these objects, diagrams (1), (4), and (5) of Figure
+ref{fig-ccd} can be done for each block of momentum $P_{ij}$ as a
+copy and matrix-matrix multiplications, respectively
 
-Likewise the fifth diagram of Figure ref{fig-ccd} can be written as
-$T^{pp}_{hh}V_{hh}^{hh}$ for each channel. It is probably a good idea
-to start the nuclear matter project by only using the first five diagrams
-of Figure ref{fig-ccd}.
+!bt
+\begin{align}
+\left[\overline{H}(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle} &=
+\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
++ {1\over 2} \sum_{\vert k_{kl} s_k s_l\rangle}
+\left[t(P_{ij})\right]_{\vert k_{kl} s_k s_l\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle}
++ {1\over 2} \sum_{\vert k_{cd} s_c s_d\rangle}
+\left[V(P_{ij})\right]_{\vert k_{cd} s_c s_d\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{cd} s_c s_d\rangle} .
+\end{align}
+!et
 
-The other diagrams involving the two-body interaction are more
-complicated and cannot simply done as matrix-matrix products. In those
-cases, one needs lookup tables that find two-body states for a given
-channel.
+Similarly, the CCD correlation energy results from
+!bt
+\begin{align}
+E_c = {1\over 4} \sum_{P_{ij}} \sum_{\vert k_{ij} s_i s_j\rangle}\sum_{\vert k_{ab} s_a s_b\rangle }
+\left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
+\end{align}
+!et
 
-To summarize: As the interaction is block diagonal, sums over
-particles or hole lines are replaced by sums over channels and sums
-over the corresponding particle or hole lines in each channel. 
-
+These efficiences cannot be used for the sixth diagram of Figure
+ref{fig-ccd}. One could either change to a ph formulation, noting that
+$k_a-k_i = k_k -k_c$ is also a preserved quantity in $t_{ik}^{ac}$ and
+that $k_k-k_c = k_j-k_b$ is preserved in $V_{cj}^{kb}$. Thus
+$\sum_{kc} t_{ik}^{ac}V_{cj}^{kb}$ has a conserved quantity $k_k-k_c$
+in the loop, and we can again use matrix-matrix multiplications for
+this diagram. This requires us to store the $T_2$ amplitude in a phhp
+and in the usual pphh formulation. Alternatively, we could simply code
+this diagram with the loops over single-particle states. If this seems
+too tedious, one can also limit CCD to the first five diagrams in
+Figure ref{fig-ccd} (these are the pp and hh ladders), which gives a
+good description for neutron matter, see the comparison between this
+and full CCD in [``Coupled-cluster calculations of nucleonic matter,''
+G. Hagen, T. Papenbrock, A. Ekström, K. A. Wendt, G. Baardsen,
+S. Gandolfi, M. Hjorth-Jensen, C. J. Horowitz, arXiv:1311.2925,
+Phys. Rev. C 89, 014319 (2014)].
 
 ===== =====
 !eblock 
