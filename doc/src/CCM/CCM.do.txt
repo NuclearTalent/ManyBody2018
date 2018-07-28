@@ -937,9 +937,9 @@ H = \delta \sum_{p=1}^\Omega (p-1)\left(a^\dagger_{p+}a_{p+} + a^\dagger_{p-}a_{
 
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936. 
 
-#!bans
-#@@@CODE Programs/CCD_PairingModel.py
-#!eans
+!bans
+@@@CODE Programs/CCD_PairingModel.py
+!eans
 
 
 

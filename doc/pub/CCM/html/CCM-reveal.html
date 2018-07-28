@@ -146,7 +146,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>Jul 26, 2018</h4></center> <!-- date -->
+<center><h4>Jul 28, 2018</h4></center> <!-- date -->
 <br>
 
 <h1 id="table_of_contents">Table of contents</h2>
@@ -1536,9 +1536,232 @@ $$
 Check your results and reproduce Fig 8.5 and Table 8.12 from Lecture Notes in Physics 936.
 
 <p>
-<!-- !bans -->
-<!-- @@@CODE Programs/CCD_PairingModel.py -->
-<!-- !eans -->
+<!-- --- begin answer of exercise --- -->
+<b>Answer.</b>
+<p>
+
+<!-- code=python (!bc pypro) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22">## Coupled clusters in CCD approximation</span>
+<span style="color: #228B22">## Implemented for the pairing model of Lecture Notes in Physics 936, Chapter 8.</span>
+<span style="color: #228B22">## Thomas Papenbrock, June 2018</span>
+
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_pairing_v</span>(g,pnum,hnum):
+    <span style="color: #CD5555">&quot;&quot;&quot;</span>
+<span style="color: #CD5555">    returns potential matrices of the pairing model in three relevant channels</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    param g: strength of the pairing interaction, as in Eq. (8.42)</span>
+<span style="color: #CD5555">    param pnum: number of particle states</span>
+<span style="color: #CD5555">    param hnum: number of hole states</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    return v_pppp, v_pphh, v_hhhh: np.array(pnum,pnum,pnum,pnum), </span>
+<span style="color: #CD5555">                                   np.array(pnum,pnum,hnum,hnum), </span>
+<span style="color: #CD5555">                                   np.array(hnum,hnum,hnum,hnum), </span>
+<span style="color: #CD5555">                                   The interaction as a 4-indexed tensor in three channels.</span>
+<span style="color: #CD5555">    &quot;&quot;&quot;</span>
+    v_pppp=np.zeros((pnum,pnum,pnum,pnum))
+    v_pphh=np.zeros((pnum,pnum,hnum,hnum))
+    v_hhhh=np.zeros((hnum,hnum,hnum,hnum))
+    
+    gval=-<span style="color: #B452CD">0.5</span>*g
+    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
+        <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
+            v_pppp[a,a+<span style="color: #B452CD">1</span>,b,b+<span style="color: #B452CD">1</span>]=gval
+            v_pppp[a+<span style="color: #B452CD">1</span>,a,b,b+<span style="color: #B452CD">1</span>]=-gval
+            v_pppp[a,a+<span style="color: #B452CD">1</span>,b+<span style="color: #B452CD">1</span>,b]=-gval
+            v_pppp[a+<span style="color: #B452CD">1</span>,a,b+<span style="color: #B452CD">1</span>,b]=gval
+            
+    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
+        <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
+            v_pphh[a,a+<span style="color: #B452CD">1</span>,i,i+<span style="color: #B452CD">1</span>]=gval
+            v_pphh[a+<span style="color: #B452CD">1</span>,a,i,i+<span style="color: #B452CD">1</span>]=-gval
+            v_pphh[a,a+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>,i]=-gval
+            v_pphh[a+<span style="color: #B452CD">1</span>,a,i+<span style="color: #B452CD">1</span>,i]=gval
+    
+    <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
+        <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
+            v_hhhh[j,j+<span style="color: #B452CD">1</span>,i,i+<span style="color: #B452CD">1</span>]=gval
+            v_hhhh[j+<span style="color: #B452CD">1</span>,j,i,i+<span style="color: #B452CD">1</span>]=-gval
+            v_hhhh[j,j+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>,i]=-gval
+            v_hhhh[j+<span style="color: #B452CD">1</span>,j,i+<span style="color: #B452CD">1</span>,i]=gval
+        
+    <span style="color: #8B008B; font-weight: bold">return</span> v_pppp, v_pphh, v_hhhh
+    
+    
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_pairing_fock</span>(delta,g,pnum,hnum):
+    <span style="color: #CD5555">&quot;&quot;&quot;</span>
+<span style="color: #CD5555">    initializes the Fock matrix of the pairing model</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    param delta: Single-particle spacing, as in Eq. (8.41)</span>
+<span style="color: #CD5555">    param g: pairing strength, as in eq. (8.42)</span>
+<span style="color: #CD5555">    param pnum: number of particle states</span>
+<span style="color: #CD5555">    param hnum: number of hole states</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    return f_pp, f_hh: The Fock matrix in two channels as numpy arrays np.array(pnum,pnum), np.array(hnum,hnum). </span>
+<span style="color: #CD5555">    &quot;&quot;&quot;</span>
+<span style="color: #228B22"># the Fock matrix for the pairing model. No f_ph needed, because we are in Hartree-Fock basis </span>
+    deltaval=<span style="color: #B452CD">0.5</span>*delta
+    gval=-<span style="color: #B452CD">0.5</span>*g
+    f_pp = np.zeros((pnum,pnum))
+    f_hh = np.zeros((hnum,hnum))
+
+    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,hnum,<span style="color: #B452CD">2</span>):
+        f_hh[i  ,i  ] = deltaval*i+gval
+        f_hh[i+<span style="color: #B452CD">1</span>,i+<span style="color: #B452CD">1</span>] = deltaval*i+gval
+        
+    <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>,pnum,<span style="color: #B452CD">2</span>):
+        f_pp[a  ,a  ] = deltaval*(hnum+a)
+        f_pp[a+<span style="color: #B452CD">1</span>,a+<span style="color: #B452CD">1</span>] = deltaval*(hnum+a)
+    
+    <span style="color: #8B008B; font-weight: bold">return</span> f_pp, f_hh
+
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">init_t2</span>(v_pphh,f_pp,f_hh):
+    <span style="color: #CD5555">&quot;&quot;&quot;</span>
+<span style="color: #CD5555">    Initializes t2 amlitudes as in MBPT2, see first equation on page 345</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    param v_pphh: pairing tensor in pphh channel</span>
+<span style="color: #CD5555">    param f_pp:   Fock matrix in pp channel</span>
+<span style="color: #CD5555">    param f_hh:   Fock matrix in hh channel</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    return t2: numpy array in pphh format, 4-indices tensor</span>
+<span style="color: #CD5555">    &quot;&quot;&quot;</span>
+    pnum = <span style="color: #658b00">len</span>(f_pp)
+    hnum = <span style="color: #658b00">len</span>(f_hh)
+    t2_new = np.zeros((pnum,pnum,hnum,hnum))
+    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
+        <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
+            <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
+                <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
+                    t2_new[a,b,i,j] = v_pphh[a,b,i,j] / (f_hh[i,i]+f_hh[j,j]-f_pp[a,a]-f_pp[b,b])
+    <span style="color: #8B008B; font-weight: bold">return</span> t2_new
+
+
+<span style="color: #228B22"># CCD equations. Note that the &quot;-&gt;abij&quot; assignment is redundant, because indices are ordered alphabetically.</span>
+<span style="color: #228B22"># Nevertheless, we retain it for transparency.</span>
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">ccd_iter</span>(v_pppp,v_pphh,v_hhhh,f_pp,f_hh,t2):
+    <span style="color: #CD5555">&quot;&quot;&quot;</span>
+<span style="color: #CD5555">    Performs one iteration of the CCD equations (8.34), using also intermediates for the nonliniar terms</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    param v_pppp: pppp-channel pairing tensor, numpy array</span>
+<span style="color: #CD5555">    param v_pphh: pphh-channel pairing tensor, numpy array</span>
+<span style="color: #CD5555">    param v_hhhh: hhhh-channel pairing tensor, numpy array</span>
+<span style="color: #CD5555">    param f_pp: Fock matrix in pp channel</span>
+<span style="color: #CD5555">    param f_hh: Fock matrix in hh channel</span>
+<span style="color: #CD5555">    param t2: Initial t2 amplitude, tensor in form of pphh channel</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    return t2_new: new t2 amplitude, tensor in form of pphh channel</span>
+<span style="color: #CD5555">    &quot;&quot;&quot;</span>
+    pnum = <span style="color: #658b00">len</span>(f_pp)
+    hnum = <span style="color: #658b00">len</span>(f_hh)
+    Hbar_pphh = (  v_pphh 
+                 + np.einsum(<span style="color: #CD5555">&#39;bc,acij-&gt;abij&#39;</span>,f_pp,t2) 
+                 - np.einsum(<span style="color: #CD5555">&#39;ac,bcij-&gt;abij&#39;</span>,f_pp,t2) 
+                 - np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abij&#39;</span>,t2,f_hh)
+                 + np.einsum(<span style="color: #CD5555">&#39;abjk,ki-&gt;abij&#39;</span>,t2,f_hh)
+                 + <span style="color: #B452CD">0.5</span>*np.einsum(<span style="color: #CD5555">&#39;abcd,cdij-&gt;abij&#39;</span>,v_pppp,t2) 
+                 + <span style="color: #B452CD">0.5</span>*np.einsum(<span style="color: #CD5555">&#39;abkl,klij-&gt;abij&#39;</span>,t2,v_hhhh)
+                )
+
+    <span style="color: #228B22"># hh intermediate, see (8.47)</span>
+    chi_hh = <span style="color: #B452CD">0.5</span>* np.einsum(<span style="color: #CD5555">&#39;cdkl,cdjl-&gt;kj&#39;</span>,v_pphh,t2)
+
+    Hbar_pphh = Hbar_pphh - (  np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abij&#39;</span>,t2,chi_hh) 
+                             - np.einsum(<span style="color: #CD5555">&#39;abik,kj-&gt;abji&#39;</span>,t2,chi_hh) )
+
+    <span style="color: #228B22"># pp intermediate, see (8.46)</span>
+    chi_pp = -<span style="color: #B452CD">0.5</span>* np.einsum(<span style="color: #CD5555">&#39;cdkl,bdkl-&gt;cb&#39;</span>,v_pphh,t2)
+
+    Hbar_pphh = Hbar_pphh + (  np.einsum(<span style="color: #CD5555">&#39;acij,cb-&gt;abij&#39;</span>,t2,chi_pp) 
+                             - np.einsum(<span style="color: #CD5555">&#39;acij,cb-&gt;baij&#39;</span>,t2,chi_pp) )
+
+    <span style="color: #228B22"># hhhh intermediate, see (8.48)</span>
+    chi_hhhh = <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;cdkl,cdij-&gt;klij&#39;</span>,v_pphh,t2)
+
+    Hbar_pphh = Hbar_pphh + <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;abkl,klij-&gt;abij&#39;</span>,t2,chi_hhhh)
+
+    <span style="color: #228B22"># phph intermediate, see (8.49)</span>
+    chi_phph= + <span style="color: #B452CD">0.5</span> * np.einsum(<span style="color: #CD5555">&#39;cdkl,dblj-&gt;bkcj&#39;</span>,v_pphh,t2)
+
+
+    Hbar_pphh = Hbar_pphh + (  np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;abij&#39;</span>,chi_phph,t2)
+                             - np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;baij&#39;</span>,chi_phph,t2)
+                             - np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;abji&#39;</span>,chi_phph,t2)
+                             + np.einsum(<span style="color: #CD5555">&#39;bkcj,acik-&gt;baji&#39;</span>,chi_phph,t2) )
+                 
+    t2_new=np.zeros((pnum,pnum,hnum,hnum))
+    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
+        <span style="color: #8B008B; font-weight: bold">for</span> j <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(hnum):
+            <span style="color: #8B008B; font-weight: bold">for</span> a <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
+                <span style="color: #8B008B; font-weight: bold">for</span> b <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(pnum):
+                    t2_new[a,b,i,j] = (  t2[a,b,i,j] 
+                                       + Hbar_pphh[a,b,i,j] / (f_hh[i,i]+f_hh[j,j]-f_pp[a,a]-f_pp[b,b]) )
+
+    <span style="color: #8B008B; font-weight: bold">return</span> t2_new
+
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">ccd_energy</span>(v_pphh,t2):
+    <span style="color: #CD5555">&quot;&quot;&quot;</span>
+<span style="color: #CD5555">    Computes CCD energy. Call as </span>
+<span style="color: #CD5555">    energy = ccd_energy(v_pphh,t2)</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    param v_pphh: pphh-channel pairing tensor, numpy array</span>
+<span style="color: #CD5555">    param t2: t2 amplitude, tensor in form of pphh channel</span>
+<span style="color: #CD5555">    </span>
+<span style="color: #CD5555">    return energy: CCD correlation energy</span>
+<span style="color: #CD5555">    &quot;&quot;&quot;</span>
+    erg = <span style="color: #B452CD">0.25</span>*np.einsum(<span style="color: #CD5555">&#39;abij,abij&#39;</span>,v_pphh,t2)
+    <span style="color: #8B008B; font-weight: bold">return</span> erg
+
+<span style="color: #228B22">###############################</span>
+<span style="color: #228B22">######## Main Program</span>
+
+<span style="color: #228B22"># set parameters as for model</span>
+pnum = <span style="color: #B452CD">20</span> <span style="color: #228B22"># number of particle states</span>
+hnum = <span style="color: #B452CD">10</span> <span style="color: #228B22"># number of hole states</span>
+delta = <span style="color: #B452CD">1.0</span>
+
+g = <span style="color: #B452CD">0.5</span>
+
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;parameters&quot;</span>)
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;delta =&quot;</span>, delta, <span style="color: #CD5555">&quot;, g =&quot;</span>, g)
+
+
+<span style="color: #228B22"># Initialize pairing matrix elements and Fock matrix</span>
+v_pppp, v_pphh, v_hhhh = init_pairing_v(g,pnum,hnum)
+f_pp, f_hh = init_pairing_fock(delta,g,pnum,hnum)
+
+<span style="color: #228B22"># Initialize T2 amplitudes from MBPT2</span>
+t2 = init_t2(v_pphh,f_pp,f_hh)
+erg = ccd_energy(v_pphh,t2)
+
+<span style="color: #228B22"># Exact MBPT2 for comparison, see last equation on page 365 </span>
+exact_mbpt2 = -<span style="color: #B452CD">0.25</span>*g**<span style="color: #B452CD">2</span>*(<span style="color: #B452CD">1.0</span>/(<span style="color: #B452CD">2.0</span>+g) + <span style="color: #B452CD">2.0</span>/(<span style="color: #B452CD">4.0</span>+g) + <span style="color: #B452CD">1.0</span>/(<span style="color: #B452CD">6.0</span>+g))
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;MBPT2 energy =&quot;</span>, erg, <span style="color: #CD5555">&quot;, compared to exact:&quot;</span>, exact_mbpt2)
+    
+    
+<span style="color: #228B22"># iterate CCD equations niter times</span>
+niter=<span style="color: #B452CD">200</span>
+mix=<span style="color: #B452CD">0.3</span>
+erg_old=<span style="color: #B452CD">0.0</span>
+eps=<span style="color: #B452CD">1.e-8</span>
+<span style="color: #8B008B; font-weight: bold">for</span> <span style="color: #658b00">iter</span> <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(niter):
+    t2_new = ccd_iter(v_pppp,v_pphh,v_hhhh,f_pp,f_hh,t2)
+    erg = ccd_energy(v_pphh,t2_new)
+    myeps = <span style="color: #658b00">abs</span>(erg-erg_old)/<span style="color: #658b00">abs</span>(erg)
+    <span style="color: #8B008B; font-weight: bold">if</span> myeps &lt; eps: <span style="color: #8B008B; font-weight: bold">break</span>
+    erg_old=erg
+    <span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;iter=&quot;</span>, <span style="color: #658b00">iter</span>, <span style="color: #CD5555">&quot;erg=&quot;</span>, erg, <span style="color: #CD5555">&quot;myeps=&quot;</span>, myeps)
+    t2 = mix*t2_new + (<span style="color: #B452CD">1.0</span>-mix)*t2 
+    
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;Energy = &quot;</span>, erg)
+</pre></div>
+<p>
+<!-- --- end answer of exercise --- -->
+
+<p>
 <!-- --- end exercise --- -->
 
 <p>
