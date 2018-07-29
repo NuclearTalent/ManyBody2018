@@ -177,7 +177,13 @@ div { text-align: justify; text-justify: inter-word; }
                None,
                '___sec53'),
               ('Example: Channel structure and its usage', 2, 'ex-21', 'ex-21'),
-              ('', 2, None, '___sec55')]}
+              ('', 2, None, '___sec55'),
+              ('From Structure to Reactions', 0, None, '___sec56'),
+              ('Electroweak reactions', 1, None, '___sec57'),
+              ('Computing optical potentials from microscopic input',
+               1,
+               None,
+               '___sec58')]}
 end of tocinfo -->
 
 <body>
@@ -218,7 +224,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>
-<center><h4>Jul 28, 2018</h4></center> <!-- date -->
+<center><h4>Jul 29, 2018</h4></center> <!-- date -->
 <br>
 
 <h1 id="table_of_contents">Table of contents</h2>
@@ -279,6 +285,9 @@ MathJax.Hub.Config({
 &nbsp; &nbsp; &nbsp; <a href="#___sec53"> Channel structure of Hamiltonian and cluster amplitudes </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#ex-21"> Example: Channel structure and its usage </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec55"> </a><br>
+<a href="#___sec56"> From Structure to Reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec57"> Electroweak reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec58"> Computing optical potentials from microscopic input </a><br>
 </p>
 <p>
 
@@ -2028,7 +2037,7 @@ finite size effects than other of the accessible magic numbers.
 <center> <!-- figure label: --> <div id="fig-finite"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 14:  Relative finite-size corrections for the kinetic energy in pure neutron matter at the Fermi momentum \( k_F = 1.6795 {\rm fm}^{-1} \) versus the neutron number A. TABC10 are twist-averaged boundary conditions with 10 Gauss-Legendre points in each spatial direction.  <!-- caption label: fig-finite --> </p></center>
-<p><img src="figslides/fig-finite.png" align="bottom" width=800></p>
+<p><img src="figslides/fig-finite.png" align="bottom" width=600></p>
 </center>
 
 <h1 id="___sec53">Channel structure of Hamiltonian and cluster amplitudes </h1>
@@ -2311,14 +2320,16 @@ copy and matrix-matrix multiplications, respectively
 $$
 \begin{align}
 \left[\overline{H}(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle} &=
-\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
-+ {1\over 2} \sum_{\vert k_{kl} s_k s_l\rangle}
+\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle} 
+\label{_auto49}\\
+&+ {1\over 2} \sum_{\vert k_{kl} s_k s_l\rangle}
 \left[t(P_{ij})\right]_{\vert k_{kl} s_k s_l\rangle}^{\vert k_{ab} s_a s_b\rangle}
-\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle}
-+ {1\over 2} \sum_{\vert k_{cd} s_c s_d\rangle}
+\left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle} 
+\label{_auto50}\\
+&+ {1\over 2} \sum_{\vert k_{cd} s_c s_d\rangle}
 \left[V(P_{ij})\right]_{\vert k_{cd} s_c s_d\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{cd} s_c s_d\rangle} .
-\label{_auto49}
+\label{_auto51}
 \end{align}
 $$
 
@@ -2329,7 +2340,7 @@ $$
 E_c = {1\over 4} \sum_{P_{ij}} \sum_{\vert k_{ij} s_i s_j\rangle}\sum_{\vert k_{ab} s_a s_b\rangle }
 \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
-\label{_auto50}
+\label{_auto52}
 \end{align}
 $$
 
@@ -2365,6 +2376,240 @@ The steps towards the solution of the CCD equations for neutron matter are as fo
 <li> Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure <a href="#fig-ccd">11</a>.</li>
 </ol>
 
+
+<center><h1 id="___sec56">From Structure to Reactions </h1></center> <hr>
+
+<p>
+Nuclear coupled-cluster theory has also been used to describe aspects
+of nuclear reactions, namely photo reactions and computations of
+optical potentials. In what follows, we want to discuss these approaches.
+
+<h1 id="___sec57">Electroweak reactions </h1>
+
+<p>
+Let us assume we probe a nucleus with an electroweak probe (e.g. via
+photon or \( Z \)-boson exchange). The corresponding operator
+\( \hat{\Theta} \) introduces transitions in the nucleus. For photo
+reactions, the relevant operator is the dipole operator
+
+$$
+\begin{align}
+\hat{\Theta} = \sum_{1=1}^A q_i (\vec{r}_i - \vec{R}_{CoM}) .
+\label{_auto53}
+\end{align}
+$$
+
+<p>
+Here \( q_i \) is the charge of nucleon \( i \), and \( \vec{R}_{CoM} \) is the
+position of the center of mass. The structure function or response
+function describing the reaction is
+
+$$
+\begin{align}
+S(\omega) \equiv \sum_f \langle\psi_0|\hat{\Theta}^\dagger|\psi_f\rangle\langle \psi_f |\hat{\Theta}|\psi_0\rangle \delta(E_f-E_0-\omega).
+\label{_auto54}
+\end{align}
+$$
+
+<p>
+Here, the sum is over all final states. The structure function is
+difficult to compute because the sum is over (infinitely many)
+continuum states, and we seek a simpler formulation. The key idea is
+that the Lorentz integral transform (LIT) of the structure function
+
+$$
+\begin{align}
+\label{LIT}
+L(\omega_0,\Gamma) &\equiv {\Gamma\over\pi} \int d\omega \frac{S(\omega)}{(\omega-\omega_0)^2+\Gamma^2} \\
+&= {\Gamma\over\pi}\langle\psi_0|\hat{\Theta}^\dagger {1\over H-E_0-\omega_0+i\Gamma} {1\over H-E_0-\omega_0-i\Gamma}\hat{\Theta}|\psi_0\rangle \nonumber.
+\end{align}
+$$
+
+<p>
+We note that the LIT \( L(\omega_0,\Gamma) \) of the structure function is
+a ground-state expectation value and thus much easier to compute than
+the structure function itself. We also note that the LIT is not
+invertible (mathematically speaking), but making some assumptions
+about the structure function, and imposing a finite resolution
+\( \Gamma \) alleviates this problem in practical computation.
+
+<p>
+We next rewrite the LIT for coupled cluster using the shorthand
+\( z\equiv E_0+\omega_0+i\Gamma \) as
+
+$$
+\begin{align}
+L(\omega_0,\Gamma) &\equiv {\Gamma\over\pi} \langle\tilde{\psi}_L(z^*) \vert \tilde{\psi}_R(z)\rangle , 
+\label{_auto55}
+\end{align}
+$$
+
+<p>
+with \( \vert\tilde{\psi}_R(z)\rangle \) and \( \langle\tilde{\psi}_L(z^*)\vert \) fulfilling
+$$
+\begin{align}
+\label{keyLR}
+\left(\overline{H}-z\right) \vert\tilde{\psi}_R(z)\rangle &= \overline{\Theta} \vert\phi_0\rangle , \\
+\langle\tilde{\psi}_L(z^*)\vert \left(\overline{H}-z^*\right) &= \langle \phi_L\vert .
+\label{_auto56}
+\end{align}
+$$
+
+<p>
+Here, \( \langle \phi_L\vert \) is the left ground state, i.e. the left
+eigenstate of the similarity-transformed Hamiltonian. Note that in the
+coupled-cluster formulation we have distinguished between left and
+right states (as these are not adjoints of each other), and replaced
+all operators by their similarity transformations. Making the ansatz
+
+$$
+\begin{align}
+\label{ansatzR}
+\vert\tilde{\psi}_R(z)\rangle &= \hat{R}\vert\phi_0\rangle \\
+&= \left( r_0(z) + \sum_{ia} r_i^a(z) a_a^\dagger a_i + {1\over 4} \sum_{ijab} r_{ij}^{ab}(z) a_a^\dagger a^\dagger_b a_j a_i +\cdots\right)\vert\phi_0\rangle  \nonumber
+\end{align}
+$$
+
+<p>
+for the right state, and
+
+$$
+\begin{align}
+\label{ansatzL}
+\langle\tilde{\psi}_L(z^*)\vert&= \langle\phi_L\vert \hat{L} \\
+&= \langle \phi_L\vert \left( l_0(z) +  \sum_{ia} l^i_a(z) a_i^\dagger a_a + {1\over 4} \sum_{ijab} l^{ij}_{ab}(z) a_i^\dagger a^\dagger_j a_b a_a +\cdots\right)  \nonumber
+\end{align}
+$$
+
+<p>
+for the left state, make the Eq. \eqref{keyLR} linear systems of
+equations that can be solved for the parameters \( r_0, r_i^a,
+r_{ij}^{ab} \) and \( l_0, l_a^i, l_{ab}^{ij} \) for each value of \( z \). The LIT then becomes
+
+$$
+\begin{align}
+L(z) = l_0(z) r_0(z) + \sum_{ia} l_a^i(z) r_i^a(z) +{1\over 4} l_{ab}^{ij}(z) r_{ij}^{ab}(z) 
+\label{_auto57}
+\end{align}
+$$
+
+in the CCSD approximation. For details, please see [&quot;Giant and pigmy dipole resonances in 4He, 16,22O, and 40Ca from chiral nucleon-nucleon interactions,&quot; S. Bacca, N. Barnea, G. Hagen, M. Miorelli, G. Orlandini, and T. Papenbrock,
+Phys. Rev. C 90, 064619 (2014)].
+
+<h1 id="___sec58">Computing optical potentials from microscopic input </h1>
+
+<p>
+The single-particle Green's function
+
+$$
+\begin{align}
+\label{Green}
+G(\alpha, \beta, E) &\equiv \langle\psi_0\vert a_\alpha {1\over E-(H-E_0)+i\eta}a^\dagger_\beta\vert\psi_0\rangle
++ \langle\psi_0\vert a_\beta^\dagger {1\over E-(H-E_0)-i\eta}a_\alpha\vert\psi_0\rangle  
+\end{align}
+$$
+
+<p>
+describes the propagation of particles and holes in the nucleus with a
+ground state \( \vert\psi_0\rangle \) and energy \( E_0 \). The Green's function fulfills the Dyson equation
+
+$$
+\begin{align}
+\label{Dyson}
+G = G^{(0)} +G^{(0)} \Sigma^* G , 
+\end{align}
+$$
+
+<p>
+where \( \Sigma^* \) is the self energy and \( G^{(0)} \) is the Hartree-Fock Green's function
+
+$$
+\begin{align}
+\label{HFGreen}
+G^{(0)}(\alpha, \beta, E) &\equiv \langle\phi_0\vert a_\alpha {1\over E-(H_{HF}-E_{HF})+i\eta}a^\dagger_\beta\vert\phi_0\rangle
++ \langle\phi_0\vert a_\beta^\dagger {1\over E-(H_{HF}-E_{HF})-i\eta}a_\alpha\vert\phi_0\rangle \\
+&= \delta_\alpha^\beta \left({\Theta(\alpha-F) \over E-\varepsilon_\alpha +i\eta} + {\Theta(F-\alpha) \over E-\varepsilon_\alpha -i\eta} \right) \nonumber. 
+\end{align}
+$$
+
+<p>
+Here, \( \Theta() \) denotes the unit step function and \( F \) labels the
+index of the Fermi surface. The key point is now that the optical
+potential \( \Sigma' \) (which describes the reaction of a single nucleon with the
+nucleus) is related to the self energy and the Hartree-Fock potential
+\( U_{HF} \) by [F. Capuzzi and C. Mahaux, &quot;Projection operator approach to the
+self-energy,&quot; Ann. Phys. (NY) 245, 147 (1996)]
+
+$$
+\begin{align}
+\Sigma' \equiv \Sigma^* +U_{HF} .
+\label{_auto58}
+\end{align}
+$$
+
+<p>
+The idea is thus as follows. Starting from a Hartree-Fock calculations
+enables us to compute the Hartree-Fock potential \( U_{HF} \) and the
+Hartree-Fock Green's function \eqref{HFGreen}. Computing the Green's
+function \eqref{Green} in coupled clusters, and inverting the Dyson
+equation \eqref{Dyson} using
+
+$$
+\begin{align}
+\Sigma^* = \left(G^{(0)}\right)^{-1} - G^{-1}
+\label{_auto59}
+\end{align}
+$$
+
+<p>
+thus allows us to compute the optical potential. We note that the
+Green's function \eqref{Green} resembles in its structure the LIT
+\eqref{LIT}, and we will indeed use a similar approach to compute this
+object with the coupled-cluster method. Indeed, we compute
+
+$$
+\begin{align}
+\left(E-(\overline{H}-E_0)+ i\eta\right) \vert\tilde{\psi}_R\rangle &= \overline{a^\dagger_\beta} \vert\phi_0\rangle , 
+\label{_auto60}\\
+\langle\tilde{\psi}_L\vert \left(E-(E_0-\overline{H})-i\eta\right) &= \langle \phi_L\vert \overline{a_\beta^\dagger} , 
+\label{_auto61}
+\end{align}
+$$
+
+<p>
+by making the ansatz \eqref{ansatzR} and \eqref{ansatzL} for the right
+and left states, respectively, solve the resulting linear systems, and
+then compute \( G(\alpha,\beta,E) = \langle\phi_L\vert
+\overline{a_\alpha} \vert\tilde{\psi}_R\rangle + \langle
+\tilde{\psi}_L\vert \overline{a_\alpha}\vert\phi_0\rangle \).
+
+<p>
+We note that a high quality optical potential can only be obtained if
+the structure of the nucleus is computed with a good accuracy, i.e. in
+good agreement to data on binding and separation energies, and charge
+and matter radii. For details, please see [&quot;Optical potential from
+first principles,&quot; J. Rotureau, P. Danielewicz, G. Hagen, F. Nunes,
+and T. Papenbrock, Phys. Rev. C 95, 024315 (2017); arXiv:1611.04554].
+We also note that this procedure must be repeated for any nucleus of
+interest, because the optical potential depends on the nucleus under
+consideration. Once the optical potential \( \Sigma' \) is computed, the
+single-particle Schroedinger equation
+
+$$
+\begin{align}
+\left( -{\hbar^2\Delta\over 2m} +\Sigma'\right)\xi = E\xi 
+\label{_auto62}
+\end{align}
+$$
+
+<p>
+describes the interaction of a single nucleon (and wave function
+\( \xi \)) with the nucleus.
+
+<p>
+Finally, we note that this approach does not depend on solving the
+nucleus \( A \) with the coupled-cluster method. Alternatives, such as the
+IMSRG or Self-Consistent Green's Function methods could also be used.
 
 <!-- ------------------- end of main content --------------- -->
 
