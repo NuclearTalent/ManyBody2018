@@ -250,7 +250,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 230pm-6pm   |  | "Start writing a CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects.html" |
 |--------------------------------------------------------------------------|
 | Wednesday | 9am-11am | "CC theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html"  and "Infinite Matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/inf/html/inf-bs.html" (TP) |        |
-|           | 1130am-1230pm | Computational CC theory  for closed and open shell nuclei (ZS)  |   |
+|           | 1130am-1230pm | "Computational CC theory  for closed and open shell nuclei":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/pdf/ZhonghaoSun.pdf" (ZS)  |   |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Finalize CC code for the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects.html" |
 |--------------------------------------------------------------------------|
@@ -259,7 +259,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Start writing CC code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
-| Friday | 9am-11am | From structure to reaction theory (TP) |        |
+| Friday | 9am-11am | "From structure to reaction theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/CCM/html/CCM.html" (TP) |        |
 |  | 1130am-1230pm | Summary of second week and links to IMSRG (TP) |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   | Group presentations of weekly work  |  |
@@ -274,7 +274,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Sunday | 9am-1230pm | "SRG theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/IMSRG/pdf/IMSRG-Lecture.pdf" (RS) |        |
+| Sunday | 9am-1230pm | "SRG theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/IMSRG/pdf/IMSRG-Lecture1.pdf" (RS) |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on CC code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
@@ -282,16 +282,16 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Start coding IMSRG for infinite matter and the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Tuesday| 9am-1100am | Bergreen basis, the continuum, and IMSRG (KF) |        |
+| Tuesday| 9am-1100am | Bergren basis, the continuum, and IMSRG (KF) |        |
 |        | 1130am-1230pm | Many-body perturbation theory calculations (BH) | |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1230pm | Bergreen basis, the continuum, and IMSRG (KF)  |        |
+| Wednesday | 9am-1230pm | Bergren basis, the continuum, and IMSRG (KF)  |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1030am | Summary Bergreen basis, the continuum, and IMSRG (KF) |        |
+| Thursday | 9am-1030am | Summary Bergren basis, the continuum, and IMSRG (KF) |        |
 |        | 11am-1230pm | Summary of school | |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   | Final group presentations |  |
