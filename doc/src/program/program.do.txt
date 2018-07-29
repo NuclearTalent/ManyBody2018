@@ -274,7 +274,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |--------------------------------------------------------------------------|
 | Day   |  | Lecture Topics and lecturer |   Projects and exercises        |
 |--------------------------------------------------------------------------|
-| Sunday | 9am-1230pm | SRG theory (RS) |        |
+| Sunday | 9am-1230pm | "SRG theory":"https://nucleartalent.github.io/ManyBody2018/doc/pub/IMSRG/pdf/IMSRG-Lecture.pdf" (RS) |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on CC code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
