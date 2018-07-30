@@ -1226,6 +1226,17 @@ matter, $P_{12}^\tau=1$, because the states are symmetric under exchange of
 isospin. Thus, the Minnesota potential simplifies significantly for
 neutron matter as $V_T$ does not contribute.
 
+We note that the spin operator has matrix elements
+!bt
+\begin{align}
+\langle s_1' s_2'\vert {1\over 2}(1-P_{12}^{\sigma})\vert s_1 s_2\rangle
+= {1\over 2} \left(
+ \delta_{s_1}^{s_1'}\delta_{s_2}^{s_2'}
+-\delta_{s_1}^{s_2'}\delta_{s_2}^{s_1'}\right) . 
+\end{align}
+!et
+
+
 
 The radial functions are
 !bt
@@ -1258,17 +1269,20 @@ A Fourier transform (in the finite cube of length $L$) yields the momentum-space
 e^{- {q^2 \over 4\kappa_\alpha}} \delta_{k_p+k_q}^{k_r+k_s} . 
 \end{align}
 !et
-Here, $q\equiv {1\over 2}(k_p-k_q-k_r+k_s)$ is the momentum transfer, and the momentum conservation
-$k_p+k_q=k_r+k_s$ is explicit.
+Here, $q\equiv {1\over 2}(k_p-k_q-k_r+k_s)$ is the momentum transfer,
+and the momentum conservation $k_p+k_q=k_r+k_s$ is explicit.
 
-As we are dealing only with neutrons, the potential matrix elements (including spin) are for $\alpha = R, S$
+As we are dealing only with neutrons, the potential matrix elements
+(including spin) are for $\alpha = R, S$
 !bt
 \begin{align}
+\label{ME_of_V}
 \langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
-\left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
+{1\over 2}\left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
 \end{align}
 !et
-and it is understood that there is no contribution from $V_T$. 
+and it is understood that there is no contribution from $V_T$. Please note that the matrix elements (ref{ME_of_V}) are not yet antisymmetric under exchange, but $\langle k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle -
+\langle k_p s_p k_q s_q\vert V_\alpha\vert k_s s_s k_r s_r\rangle$ is. 
 
 
 

@@ -146,7 +146,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>Jul 29, 2018</h4></center> <!-- date -->
+<center><h4>Jul 30, 2018</h4></center> <!-- date -->
 <br>
 
 <h1 id="table_of_contents">Table of contents</h2>
@@ -2133,17 +2133,31 @@ isospin. Thus, the Minnesota potential simplifies significantly for
 neutron matter as \( V_T \) does not contribute.
 
 <p>
+We note that the spin operator has matrix elements
+<p>&nbsp;<br>
+$$
+\begin{align}
+\langle s_1' s_2'\vert {1\over 2}(1-P_{12}^{\sigma})\vert s_1 s_2\rangle
+= {1\over 2} \left(
+ \delta_{s_1}^{s_1'}\delta_{s_2}^{s_2'}
+-\delta_{s_1}^{s_2'}\delta_{s_2}^{s_1'}\right) . 
+\tag{51}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>
 The radial functions are
 <p>&nbsp;<br>
 $$
 \begin{align}
 V_R(r) &=V_R e^{-\kappa_R r^2} , 
-\tag{51}\\
-V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \tag{52}\\
-V_T(r) &=V_T e^{-\kappa_T r^2} , 
+V_S(r) &=V_S e^{-\kappa_S r^2} , 
 \tag{53}\\
-\tag{54}
+V_T(r) &=V_T e^{-\kappa_T r^2} , 
+\tag{54}\\
+\tag{55}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2174,27 +2188,29 @@ $$
 \begin{align}
 \langle k_p k_q \vert V_\alpha\vert k_r k_s \rangle = {V_\alpha\over L^3} \left({\pi\over\kappa_\alpha}\right)^{3/2}
 e^{- {q^2 \over 4\kappa_\alpha}} \delta_{k_p+k_q}^{k_r+k_s} . 
-\tag{55}
-\end{align}
-$$
-<p>&nbsp;<br>
-
-Here, \( q\equiv {1\over 2}(k_p-k_q-k_r+k_s) \) is the momentum transfer, and the momentum conservation
-\( k_p+k_q=k_r+k_s \) is explicit.
-
-<p>
-As we are dealing only with neutrons, the potential matrix elements (including spin) are for \( \alpha = R, S \)
-<p>&nbsp;<br>
-$$
-\begin{align}
-\langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
-\left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
 \tag{56}
 \end{align}
 $$
 <p>&nbsp;<br>
 
-and it is understood that there is no contribution from \( V_T \).
+Here, \( q\equiv {1\over 2}(k_p-k_q-k_r+k_s) \) is the momentum transfer,
+and the momentum conservation \( k_p+k_q=k_r+k_s \) is explicit.
+
+<p>
+As we are dealing only with neutrons, the potential matrix elements
+(including spin) are for \( \alpha = R, S \)
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{57}
+\langle	k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle &= \langle	k_p k_q \vert V_\alpha\vert k_r k_s \rangle
+{1\over 2}\left(\delta_{s_p}^{s_r}\delta_{s_q}^{s_s} - \delta_{s_p}^{s_s}\delta_{s_q}^{s_r}\right) , 
+\end{align}
+$$
+<p>&nbsp;<br>
+
+and it is understood that there is no contribution from \( V_T \). Please note that the matrix elements <a href="#mjx-eqn-57">(57)</a> are not yet antisymmetric under exchange, but \( \langle k_p s_p k_q s_q\vert V_\alpha\vert k_r s_r k_s s_s\rangle -
+\langle k_p s_p k_q s_q\vert V_\alpha\vert k_s s_s k_r s_r\rangle \) is.
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2209,7 +2225,7 @@ We have single-particle states with momentum and spin, namely
 $$
 \begin{align}
 \vert r\rangle \equiv \vert k_r s_r\rangle .
-\tag{57}
+\tag{58}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2220,7 +2236,7 @@ Naively, two-body states are then
 $$
 \begin{align}
 \vert r s \rangle \equiv \vert k_r s_r k_s s_s\rangle ,
-\tag{58}
+\tag{59}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2230,7 +2246,7 @@ but using the center-of-mass transformation <a href="#mjx-eqn-41">(41)</a> we ca
 $$
 \begin{align}
 \vert r s \rangle \equiv \vert P_{rs} k_{rs} s_r s_s\rangle ,
-\tag{59}
+\tag{60}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2247,7 +2263,7 @@ $$
 \begin{align}
 t_{ij}^{ab} \to \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \equiv t_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , 
-\tag{60}
+\tag{61}
 \end{align}  
 $$
 <p>&nbsp;<br>
@@ -2262,13 +2278,13 @@ $$
 \begin{align}
 V_{cd}^{ab} &\to \left[V(P_{ab})\right]_{\vert k_{cd} s_c s_d\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \equiv V_{\vert P_{ab} k_{cd} s_c s_d\rangle}^{\vert P_{ab} k_{ab} s_a s_b\rangle} , 
-\tag{61}\\
+\tag{62}\\
 V_{ij}^{ab} &\to \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \equiv V_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , 
-\tag{62}\\ 
+\tag{63}\\ 
 V_{ij}^{kl} &\to \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle}
 \equiv V_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{kl} s_k s_l\rangle} , 
-\tag{63}
+\tag{64}
 \end{align} 
 $$
 <p>&nbsp;<br>
@@ -2280,7 +2296,7 @@ $$
 \begin{align}
 \overline{H}_{ij}^{ab} \to \left[\overline{H}(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \equiv \overline{H}_{\vert P_{ij} k_{ij} s_i s_j\rangle}^{\vert P_{ij} k_{ab} s_a s_b\rangle} , 
-\tag{64}
+\tag{65}
 \end{align}  
 $$
 <p>&nbsp;<br>
@@ -2295,15 +2311,15 @@ $$
 \begin{align}
 \left[\overline{H}(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle} &=
 \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle} 
-\tag{65}\\
+\tag{66}\\
 &+ {1\over 2} \sum_{\vert k_{kl} s_k s_l\rangle}
 \left[t(P_{ij})\right]_{\vert k_{kl} s_k s_l\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{kl} s_k s_l\rangle} 
-\tag{66}\\
+\tag{67}\\
 &+ {1\over 2} \sum_{\vert k_{cd} s_c s_d\rangle}
 \left[V(P_{ij})\right]_{\vert k_{cd} s_c s_d\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{cd} s_c s_d\rangle} .
-\tag{67}
+\tag{68}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2316,7 +2332,7 @@ $$
 E_c = {1\over 4} \sum_{P_{ij}} \sum_{\vert k_{ij} s_i s_j\rangle}\sum_{\vert k_{ab} s_a s_b\rangle }
 \left[t(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
 \left[V(P_{ij})\right]_{\vert k_{ij} s_i s_j\rangle}^{\vert k_{ab} s_a s_b\rangle}
-\tag{68}
+\tag{69}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2373,7 +2389,7 @@ reactions, the relevant operator is the dipole operator
 $$
 \begin{align}
 \hat{\Theta} = \sum_{1=1}^A q_i (\vec{r}_i - \vec{R}_{CoM}) .
-\tag{69}
+\tag{70}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2387,7 +2403,7 @@ function describing the reaction is
 $$
 \begin{align}
 S(\omega) \equiv \sum_f \langle\psi_0|\hat{\Theta}^\dagger|\psi_f\rangle\langle \psi_f |\hat{\Theta}|\psi_0\rangle \delta(E_f-E_0-\omega).
-\tag{70}
+\tag{71}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2401,7 +2417,7 @@ that the Lorentz integral transform (LIT) of the structure function
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{71}
+\tag{72}
 L(\omega_0,\Gamma) &\equiv {\Gamma\over\pi} \int d\omega \frac{S(\omega)}{(\omega-\omega_0)^2+\Gamma^2} \\
 &= {\Gamma\over\pi}\langle\psi_0|\hat{\Theta}^\dagger {1\over H-E_0-\omega_0+i\Gamma} {1\over H-E_0-\omega_0-i\Gamma}\hat{\Theta}|\psi_0\rangle \nonumber.
 \end{align}
@@ -2424,7 +2440,7 @@ We next rewrite the LIT for coupled cluster using the shorthand
 $$
 \begin{align}
 L(\omega_0,\Gamma) &\equiv {\Gamma\over\pi} \langle\tilde{\psi}_L(z^*) \vert \tilde{\psi}_R(z)\rangle , 
-\tag{72}
+\tag{73}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2434,10 +2450,10 @@ with \( \vert\tilde{\psi}_R(z)\rangle \) and \( \langle\tilde{\psi}_L(z^*)\vert 
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{73}
+\tag{74}
 \left(\overline{H}-z\right) \vert\tilde{\psi}_R(z)\rangle &= \overline{\Theta} \vert\phi_0\rangle , \\
 \langle\tilde{\psi}_L(z^*)\vert \left(\overline{H}-z^*\right) &= \langle \phi_L\vert .
-\tag{74}
+\tag{75}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2452,7 +2468,7 @@ all operators by their similarity transformations. Making the ansatz
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{75}
+\tag{76}
 \vert\tilde{\psi}_R(z)\rangle &= \hat{R}\vert\phi_0\rangle \\
 &= \left( r_0(z) + \sum_{ia} r_i^a(z) a_a^\dagger a_i + {1\over 4} \sum_{ijab} r_{ij}^{ab}(z) a_a^\dagger a^\dagger_b a_j a_i +\cdots\right)\vert\phi_0\rangle  \nonumber
 \end{align}
@@ -2465,7 +2481,7 @@ for the right state, and
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{76}
+\tag{77}
 \langle\tilde{\psi}_L(z^*)\vert&= \langle\phi_L\vert \hat{L} \\
 &= \langle \phi_L\vert \left( l_0(z) +  \sum_{ia} l^i_a(z) a_i^\dagger a_a + {1\over 4} \sum_{ijab} l^{ij}_{ab}(z) a_i^\dagger a^\dagger_j a_b a_a +\cdots\right)  \nonumber
 \end{align}
@@ -2473,7 +2489,7 @@ $$
 <p>&nbsp;<br>
 
 <p>
-for the left state, make the Eq. <a href="#mjx-eqn-73">(73)</a> linear systems of
+for the left state, make the Eq. <a href="#mjx-eqn-74">(74)</a> linear systems of
 equations that can be solved for the parameters \( r_0, r_i^a,
 r_{ij}^{ab} \) and \( l_0, l_a^i, l_{ab}^{ij} \) for each value of \( z \). The LIT then becomes
 
@@ -2481,7 +2497,7 @@ r_{ij}^{ab} \) and \( l_0, l_a^i, l_{ab}^{ij} \) for each value of \( z \). The 
 $$
 \begin{align}
 L(z) = l_0(z) r_0(z) + \sum_{ia} l_a^i(z) r_i^a(z) +{1\over 4} l_{ab}^{ij}(z) r_{ij}^{ab}(z) 
-\tag{77}
+\tag{78}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2497,7 +2513,7 @@ The single-particle Green's function
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{78}
+\tag{79}
 G(\alpha, \beta, E) &\equiv \langle\psi_0\vert a_\alpha {1\over E-(H-E_0)+i\eta}a^\dagger_\beta\vert\psi_0\rangle
 + \langle\psi_0\vert a_\beta^\dagger {1\over E-(H-E_0)-i\eta}a_\alpha\vert\psi_0\rangle  
 \end{align}
@@ -2511,7 +2527,7 @@ ground state \( \vert\psi_0\rangle \) and energy \( E_0 \). The Green's function
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{79}
+\tag{80}
 G = G^{(0)} +G^{(0)} \Sigma^* G , 
 \end{align}
 $$
@@ -2523,7 +2539,7 @@ where \( \Sigma^* \) is the self energy and \( G^{(0)} \) is the Hartree-Fock Gr
 <p>&nbsp;<br>
 $$
 \begin{align}
-\tag{80}
+\tag{81}
 G^{(0)}(\alpha, \beta, E) &\equiv \langle\phi_0\vert a_\alpha {1\over E-(H_{HF}-E_{HF})+i\eta}a^\dagger_\beta\vert\phi_0\rangle
 + \langle\phi_0\vert a_\beta^\dagger {1\over E-(H_{HF}-E_{HF})-i\eta}a_\alpha\vert\phi_0\rangle \\
 &= \delta_\alpha^\beta \left({\Theta(\alpha-F) \over E-\varepsilon_\alpha +i\eta} + {\Theta(F-\alpha) \over E-\varepsilon_\alpha -i\eta} \right) \nonumber. 
@@ -2543,7 +2559,7 @@ self-energy,&quot; Ann. Phys. (NY) 245, 147 (1996)]
 $$
 \begin{align}
 \Sigma' \equiv \Sigma^* +U_{HF} .
-\tag{81}
+\tag{82}
 \end{align}
 $$
 <p>&nbsp;<br>
@@ -2551,38 +2567,38 @@ $$
 <p>
 The idea is thus as follows. Starting from a Hartree-Fock calculations
 enables us to compute the Hartree-Fock potential \( U_{HF} \) and the
-Hartree-Fock Green's function <a href="#mjx-eqn-80">(80)</a>. Computing the Green's
-function <a href="#mjx-eqn-78">(78)</a> in coupled clusters, and inverting the Dyson
-equation <a href="#mjx-eqn-79">(79)</a> using
+Hartree-Fock Green's function <a href="#mjx-eqn-81">(81)</a>. Computing the Green's
+function <a href="#mjx-eqn-79">(79)</a> in coupled clusters, and inverting the Dyson
+equation <a href="#mjx-eqn-80">(80)</a> using
 
 <p>&nbsp;<br>
 $$
 \begin{align}
 \Sigma^* = \left(G^{(0)}\right)^{-1} - G^{-1}
-\tag{82}
+\tag{83}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
 thus allows us to compute the optical potential. We note that the
-Green's function <a href="#mjx-eqn-78">(78)</a> resembles in its structure the LIT
-<a href="#mjx-eqn-71">(71)</a>, and we will indeed use a similar approach to compute this
+Green's function <a href="#mjx-eqn-79">(79)</a> resembles in its structure the LIT
+<a href="#mjx-eqn-72">(72)</a>, and we will indeed use a similar approach to compute this
 object with the coupled-cluster method. Indeed, we compute
 
 <p>&nbsp;<br>
 $$
 \begin{align}
 \left(E-(\overline{H}-E_0)+ i\eta\right) \vert\tilde{\psi}_R\rangle &= \overline{a^\dagger_\beta} \vert\phi_0\rangle , 
-\tag{83}\\
+\tag{84}\\
 \langle\tilde{\psi}_L\vert \left(E-(E_0-\overline{H})-i\eta\right) &= \langle \phi_L\vert \overline{a_\beta^\dagger} , 
-\tag{84}
+\tag{85}
 \end{align}
 $$
 <p>&nbsp;<br>
 
 <p>
-by making the ansatz <a href="#mjx-eqn-75">(75)</a> and <a href="#mjx-eqn-76">(76)</a> for the right
+by making the ansatz <a href="#mjx-eqn-76">(76)</a> and <a href="#mjx-eqn-77">(77)</a> for the right
 and left states, respectively, solve the resulting linear systems, and
 then compute \( G(\alpha,\beta,E) = \langle\phi_L\vert
 \overline{a_\alpha} \vert\tilde{\psi}_R\rangle + \langle
@@ -2604,7 +2620,7 @@ single-particle Schroedinger equation
 $$
 \begin{align}
 \left( -{\hbar^2\Delta\over 2m} +\Sigma'\right)\xi = E\xi 
-\tag{85}
+\tag{86}
 \end{align}
 $$
 <p>&nbsp;<br>
