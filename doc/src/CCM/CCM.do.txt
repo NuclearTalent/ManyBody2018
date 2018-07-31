@@ -1404,7 +1404,19 @@ o Exploit this channel structure when computing the diagrams.
 
 o Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure ref{fig-ccd}.
 
+======= Benchmarks with the Minnesota potential =======
+Here are some _tentative_ benchmarks (I am still debugging and testing my code).
 
+
+For the benchmarks, let us use a nucleon mass $m=938.92$ MeV, $\hbar =
+197.33$ MeV fm, and $c=1$. For $N=14$ neutrons at a density $\rho=0.08
+{\rm fm}^{-3}$ I obtain $T_{\rm kin}(\vert\phi_0\rangle)/N =
+22.427553$ MeV, and $E_{HF}/N = 10.3498$ MeV. In model spaces with
+$N_{\rm max}=1$, $N_{\rm max}=2$, and $N_{\rm max}=3$, and using only
+the first five diagrams of Figure ref{fig-ccd} for the CCD
+calculation, yields the correlation energies per particle of $E_{c}/N
+=-0.1175$ MeV, $E_{c}/N =-0.5231$ MeV, and $E_{c}/N = -0.6616$ MeV,
+respectively.
 
 ========= From Structure to Reactions =========
 

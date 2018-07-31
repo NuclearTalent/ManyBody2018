@@ -173,12 +173,13 @@ div { text-align: justify; text-justify: inter-word; }
                '___sec53'),
               ('Example: Channel structure and its usage', 2, 'ex-21', 'ex-21'),
               ('', 2, None, '___sec55'),
-              ('From Structure to Reactions', 0, None, '___sec56'),
-              ('Electroweak reactions', 1, None, '___sec57'),
+              ('Benchmarks with the Minnesota potential', 1, None, '___sec56'),
+              ('From Structure to Reactions', 0, None, '___sec57'),
+              ('Electroweak reactions', 1, None, '___sec58'),
               ('Computing optical potentials from microscopic input',
                1,
                None,
-               '___sec58')]}
+               '___sec59')]}
 end of tocinfo -->
 
 <body>
@@ -219,7 +220,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>
-<center><h4>Jul 30, 2018</h4></center> <!-- date -->
+<center><h4>Jul 31, 2018</h4></center> <!-- date -->
 <br>
 
 <h1 id="table_of_contents">Table of contents</h2>
@@ -280,9 +281,10 @@ MathJax.Hub.Config({
 &nbsp; &nbsp; &nbsp; <a href="#___sec53"> Channel structure of Hamiltonian and cluster amplitudes </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#ex-21"> Example: Channel structure and its usage </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec55"> </a><br>
-<a href="#___sec56"> From Structure to Reactions </a><br>
-&nbsp; &nbsp; &nbsp; <a href="#___sec57"> Electroweak reactions </a><br>
-&nbsp; &nbsp; &nbsp; <a href="#___sec58"> Computing optical potentials from microscopic input </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec56"> Benchmarks with the Minnesota potential </a><br>
+<a href="#___sec57"> From Structure to Reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec58"> Electroweak reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec59"> Computing optical potentials from microscopic input </a><br>
 </p>
 <p>
 
@@ -2385,15 +2387,30 @@ The steps towards the solution of the CCD equations for neutron matter are as fo
 <li> Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure <a href="#fig-ccd">11</a>.</li>
 </ol>
 
+<h1 id="___sec56">Benchmarks with the Minnesota potential </h1>
+Here are some <b>tentative</b> benchmarks (I am still debugging and testing my code).
 
-<center><h1 id="___sec56">From Structure to Reactions </h1></center> <hr>
+<p>
+For the benchmarks, let us use a nucleon mass \( m=938.92 \) MeV, \( \hbar =
+197.33 \) MeV fm, and \( c=1 \). For \( N=14 \) neutrons at a density \( \rho=0.08
+{\rm fm}^{-3} \) I obtain \( T_{\rm kin}(\vert\phi_0\rangle)/N =
+22.427553 \) MeV, and \( E_{HF}/N = 10.3498 \) MeV. In model spaces with
+\( N_{\rm max}=1 \), \( N_{\rm max}=2 \), and \( N_{\rm max}=3 \), and using only
+the first five diagrams of Figure <a href="#fig-ccd">11</a> for the CCD
+calculation, yields the correlation energies per particle of \( E_{c}/N
+=-0.1175 \) MeV, \( E_{c}/N =-0.5231 \) MeV, and \( E_{c}/N = -0.6616 \) MeV,
+respectively.
+
+<p>
+
+<center><h1 id="___sec57">From Structure to Reactions </h1></center> <hr>
 
 <p>
 Nuclear coupled-cluster theory has also been used to describe aspects
 of nuclear reactions, namely photo reactions and computations of
 optical potentials. In what follows, we want to discuss these approaches.
 
-<h1 id="___sec57">Electroweak reactions </h1>
+<h1 id="___sec58">Electroweak reactions </h1>
 
 <p>
 Let us assume we probe a nucleus with an electroweak probe (e.g. via
@@ -2505,7 +2522,7 @@ $$
 in the CCSD approximation. For details, please see [&quot;Giant and pigmy dipole resonances in 4He, 16,22O, and 40Ca from chiral nucleon-nucleon interactions,&quot; S. Bacca, N. Barnea, G. Hagen, M. Miorelli, G. Orlandini, and T. Papenbrock,
 Phys. Rev. C 90, 064619 (2014)].
 
-<h1 id="___sec58">Computing optical potentials from microscopic input </h1>
+<h1 id="___sec59">Computing optical potentials from microscopic input </h1>
 
 <p>
 The single-particle Green's function
