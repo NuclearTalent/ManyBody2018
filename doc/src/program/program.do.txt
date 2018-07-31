@@ -278,7 +278,7 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on CC code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
-| Monday | 9am-12:30pm | IMSRG and infinite matter (RS) |        |
+| Monday | 9am-12:30pm | "IMSRG and infinite matter::"https://nucleartalent.github.io/ManyBody2018/doc/pub/IMSRG/html/IMSRG.html" (RS) |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Start coding IMSRG for infinite matter and the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
