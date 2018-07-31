@@ -1,0 +1,199 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+
+<title></title>
+
+
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<style type="text/css">
+h1 {color: #b58900;}  /* yellow */
+/* h1 {color: #cb4b16;}  orange */
+/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
+code { padding: 0px; background-color: inherit; }
+pre {
+  border: 0pt solid #93a1a1;
+  box-shadow: none;
+}
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 4, 'sections': []}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+Normal-ordered operators:
+$$
+\begin{equation}
+E_0 = \sum_{i} n_i t_{ii} + \frac{1}{2}\sum_{ij}n_in_j V_{ijij} + \frac{1}{6} n_i n_j n_k V_{ijkijk}^{(3)}
+\label{_auto1}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+f_{pq} = t_{pq} + \sum_{i}n_i V_{piqi} + \frac{1}{2} \sum_{ij}n_i n_j V_{pijqij}^{(3)}
+\label{_auto2}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\Gamma_{pqrs} = V_{pqrs} + \sum_{i}n_i V_{pqirsi}^{(3)}
+\label{_auto3}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+W_{pqrstu} = V_{pqrstu}^{(3)}
+\label{_auto4}
+\end{equation}
+$$
+
+<p>
+IMSRG flow equations:
+$$
+\begin{equation}
+\frac{d}{ds}E_0 = \sum_{ab} n_a\bar{n}_b \left(\eta_{ab}f_{ba}-f_{ab}\eta_{ba} \right)
++\frac{1}{4} \sum_{abcd} n_a n_b \bar{n}_c\bar{n}_d \left( \eta_{abcd}\Gamma_{cdab} - \Gamma_{abcd}\eta_{cdab} \right)
+\label{_auto5}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds} f_{ij} = \sum_{a} \left(\eta_{ia}f_{aj}-f_{ia}\eta_{aj}\right)
+&+ \sum_{ab}(n_a\bar{n}_b-\bar{n}_a n_b) \left(\eta_{ab}\Gamma_{biaj}-f_{ab}\eta_{biaj} \right)
+\\
+&+ \frac{1}{2} \sum_{abc}(n_an_b\bar{n}_c + \bar{n}_a\bar{n}_bn_c) \left( \eta_{ciab}\Gamma_{abcj} - \Gamma_{ciab}\eta_{abcj} \right)
+\end{aligned}
+\label{_auto6}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds}\Gamma_{ijkl} = &\sum_{a}\left[ (1-P_{ij}\left( \eta_{ia}\Gamma_{ajkl}-f_{ia}\eta_{ajkl} \right) - ( 1-P_{kl}) \left( \eta_{ak}\Gamma_{kjal} - f_{ak}\eta_{ijal} \right) \right]
+\\
+&+ \frac{1}{2} \sum_{ab} (\bar{n}_a\bar{n}_b-n_a n_b)\left( \eta_{ijab}\Gamma_{abkl} - \Gamma_{ijab}\eta_{abkl} \right) \\
+&+ (1-P_{ij})(1-P_{kl}) \sum_{ab}(n_a\bar{n}_b-\bar{n}_an_b) \eta_{aibk}\Gamma_{bjal}
+\end{aligned}
+\label{_auto7}
+\end{equation}
+$$
+
+<p>
+The White generator:
+$$
+\begin{equation}
+\eta^{\text{Wh}}_{ai} = \frac{f_{ai}}{\Delta_{ai}}
+\label{_auto8}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\eta^{\text{Wh}}_{abij} = \frac{\Gamma_{abij}}{\Delta_{abij}}
+\label{_auto9}
+\end{equation}
+$$
+
+<p>
+Energy denominators:
+$$
+\begin{equation}
+\Delta_{ai} = f_{aa} - f_{ii}
+\label{_auto10}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\Delta_{abij} = f_{aa} + f_{bb} - f_{ii} - f_{jj}
+\label{_auto11}
+\end{equation}
+$$
+
+<p>
+Simplification of flow equation for nuclear matter:
+$$
+\begin{equation}
+\frac{d}{ds}E_0 = \frac{1}{4} \sum_{abcd} n_a n_b \bar{n}_c\bar{n}_d \left( \eta_{abcd}\Gamma_{cdab} - \Gamma_{abcd}\eta_{cdab} \right)
+\label{_auto12}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\frac{d}{ds} f_{ij} =
+\frac{1}{2} \sum_{abc}(n_an_b\bar{n}_c + \bar{n}_a\bar{n}_bn_c) \left( \eta_{ciab}\Gamma_{abcj} - \Gamma_{ciab}\eta_{abcj} \right)
+\label{_auto13}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds}\Gamma_{ijkl} &= (A_{ii} + A_{jj} - A_{kk} - A_{ll})B_{ijkl} - (B_{ii} + B_{jj} - B_{kk} - B_{ll})A_{ijkl}
+\\
+&+ \frac{1}{2} \sum_{ab} (\bar{n}_a\bar{n}_b-n_a n_b)\left( \eta_{ijab}\Gamma_{abkl} - \Gamma_{ijab}\eta_{abkl} \right) \\
+&+ (1-P_{ij})(1-P_{kl}) \sum_{ab}(n_a\bar{n}_b-\bar{n}_an_b) \eta_{aibk}\Gamma_{bjal}
+\end{aligned}
+\label{_auto14}
+\end{equation}
+$$
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

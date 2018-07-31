@@ -1,0 +1,107 @@
+Normal-ordered operators:
+!bt
+\begin{equation}
+E_0 = \sum_{i} n_i t_{ii} + \frac{1}{2}\sum_{ij}n_in_j V_{ijij} + \frac{1}{6} n_i n_j n_k V_{ijkijk}^{(3)}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+f_{pq} = t_{pq} + \sum_{i}n_i V_{piqi} + \frac{1}{2} \sum_{ij}n_i n_j V_{pijqij}^{(3)}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\Gamma_{pqrs} = V_{pqrs} + \sum_{i}n_i V_{pqirsi}^{(3)}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+W_{pqrstu} = V_{pqrstu}^{(3)}
+\end{equation}
+!et
+
+
+IMSRG flow equations:
+!bt
+\begin{equation}
+\frac{d}{ds}E_0 = \sum_{ab} n_a\bar{n}_b \left(\eta_{ab}f_{ba}-f_{ab}\eta_{ba} \right)
++\frac{1}{4} \sum_{abcd} n_a n_b \bar{n}_c\bar{n}_d \left( \eta_{abcd}\Gamma_{cdab} - \Gamma_{abcd}\eta_{cdab} \right)
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds} f_{ij} = \sum_{a} \left(\eta_{ia}f_{aj}-f_{ia}\eta_{aj}\right)
+&+ \sum_{ab}(n_a\bar{n}_b-\bar{n}_a n_b) \left(\eta_{ab}\Gamma_{biaj}-f_{ab}\eta_{biaj} \right)
+\\
+&+ \frac{1}{2} \sum_{abc}(n_an_b\bar{n}_c + \bar{n}_a\bar{n}_bn_c) \left( \eta_{ciab}\Gamma_{abcj} - \Gamma_{ciab}\eta_{abcj} \right)
+\end{aligned}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds}\Gamma_{ijkl} = &\sum_{a}\left[ (1-P_{ij}\left( \eta_{ia}\Gamma_{ajkl}-f_{ia}\eta_{ajkl} \right) - ( 1-P_{kl}) \left( \eta_{ak}\Gamma_{kjal} - f_{ak}\eta_{ijal} \right) \right]
+\\
+&+ \frac{1}{2} \sum_{ab} (\bar{n}_a\bar{n}_b-n_a n_b)\left( \eta_{ijab}\Gamma_{abkl} - \Gamma_{ijab}\eta_{abkl} \right) \\
+&+ (1-P_{ij})(1-P_{kl}) \sum_{ab}(n_a\bar{n}_b-\bar{n}_an_b) \eta_{aibk}\Gamma_{bjal}
+\end{aligned}
+\end{equation}
+!et
+
+The White generator:
+!bt
+\begin{equation}
+\eta^{\text{Wh}}_{ai} = \frac{f_{ai}}{\Delta_{ai}}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\eta^{\text{Wh}}_{abij} = \frac{\Gamma_{abij}}{\Delta_{abij}}
+\end{equation}
+!et
+
+Energy denominators:
+!bt
+\begin{equation}
+\Delta_{ai} = f_{aa} - f_{ii}
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\Delta_{abij} = f_{aa} + f_{bb} - f_{ii} - f_{jj}
+\end{equation}
+!et
+
+
+Simplification of flow equation for nuclear matter:
+!bt
+\begin{equation}
+\frac{d}{ds}E_0 = \frac{1}{4} \sum_{abcd} n_a n_b \bar{n}_c\bar{n}_d \left( \eta_{abcd}\Gamma_{cdab} - \Gamma_{abcd}\eta_{cdab} \right)
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\frac{d}{ds} f_{ij} =
+\frac{1}{2} \sum_{abc}(n_an_b\bar{n}_c + \bar{n}_a\bar{n}_bn_c) \left( \eta_{ciab}\Gamma_{abcj} - \Gamma_{ciab}\eta_{abcj} \right)
+\end{equation}
+!et
+
+!bt
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds}\Gamma_{ijkl} &= (A_{ii} + A_{jj} - A_{kk} - A_{ll})B_{ijkl} - (B_{ii} + B_{jj} - B_{kk} - B_{ll})A_{ijkl}
+\\
+&+ \frac{1}{2} \sum_{ab} (\bar{n}_a\bar{n}_b-n_a n_b)\left( \eta_{ijab}\Gamma_{abkl} - \Gamma_{ijab}\eta_{abkl} \right) \\
+&+ (1-P_{ij})(1-P_{kl}) \sum_{ab}(n_a\bar{n}_b-\bar{n}_an_b) \eta_{aibk}\Gamma_{bjal}
+\end{aligned}
+\end{equation}
+!et
