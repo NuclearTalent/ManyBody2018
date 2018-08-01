@@ -282,16 +282,17 @@ There is a bus transportation from the hotel to	the auditorium at Henan	Normal U
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Start coding IMSRG for infinite matter and the pairing model":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Tuesday| 9am-1100am | Berggren basis, the continuum, and IMSRG (KF) |        |
+| Tuesday| 9am-1100am | "Nuclei as (many-body) open quantum systems":"https://nucleartalent.github.io/ManyBody2018/doc/pub/open/pdf/lecture_I_kfossez.pdf" (KF) |        |
 |        | 1130am-1230pm | "Many-body perturbation theory calculations":"https://nucleartalent.github.io/ManyBody2018/doc/pub/IMSRG/pdf/BaishanHu.pdf" (BH) | |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html"  |
 |--------------------------------------------------------------------------|
-| Wednesday | 9am-1230pm | Berggren basis, the continuum, and IMSRG (KF)  |        |
+| Wednesday | 9am-1230pm | "Quasi-stationary formalism and Berggren basis":"https://nucleartalent.github.io/ManyBody2018/doc/pub/open/pdf/lecture_II_kfossez.pdf"(KF)  |        |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   |  | "Continue work on code for infinite matter":"https://nucleartalent.github.io/ManyBody2018/doc/pub/projects/html/projects-bs.html" |
 |--------------------------------------------------------------------------|
-| Thursday | 9am-1030am | Summary Berggren basis, the continuum, and IMSRG (KF) |        |
+| Thursday | 9am-1030am | "Many-body methods for nuclear open quantum systems":"https://nucleartalent.github.io/ManyBody2018/doc/pub/open/pdf/lecture_IIIa_kfossez.pdf" (KF)   |       |
+|          |            | "Renormalization group approaches for continuum couplings": "https://nucleartalent.github.io/ManyBody2018/doc/pub/open/pdf/lecture_IIIb_kfossez.pdf" (KF) |        |
 |        | 11am-1230pm | Summary of school | |
 |        | 1230pm-230pm  | Lunch + own activities |                         |
 |        | 230pm-6pm   | Final group presentations |  |
