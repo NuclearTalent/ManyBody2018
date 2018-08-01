@@ -85,3 +85,33 @@ output in course.html
 running mako on course.do.txt to make tmp_mako__course.do.txt
 translating doconce text in tmp_mako__course.do.txt to html
 output in course.html
+running mako on course.do.txt to make tmp_mako__course.do.txt
+translating doconce text in tmp_mako__course.do.txt to html
+ERROR: 7 !bblock do not match 6 !eblock directives
+
+
+Two !bblock after each other!
+
+!bblock
+
+Lectures are approximately 45 min each with a small break between each lecture. The morning sessions are scheduled to end around 1230pm. 
+Every Friday we will have presentations from each group, where a summary of what has been achieved is presented. 
+
+Lectures and preparatory material on second quantization are all available at the "Github address of the course":"https://github.com/NuclearTalent/ManyBody2018", or go to URL:" https://nucleartalent.github.io/ManyBody2018/doc/web/course.html"  for an easier read. 
+
+Furthermore, we strongly recommend that you read chapter 8 and 10 of "Lecture Notes in Physics 936":"https://www.springer.com/us/book/9783319533353". This text contains also links to all codes we will discuss, in addition to the codes we have placed in the "program folder of the course":"https://nucleartalent.github.io/ManyBody2018/doc/web/course.html". If you cannot access the pdf file of the above text, you can reach chapters 8 and 10 via their respective arXiv versions, "click here for chapter 8":"https://arxiv.org/pdf/1611.06765.pdf" and 
+"here for chapter 10":"https://arxiv.org/pdf/1612.08315.pdf". 
+
+Furthermore, for Coupled Cluster theory the review of Crawford and Schaefer III, "An Introduction to Coupled Cluster Theory for Computational Chemists":"https://doi.org/10.1002/9780470125915.ch2" is highly recommended. 
+
+For nuclear structure problems, the book of "Rick Casten is a highly recommended read":"https://global.oup.com/academic/product/nuclear-structure-from-a-simple-perspective-9780198507246?cc=us&lang=en&".
+Similarly, "Alex Brown's text on Nuclear Structure":"https://github.com/NuclearTalent/NuclearStructure/blob/master/doc/Literature/brown.pdf" is a good companion read.  The text of  "Jouni Suhonen is also an excellent read":"https://www.springer.com/us/book/9783540488590".
+
+
+
+!split
+===== Teaching and projects =====
+!bblock
+running mako on course.do.txt to make tmp_mako__course.do.txt
+translating doconce text in tmp_mako__course.do.txt to html
+output in course.html
