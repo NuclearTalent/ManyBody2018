@@ -38,7 +38,9 @@ Automatically generated HTML file from DocOnce source
 </head>
 
 <!-- tocinfo
-{'highest level': 4, 'sections': []}
+{'highest level': 1,
+ 'sections': [('Relevant IMSRG equations', 1, None, '___sec0'),
+              ('Benchmarking the pairing model', 1, None, '___sec1')]}
 end of tocinfo -->
 
 <body>
@@ -66,6 +68,9 @@ MathJax.Hub.Config({
 
 <!-- ------------------- main content ---------------------- -->
 
+<h1 id="___sec0" class="anchor">Relevant IMSRG equations </h1>
+
+<p>
 Normal-ordered operators:
 $$
 \begin{equation}
@@ -199,6 +204,34 @@ $$
 \end{equation}
 $$
 
+<h1 id="___sec1" class="anchor">Benchmarking the pairing model </h1>
+Pairing model with 4 particles, in 4 doubly degenerate levels, for \( \delta=1 \) and \( g=+0.5 \)
+
+<p>
+Solving the IMSRG flow equation with a simple Euler step method with
+step size \( ds = 0.1 \).  \( E_0 \) is the zero-body piece of the flowing
+Hamiltonian \( H(s) \).  EMBPT2 is the second order MBPT energy using
+\( H(s) \), and \( dE/ds \) is the zero body part of \( [\eta(s), H(s)] \).
+
+<p>
+
+<div class="row">
+  <div class="col-xs-4">
+    <table class="table table-striped table-hover table-condensed">
+<thead>
+<tr><td align="center">\( s \)</td> <td align="center">\( E_0 \)</td> <td align="center"><b>  EMBPT2  </b></td> <td align="center">\( dE/ds \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   0.0        </td> <td align="center">   1.50000      </td> <td align="center">   -0.0623932    </td> <td align="center">   0.0000000      </td> </tr>
+<tr><td align="center">   0.1        </td> <td align="center">   1.48752      </td> <td align="center">   -0.0531358    </td> <td align="center">   -0.1247860     </td> </tr>
+<tr><td align="center">   0.2        </td> <td align="center">   1.47689      </td> <td align="center">   -0.0453987    </td> <td align="center">   -0.1062720     </td> </tr>
+<tr><td align="center">   0.3        </td> <td align="center">   1.46781      </td> <td align="center">   -0.0388940    </td> <td align="center">   -0.0907975     </td> </tr>
+<tr><td align="center">   0.4        </td> <td align="center">   1.46004      </td> <td align="center">   -0.0333983    </td> <td align="center">   -0.0777880     </td> </tr>
+<tr><td align="center">   0.5        </td> <td align="center">   1.45336      </td> <td align="center">   -0.0287359    </td> <td align="center">   -0.0667967     </td> </tr>
+</tbody>
+    </table>
+  </div> <!-- col-xs-4 -->
+</div> <!-- cell row -->
 
 <!-- ------------------- end of main content --------------- -->
 
