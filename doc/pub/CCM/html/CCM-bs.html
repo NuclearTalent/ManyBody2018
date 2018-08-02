@@ -153,13 +153,20 @@ Automatically generated HTML file from DocOnce source
                '___sec53'),
               ('Example: Channel structure and its usage', 2, 'ex-21', 'ex-21'),
               ('', 2, None, '___sec55'),
-              ('Benchmarks with the Minnesota potential', 1, None, '___sec56'),
-              ('From Structure to Reactions', 0, None, '___sec57'),
-              ('Electroweak reactions', 1, None, '___sec58'),
+              ('Exercise 20: Write a CCD code for neutron matter, focusing '
+               'first on ladder approximation, i.e. including the first five '
+               'diagrams in Figure ref{fig-ccd}.',
+               2,
+               'ex-30',
+               'ex-30'),
+              ('', 2, None, '___sec57'),
+              ('Benchmarks with the Minnesota potential', 1, None, '___sec58'),
+              ('From Structure to Reactions', 0, None, '___sec59'),
+              ('Electroweak reactions', 1, None, '___sec60'),
               ('Computing optical potentials from microscopic input',
                1,
                None,
-               '___sec59')]}
+               '___sec61')]}
 end of tocinfo -->
 
 <body>
@@ -254,10 +261,12 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="#___sec53" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Channel structure of Hamiltonian and cluster amplitudes</a></li>
      <!-- navigation toc: --> <li><a href="#ex-21" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: Channel structure and its usage</a></li>
      <!-- navigation toc: --> <li><a href="#___sec55" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec56" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Benchmarks with the Minnesota potential</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec57" style="font-size: 80%;"><b>From Structure to Reactions</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec58" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Electroweak reactions</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec59" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Computing optical potentials from microscopic input</a></li>
+     <!-- navigation toc: --> <li><a href="#ex-30" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exercise 20: Write a CCD code for neutron matter, focusing first on ladder approximation, i.e. including the first five diagrams in Figure ref{fig-ccd}.</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec57" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec58" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Benchmarks with the Minnesota potential</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec59" style="font-size: 80%;"><b>From Structure to Reactions</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec60" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Electroweak reactions</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec61" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Computing optical potentials from microscopic input</a></li>
 
         </ul>
       </li>
@@ -290,7 +299,7 @@ MathJax.Hub.Config({
 <center><b>The University of Tennessee, Knoxville, tpapenbr@utk.edu</b></center>
 <br>
 <p>
-<center><h4>Jul 31, 2018</h4></center> <!-- date -->
+<center><h4>Aug 2, 2018</h4></center> <!-- date -->
 <br>
 <p>
 </div> <!-- end jumbotron -->
@@ -353,10 +362,12 @@ MathJax.Hub.Config({
 &nbsp; &nbsp; &nbsp; <a href="#___sec53"> Channel structure of Hamiltonian and cluster amplitudes </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#ex-21"> Example: Channel structure and its usage </a><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec55"> </a><br>
-&nbsp; &nbsp; &nbsp; <a href="#___sec56"> Benchmarks with the Minnesota potential </a><br>
-<a href="#___sec57"> From Structure to Reactions </a><br>
-&nbsp; &nbsp; &nbsp; <a href="#___sec58"> Electroweak reactions </a><br>
-&nbsp; &nbsp; &nbsp; <a href="#___sec59"> Computing optical potentials from microscopic input </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#ex-30"> Exercise 20: Write a CCD code for neutron matter, focusing first on ladder approximation, i.e. including the first five diagrams in Figure <a href="#fig-ccd">11</a>. </a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#___sec57"> </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec58"> Benchmarks with the Minnesota potential </a><br>
+<a href="#___sec59"> From Structure to Reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec60"> Electroweak reactions </a><br>
+&nbsp; &nbsp; &nbsp; <a href="#___sec61"> Computing optical potentials from microscopic input </a><br>
 </p>
 <p>
 
@@ -2798,29 +2809,813 @@ The steps towards the solution of the CCD equations for neutron matter are as fo
 <li> Solve the coupled-cluster equations. Here we start first with the pp and hh ladders, i.e. using only  the first five diagrams of Figure <a href="#fig-ccd">11</a>.</li>
 </ol>
 
-<h1 id="___sec56" class="anchor">Benchmarks with the Minnesota potential </h1>
-Here are some <b>tentative</b> benchmarks.
+<div class="panel panel-default">
+<div class="panel-body">
+<p> <!-- subsequent paragraphs come in larger fonts, so start with a paragraph -->
+
+<p>
+<!-- --- begin exercise --- -->
+
+<h2 id="ex-30" class="anchor">Exercise 20: Write a CCD code for neutron matter, focusing first on ladder approximation, i.e. including the first five diagrams in Figure <a href="#fig-ccd">11</a>.</h2>
+
+<p>
+<!-- --- begin answer of exercise --- -->
+
+<p>
+<a class="glyphicon glyphicon-hand-right showdetails" data-toggle="collapse"
+ data-target="#exer_20_1" style="font-size: 80%;"></a>
+<b>Answer.</b>
+<div class="collapse-group">
+<p><div class="collapse" id="exer_20_1">
+
+<p>
+
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+
+<span style="color: #408080; font-style: italic">##############################################################</span>
+<span style="color: #408080; font-style: italic"># CCD Program for neutron matter with the Minnesota potential.</span>
+<span style="color: #408080; font-style: italic">#</span>
+<span style="color: #408080; font-style: italic"># Thomas Papenbrock, July/August 2018</span>
+<span style="color: #408080; font-style: italic">#</span>
+<span style="color: #408080; font-style: italic"># License: Free Software following Version 3 of GNU General Public License, </span>
+<span style="color: #408080; font-style: italic"># see https://www.gnu.org/licenses/gpl.html</span>
+<span style="color: #408080; font-style: italic">#######</span>
+
+
+<span style="color: #408080; font-style: italic">##########################</span>
+<span style="color: #408080; font-style: italic"># Class for neutron matter </span>
+<span style="color: #408080; font-style: italic">#######</span>
+
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MomSpaceBasis</span>:
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    momentum-space basis class</span>
+<span style="color: #BA2121; font-style: italic">    The constructor has the form</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    MomSpaceBasis(Nmax,kmax)</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    param Nmax: Number of lattice points in positive kx-direction</span>
+<span style="color: #BA2121; font-style: italic">    param kmax: Highest lattice momentum (in 1/fm)</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    return: MomSpaceBasis as a single-partcle basis. </span>
+<span style="color: #BA2121; font-style: italic">    attributes of MomSpaceBasis are</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    dk : lattice spacing in 1/fm</span>
+<span style="color: #BA2121; font-style: italic">    Lbox : linear dimension (in fm) of cubic box</span>
+<span style="color: #BA2121; font-style: italic">    nvec : lattice vectors (integers)</span>
+<span style="color: #BA2121; font-style: italic">    kvec : lattice momentum vectors (floats, in 1/fm)</span>
+<span style="color: #BA2121; font-style: italic">    ngrid : total number of lattice points </span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>,Nmax,kmax,ordered<span style="color: #666666">=</span><span style="color: #008000">True</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        the constructor</span>
+<span style="color: #BA2121; font-style: italic">        </span>
+<span style="color: #BA2121; font-style: italic">        Generates a cubic lattice in momentum space</span>
+<span style="color: #BA2121; font-style: italic">        param Nmax: Number of lattice points in positive kx-direction</span>
+<span style="color: #BA2121; font-style: italic">        param kmax: Highest lattice momentum (in 1/fm)</span>
+<span style="color: #BA2121; font-style: italic">        param ordered: Optional parameter, True by default, will order lattice points by kinetic energy</span>
+<span style="color: #BA2121; font-style: italic">        </span>
+<span style="color: #BA2121; font-style: italic">        return MomSpaceBasis</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>Nmax <span style="color: #666666">=</span> Nmax
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>dim <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>ngrid <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>_kvec<span style="color: #666666">=</span>[]
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec<span style="color: #666666">=</span>[]
+
+        dk <span style="color: #666666">=</span> kmax <span style="color: #666666">/</span> Nmax
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>dk <span style="color: #666666">=</span> dk
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>Lbox <span style="color: #666666">=</span> <span style="color: #666666">2.0*</span>np<span style="color: #666666">.</span>pi<span style="color: #666666">/</span>dk
+        
+        nx<span style="color: #666666">=</span>[]
+        nvec<span style="color: #666666">=</span>[]
+        <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">-</span>Nmax,Nmax<span style="color: #666666">+1</span>):
+            <span style="color: #008000">self</span><span style="color: #666666">.</span>dim<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>dim<span style="color: #666666">+1</span>
+            nx<span style="color: #666666">.</span>append(i)
+        
+        <span style="color: #408080; font-style: italic">#print(&#39;nx=&#39;,nx)</span>
+        
+        <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> nx:
+            <span style="color: #008000; font-weight: bold">for</span> j <span style="color: #AA22FF; font-weight: bold">in</span> nx:
+                <span style="color: #008000; font-weight: bold">for</span> k <span style="color: #AA22FF; font-weight: bold">in</span> nx:
+                    nvec<span style="color: #666666">.</span>append(np<span style="color: #666666">.</span>array([i,j,k], dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>))
+                    
+        <span style="color: #408080; font-style: italic">#print(&#39;nvec=&#39;,nvec)</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>ngrid<span style="color: #666666">=</span><span style="color: #008000">len</span>(nvec)
+        
+        <span style="color: #008000; font-weight: bold">if</span> ordered:
+            <span style="color: #408080; font-style: italic">#print(&quot;ordered&quot;)</span>
+            norm<span style="color: #666666">=</span>np<span style="color: #666666">.</span>zeros(<span style="color: #008000">self</span><span style="color: #666666">.</span>ngrid,dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+            <span style="color: #008000; font-weight: bold">for</span> i, vec <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(nvec):
+                npvec<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(vec,dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+                norm[i]<span style="color: #666666">=</span>np<span style="color: #666666">.</span>dot(npvec,npvec)
+               <span style="color: #408080; font-style: italic"># print(i, vec, norm[i])</span>
+        
+            index<span style="color: #666666">=</span>np<span style="color: #666666">.</span>argsort(norm)
+            <span style="color: #408080; font-style: italic">#print(index)</span>
+            <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec<span style="color: #666666">=</span>[]
+            <span style="color: #008000; font-weight: bold">for</span> i, ind <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(index):
+                <span style="color: #408080; font-style: italic">#print(i, ind, nvec[ind])</span>
+                <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec<span style="color: #666666">.</span>append(nvec[ind])
+                
+        <span style="color: #008000; font-weight: bold">else</span>: 
+            <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec<span style="color: #666666">=</span>nvec  <span style="color: #408080; font-style: italic"># a list</span>
+            
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>_kvec <span style="color: #666666">=</span> np<span style="color: #666666">.</span>array(<span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec)<span style="color: #666666">*</span>dk <span style="color: #408080; font-style: italic"># a numpy array</span>
+
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">kvec</span>(<span style="color: #008000">self</span>,indx<span style="color: #666666">=-1</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        MomSpaceBasis.kvec(i) returns ith momentum vector</span>
+<span style="color: #BA2121; font-style: italic">        MomSpaceBasis.kvec() returns all momentum vectors</span>
+<span style="color: #BA2121; font-style: italic">        </span>
+<span style="color: #BA2121; font-style: italic">        param indx: index of k-vector to be returned, optional</span>
+<span style="color: #BA2121; font-style: italic">        return 3-vector (if index non-negative), or all vectors if no index specified</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">if</span> indx <span style="color: #666666">==</span> <span style="color: #666666">-1</span>:
+            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_kvec
+        <span style="color: #008000; font-weight: bold">else</span>:
+            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_kvec[indx]
+        
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">nvec</span>(<span style="color: #008000">self</span>,indx<span style="color: #666666">=-1</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        MomSpaceBasis.nvec(i) returns ith lattice vector</span>
+<span style="color: #BA2121; font-style: italic">        MomSpaceBasis.nvec() returns all lattice vectors</span>
+<span style="color: #BA2121; font-style: italic">        </span>
+<span style="color: #BA2121; font-style: italic">        param indx: index of lattice vector to be returned, optional</span>
+<span style="color: #BA2121; font-style: italic">        return 3-vector (if index non-negative), or all lattice vectors if no index specified</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">if</span> indx <span style="color: #666666">==</span> <span style="color: #666666">-1</span>:
+            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec
+        <span style="color: #008000; font-weight: bold">else</span>:
+            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec[indx]
+        
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">dens</span>(<span style="color: #008000">self</span>,num):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        returns density of system if num particles are present</span>
+<span style="color: #BA2121; font-style: italic">        param num: int, number of particles</span>
+<span style="color: #BA2121; font-style: italic">        return dens: float</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">return</span> num<span style="color: #666666">/</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>Lbox)<span style="color: #666666">**3</span>
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">update</span>(<span style="color: #008000">self</span>,dk):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Uses dk as new lattice spacing and rescales existing lattice</span>
+<span style="color: #BA2121; font-style: italic">        param dk: in 1/fm lattice spacing in momentum space</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>Lbox<span style="color: #666666">=2.0*</span>np<span style="color: #666666">.</span>pi<span style="color: #666666">/</span>dk
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>_kvec <span style="color: #666666">=</span> np<span style="color: #666666">.</span>array(<span style="color: #008000">self</span><span style="color: #666666">.</span>_nvec)<span style="color: #666666">*</span>dk
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__len__</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        overloading of the &#39;len&#39; function</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>ngrid
+    
+    
+<span style="color: #408080; font-style: italic">############</span>
+<span style="color: #408080; font-style: italic"># useful functions</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">magic_numbers</span>(basis):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    param basis: MomSpaceBasis object</span>
+<span style="color: #BA2121; font-style: italic">    return magic: array of magic numbers</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    nvecs <span style="color: #666666">=</span> basis<span style="color: #666666">.</span>nvec()
+    vec<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(nvecs[<span style="color: #666666">0</span>],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+    norm <span style="color: #666666">=</span> np<span style="color: #666666">.</span>dot(vec,vec)
+    magic<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,<span style="color: #008000">len</span>(nvecs)):
+        vec<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(nvecs[i],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+        norm2 <span style="color: #666666">=</span> np<span style="color: #666666">.</span>dot(vec,vec)
+        <span style="color: #008000; font-weight: bold">if</span> norm2 <span style="color: #666666">&gt;</span> norm: 
+            magic<span style="color: #666666">.</span>append(<span style="color: #666666">2*</span>i)
+            norm<span style="color: #666666">=</span>norm2
+    <span style="color: #008000; font-weight: bold">return</span> magic
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_dk</span>(rho,Num):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    param rho: desired density</span>
+<span style="color: #BA2121; font-style: italic">    param Num: magic number of particles</span>
+<span style="color: #BA2121; font-style: italic">    return dk: grid spacing in momentum space (in 1/fm)</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    Lbox <span style="color: #666666">=</span> (Num<span style="color: #666666">/</span>rho)<span style="color: #666666">**</span>(<span style="color: #666666">1.0/3.0</span>)
+    dk <span style="color: #666666">=</span> <span style="color: #666666">2.0*</span>np<span style="color: #666666">.</span>pi<span style="color: #666666">/</span>Lbox
+    <span style="color: #008000; font-weight: bold">return</span> dk
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">spbasis_from_MomSpaceBasis</span>(lattice_vecs,st_degen):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    converts a lattice to a single particle basis for spin-isospin degeneracy st_degen</span>
+<span style="color: #BA2121; font-style: italic">    param lattice_vecs: list of lattice vectors for 1st particle</span>
+<span style="color: #BA2121; font-style: italic">    param st_degen: spin-isospin degeneracy</span>
+<span style="color: #BA2121; font-style: italic">    return: basis as a list of momenta</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #008000; font-weight: bold">if</span> st_degen <span style="color: #666666">!=</span> <span style="color: #666666">2</span>: <span style="color: #408080; font-style: italic"># for now only neutron matter</span>
+        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Unexpected parameter st_degen&quot;</span>)
+        <span style="color: #008000; font-weight: bold">return</span> lattice_vecs
+    
+    basis<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> vec <span style="color: #AA22FF; font-weight: bold">in</span> lattice_vecs:
+        <span style="color: #008000; font-weight: bold">for</span> st <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(st_degen):
+            basis<span style="color: #666666">.</span>append(np<span style="color: #666666">.</span>array(vec,dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>))
+            
+    <span style="color: #008000; font-weight: bold">return</span> basis
+
+
+
+<span style="color: #408080; font-style: italic">#########################################################</span>
+<span style="color: #408080; font-style: italic"># Functions for comparisons with infinite free Fermi gas</span>
+                         
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">kF_from_density</span>(rho,st_degen<span style="color: #666666">=2</span>):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Computes Fermi momentum for given density and spin/isospin degeneracy.</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    param rho: density in inverse fm cubed</span>
+<span style="color: #BA2121; font-style: italic">    param st_degen: spin-isospin degeneracy; default 2</span>
+<span style="color: #BA2121; font-style: italic">    return: Fermi momentum in inverse fm</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    res <span style="color: #666666">=</span> (<span style="color: #666666">6.0*</span>(np<span style="color: #666666">.</span>pi)<span style="color: #666666">**2*</span>rho<span style="color: #666666">/</span>st_degen)<span style="color: #666666">**</span>(<span style="color: #666666">1.0/3.0</span>)
+    <span style="color: #008000; font-weight: bold">return</span> res
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">EnergyDensity_FermiGas</span>(kF,st_degen<span style="color: #666666">=2</span>):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Computes energy density of free Fermi gas at Fermi momentum and spin/isospin degeneracy</span>
+<span style="color: #BA2121; font-style: italic">    param kF: Fermi momentum in inverse fm</span>
+<span style="color: #BA2121; font-style: italic">    param st_degen: spin-isospin degeneracy; default 2</span>
+<span style="color: #BA2121; font-style: italic">    return: Energy density in MeV/fm**3</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    pvec <span style="color: #666666">=</span> np<span style="color: #666666">.</span>array([kF,<span style="color: #666666">0.0</span>,<span style="color: #666666">0.0</span>])
+    erg <span style="color: #666666">=</span> (st_degen<span style="color: #666666">*</span>kF<span style="color: #666666">**3/</span>(<span style="color: #666666">10.0*</span>np<span style="color: #666666">.</span>pi<span style="color: #666666">**2</span>)) <span style="color: #666666">*</span> Tkin(pvec)
+    <span style="color: #008000; font-weight: bold">return</span> erg
+
+
+<span style="color: #408080; font-style: italic">########################################################################################</span>
+<span style="color: #408080; font-style: italic"># Functions for CCD of neutron matter</span>
+<span style="color: #408080; font-style: italic"># Implementation uses only pp and hh ladders</span>
+<span style="color: #408080; font-style: italic"># </span>
+<span style="color: #408080; font-style: italic">########################################################################################</span>
+
+
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">numba</span> <span style="color: #008000; font-weight: bold">import</span> jit  
+<span style="color: #408080; font-style: italic"># compile a few functions to gain speed; should probably done in Fortran or C++, </span>
+<span style="color: #408080; font-style: italic"># and called from Python</span>
+
+<span style="color: #AA22FF">@jit</span>(nopython<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">minnesota_nn</span>(p_out,s1_out,s2_out,p_in,s1_in,s2_in,Lbox):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    The Minnesota potential between two neutrons, not yet anti-symmetrized </span>
+<span style="color: #BA2121; font-style: italic">    param p_out: relative out momentum</span>
+<span style="color: #BA2121; font-style: italic">    param p_in : relative in momentum</span>
+<span style="color: #BA2121; font-style: italic">    param s1_out, s2_out: spin projections of out particles 1 and 2</span>
+<span style="color: #BA2121; font-style: italic">    param s1_in, s2_in  : spin projections of in particles 1 and 2</span>
+<span style="color: #BA2121; font-style: italic">    Lbox : size of momentum box</span>
+<span style="color: #BA2121; font-style: italic">    return: value of potential in MeV; not anti-symmetrized!</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #408080; font-style: italic"># parameters. VT is not active between two neutrons (no triplet)</span>
+    VR <span style="color: #666666">=</span> <span style="color: #666666">200.0</span>
+    VS <span style="color: #666666">=</span> <span style="color: #666666">-91.85</span>  <span style="color: #408080; font-style: italic"># sign typo in Lecture Notes Physics 936, Chap. 8</span>
+    kappaR <span style="color: #666666">=</span> <span style="color: #666666">1.487</span>
+    kappaS <span style="color: #666666">=</span> <span style="color: #666666">0.465</span>
+    
+    qvec<span style="color: #666666">=</span>p_out<span style="color: #666666">-</span>p_in
+    q2<span style="color: #666666">=</span>np<span style="color: #666666">.</span>dot(qvec,qvec)
+    
+    s1_i <span style="color: #666666">=</span>spin2spinor(s1_in)
+    s2_i <span style="color: #666666">=</span>spin2spinor(s2_in)
+    s1_o <span style="color: #666666">=</span>spin2spinor(s1_out)
+    s2_o <span style="color: #666666">=</span>spin2spinor(s2_out)
+    
+    spin_part <span style="color: #666666">=</span> <span style="color: #666666">0.5</span> <span style="color: #666666">*</span> ( np<span style="color: #666666">.</span>dot(s1_i,s1_o)<span style="color: #666666">*</span>np<span style="color: #666666">.</span>dot(s2_i,s2_o)
+                       <span style="color: #666666">-</span>np<span style="color: #666666">.</span>dot(s1_i,s2_o)<span style="color: #666666">*</span>np<span style="color: #666666">.</span>dot(s2_i,s1_o) )
+    
+    
+    pot <span style="color: #666666">=</span> spin_part <span style="color: #666666">*</span> (  VR<span style="color: #666666">*</span>np<span style="color: #666666">.</span>exp(<span style="color: #666666">-0.25*</span>q2<span style="color: #666666">/</span>kappaR) <span style="color: #666666">/</span> (Lbox<span style="color: #666666">*</span>np<span style="color: #666666">.</span>sqrt(kappaR))<span style="color: #666666">**3</span> 
+                       <span style="color: #666666">+</span> VS<span style="color: #666666">*</span>np<span style="color: #666666">.</span>exp(<span style="color: #666666">-0.25*</span>q2<span style="color: #666666">/</span>kappaS) <span style="color: #666666">/</span> (Lbox<span style="color: #666666">*</span>np<span style="color: #666666">.</span>sqrt(kappaS))<span style="color: #666666">**3</span> )
+    
+    pot <span style="color: #666666">=</span> pot<span style="color: #666666">*</span>(np<span style="color: #666666">.</span>sqrt(np<span style="color: #666666">.</span>pi))<span style="color: #666666">**3</span> 
+
+    
+    <span style="color: #008000; font-weight: bold">return</span> pot
+
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">spin_of_index</span>(i):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Even indices of the lattive have spin up, odds have spin down</span>
+<span style="color: #BA2121; font-style: italic">    param i: index of sp_basis</span>
+<span style="color: #BA2121; font-style: italic">    return: spin as +/- 1</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    spin <span style="color: #666666">=</span> <span style="color: #666666">1-2*</span>np<span style="color: #666666">.</span>remainder(i,<span style="color: #666666">2</span>)
+    <span style="color: #008000; font-weight: bold">return</span> spin
+
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">spin2spinor</span>(s):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Makes a two-component spinor of an integer s</span>
+<span style="color: #BA2121; font-style: italic">    param s: spin = +/- 1</span>
+<span style="color: #BA2121; font-style: italic">    return: two-component numpy array [1,0] for up and [0,1] for down</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    up  <span style="color: #666666">=</span>np<span style="color: #666666">.</span>array([<span style="color: #666666">1.0</span>,<span style="color: #666666">0.0</span>])
+    down<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array([<span style="color: #666666">0.0</span>,<span style="color: #666666">1.0</span>])
+    <span style="color: #008000; font-weight: bold">if</span> s <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+        <span style="color: #008000; font-weight: bold">return</span> up
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> down
+
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Tkin</span>(pvec):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Kinetic energy for a momentum vector</span>
+<span style="color: #BA2121; font-style: italic">    param pvec: 3-component numpy array in inverse fm</span>
+<span style="color: #BA2121; font-style: italic">    return: kinetic energy of that momentum in MeV</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    nucleon_mass <span style="color: #666666">=</span> <span style="color: #666666">938.92</span>
+    hbarc <span style="color: #666666">=</span> <span style="color: #666666">197.33</span>
+<span style="color: #408080; font-style: italic"># More precise numbers for neutron mass and hbar follow.</span>
+<span style="color: #408080; font-style: italic"># For N=14, this yields E_HF = 10.3337 MeV per nucleon in HF. Benchmarked with Ragnar Stroberg.</span>
+<span style="color: #408080; font-style: italic">#     nucleon_mass = 939.56563</span>
+<span style="color: #408080; font-style: italic">#     hbarc = 197.3269718</span>
+    p2 <span style="color: #666666">=</span> np<span style="color: #666666">.</span>dot(pvec,pvec)
+    res <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>hbarc<span style="color: #666666">**2*</span>p2<span style="color: #666666">/</span>nucleon_mass
+    <span style="color: #008000; font-weight: bold">return</span> res
+    
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">compute_total_Tkin</span>(Nocc,sp_basis,dk):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Computes total kinetic energy of reference state</span>
+<span style="color: #BA2121; font-style: italic">    param Nocc, sp_basis, dk: particle number, integer s.p. lattice, delta k </span>
+<span style="color: #BA2121; font-style: italic">    return: total kinetic energy</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    erg<span style="color: #666666">=0.0</span>
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Nocc):
+        mom_vec <span style="color: #666666">=</span> sp_basis[i]
+        vec<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array(mom_vec)<span style="color: #666666">*</span>dk
+        erg<span style="color: #666666">=</span>erg<span style="color: #666666">+</span>Tkin(vec)
+        
+    <span style="color: #008000; font-weight: bold">return</span> erg
+
+
+
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Fock</span>(pvec,s,sp_basis,Nocc,dk,Lbox):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Fock matrix of momentum pvec in hh space</span>
+<span style="color: #BA2121; font-style: italic">    param pvec: 3-component numpy array in inverse fm</span>
+<span style="color: #BA2121; font-style: italic">    param s: spin as +/- 1 of state</span>
+<span style="color: #BA2121; font-style: italic">    param_sp_basis, Nocc, dk, Lbox : parameters of s.p. basis and system</span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    return: Fock matrix element = kinetic energy of that momentum in MeV</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    res <span style="color: #666666">=</span> Tkin(pvec)
+    
+    dum<span style="color: #666666">=0.0</span>
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Nocc):
+        vec<span style="color: #666666">=</span>sp_basis[i]<span style="color: #666666">*</span>dk
+        si<span style="color: #666666">=</span>spin_of_index(i)
+        p_in <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(vec<span style="color: #666666">-</span>pvec)
+        p_out<span style="color: #666666">=</span> p_in
+        dum <span style="color: #666666">=</span> dum <span style="color: #666666">+</span> ( minnesota_nn(p_out,s,si, p_in, s,si,Lbox) 
+                     <span style="color: #666666">-</span>minnesota_nn(p_out,s,si,<span style="color: #666666">-</span>p_in,si, s,Lbox) )  <span style="color: #408080; font-style: italic">#antisymmetrized Minnesota</span>
+        
+    res <span style="color: #666666">=</span> res<span style="color: #666666">+</span>dum
+    <span style="color: #008000; font-weight: bold">return</span> res
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">compute_E_HF_simple</span>(Nocc,sp_basis,dk):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Computes HF energy of reference state</span>
+<span style="color: #BA2121; font-style: italic">    param Nocc, sp_basis, dk: particle number, integer s.p. lattice, delta k </span>
+<span style="color: #BA2121; font-style: italic">    return: total HF energy</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    erg<span style="color: #666666">=</span>compute_total_Tkin(Nocc,sp_basis,dk)
+
+    pot<span style="color: #666666">=0.0</span>
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Nocc):
+        momi<span style="color: #666666">=</span>sp_basis[i]<span style="color: #666666">*</span>dk
+        si <span style="color: #666666">=</span> spin_of_index(i)
+        <span style="color: #008000; font-weight: bold">for</span> j <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Nocc):
+            momj<span style="color: #666666">=</span>sp_basis[j]<span style="color: #666666">*</span>dk
+            sj <span style="color: #666666">=</span> spin_of_index(j)
+            p_rel <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(momi<span style="color: #666666">-</span>momj)
+            pot <span style="color: #666666">=</span> pot <span style="color: #666666">+</span> <span style="color: #666666">0.5*</span> (  minnesota_nn(p_rel,si,sj, p_rel,si,sj,Lbox)
+                                <span style="color: #666666">-</span> minnesota_nn(p_rel,si,sj,<span style="color: #666666">-</span>p_rel,sj,si,Lbox) )
+            
+    erg <span style="color: #666666">=</span> erg<span style="color: #666666">+</span>pot
+    <span style="color: #008000; font-weight: bold">return</span> erg
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_channels</span>(sp_basis,start1,end1,start2,end2,identical,other_channels<span style="color: #666666">=</span><span style="color: #008000">None</span>):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Returns channels for coupled cluster based on Minnesota potential</span>
+<span style="color: #BA2121; font-style: italic">    param sp_Basis: A single-particle basis</span>
+<span style="color: #BA2121; font-style: italic">    param start1: index to start for particle 1</span>
+<span style="color: #BA2121; font-style: italic">    param end1: index to end for particle 1</span>
+<span style="color: #BA2121; font-style: italic">    param start2: index to start for particle 2</span>
+<span style="color: #BA2121; font-style: italic">    param end2: index to end for particle 2</span>
+<span style="color: #BA2121; font-style: italic">    param identical: True for hh or pp, False for hp</span>
+<span style="color: #BA2121; font-style: italic">    param other_channels: list of other channels to compare with</span>
+<span style="color: #BA2121; font-style: italic">    return: channels, p_rel, t2amp. channels is a list of p12, where p12 is a momentum vector; </span>
+<span style="color: #BA2121; font-style: italic">            p_rel is a nested list with relative momenta and spins for each channel</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    channel<span style="color: #666666">=</span>[]
+    p_rel<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i, mom_vecs1 <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(sp_basis[start1:end1]):
+        <span style="color: #408080; font-style: italic">#vec1=np.array(mom_vecs1,dtype=int)</span>
+        vec1<span style="color: #666666">=</span>mom_vecs1
+        spin1<span style="color: #666666">=</span>spin_of_index(i)
+            
+        <span style="color: #008000; font-weight: bold">for</span> j, mom_vecs2 <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(sp_basis[start2:end2]):
+            <span style="color: #008000; font-weight: bold">if</span> identical <span style="color: #AA22FF; font-weight: bold">and</span> i<span style="color: #666666">==</span>j: <span style="color: #008000; font-weight: bold">continue</span>  <span style="color: #408080; font-style: italic">#Fortran cycle</span>
+            <span style="color: #408080; font-style: italic">#vec2=np.array(mom_vecs2,dtype=int)</span>
+            vec2<span style="color: #666666">=</span>mom_vecs2
+            spin2<span style="color: #666666">=</span>spin_of_index(j)
+                
+            p12 <span style="color: #666666">=</span> vec1<span style="color: #666666">+</span>vec2
+            prel<span style="color: #666666">=</span> vec1<span style="color: #666666">-</span>vec2
+            spins<span style="color: #666666">=</span>np<span style="color: #666666">.</span>array([spin1,spin2],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+            ps<span style="color: #666666">=</span>[prel,spins]
+
+            new<span style="color: #666666">=</span><span style="color: #008000">True</span>
+            needed<span style="color: #666666">=</span><span style="color: #008000">True</span>
+            <span style="color: #008000; font-weight: bold">if</span> other_channels <span style="color: #AA22FF; font-weight: bold">is</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #008000">None</span>: <span style="color: #408080; font-style: italic">#check whether we need this channel</span>
+                needed<span style="color: #666666">=</span><span style="color: #008000">False</span>
+                <span style="color: #008000; font-weight: bold">for</span> chan_o <span style="color: #AA22FF; font-weight: bold">in</span> other_channels:
+                    <span style="color: #008000; font-weight: bold">if</span> (chan_o<span style="color: #666666">==</span>p12)<span style="color: #666666">.</span>all(): 
+                        needed<span style="color: #666666">=</span><span style="color: #008000">True</span>
+                        <span style="color: #008000; font-weight: bold">break</span>
+            <span style="color: #008000; font-weight: bold">if</span> needed: <span style="color: #408080; font-style: italic">#check whether this channel exists already</span>
+                <span style="color: #008000; font-weight: bold">for</span> ipos, chan <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(channel):
+                    <span style="color: #008000; font-weight: bold">if</span> (chan<span style="color: #666666">==</span>p12)<span style="color: #666666">.</span>all(): 
+                        new<span style="color: #666666">=</span><span style="color: #008000">False</span>
+                        <span style="color: #008000; font-weight: bold">break</span>
+                    
+            <span style="color: #008000; font-weight: bold">if</span> needed <span style="color: #AA22FF; font-weight: bold">and</span> new: 
+                channel<span style="color: #666666">.</span>append(p12)
+                p_rel<span style="color: #666666">.</span>append([ps])
+                
+            <span style="color: #008000; font-weight: bold">if</span> needed <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #AA22FF; font-weight: bold">not</span> new:
+                p_rel[ipos]<span style="color: #666666">.</span>append(ps)
+                
+    <span style="color: #008000; font-weight: bold">return</span> channel, p_rel 
+    
+
+    
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">setup_T2_amplitudes</span>(sp_basis,NN,st_degen):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    returns the t2 amplitudes and t2 channels</span>
+<span style="color: #BA2121; font-style: italic">    param sp_basis: a sp_basis</span>
+<span style="color: #BA2121; font-style: italic">    param NN: neutron number</span>
+<span style="color: #BA2121; font-style: italic">    param st_degen: 2 for the moment, spin-isospin degeneracy</span>
+<span style="color: #BA2121; font-style: italic">    return: hh_channels, pp_channels, p_rel_hh, p_rel_pp, t2amp</span>
+<span style="color: #BA2121; font-style: italic">            these are the hh and pp channels of T2, lists of the relative momenta, </span>
+<span style="color: #BA2121; font-style: italic">            and t2amps as a list of numpy arrays set to zero </span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    num_states <span style="color: #666666">=</span> <span style="color: #008000">len</span>(sp_basis)
+    
+    hh_channels, p_rel_hh <span style="color: #666666">=</span> get_channels(sp_basis,<span style="color: #666666">0</span>,NN,<span style="color: #666666">0</span>,NN,<span style="color: #008000">True</span>)
+    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;hh channels=&#39;</span>, <span style="color: #008000">len</span>(hh_channels))
+
+    pp_channels, p_rel_pp <span style="color: #666666">=</span> get_channels(sp_basis,NN,num_states,NN,num_states,<span style="color: #008000">True</span>,hh_channels)
+    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;pp channels=&#39;</span>, <span style="color: #008000">len</span>(pp_channels))
+    
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(pp_channels) <span style="color: #666666">!=</span> <span style="color: #008000">len</span>(hh_channels): <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;pp and hh channels do not match&#39;</span>)
+     
+
+    ordered_pp_channel<span style="color: #666666">=</span>[]
+    ordered_p_rel_pp<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i, chanhh <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(hh_channels):
+        <span style="color: #008000; font-weight: bold">for</span> j, chanpp <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(pp_channels):
+            <span style="color: #008000; font-weight: bold">if</span> (chanpp<span style="color: #666666">==</span>chanhh)<span style="color: #666666">.</span>all():
+                ordered_pp_channel<span style="color: #666666">.</span>append(chanpp)
+                ordered_p_rel_pp<span style="color: #666666">.</span>append(p_rel_pp[j])    
+                <span style="color: #008000; font-weight: bold">break</span>
+                
+    pp_channels <span style="color: #666666">=</span> ordered_pp_channel
+    p_rel_pp <span style="color: #666666">=</span> ordered_p_rel_pp
+            
+    <span style="color: #408080; font-style: italic"># set t2 amplitudes to zero in each channel</span>
+    t2amp <span style="color: #666666">=</span> fill_pot(Lbox, dk, pp_channels, hh_channels, p_rel_pp, p_rel_hh, <span style="color: #008000">True</span>)
+        
+    <span style="color: #008000; font-weight: bold">return</span> hh_channels, pp_channels, p_rel_hh, p_rel_pp, t2amp
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">fill_pot</span>(Lbox, dk, channels_out, channels_in, p_rel_out, p_rel_in, T2amp<span style="color: #666666">=</span><span style="color: #008000">False</span>):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Fills lists of matrices such as Vhhhh, Vpphh, Vpppp, t2_pphh</span>
+<span style="color: #BA2121; font-style: italic">    param Lbox: Lbox</span>
+<span style="color: #BA2121; font-style: italic">    param dk: dk</span>
+<span style="color: #BA2121; font-style: italic">    param channels_out, channels_in: the channels we have</span>
+<span style="color: #BA2121; font-style: italic">    param p_rel_out, p_rel_in: the list of [prel, [s1,s2]]</span>
+<span style="color: #BA2121; font-style: italic">    param T2amp=False: Set to True if t2_pphh needs to be computed</span>
+<span style="color: #BA2121; font-style: italic">    return: The object of desire as a list of numpy matrices. </span>
+<span style="color: #BA2121; font-style: italic">            Contain matrix elements for potentials, zeros if T2amp=True is requested. </span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    Vpot<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i, chan_in <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(channels_in):
+        dim_in <span style="color: #666666">=</span> <span style="color: #008000">len</span>(p_rel_in[i])
+        dim_out<span style="color: #666666">=</span> <span style="color: #008000">len</span>(p_rel_out[i])
+        Vpot_chan<span style="color: #666666">=</span>np<span style="color: #666666">.</span>zeros((dim_out,dim_in))
+        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> T2amp: 
+            <span style="color: #008000; font-weight: bold">for</span> ii, ps_i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_in[i]):
+                [pii, [s1, s2]] <span style="color: #666666">=</span> ps_i
+                pii <span style="color: #666666">=</span> pii<span style="color: #666666">*</span>dk<span style="color: #666666">*0.5</span>
+                <span style="color: #008000; font-weight: bold">for</span> jj, ps_j <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_out[i]):
+                    <span style="color: #008000; font-weight: bold">if</span> dim_in <span style="color: #666666">==</span> dim_out <span style="color: #AA22FF; font-weight: bold">and</span> jj <span style="color: #666666">&gt;</span> ii: <span style="color: #008000; font-weight: bold">continue</span>
+                    [pjj, [ss1, ss2]] <span style="color: #666666">=</span> ps_j
+                    pjj <span style="color: #666666">=</span> pjj<span style="color: #666666">*</span>dk<span style="color: #666666">*0.5</span>
+                    Vpot_chan[jj,ii] <span style="color: #666666">=</span> ( minnesota_nn( pjj,ss1,ss2, pii,s1,s2,Lbox)
+                                        <span style="color: #666666">-</span>minnesota_nn(<span style="color: #666666">-</span>pjj,ss2,ss1, pii,s1,s2,Lbox) )
+                    <span style="color: #008000; font-weight: bold">if</span> dim_in <span style="color: #666666">==</span> dim_out : Vpot_chan[ii,jj] <span style="color: #666666">=</span> Vpot_chan[jj,ii]
+        
+        Vpot<span style="color: #666666">.</span>append(Vpot_chan)
+    <span style="color: #008000; font-weight: bold">return</span> Vpot
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">init_V</span>(Lbox, dk, hhchannels, ppchannels, p_relhh, p_relpp,zeros<span style="color: #666666">=</span><span style="color: #008000">False</span>):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Sets up Vhhhh, Vpphh, and Vpppp. </span>
+<span style="color: #BA2121; font-style: italic">    </span>
+<span style="color: #BA2121; font-style: italic">    return: Vhhhh, Vpphh, Vpppp as a lists of numpy arrays</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    Vhhhh <span style="color: #666666">=</span> fill_pot(Lbox, dk, hhchannels, hhchannels, p_relhh, p_relhh,zeros)
+    Vpphh <span style="color: #666666">=</span> fill_pot(Lbox, dk, ppchannels, hhchannels, p_relpp, p_relhh,zeros)
+    Vpppp <span style="color: #666666">=</span> fill_pot(Lbox, dk, ppchannels, ppchannels, p_relpp, p_relpp,zeros)
+    
+    <span style="color: #008000; font-weight: bold">return</span> Vhhhh, Vpphh, Vpppp  
+            
+<span style="color: #AA22FF">@jit</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">make_diagram</span>(obj1,obj2,fac):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Makes diagrams for pp or hh ladders as matrix-matrix multiplications</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    hbar_pphh<span style="color: #666666">=</span>[]
+    dim1<span style="color: #666666">=</span><span style="color: #008000">len</span>(obj1)
+    <span style="color: #008000; font-weight: bold">for</span> chan <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(dim1):
+        mat1 <span style="color: #666666">=</span> obj1[chan]
+        mat2 <span style="color: #666666">=</span> obj2[chan]
+        hbar_pphh<span style="color: #666666">.</span>append( fac<span style="color: #666666">*</span>np<span style="color: #666666">.</span>matmul(mat1,mat2) )
+        
+    <span style="color: #008000; font-weight: bold">return</span> hbar_pphh
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">make_diagrams2_3</span>(t2_pphh,fabij):
+    hbar_pphh<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i, t2_mat <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(t2_pphh):
+        f_mat <span style="color: #666666">=</span> fabij[i]
+        hbar_mat <span style="color: #666666">=</span> t2_mat<span style="color: #666666">*</span>f_mat
+        hbar_pphh<span style="color: #666666">.</span>append(hbar_mat)
+    <span style="color: #008000; font-weight: bold">return</span> hbar_pphh
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">compute_hbar</span>(v_pppp,v_pphh,v_hhhh,t2_pphh,fabij):
+    diagram1 <span style="color: #666666">=</span> v_pphh<span style="color: #666666">.</span>copy()
+    diagram23 <span style="color: #666666">=</span> make_diagrams2_3(t2_pphh, fabij)
+    diagram4 <span style="color: #666666">=</span> make_diagram(v_pppp,t2_pphh,<span style="color: #666666">0.5</span>)
+    diagram5 <span style="color: #666666">=</span> make_diagram(t2_pphh,v_hhhh,<span style="color: #666666">0.5</span>)
+    
+    hbar_pphh<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #008000">len</span>(t2_pphh)):
+        mat <span style="color: #666666">=</span> (  diagram1[i]
+               <span style="color: #666666">+</span> diagram23[i]
+               <span style="color: #666666">+</span> diagram4[i]
+               <span style="color: #666666">+</span> diagram5[i]  )
+        hbar_pphh<span style="color: #666666">.</span>append(mat)
+    
+    <span style="color: #008000; font-weight: bold">return</span> hbar_pphh
+    
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_energy_denominator</span>(hh_channels,p_rel_pp,p_rel_hh,sp_basis,Nocc,dk,Lbox):
+    res<span style="color: #666666">=</span>[]
+    fabij<span style="color: #666666">=</span>[]
+    <span style="color: #008000; font-weight: bold">for</span> i, Ptot <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(hh_channels):
+        dimhh<span style="color: #666666">=</span><span style="color: #008000">len</span>(p_rel_hh[i])
+        dimpp<span style="color: #666666">=</span><span style="color: #008000">len</span>(p_rel_pp[i])
+        res_mat <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros((dimpp,dimhh))
+        f_mat   <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros((dimpp,dimhh))
+        <span style="color: #008000; font-weight: bold">for</span> ii, psh_rel <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_hh[i]):
+            [pij, [si, sj]] <span style="color: #666666">=</span> psh_rel  
+            p_i <span style="color: #666666">=</span> (Ptot<span style="color: #666666">+</span>pij)<span style="color: #666666">//2</span>
+            p_i <span style="color: #666666">=</span> p_i <span style="color: #666666">+</span> np<span style="color: #666666">.</span>array([Nmax,Nmax,Nmax],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+            p_j <span style="color: #666666">=</span> (Ptot<span style="color: #666666">-</span>pij)<span style="color: #666666">//2</span>
+            p_j <span style="color: #666666">=</span> p_j <span style="color: #666666">+</span> np<span style="color: #666666">.</span>array([Nmax,Nmax,Nmax],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+            ssi <span style="color: #666666">=</span> (<span style="color: #666666">1-</span>si)<span style="color: #666666">//2</span>
+            ssj <span style="color: #666666">=</span> (<span style="color: #666666">1-</span>sj)<span style="color: #666666">//2</span>
+            fii <span style="color: #666666">=</span> fock_mtx4[p_i[<span style="color: #666666">0</span>],p_i[<span style="color: #666666">1</span>],p_i[<span style="color: #666666">2</span>],ssi]
+            fjj <span style="color: #666666">=</span> fock_mtx4[p_j[<span style="color: #666666">0</span>],p_j[<span style="color: #666666">1</span>],p_j[<span style="color: #666666">2</span>],ssj]
+            <span style="color: #008000; font-weight: bold">for</span> jj, psp_rel <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_pp[i]):
+                [pab, [sa, sb]] <span style="color: #666666">=</span> psp_rel
+                p_a <span style="color: #666666">=</span> (Ptot<span style="color: #666666">+</span>pab)<span style="color: #666666">//2</span>
+                p_a <span style="color: #666666">=</span> p_a <span style="color: #666666">+</span> np<span style="color: #666666">.</span>array([Nmax,Nmax,Nmax],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+                p_b <span style="color: #666666">=</span> (Ptot<span style="color: #666666">-</span>pab)<span style="color: #666666">//2</span>
+                p_b <span style="color: #666666">=</span> p_b <span style="color: #666666">+</span> np<span style="color: #666666">.</span>array([Nmax,Nmax,Nmax],dtype<span style="color: #666666">=</span><span style="color: #008000">int</span>)
+                ssa <span style="color: #666666">=</span> (<span style="color: #666666">1-</span>sa)<span style="color: #666666">//2</span>
+                ssb <span style="color: #666666">=</span> (<span style="color: #666666">1-</span>sb)<span style="color: #666666">//2</span>
+                faa <span style="color: #666666">=</span> fock_mtx4[p_a[<span style="color: #666666">0</span>],p_a[<span style="color: #666666">1</span>],p_a[<span style="color: #666666">2</span>],ssa]
+                fbb <span style="color: #666666">=</span> fock_mtx4[p_b[<span style="color: #666666">0</span>],p_b[<span style="color: #666666">1</span>],p_b[<span style="color: #666666">2</span>],ssb]
+                
+                res_mat[jj,ii] <span style="color: #666666">=</span> <span style="color: #666666">1.0</span> <span style="color: #666666">/</span> (fii <span style="color: #666666">+</span> fjj <span style="color: #666666">-</span> faa <span style="color: #666666">-</span> fbb) 
+                f_mat[jj,ii] <span style="color: #666666">=</span> faa <span style="color: #666666">+</span> fbb <span style="color: #666666">-</span> fii <span style="color: #666666">-</span> fjj
+        res<span style="color: #666666">.</span>append(res_mat)
+        fabij<span style="color: #666666">.</span>append(f_mat)
+    <span style="color: #008000; font-weight: bold">return</span> res, fabij
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_t2_from_mbpt</span>(Vpphh,denom):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    param Vpphh: Vpphh</span>
+<span style="color: #BA2121; font-style: italic">    param denom: energy denominator in pphh format</span>
+<span style="color: #BA2121; font-style: italic">    return t2: quotient of both, element for element </span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    res <span style="color: #666666">=</span> []
+    <span style="color: #008000; font-weight: bold">for</span> i, vv <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(Vpphh):
+        dd <span style="color: #666666">=</span> denom[i]
+        res_mat <span style="color: #666666">=</span> vv<span style="color: #666666">*</span>dd  <span style="color: #408080; font-style: italic">#how simple in python; element by element multiply</span>
+        res<span style="color: #666666">.</span>append(res_mat)
+    <span style="color: #008000; font-weight: bold">return</span> res
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">compute_E_CCD</span>(Vpphh,T2pphh):
+    erg<span style="color: #666666">=0.0</span>
+<span style="color: #408080; font-style: italic">#     erg2=0.0</span>
+    <span style="color: #008000; font-weight: bold">for</span> i, t2mat <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(T2pphh):
+        vmat  <span style="color: #666666">=</span> Vpphh[i]
+        erg <span style="color: #666666">=</span> erg <span style="color: #666666">+</span> <span style="color: #666666">0.25*</span>np<span style="color: #666666">.</span>sum(vmat<span style="color: #666666">*</span>t2mat)
+    <span style="color: #008000; font-weight: bold">return</span> erg
+
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">compute_Fock_4</span>(sp_basis,Nocc,dk,Lbox,Nmax):
+    fock_mtx4<span style="color: #666666">=</span>np<span style="color: #666666">.</span>zeros(shape<span style="color: #666666">=</span>(<span style="color: #666666">2*</span>Nmax<span style="color: #666666">+1</span>, <span style="color: #666666">2*</span>Nmax<span style="color: #666666">+1</span>, <span style="color: #666666">2*</span>Nmax<span style="color: #666666">+1</span>, <span style="color: #666666">2</span>))
+    <span style="color: #008000; font-weight: bold">for</span> i, vec <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(sp_basis):
+        pvec<span style="color: #666666">=</span>vec<span style="color: #666666">*</span>dk
+        spin<span style="color: #666666">=</span>spin_of_index(i)
+        si <span style="color: #666666">=</span> (<span style="color: #666666">1</span> <span style="color: #666666">-</span> spin)<span style="color: #666666">//2</span>
+        px<span style="color: #666666">=</span>vec[<span style="color: #666666">0</span>]<span style="color: #666666">+</span>Nmax
+        py<span style="color: #666666">=</span>vec[<span style="color: #666666">1</span>]<span style="color: #666666">+</span>Nmax
+        pz<span style="color: #666666">=</span>vec[<span style="color: #666666">2</span>]<span style="color: #666666">+</span>Nmax
+        fock_mtx4[px,py,pz,si] <span style="color: #666666">=</span> Fock(pvec,spin,sp_basis,Nocc,dk,Lbox)
+    <span style="color: #008000; font-weight: bold">return</span> fock_mtx4
+
+<span style="color: #408080; font-style: italic">#####################################</span>
+<span style="color: #408080; font-style: italic">########### Main Program starts here    </span>
+
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">timeit</span> <span style="color: #008000; font-weight: bold">import</span> default_timer <span style="color: #008000; font-weight: bold">as</span> timer
+<span style="color: #408080; font-style: italic"># for timing purposes</span>
+
+progstart<span style="color: #666666">=</span>timer()
+
+Nmax<span style="color: #666666">=1</span>
+kmax<span style="color: #666666">=1.0</span>
+mbase <span style="color: #666666">=</span> MomSpaceBasis(Nmax,kmax)
+lattice<span style="color: #666666">=</span>mbase<span style="color: #666666">.</span>nvec()
+
+<span style="color: #408080; font-style: italic">## set particle number</span>
+NN<span style="color: #666666">=14</span>
+st_degen<span style="color: #666666">=2</span>  <span style="color: #408080; font-style: italic"># spin up and down</span>
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;chosen N =&quot;</span>, NN)
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;magic numbers&quot;</span>, magic_numbers(mbase))
+
+<span style="color: #408080; font-style: italic">## set density</span>
+rho<span style="color: #666666">=0.08</span>
+
+dk <span style="color: #666666">=</span> get_dk(rho,NN)
+
+mbase<span style="color: #666666">.</span>update(dk)
+Lbox <span style="color: #666666">=</span> mbase<span style="color: #666666">.</span>Lbox
+
+
+<span style="color: #408080; font-style: italic">## get single particle basis</span>
+
+sp_basis <span style="color: #666666">=</span> spbasis_from_MomSpaceBasis(lattice,st_degen)
+num_states <span style="color: #666666">=</span> <span style="color: #008000">len</span>(sp_basis)
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;number of s.p. states:&#39;</span>, num_states)
+
+<span style="color: #408080; font-style: italic"># print out a few facts of the reference state</span>
+total_Tkin <span style="color: #666666">=</span> compute_total_Tkin(NN,sp_basis,dk)
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;total Tkin per particle =&#39;</span>, total_Tkin<span style="color: #666666">/</span>NN )
+
+k_fermi <span style="color: #666666">=</span> kF_from_density(rho)
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Fermi momentum =&quot;</span>, k_fermi)
+
+E_gas <span style="color: #666666">=</span> EnergyDensity_FermiGas(k_fermi)
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Energy per neutron of infinite free Fermi gas&quot;</span>, E_gas<span style="color: #666666">/</span>rho)
+
+E_HF <span style="color: #666666">=</span> compute_E_HF_simple(NN,sp_basis,dk)
+E_HF <span style="color: #666666">=</span> E_HF<span style="color: #666666">/</span>NN
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;HF energy per neutron =&quot;</span>, E_HF)
+
+<span style="color: #408080; font-style: italic">## now we start our business ...</span>
+<span style="color: #408080; font-style: italic">## get all channels and two-body states within those channels; set T2 to zero</span>
+hh_channels, pp_channels, p_rel_hh, p_rel_pp, t2_pphh <span style="color: #666666">=</span> setup_T2_amplitudes(sp_basis,NN,st_degen)
+
+<span style="color: #408080; font-style: italic"># get some insight in how big this all is</span>
+count<span style="color: #666666">=0</span>
+<span style="color: #008000; font-weight: bold">for</span> i, channel <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_hh):
+    dim<span style="color: #666666">=</span><span style="color: #008000">len</span>(p_rel_hh[i])
+    count<span style="color: #666666">=</span>count<span style="color: #666666">+</span>dim
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;hh number of total combinations&#39;</span>, count)
+
+count<span style="color: #666666">=0</span>
+<span style="color: #008000; font-weight: bold">for</span> i, channel <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(p_rel_pp):
+    dim<span style="color: #666666">=</span><span style="color: #008000">len</span>(p_rel_pp[i])
+    count<span style="color: #666666">=</span>count<span style="color: #666666">+</span>dim
+    
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;pp number of total combinations&#39;</span>, count)
+
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;get v_hhhh, v_pphh, v_pppp&quot;</span>)
+start <span style="color: #666666">=</span> timer()
+v_hhhh, v_pphh, v_pppp <span style="color: #666666">=</span> init_V(Lbox, dk, hh_channels, pp_channels, p_rel_hh, p_rel_pp)
+end <span style="color: #666666">=</span> timer()
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;what a hog!&quot;</span>, end<span style="color: #666666">-</span>start, <span style="color: #BA2121">&#39;seconds&#39;</span>)
+
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;compute energy denominator&quot;</span>)
+start <span style="color: #666666">=</span> timer()
+fock_mtx4 <span style="color: #666666">=</span> compute_Fock_4(sp_basis,NN,dk,Lbox,Nmax)
+denom_pphh, f_abij <span style="color: #666666">=</span> get_energy_denominator(pp_channels,p_rel_pp,p_rel_hh,sp_basis,NN,dk,Lbox)
+end <span style="color: #666666">=</span> timer()
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;that&#39;s faster&quot;</span>, end<span style="color: #666666">-</span>start, <span style="color: #BA2121">&#39;seconds&#39;</span>)
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Initialize T2 from MBPT2&quot;</span>)
+t2_pphh <span style="color: #666666">=</span> get_t2_from_mbpt(v_pphh,denom_pphh)
+
+erg <span style="color: #666666">=</span> compute_E_CCD(v_pphh,t2_pphh)
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;MBPT2 correlation energy per neutron =&#39;</span>, erg<span style="color: #666666">/</span>NN)
+
+
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;start CCD iterations ...&quot;</span>)
+
+niter<span style="color: #666666">=200</span>
+mix<span style="color: #666666">=0.99</span>
+erg_old<span style="color: #666666">=0.0</span>
+eps<span style="color: #666666">=1.e-8</span>
+<span style="color: #008000; font-weight: bold">for</span> <span style="color: #008000">iter</span> <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(niter):
+    
+    start <span style="color: #666666">=</span> timer()
+    hbar_pphh <span style="color: #666666">=</span> compute_hbar(v_pppp,v_pphh,v_hhhh,t2_pphh,f_abij)
+    end <span style="color: #666666">=</span> timer()
+    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;time of making Hbar:&quot;</span>, end<span style="color: #666666">-</span>start, <span style="color: #BA2121">&#39;seconds&#39;</span>)
+    
+    t2_new <span style="color: #666666">=</span> get_t2_from_mbpt(hbar_pphh,denom_pphh)
+    
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #008000">len</span>(t2_new)):
+        t2_new[i] <span style="color: #666666">=</span> t2_pphh[i] <span style="color: #666666">+</span> t2_new[i]
+    
+    erg <span style="color: #666666">=</span> compute_E_CCD(v_pphh,t2_new)
+    
+    myeps <span style="color: #666666">=</span> <span style="color: #008000">abs</span>(erg<span style="color: #666666">-</span>erg_old)<span style="color: #666666">/</span><span style="color: #008000">abs</span>(erg)
+    <span style="color: #008000; font-weight: bold">if</span> myeps <span style="color: #666666">&lt;</span> eps: <span style="color: #008000; font-weight: bold">break</span>
+    erg_old<span style="color: #666666">=</span>erg
+
+    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;iter=&quot;</span>, <span style="color: #008000">iter</span>, <span style="color: #BA2121">&quot;Correlation energy per neutron=&quot;</span>, erg<span style="color: #666666">/</span>NN, <span style="color: #BA2121">&quot;, epsilon=&quot;</span>, myeps)
+    
+    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #008000">len</span>(t2_pphh)):
+        t2_pphh[i] <span style="color: #666666">=</span> mix<span style="color: #666666">*</span>t2_new[i] <span style="color: #666666">+</span> (<span style="color: #666666">1.0-</span>mix)<span style="color: #666666">*</span>t2_pphh[i]
+    
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Correlation energy per neutron= &quot;</span>, erg<span style="color: #666666">/</span>NN)
+
+progend<span style="color: #666666">=</span>timer()
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;total time in seconds&#39;</span>, progend<span style="color: #666666">-</span>progstart)
+</pre></div>
+<p>
+</div></p>
+</div>
+</p>
+
+<p>
+<!-- --- end answer of exercise --- -->
+
+<p>
+<!-- --- end exercise --- -->
+
+<h2><div id="___sec57"></div></h2>
+</div>
+</div>
+
+
+<h1 id="___sec58" class="anchor">Benchmarks with the Minnesota potential </h1>
 
 <p>
 For the benchmarks, let us use a nucleon mass \( m=938.92 \) MeV, \( \hbar =
 197.33 \) MeV fm, and \( c=1 \). For \( N=14 \) neutrons at a density \( \rho=0.08
 {\rm fm}^{-3} \) one finds \( T_{\rm kin}(\vert\phi_0\rangle)/N =
 22.427553 \) MeV, and \( E_{HF}/N = 10.3498 \) MeV. In model spaces with
-$N_{\rm max}=1, 2, and using only the first five diagrams
+\( N_{\rm max}=1 \) and \( N_{\rm max}=2 \), and using only the first five diagrams
 of Figure <a href="#fig-ccd">11</a> for the CCD calculation, yields the correlation
-energies per particle of \( E_{c}/N =-0.2118 \) MeV, \( E_{c}/N =-0.6923 \)
+energies per particle of \( E_{c}/N =-0.2118 \) MeV and \( E_{c}/N =-0.6923 \)
 MeV, respectively.
 
 <p>
 
-<center><h1 id="___sec57" class="anchor">From Structure to Reactions </h1></center> <!-- chapter heading -->
+<center><h1 id="___sec59" class="anchor">From Structure to Reactions </h1></center> <!-- chapter heading -->
 
 <p>
 Nuclear coupled-cluster theory has also been used to describe aspects
 of nuclear reactions, namely photo reactions and computations of
 optical potentials. In what follows, we want to discuss these approaches.
 
-<h1 id="___sec58" class="anchor">Electroweak reactions </h1>
+<h1 id="___sec60" class="anchor">Electroweak reactions </h1>
 
 <p>
 Let us assume we probe a nucleus with an electroweak probe (e.g. via
@@ -2932,7 +3727,7 @@ $$
 in the CCSD approximation. For details, please see [&quot;Giant and pigmy dipole resonances in 4He, 16,22O, and 40Ca from chiral nucleon-nucleon interactions,&quot; S. Bacca, N. Barnea, G. Hagen, M. Miorelli, G. Orlandini, and T. Papenbrock,
 Phys. Rev. C 90, 064619 (2014)].
 
-<h1 id="___sec59" class="anchor">Computing optical potentials from microscopic input </h1>
+<h1 id="___sec61" class="anchor">Computing optical potentials from microscopic input </h1>
 
 <p>
 The single-particle Green's function
