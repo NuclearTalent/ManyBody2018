@@ -1,3 +1,4 @@
+\
 <!DOCTYPE html>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -169,7 +170,7 @@ $$
 <p>&nbsp;<br>
 
 <p>
-IMSRG flow equations:
+IMSRG flow equations. Note that here we do not follow the CC/MBPT convetion that \( ijk \) are hole indices and \( abc \) are particle indices. Instead, \( abc \) are used for interal (contracted) indices which are summed over, and \( ijk \) are external indices.
 <p>&nbsp;<br>
 $$
 \begin{equation}
@@ -213,7 +214,7 @@ The White generator:
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\eta^{\text{Wh}}_{ai} = \frac{f_{ai}}{\Delta_{ai}}
+\eta^{\text{Wh}}_{ai} = \frac{f_{ai}}{\Delta_{ai}} - h.c.
 \tag{8}
 \end{equation}
 $$
@@ -222,14 +223,14 @@ $$
 <p>&nbsp;<br>
 $$
 \begin{equation}
-\eta^{\text{Wh}}_{abij} = \frac{\Gamma_{abij}}{\Delta_{abij}}
+\eta^{\text{Wh}}_{abij} = \frac{\Gamma_{abij}}{\Delta_{abij}} - h.c.
 \tag{9}
 \end{equation}
 $$
 <p>&nbsp;<br>
 
 <p>
-Energy denominators:
+Here we use the Moller-Plesset energy denominators. Other choices are possible, but these will suffice for our purposes.
 <p>&nbsp;<br>
 $$
 \begin{equation}
@@ -249,7 +250,8 @@ $$
 <p>&nbsp;<br>
 
 <p>
-Simplification of flow equation for nuclear matter:
+For nuclear matter, momentum conservation restricts one-body operators to be diagonal.
+This allows for some simplification of flow equations:
 <p>&nbsp;<br>
 $$
 \begin{equation}
@@ -307,7 +309,7 @@ Hamiltonian \( H(s) \).  EMBPT2 is the second order MBPT energy using
 </tbody>
 </table>
 <p>
-The same numbers as before, but now the \( [\eta_2, H_2]_2 \)
+The same numbers as before, but now the \( [\eta_{2b}, H_{2b}]_{2b} \)
 particle-hole commutator term is omitted.
 
 <p>
@@ -324,24 +326,6 @@ particle-hole commutator term is omitted.
 <tr><td align="center">   0.5        </td> <td align="center">   1.45342      </td> <td align="center">   -0.0284994    </td> <td align="center">   -0.0664503     </td> </tr>
 <tr><td align="center">   0.6        </td> <td align="center">   1.44772      </td> <td align="center">   -0.0244746    </td> <td align="center">   -0.0569988     </td> </tr>
 <tr><td align="center">   0.7        </td> <td align="center">   1.44283      </td> <td align="center">   -0.0210395    </td> <td align="center">   -0.0489492     </td> </tr>
-</tbody>
-</table>
-<p>
-These are the same as before, but with the painful \( [\eta_{2b},
-H_{2b}]_{2b} \) particle-hole term omitted.
-
-<p>
-<table border="1">
-<thead>
-<tr><td align="center">\( s \)</td> <td align="center">\( E0 \)</td> <th align="center">  EMBPT2  </th> <td align="center">\( dE/ds \)</td> </tr>
-</thead>
-<tbody>
-<tr><td align="center">   0.0        </td> <td align="center">   1.50000     </td> <td align="center">   -0.0623932    </td> <td align="center">   0              </td> </tr>
-<tr><td align="center">   0.1        </td> <td align="center">   1.48752     </td> <td align="center">   -0.0531358    </td> <td align="center">   -0.124786      </td> </tr>
-<tr><td align="center">   0.2        </td> <td align="center">   1.47689     </td> <td align="center">   -0.0453551    </td> <td align="center">   -0.106272      </td> </tr>
-<tr><td align="center">   0.3        </td> <td align="center">   1.46782     </td> <td align="center">   -0.0387878    </td> <td align="center">   -0.0907102     </td> </tr>
-<tr><td align="center">   0.4        </td> <td align="center">   1.46007     </td> <td align="center">   -0.0332251    </td> <td align="center">   -0.0775756     </td> </tr>
-<tr><td align="center">   0.5        </td> <td align="center">   1.45342     </td> <td align="center">   -0.0284994    </td> <td align="center">   -0.0664503     </td> </tr>
 </tbody>
 </table>
 </section>
