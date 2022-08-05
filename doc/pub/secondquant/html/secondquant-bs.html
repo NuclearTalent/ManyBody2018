@@ -2767,10 +2767,10 @@ We can now use this code to compute the matrix elements between two two-body Sla
 
 
 <div class="compute"><script type="text/x-sage">
-from sympy import symbols, latex, WildFunction, collect, Rational, simplify
+from sympy import symbols, latex, WildFunction, collect, Rational, simplify, Dummy
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
 # setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
+p,q,r,s = symbols('p q r s',cls=Dummy)
 f = AntiSymmetricTensor('f',(p,),(q,))
 pr = NO((Fd(p)*F(q)))
 v = AntiSymmetricTensor('v',(p,q),(r,s))
@@ -2806,10 +2806,10 @@ In our first step we just define the Hamiltonian
 
 
 <div class="compute"><script type="text/x-sage">
-from sympy import symbols, latex, WildFunction, collect, Rational, simplify
+from sympy import symbols, latex, WildFunction, collect, Rational, simplify, Dummy
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
 # setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
+p,q,r,s = symbols('p q r s',cls=Dummy)
 f = AntiSymmetricTensor('f',(p,),(q,))
 pr = Fd(p)*F(q)
 v = AntiSymmetricTensor('v',(p,q),(r,s))
@@ -2846,10 +2846,10 @@ In our next step we define the reference energy \( E_0 \) and redefine the Hamil
 
 
 <div class="compute"><script type="text/x-sage">
-from sympy import symbols, latex, WildFunction, collect, Rational, simplify
+from sympy import symbols, latex, WildFunction, collect, Rational, simplify, Dummy
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
 # setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
+p,q,r,s = symbols('p q r s',cls=Dummy)
 f = AntiSymmetricTensor('f',(p,),(q,))
 pr = Fd(p)*F(q)
 v = AntiSymmetricTensor('v',(p,q),(r,s))
@@ -2893,10 +2893,10 @@ We can now go back to exercise 7 and define the Hamiltonian and the second-quant
 
 
 <div class="compute"><script type="text/x-sage">
-from sympy import symbols, latex, WildFunction, collect, Rational, simplify
+from sympy import symbols, latex, WildFunction, collect, Rational, simplify, Dummy
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
 # setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
+p,q,r,s = symbols('p q r s',cls=Dummy)
 
 v = AntiSymmetricTensor('v',(p,q),(r,s))
 pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
